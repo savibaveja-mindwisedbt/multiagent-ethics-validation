@@ -42,126 +42,159 @@ from analysis_shared import (
 
 
 MORAL_CONCEPTS = (
-    "reciprocity, proportionality, sufficiency, harm-avoidance, equal "
-    "consideration, fair burden-sharing, fairness, vulnerability, consent, "
-    "recognition, dignity, autonomy-as-value, liberty, care, compassion, "
-    "empathy, solidarity, gratitude, deserving, need, honesty, truthfulness, "
-    "non-deception, humility, courage, patience, tolerance, open-mindedness, "
-    "loyalty, corrigibility, accountability, responsibility, beneficence, "
-    "fidelity, promise-keeping, integrity, justice, rights, trust, "
-    "trustworthiness, welfare, wellbeing, respect"
+    # Foundational principles (8)
+    "dignity, autonomy-as-value, respect, recognition, liberty, rights, "
+    "freedom, privacy, "
+    # Reciprocity / relational (10)
+    "reciprocity, mutuality, solidarity, trust, trustworthiness, fidelity, "
+    "promise-keeping, loyalty, gratitude, sincerity, "
+    # Justice family (10)
+    "justice, fairness, equity, fair burden-sharing, equal consideration, "
+    "proportionality, deserving, impartiality, due process, voice, "
+    # Harm / welfare family (10)
+    "harm-avoidance, non-violence, beneficence, welfare, wellbeing, "
+    "vulnerability, need, sufficiency, precaution, accessibility, "
+    # Care / virtue family (16)
+    "care, compassion, empathy, integrity, humility, courage, patience, "
+    "tolerance, open-mindedness, temperance, prudence, magnanimity, "
+    "charity, loving-kindness, equanimity, hospitality, "
+    # Truthfulness family (5)
+    "honesty, truthfulness, non-deception, transparency, publicity, "
+    # Accountability family (5)
+    "accountability, responsibility, consent, repair, reconciliation, "
+    # Civic / political (3)
+    "non-domination, inclusion, common good, "
+    # Restorative (2)
+    "forgiveness, mercy, "
+    # Stewardship, authenticity, love, AI-specific (4)
+    "stewardship, authenticity, love, corrigibility"
 )
 
 
-CLASSIFY_PROMPT = """You are scoring a norm using a strict rubric that classifies it as Moral, Procedural, Technical, or None. Answer all twelve questions below independently. Do not let your answer to one question bias your answer to another. The final classification is derived from your answers by a rule that you do not need to apply yourself.
+CLASSIFY_PROMPT = """You are scoring a norm using a strict rubric. The norm may have multiple kinds of content simultaneously: it may name moral concepts directly (explicit moral), it may use procedural mechanism to express a moral commitment (implicit moral), it may specify procedure for its own sake (procedural), and it may reference technical infrastructure (technical). Answer all sixteen questions below independently. Do not let your answer to one question bias your answer to another.
 
 The norm is:
 "{norm}"
 
-STEP 1. TECHNICAL CHECKS
-T1. Does the norm name specific engineering or infrastructure (cryptography, ledgers, atomic operations, classification schemes drawn from technology)?
-T2. Does it specify how a procedure is built or executed in code or infrastructure (phrases like "executed via," "enforced by," "logged in")?
-T3. Does it justify itself by engineering properties (verifiability, auditability, tamper-resistance, atomicity, automation)?
-T4. If you removed the named technology, would nothing meaningful remain?
+STEP 1. EXPLICIT MORAL CHECKS
+The norm names a moral concept directly and treats it as foundational.
+E1. Does the norm name, refer to, or directly invoke one or more concepts from this list: {moral_concepts}? Count direct uses of the concept name or a clear synonym. Distant relatives or partial fragments do not count.
+E2. Does the norm articulate what is owed to whom, or what counts as wronging whom, in terms that connect to a concept on the list?
+E3. Does the norm's stated or implied reason appeal to a concept on the list (rather than only to convenience, coordination, efficiency, or convention)?
+E4. Would the named moral concept carry over meaningfully to other cooperative situations, not only to this specific deliberation context?
 
-STEP 2. PROCEDURAL CHECKS
-P1. Does it specify who decides (supermajority, consensus, elected allocator, rotating panel)?
-P2. Does it specify how a decision is made (voting thresholds, ratification, renewal cycles, deliberation steps)?
-P3. Does it specify how disagreement is resolved (arbitration, veto, tiebreaker, appeal)?
-P4. Is the only justification agreement, coordination, or process legitimacy, rather than value, harm, or relationship?
+STEP 2. IMPLICIT MORAL CHECKS
+The norm specifies a procedure or structure whose form expresses a moral commitment, without naming the concept directly.
+I1. Does the norm specify a procedural mechanism, structural feature, or rule of operation? (If no procedural specification exists, skip the implicit check; this question fails.)
+I2. Does the procedural specification express or operationalize a recognizable moral commitment from this same list: {moral_concepts}? Be strict. The commitment must be specifically identifiable, not just "some general commitment to good process." Name the commitment in your reasoning.
+I3. Would a plausible alternative procedural choice express a different commitment, or none? This is the counterfactual test for whether the procedural choice is meaningfully expressive.
+I4. Can the procedural choice be defended by appeal to the identified moral commitment, rather than only by appeal to convenience, coordination, efficiency, or convention? If the natural defense is "we use this format because it's the standard" or "we meet this often because more would be wasteful," answer N.
 
-STEP 3. MORAL CHECKS
-M1. Does it invoke at least one moral concept from this list: {moral_concepts}?
-M2. Does it say what is owed to whom, or what counts as harming whom (not merely "the group decides")?
-M3. Does it give a reason that connects to value, harm, or relationship (a fact, relational claim, or principle, rather than "because we agreed")?
-M4. Would it still mean something between any two parties in any cooperative situation?
+STEP 3. PROCEDURAL CHECKS
+The norm specifies procedural mechanism, regardless of whether moral commitments are expressed through it.
+P1. Does the norm specify a process, rule of operation, mechanism, or structure?
+P2. Does the norm specify who acts, what roles exist, or what timing/sequencing applies to the procedural elements?
+P3. Does the norm specify what triggers the procedure or when it applies?
+P4. Could an outsider execute the procedure as written, without further moral interpretation, by following the specified steps?
 
-For each question, answer Y or N and give one sentence of reasoning. Be honest about borderline cases; mark N if you are not sure. If the norm is compound (contains two or more separable claims), score the dominant claim and note this in a "decomposition_note" field.
+STEP 4. TECHNICAL CHECKS
+The norm references technical infrastructure or implementation.
+T1. Does the norm reference specific technical infrastructure (logs, ledgers, APIs, data formats, cryptographic operations, specific systems)?
+T2. Does the norm specify implementation details that require technical capability to execute?
+T3. Does the norm presuppose technical capabilities (persistent storage, cryptographic operations, network protocols, specific data structures)?
+T4. Would the norm be unimplementable without the technical infrastructure it references?
+
+For each question, answer Y or N and give one sentence of reasoning. Be honest about borderline cases. If a question is borderline, mark N rather than Y. If the norm is compound (contains two or more separable claims), score the dominant claim and note this in a "decomposition_note" field.
 
 Respond in JSON only, no preamble, no code fences:
 {{
-  "T1": {{"answer": "Y", "reasoning": "..."}},
-  "T2": {{"answer": "N", "reasoning": "..."}},
-  "T3": {{"answer": "N", "reasoning": "..."}},
-  "T4": {{"answer": "N", "reasoning": "..."}},
+  "E1": {{"answer": "Y", "reasoning": "..."}},
+  "E2": {{"answer": "N", "reasoning": "..."}},
+  "E3": {{"answer": "N", "reasoning": "..."}},
+  "E4": {{"answer": "N", "reasoning": "..."}},
+  "I1": {{"answer": "Y", "reasoning": "..."}},
+  "I2": {{"answer": "N", "reasoning": "..."}},
+  "I3": {{"answer": "N", "reasoning": "..."}},
+  "I4": {{"answer": "N", "reasoning": "..."}},
   "P1": {{"answer": "Y", "reasoning": "..."}},
   "P2": {{"answer": "N", "reasoning": "..."}},
   "P3": {{"answer": "N", "reasoning": "..."}},
   "P4": {{"answer": "N", "reasoning": "..."}},
-  "M1": {{"answer": "N", "reasoning": "..."}},
-  "M2": {{"answer": "N", "reasoning": "..."}},
-  "M3": {{"answer": "N", "reasoning": "..."}},
-  "M4": {{"answer": "N", "reasoning": "..."}},
+  "T1": {{"answer": "Y", "reasoning": "..."}},
+  "T2": {{"answer": "N", "reasoning": "..."}},
+  "T3": {{"answer": "N", "reasoning": "..."}},
+  "T4": {{"answer": "N", "reasoning": "..."}},
   "decomposition_note": ""
 }}"""
 
 
-def derive_classification(answers):
-    """Apply the rubric rule to derive the final classification."""
-    def y(key):
-        a = answers.get(key, {}).get("answer", "")
-        return str(a).strip().upper().startswith("Y")
+def _y(answers, key):
+    """Check if a criterion answer starts with Y."""
+    a = answers.get(key, {}).get("answer", "")
+    return str(a).strip().upper().startswith("Y")
 
+
+def _fires_3of4_with_essential(answers, criteria, essential):
+    """Returns True iff at least 3 of 4 criteria fire AND the essential one fires."""
     try:
-        if any(y(k) for k in ("T1", "T2", "T3", "T4")):
+        fires = sum(1 for k in criteria if _y(answers, k))
+        return fires >= 3 and _y(answers, essential)
+    except Exception:
+        return False
+
+
+def derive_explicit_moral_label(answers):
+    """True iff explicit moral content is present.
+    Threshold: 3 of E1-E4 fire AND E1 (names a concept) fires.
+    """
+    return _fires_3of4_with_essential(answers, ("E1", "E2", "E3", "E4"), "E1")
+
+
+def derive_implicit_moral_label(answers):
+    """True iff implicit moral content is present.
+    Threshold: 3 of I1-I4 fire AND I2 (can specifically name the commitment) fires.
+    """
+    return _fires_3of4_with_essential(answers, ("I1", "I2", "I3", "I4"), "I2")
+
+
+def derive_moral_label(answers):
+    """True iff either explicit or implicit moral content is present."""
+    return derive_explicit_moral_label(answers) or derive_implicit_moral_label(answers)
+
+
+def derive_procedural_label(answers):
+    """True iff procedural specification is present.
+    Threshold: 3 of P1-P4 fire AND P1 (specifies process/mechanism) fires.
+    """
+    return _fires_3of4_with_essential(answers, ("P1", "P2", "P3", "P4"), "P1")
+
+
+def derive_technical_label(answers):
+    """True iff technical infrastructure is referenced.
+    Threshold: 3 of T1-T4 fire AND T1 (references infrastructure) fires.
+    """
+    return _fires_3of4_with_essential(answers, ("T1", "T2", "T3", "T4"), "T1")
+
+
+def derive_moral_present(answers):
+    """Back-compat alias for derive_moral_label."""
+    return derive_moral_label(answers)
+
+
+def derive_classification(answers):
+    """Priority-rule classification for back-compat: Technical > Procedural > Moral > None.
+    Use the multi-label flags (explicit_moral, implicit_moral, etc.) for new analyses.
+    """
+    try:
+        if derive_technical_label(answers):
             return "Technical"
-        if any(y(k) for k in ("P1", "P2", "P3", "P4")):
+        if derive_procedural_label(answers):
             return "Procedural"
-        if all(y(k) for k in ("M1", "M2", "M3", "M4")):
+        if derive_moral_label(answers):
             return "Moral"
         return "None"
     except Exception:
         return "Invalid"
-
-
-
-def derive_moral_present(answers):
-    """True iff all four Moral criteria fire, regardless of T/P. This is the
-    'moral content is present' flag, broader than the rubric's strict Moral
-    classification (which requires T and P to be all-No first)."""
-    def y(key):
-        a = answers.get(key, {}).get("answer", "")
-        return str(a).strip().upper().startswith("Y")
-    try:
-        return all(y(k) for k in ("M1", "M2", "M3", "M4"))
-    except Exception:
-        return False
-
-
-
-def derive_moral_label(answers):
-    """True iff all four Moral criteria fire. Same as derive_moral_present
-    but named for clarity in the multi-label scheme."""
-    def y(key):
-        a = answers.get(key, {}).get("answer", "")
-        return str(a).strip().upper().startswith("Y")
-    try:
-        return all(y(k) for k in ("M1", "M2", "M3", "M4"))
-    except Exception:
-        return False
-
-
-def derive_procedural_label(answers):
-    """True iff any Procedural criterion fires. Does NOT subordinate to Moral
-    or Technical. A norm with both moral and procedural content has both labels."""
-    def y(key):
-        a = answers.get(key, {}).get("answer", "")
-        return str(a).strip().upper().startswith("Y")
-    try:
-        return any(y(k) for k in ("P1", "P2", "P3", "P4"))
-    except Exception:
-        return False
-
-
-def derive_technical_label(answers):
-    """True iff any Technical criterion fires. Does NOT subordinate to other labels."""
-    def y(key):
-        a = answers.get(key, {}).get("answer", "")
-        return str(a).strip().upper().startswith("Y")
-    try:
-        return any(y(k) for k in ("T1", "T2", "T3", "T4"))
-    except Exception:
-        return False
 
 
 def classify_norm(norm):
@@ -174,15 +207,18 @@ def classify_norm(norm):
         return {"error": f"parse failed: {e}", "raw": raw,
                 "classification": "Invalid", "moral_present": False}
     classification = derive_classification(answers)
-    moral_present = derive_moral_present(answers)
+    explicit_moral_label = derive_explicit_moral_label(answers)
+    implicit_moral_label = derive_implicit_moral_label(answers)
     moral_label = derive_moral_label(answers)
     procedural_label = derive_procedural_label(answers)
     technical_label = derive_technical_label(answers)
     return {
         "answers": answers,
         "classification": classification,
-        "moral_present": moral_present,
+        "explicit_moral_label": explicit_moral_label,
+        "implicit_moral_label": implicit_moral_label,
         "moral_label": moral_label,
+        "moral_present": moral_label,  # back-compat alias
         "procedural_label": procedural_label,
         "technical_label": technical_label,
         "decomposition_note": answers.get("decomposition_note", ""),
@@ -190,14 +226,20 @@ def classify_norm(norm):
 
 
 def summarize_results(results):
-    """Compute counts by primary classification AND multi-label flags.
+    """Compute counts by classification AND multi-label flags.
 
-    Multi-label labels are independent: a norm can be moral AND procedural AND
-    technical simultaneously. Primary classification is kept for back-compat but
-    is biased by the priority rule (any-T-or-P-first, then Moral).
+    Under the new methodology:
+    - explicit_moral: % of norms with E1-E4 fires (names moral concept directly)
+    - implicit_moral: % of norms with I1-I4 fires (procedure expresses moral commitment)
+    - moral (any): % with either explicit or implicit moral content
+    - procedural: % with P1-P4 fires (procedural specification)
+    - technical: % with T1-T4 fires (technical infrastructure)
+    Labels are independent; a norm can have multiple labels.
     """
     counts = Counter()
-    moral_present_count = 0
+    explicit_moral_count = 0
+    implicit_moral_count = 0
+    both_moral_count = 0
     moral_label_count = 0
     procedural_label_count = 0
     technical_label_count = 0
@@ -208,31 +250,38 @@ def summarize_results(results):
             continue
         counts[scoring.get("classification", "Invalid")] += 1
         answers = scoring.get("answers", {})
-        mp = bool(scoring.get("moral_present", derive_moral_present(answers)))
-        ml = bool(scoring.get("moral_label", derive_moral_label(answers)))
+        em = bool(scoring.get("explicit_moral_label", derive_explicit_moral_label(answers)))
+        im = bool(scoring.get("implicit_moral_label", derive_implicit_moral_label(answers)))
+        ml = em or im
         pl = bool(scoring.get("procedural_label", derive_procedural_label(answers)))
         tl = bool(scoring.get("technical_label", derive_technical_label(answers)))
-        if mp:
-            moral_present_count += 1
-        if ml:
-            moral_label_count += 1
-        if pl:
-            procedural_label_count += 1
-        if tl:
-            technical_label_count += 1
+        if em: explicit_moral_count += 1
+        if im: implicit_moral_count += 1
+        if em and im: both_moral_count += 1
+        if ml: moral_label_count += 1
+        if pl: procedural_label_count += 1
+        if tl: technical_label_count += 1
         total += 1
     pct = {k: round(100 * v / total, 1) if total else 0.0 for k, v in counts.items()}
+    def p(n):
+        return round(100 * n / total, 1) if total else 0.0
     return {
         "counts": dict(counts),
         "percentages": pct,
-        "moral_present_count": moral_present_count,
-        "moral_present_percentage": round(100 * moral_present_count / total, 1) if total else 0.0,
+        "explicit_moral_count": explicit_moral_count,
+        "explicit_moral_percentage": p(explicit_moral_count),
+        "implicit_moral_count": implicit_moral_count,
+        "implicit_moral_percentage": p(implicit_moral_count),
+        "both_moral_count": both_moral_count,
+        "both_moral_percentage": p(both_moral_count),
         "moral_label_count": moral_label_count,
-        "moral_label_percentage": round(100 * moral_label_count / total, 1) if total else 0.0,
+        "moral_label_percentage": p(moral_label_count),
+        "moral_present_count": moral_label_count,  # back-compat
+        "moral_present_percentage": p(moral_label_count),  # back-compat
         "procedural_label_count": procedural_label_count,
-        "procedural_label_percentage": round(100 * procedural_label_count / total, 1) if total else 0.0,
+        "procedural_label_percentage": p(procedural_label_count),
         "technical_label_count": technical_label_count,
-        "technical_label_percentage": round(100 * technical_label_count / total, 1) if total else 0.0,
+        "technical_label_percentage": p(technical_label_count),
         "total": total,
     }
 def load_scored_cache(cache_dir="analysis/classification"):
@@ -365,8 +414,9 @@ def summarize_directory(directory):
         from collections import Counter as _C
         deduped_classes = _C(g["classification"] for g in groups)
         deduped_total = len(groups)
-        moral_present_n = sum(1 for g in groups if g["moral_present"])
-        moral_label_n = sum(1 for g in groups if g.get("moral_label", g["moral_present"]))
+        explicit_moral_n = sum(1 for g in groups if g.get("explicit_moral_label", False))
+        implicit_moral_n = sum(1 for g in groups if g.get("implicit_moral_label", False))
+        moral_label_n = sum(1 for g in groups if g.get("moral_label", g.get("moral_present", False)))
         procedural_label_n = sum(1 for g in groups if g.get("procedural_label", False))
         technical_label_n = sum(1 for g in groups if g.get("technical_label", False))
 
@@ -381,13 +431,15 @@ def summarize_directory(directory):
             "n_raw": total,
             "n_dedup": deduped_total,
             "PrimMoral": dedup_pct.get("Moral", 0.0),
+            "ExplM": round(100 * explicit_moral_n / deduped_total, 1) if deduped_total else 0.0,
+            "ImplM": round(100 * implicit_moral_n / deduped_total, 1) if deduped_total else 0.0,
             "MoralL": round(100 * moral_label_n / deduped_total, 1) if deduped_total else 0.0,
             "ProcL": round(100 * procedural_label_n / deduped_total, 1) if deduped_total else 0.0,
             "TechL": round(100 * technical_label_n / deduped_total, 1) if deduped_total else 0.0,
             "Non": dedup_pct.get("None", 0.0),
         })
 
-    header = f"{'Source':<50} {'Nraw':>5} {'Ndup':>5} {'PrimMor':>8} {'MoralL':>7} {'ProcL':>6} {'TechL':>6} {'None':>6}"
+    header = f"{'Source':<50} {'Nraw':>5} {'Ndup':>5} {'PrimMor':>8} {'ExplM':>6} {'ImplM':>6} {'MoralL':>7} {'ProcL':>6} {'TechL':>6}"
     print(header)
     print("-" * len(header))
     for r in rows:
@@ -395,14 +447,16 @@ def summarize_directory(directory):
         if len(label) > 50:
             label = label[:47] + "..."
         print(f"{label:<50} {r['n_raw']:>5} {r['n_dedup']:>5} {r['PrimMoral']:>8.1f} "
-              f"{r['MoralL']:>7.1f} {r['ProcL']:>6.1f} {r['TechL']:>6.1f} {r['Non']:>6.1f}")
+              f"{r['ExplM']:>6.1f} {r['ImplM']:>6.1f} {r['MoralL']:>7.1f} {r['ProcL']:>6.1f} {r['TechL']:>6.1f}")
     print()
     print("Nraw   = raw norm count (parsed numbered items)")
     print("Ndup   = deduped norm groups")
-    print("PrimMor = Primary classification (biased: any T/P fires first)")
-    print("MoralL = Multi-label: % with moral content present (M1-M4 all fire)")
-    print("ProcL  = Multi-label: % with procedural content present (any P fires)")
-    print("TechL  = Multi-label: % with technical content present (any T fires)")
+    print("PrimMor = Priority classification (back-compat)")
+    print("ExplM  = Explicit moral: % with E1-E4 fires (norm NAMES a moral concept)")
+    print("ImplM  = Implicit moral: % with I1-I4 fires (procedure EXPRESSES a moral commitment)")
+    print("MoralL = Either explicit OR implicit moral content present")
+    print("ProcL  = Procedural: % with P1-P4 fires (3 of 4, P1 essential)")
+    print("TechL  = Technical: % with T1-T4 fires (3 of 4, T1 essential)")
     print("Labels are independent; a norm can have multiple labels.")
 
 def dedup_classification_results(results):
@@ -417,8 +471,9 @@ def dedup_classification_results(results):
         scoring = r.get("scoring", {})
         cls = scoring.get("classification", "Invalid")
         answers = scoring.get("answers", {})
-        mp = bool(scoring.get("moral_present", derive_moral_present(answers)))
-        ml = bool(scoring.get("moral_label", derive_moral_label(answers)))
+        em = bool(scoring.get("explicit_moral_label", derive_explicit_moral_label(answers)))
+        im = bool(scoring.get("implicit_moral_label", derive_implicit_moral_label(answers)))
+        ml = em or im
         pl = bool(scoring.get("procedural_label", derive_procedural_label(answers)))
         tl = bool(scoring.get("technical_label", derive_technical_label(answers)))
         key = title_key(norm)
@@ -428,8 +483,10 @@ def dedup_classification_results(results):
             "norm_index": idx,
             "norm": norm,
             "classification": cls,
-            "moral_present": mp,
+            "explicit_moral_label": em,
+            "implicit_moral_label": im,
             "moral_label": ml,
+            "moral_present": ml,
             "procedural_label": pl,
             "technical_label": tl,
         })
@@ -438,7 +495,8 @@ def dedup_classification_results(results):
     for key, items in groups.items():
         cls_counter = Counter(i["classification"] for i in items)
         majority_cls = cls_counter.most_common(1)[0][0]
-        any_mp = any(i["moral_present"] for i in items)
+        any_em = any(i["explicit_moral_label"] for i in items)
+        any_im = any(i["implicit_moral_label"] for i in items)
         any_ml = any(i["moral_label"] for i in items)
         any_pl = any(i["procedural_label"] for i in items)
         any_tl = any(i["technical_label"] for i in items)
@@ -448,8 +506,10 @@ def dedup_classification_results(results):
             "source_indices": [i["norm_index"] for i in items],
             "classification": majority_cls,
             "classification_dispersion": dict(cls_counter),
-            "moral_present": any_mp,
+            "explicit_moral_label": any_em,
+            "implicit_moral_label": any_im,
             "moral_label": any_ml,
+            "moral_present": any_ml,
             "procedural_label": any_pl,
             "technical_label": any_tl,
             "variants": items,
