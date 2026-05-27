@@ -38,7 +38,7 @@ The single-agent baselines are listed below. Each item shows the agent and a num
 
 {baselines_block}
 
-For each baseline, determine whether it contains a norm or concept that is substantially similar to the deliberation norm. "Substantially similar" means the same underlying claim about what is required, permitted, owed, or forbidden, even if phrased differently or framed in different vocabulary. A baseline that mentions the topic but does not assert the same underlying claim is not a match.
+For each baseline, determine whether it contains a norm, concept, or combination of norms that articulates the same underlying claim as the deliberation norm. "Substantially similar" means the ethical claim or obligation expressed by the deliberation norm is captured by the baseline, whether through a single norm, a combination of multiple norms together, direct statement, or clear implication. The baseline does not need to use the same wording, conceptual framing, or order. It counts as a match if the underlying claim about what is required, permitted, owed, or forbidden is articulated, even if the baseline expresses it more narrowly, more broadly, or in different vocabulary. A baseline that mentions the topic only in passing without asserting any substantive claim is still not a match.
 
 For each match, quote the closest matching baseline text.
 

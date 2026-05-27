@@ -43,8 +43,13 @@ from analysis_shared import (
 
 MORAL_CONCEPTS = (
     "reciprocity, proportionality, sufficiency, harm-avoidance, equal "
-    "consideration, fair burden-sharing, vulnerability, consent, recognition, "
-    "dignity, autonomy-as-value, care, solidarity, gratitude, deserving, need"
+    "consideration, fair burden-sharing, fairness, vulnerability, consent, "
+    "recognition, dignity, autonomy-as-value, liberty, care, compassion, "
+    "empathy, solidarity, gratitude, deserving, need, honesty, truthfulness, "
+    "non-deception, humility, courage, patience, tolerance, open-mindedness, "
+    "loyalty, corrigibility, accountability, responsibility, beneficence, "
+    "fidelity, promise-keeping, integrity, justice, rights, trust, "
+    "trustworthiness, welfare, wellbeing, respect"
 )
 
 
@@ -123,6 +128,42 @@ def derive_moral_present(answers):
         return False
 
 
+
+def derive_moral_label(answers):
+    """True iff all four Moral criteria fire. Same as derive_moral_present
+    but named for clarity in the multi-label scheme."""
+    def y(key):
+        a = answers.get(key, {}).get("answer", "")
+        return str(a).strip().upper().startswith("Y")
+    try:
+        return all(y(k) for k in ("M1", "M2", "M3", "M4"))
+    except Exception:
+        return False
+
+
+def derive_procedural_label(answers):
+    """True iff any Procedural criterion fires. Does NOT subordinate to Moral
+    or Technical. A norm with both moral and procedural content has both labels."""
+    def y(key):
+        a = answers.get(key, {}).get("answer", "")
+        return str(a).strip().upper().startswith("Y")
+    try:
+        return any(y(k) for k in ("P1", "P2", "P3", "P4"))
+    except Exception:
+        return False
+
+
+def derive_technical_label(answers):
+    """True iff any Technical criterion fires. Does NOT subordinate to other labels."""
+    def y(key):
+        a = answers.get(key, {}).get("answer", "")
+        return str(a).strip().upper().startswith("Y")
+    try:
+        return any(y(k) for k in ("T1", "T2", "T3", "T4"))
+    except Exception:
+        return False
+
+
 def classify_norm(norm):
     """Single LLM call. Returns dict with scoring + derived classification."""
     prompt = CLASSIFY_PROMPT.format(norm=norm, moral_concepts=MORAL_CONCEPTS)
@@ -134,38 +175,64 @@ def classify_norm(norm):
                 "classification": "Invalid", "moral_present": False}
     classification = derive_classification(answers)
     moral_present = derive_moral_present(answers)
+    moral_label = derive_moral_label(answers)
+    procedural_label = derive_procedural_label(answers)
+    technical_label = derive_technical_label(answers)
     return {
         "answers": answers,
         "classification": classification,
         "moral_present": moral_present,
+        "moral_label": moral_label,
+        "procedural_label": procedural_label,
+        "technical_label": technical_label,
         "decomposition_note": answers.get("decomposition_note", ""),
     }
 
 
 def summarize_results(results):
-    """Compute counts by primary classification AND moral_present."""
+    """Compute counts by primary classification AND multi-label flags.
+
+    Multi-label labels are independent: a norm can be moral AND procedural AND
+    technical simultaneously. Primary classification is kept for back-compat but
+    is biased by the priority rule (any-T-or-P-first, then Moral).
+    """
     counts = Counter()
     moral_present_count = 0
+    moral_label_count = 0
+    procedural_label_count = 0
+    technical_label_count = 0
     total = 0
     for r in results:
         scoring = r.get("scoring")
         if not isinstance(scoring, dict):
             continue
         counts[scoring.get("classification", "Invalid")] += 1
-        if "moral_present" in scoring:
-            mp = bool(scoring["moral_present"])
-        else:
-            mp = derive_moral_present(scoring.get("answers", {}))
+        answers = scoring.get("answers", {})
+        mp = bool(scoring.get("moral_present", derive_moral_present(answers)))
+        ml = bool(scoring.get("moral_label", derive_moral_label(answers)))
+        pl = bool(scoring.get("procedural_label", derive_procedural_label(answers)))
+        tl = bool(scoring.get("technical_label", derive_technical_label(answers)))
         if mp:
             moral_present_count += 1
+        if ml:
+            moral_label_count += 1
+        if pl:
+            procedural_label_count += 1
+        if tl:
+            technical_label_count += 1
         total += 1
     pct = {k: round(100 * v / total, 1) if total else 0.0 for k, v in counts.items()}
-    moral_present_pct = round(100 * moral_present_count / total, 1) if total else 0.0
     return {
         "counts": dict(counts),
         "percentages": pct,
         "moral_present_count": moral_present_count,
-        "moral_present_percentage": moral_present_pct,
+        "moral_present_percentage": round(100 * moral_present_count / total, 1) if total else 0.0,
+        "moral_label_count": moral_label_count,
+        "moral_label_percentage": round(100 * moral_label_count / total, 1) if total else 0.0,
+        "procedural_label_count": procedural_label_count,
+        "procedural_label_percentage": round(100 * procedural_label_count / total, 1) if total else 0.0,
+        "technical_label_count": technical_label_count,
+        "technical_label_percentage": round(100 * technical_label_count / total, 1) if total else 0.0,
         "total": total,
     }
 def load_scored_cache(cache_dir="analysis/classification"):
@@ -276,8 +343,8 @@ def score_baselines(baselines_dir, prompt_id):
 
 
 def summarize_directory(directory):
-    """Aggregate every classification_*.json file. Shows Primary Moral
-    (rubric strict) and Moral Present (M1-M4 all Y regardless of T/P)."""
+    """Aggregate every classification_*.json file. Shows multi-label flags
+    (MoralL, ProcL, TechL) alongside the primary classification."""
     directory = Path(directory)
     files = sorted(directory.glob("classification_*.json"))
     if not files:
@@ -294,51 +361,54 @@ def summarize_directory(directory):
             continue
         results = data.get("results", [])
         groups = dedup_classification_results(results) if results else []
-        moral_present_n = sum(1 for g in groups if g["moral_present"])
+
         from collections import Counter as _C
         deduped_classes = _C(g["classification"] for g in groups)
         deduped_total = len(groups)
+        moral_present_n = sum(1 for g in groups if g["moral_present"])
+        moral_label_n = sum(1 for g in groups if g.get("moral_label", g["moral_present"]))
+        procedural_label_n = sum(1 for g in groups if g.get("procedural_label", False))
+        technical_label_n = sum(1 for g in groups if g.get("technical_label", False))
+
         s = data.get("summary", {})
-        pct = s.get("percentages", {})
         total = s.get("total", 0)
-        moral_present_pct = round(100 * moral_present_n / total, 1) if total else 0.0
+
         dedup_pct = {k: round(100 * v / deduped_total, 1) if deduped_total else 0.0
                      for k, v in deduped_classes.items()}
-        moral_present_pct_dedup = round(100 * moral_present_n / deduped_total, 1) if deduped_total else 0.0
         rows.append({
             "source_type": data.get("source_type", "?"),
             "source": data.get("source") or data.get("prompt_id", "?"),
             "n_raw": total,
             "n_dedup": deduped_total,
             "PrimMoral": dedup_pct.get("Moral", 0.0),
-            "MoralPres": moral_present_pct_dedup,
-            "Proc": dedup_pct.get("Procedural", 0.0),
-            "Tech": dedup_pct.get("Technical", 0.0),
+            "MoralL": round(100 * moral_label_n / deduped_total, 1) if deduped_total else 0.0,
+            "ProcL": round(100 * procedural_label_n / deduped_total, 1) if deduped_total else 0.0,
+            "TechL": round(100 * technical_label_n / deduped_total, 1) if deduped_total else 0.0,
             "Non": dedup_pct.get("None", 0.0),
-            "Inv": dedup_pct.get("Invalid", 0.0),
         })
 
-    header = f"{'Source':<50} {'Nraw':>5} {'Ndup':>5} {'PrimMor':>8} {'MorPres':>8} {'Proc':>7} {'Tech':>7} {'None':>7} {'Inv':>5}"
+    header = f"{'Source':<50} {'Nraw':>5} {'Ndup':>5} {'PrimMor':>8} {'MoralL':>7} {'ProcL':>6} {'TechL':>6} {'None':>6}"
     print(header)
     print("-" * len(header))
     for r in rows:
         label = f"{r['source_type']}: {Path(r['source']).name if r['source_type']=='transcript' else r['source']}"
         if len(label) > 50:
             label = label[:47] + "..."
-        print(f"{label:<50} {r['n_raw']:>5} {r['n_dedup']:>5} {r['PrimMoral']:>8.1f} {r['MoralPres']:>8.1f} "
-              f"{r['Proc']:>7.1f} {r['Tech']:>7.1f} {r['Non']:>7.1f} {r['Inv']:>5.1f}")
+        print(f"{label:<50} {r['n_raw']:>5} {r['n_dedup']:>5} {r['PrimMoral']:>8.1f} "
+              f"{r['MoralL']:>7.1f} {r['ProcL']:>6.1f} {r['TechL']:>6.1f} {r['Non']:>6.1f}")
     print()
-    print("Nraw  = raw norm count (parsed numbered items)")
-    print("Ndup  = deduped norm groups (after title-based collapsing)")
-    print("Percentages are computed against Ndup, not Nraw.")
-    print("PrimMor = Primary Moral (rubric strict: no T/P fires, all M fire)")
-    print("MorPres = Moral Present (all four M fire, regardless of T/P)")
-
+    print("Nraw   = raw norm count (parsed numbered items)")
+    print("Ndup   = deduped norm groups")
+    print("PrimMor = Primary classification (biased: any T/P fires first)")
+    print("MoralL = Multi-label: % with moral content present (M1-M4 all fire)")
+    print("ProcL  = Multi-label: % with procedural content present (any P fires)")
+    print("TechL  = Multi-label: % with technical content present (any T fires)")
+    print("Labels are independent; a norm can have multiple labels.")
 
 def dedup_classification_results(results):
     """Group classification results by title_key. Returns list of groups with
     representative norm text, source indices, majority classification, and
-    'any-variant' moral_present flag."""
+    'any-variant' multi-label flags (moral, procedural, technical)."""
     from collections import Counter, defaultdict
     groups = defaultdict(list)
     for r in results:
@@ -346,10 +416,11 @@ def dedup_classification_results(results):
         norm = r.get("norm", "")
         scoring = r.get("scoring", {})
         cls = scoring.get("classification", "Invalid")
-        if "moral_present" in scoring:
-            mp = bool(scoring["moral_present"])
-        else:
-            mp = derive_moral_present(scoring.get("answers", {}))
+        answers = scoring.get("answers", {})
+        mp = bool(scoring.get("moral_present", derive_moral_present(answers)))
+        ml = bool(scoring.get("moral_label", derive_moral_label(answers)))
+        pl = bool(scoring.get("procedural_label", derive_procedural_label(answers)))
+        tl = bool(scoring.get("technical_label", derive_technical_label(answers)))
         key = title_key(norm)
         if not key or len(key) < 4:
             key = norm.lower()[:60]
@@ -358,6 +429,9 @@ def dedup_classification_results(results):
             "norm": norm,
             "classification": cls,
             "moral_present": mp,
+            "moral_label": ml,
+            "procedural_label": pl,
+            "technical_label": tl,
         })
 
     out = []
@@ -365,6 +439,9 @@ def dedup_classification_results(results):
         cls_counter = Counter(i["classification"] for i in items)
         majority_cls = cls_counter.most_common(1)[0][0]
         any_mp = any(i["moral_present"] for i in items)
+        any_ml = any(i["moral_label"] for i in items)
+        any_pl = any(i["procedural_label"] for i in items)
+        any_tl = any(i["technical_label"] for i in items)
         out.append({
             "dedup_key": key,
             "representative_norm": items[0]["norm"],
@@ -372,6 +449,9 @@ def dedup_classification_results(results):
             "classification": majority_cls,
             "classification_dispersion": dict(cls_counter),
             "moral_present": any_mp,
+            "moral_label": any_ml,
+            "procedural_label": any_pl,
+            "technical_label": any_tl,
             "variants": items,
         })
     return out
