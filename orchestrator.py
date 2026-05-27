@@ -46,6 +46,36 @@ genuinely have more to contribute, not on whether ending the \
 deliberation would be convenient."""
 
 
+READY_CHECK_INSTRUCTION_WITH_REFLECTION = """\
+[Facilitator] Before we proceed to round {next_round}, the group will \
+take a ready-check that includes a brief self-assessment. Each agent in \
+turn should respond to the following:
+
+1. CHARACTERIZE: Briefly characterize what kind of content the panel \
+has produced so far. Is it moral principles, procedural mechanisms, \
+technical infrastructure, or some mix? Be specific about the balance.
+
+2. ASSESS: Is the trajectory of the deliberation the right one for the \
+original question the panel was given, or has the panel drifted away \
+from the substance of what was asked?
+
+3. CORRECT (if applicable): If you believe the panel has drifted, name \
+the drift specifically and propose a course correction. If you believe \
+the trajectory is correct, say so.
+
+4. VOTE: End your response with either READY (deliberation has reached \
+substantive contribution and is ready for the outcome statement, OR any \
+identified drift has been adequately addressed) or NOT READY (further \
+substantive contribution OR drift correction is needed in additional \
+rounds). Place the vote on its own line.
+
+If all six agents vote READY, the deliberation will skip directly to \
+the outcome statement. If any agent votes NOT READY, the deliberation \
+will continue into round {next_round}. Vote based on whether you \
+genuinely have more to contribute, not on whether ending the \
+deliberation would be convenient."""
+
+
 @dataclass
 class Turn:
     round_index: int
@@ -126,6 +156,7 @@ def run_deliberation(
     api_key, agents, scenario_key, normgen,
     rounds=5, out_path=None, verbose=True,
     enable_ready_check=True, ready_check_max_tokens=150,
+    self_reflection=False,
 ):
     n_agents = len(agents)
 
@@ -154,6 +185,7 @@ def run_deliberation(
                 "leadoff_rotation": "round_index mod n_agents",
                 "leadoff_per_round": [agents[leadoff_for_round(r)].agent_id for r in range(rounds + 1)],
                 "ready_check_enabled": enable_ready_check,
+                "self_reflection": self_reflection,
                 "ready_check_after_rounds": sorted(READY_CHECK_AFTER_ROUNDS),
                 "ready_check_log": ready_check_log,
                 "stopped_early_after_round": stopped_early_after_round,
@@ -190,7 +222,7 @@ def run_deliberation(
         try:
             text, usage, elapsed = _one_call(
                 api_key=api_key, agent=agent, messages=messages,
-                max_tokens_override=ready_check_max_tokens if is_ready_check else None,
+                max_tokens_override=(ready_check_max_tokens * 5 if self_reflection else ready_check_max_tokens) if is_ready_check else None,
             )
         except Exception as e:
             text = f"[API error during this turn: {e}]"
@@ -224,7 +256,12 @@ def run_deliberation(
     def run_ready_check(after_round_1_based):
         next_round_0_based = after_round_1_based
         order = turn_order_for_round(next_round_0_based)
-        check_text = READY_CHECK_INSTRUCTION.format(next_round=after_round_1_based + 1)
+        if self_reflection:
+            check_text = READY_CHECK_INSTRUCTION_WITH_REFLECTION.format(
+                next_round=after_round_1_based + 1)
+        else:
+            check_text = READY_CHECK_INSTRUCTION.format(
+                next_round=after_round_1_based + 1)
         if verbose:
             print(f"\n--- Ready-check after Round {after_round_1_based} (leadoff: {order[0].display_name}) ---")
         votes = []

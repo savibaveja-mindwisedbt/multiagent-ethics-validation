@@ -75,7 +75,8 @@ def run_all_baselines(api_key, only=None, mixed_model=False):
                       mixed_model=mixed_model)
 
 
-def run_all_deliberations(api_key, only=None, mixed_model=False, normgen_only=False):
+def run_all_deliberations(api_key, only=None, mixed_model=False, normgen_only=False,
+                            self_reflection=False):
     keys = only if only else SCENARIO_KEYS
     panel = build_mixed_panel() if mixed_model else build_panel()
     panel_tag = "mixed" if mixed_model else "samemodel"
@@ -91,13 +92,15 @@ def run_all_deliberations(api_key, only=None, mixed_model=False, normgen_only=Fa
         for normgen in conditions:
             cond_label = "normgen" if normgen else "nonorm"
             stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+            reflect_tag = "_reflect" if self_reflection else ""
             out_path = (TRANSCRIPTS_DIR /
-                        f"deliberation_{k}_{cond_label}_{panel_tag}_rotleadoff_{stamp}.json")
+                        f"deliberation_{k}_{cond_label}_{panel_tag}_rotleadoff{reflect_tag}_{stamp}.json")
             print(f"\n=== Scenario {k}, {cond_label}, {panel_tag} panel ===")
             print(f"Saving to {out_path}")
             run_deliberation(
                 api_key=api_key, agents=panel, scenario_key=k,
                 normgen=normgen, rounds=5, out_path=out_path, verbose=True,
+                self_reflection=self_reflection,
             )
 
 
@@ -112,6 +115,9 @@ def main():
                         help="Use the heterogeneous Phase 2 panel.")
     parser.add_argument("--normgen-only", action="store_true",
                         help="Skip the no-norm condition; run only the norm-generating condition.")
+    parser.add_argument("--self-reflection", action="store_true",
+                        help="Use the self-reflection ready-check that asks agents to "
+                             "characterize and assess deliberation trajectory before voting.")
     args = parser.parse_args()
 
     only_keys = [k.strip().upper() for k in args.only.split(",") if k.strip()] or None
@@ -160,7 +166,8 @@ def main():
 
     if do_deliberations:
         print("\nStage 2: Running deliberations.")
-        run_all_deliberations(api_key, only=only, mixed_model=args.mixed_model, normgen_only=args.normgen_only)
+        run_all_deliberations(api_key, only=only, mixed_model=args.mixed_model,
+                              normgen_only=args.normgen_only, self_reflection=args.self_reflection)
 
     print("\nDone.")
     return 0
