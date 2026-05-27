@@ -157,6 +157,7 @@ def run_deliberation(
     rounds=5, out_path=None, verbose=True,
     enable_ready_check=True, ready_check_max_tokens=150,
     self_reflection=False,
+    no_consensus_outcome=False,
 ):
     n_agents = len(agents)
 
@@ -168,7 +169,7 @@ def run_deliberation(
         return agents[start:] + agents[:start]
 
     scenario_prompt = build_scenario_prompt(scenario_key, normgen)
-    outcome_instruction = build_outcome_instruction(scenario_key, normgen)
+    outcome_instruction = build_outcome_instruction(scenario_key, normgen, no_consensus_outcome=no_consensus_outcome)
 
     transcript = []
     turn_counter = 0
@@ -186,6 +187,7 @@ def run_deliberation(
                 "leadoff_per_round": [agents[leadoff_for_round(r)].agent_id for r in range(rounds + 1)],
                 "ready_check_enabled": enable_ready_check,
                 "self_reflection": self_reflection,
+                "no_consensus_outcome": no_consensus_outcome,
                 "ready_check_after_rounds": sorted(READY_CHECK_AFTER_ROUNDS),
                 "ready_check_log": ready_check_log,
                 "stopped_early_after_round": stopped_early_after_round,

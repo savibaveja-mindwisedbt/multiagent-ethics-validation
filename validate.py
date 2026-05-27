@@ -76,7 +76,7 @@ def run_all_baselines(api_key, only=None, mixed_model=False):
 
 
 def run_all_deliberations(api_key, only=None, mixed_model=False, normgen_only=False,
-                            self_reflection=False):
+                            self_reflection=False, no_consensus_outcome=False):
     keys = only if only else SCENARIO_KEYS
     panel = build_mixed_panel() if mixed_model else build_panel()
     panel_tag = "mixed" if mixed_model else "samemodel"
@@ -93,14 +93,16 @@ def run_all_deliberations(api_key, only=None, mixed_model=False, normgen_only=Fa
             cond_label = "normgen" if normgen else "nonorm"
             stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
             reflect_tag = "_reflect" if self_reflection else ""
+            consensus_tag = "_noconsensus" if no_consensus_outcome else ""
             out_path = (TRANSCRIPTS_DIR /
-                        f"deliberation_{k}_{cond_label}_{panel_tag}_rotleadoff{reflect_tag}_{stamp}.json")
+                        f"deliberation_{k}_{cond_label}_{panel_tag}_rotleadoff{reflect_tag}{consensus_tag}_{stamp}.json")
             print(f"\n=== Scenario {k}, {cond_label}, {panel_tag} panel ===")
             print(f"Saving to {out_path}")
             run_deliberation(
                 api_key=api_key, agents=panel, scenario_key=k,
                 normgen=normgen, rounds=5, out_path=out_path, verbose=True,
                 self_reflection=self_reflection,
+                no_consensus_outcome=no_consensus_outcome,
             )
 
 
@@ -118,6 +120,11 @@ def main():
     parser.add_argument("--self-reflection", action="store_true",
                         help="Use the self-reflection ready-check that asks agents to "
                              "characterize and assess deliberation trajectory before voting.")
+    parser.add_argument("--no-consensus-outcome", action="store_true",
+                        help="Each agent states their own final norm list rather than "
+                             "the consortium's consolidated norms. Tests whether the "
+                             "convergence we observe is genuine persuasion or "
+                             "structural sycophancy.")
     args = parser.parse_args()
 
     only_keys = [k.strip().upper() for k in args.only.split(",") if k.strip()] or None
@@ -167,7 +174,9 @@ def main():
     if do_deliberations:
         print("\nStage 2: Running deliberations.")
         run_all_deliberations(api_key, only=only, mixed_model=args.mixed_model,
-                              normgen_only=args.normgen_only, self_reflection=args.self_reflection)
+                              normgen_only=args.normgen_only,
+                              self_reflection=args.self_reflection,
+                              no_consensus_outcome=args.no_consensus_outcome)
 
     print("\nDone.")
     return 0
