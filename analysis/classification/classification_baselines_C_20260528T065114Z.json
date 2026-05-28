@@ -1,0 +1,1052 @@
+{
+  "source_type": "baselines",
+  "baselines_dir": "baselines_C_partition/",
+  "prompt_id": "C",
+  "analysis_model": "anthropic/claude-sonnet-4.6",
+  "norms_scored": 12,
+  "baselines_used": [
+    "baseline_C_run0_20260518T025907Z.json",
+    "baseline_C_run0_20260518T030536Z.json",
+    "baseline_C_run1_20260518T025942Z.json",
+    "baseline_C_run2_20260518T030019Z.json"
+  ],
+  "summary": {
+    "counts": {
+      "Moral": 1,
+      "Procedural": 8,
+      "Technical": 2,
+      "None": 1
+    },
+    "percentages": {
+      "Moral": 8.3,
+      "Procedural": 66.7,
+      "Technical": 16.7,
+      "None": 8.3
+    },
+    "explicit_moral_count": 4,
+    "explicit_moral_percentage": 33.3,
+    "implicit_moral_count": 10,
+    "implicit_moral_percentage": 83.3,
+    "both_moral_count": 4,
+    "both_moral_percentage": 33.3,
+    "moral_label_count": 10,
+    "moral_label_percentage": 83.3,
+    "moral_present_count": 10,
+    "moral_present_percentage": 83.3,
+    "procedural_label_count": 10,
+    "procedural_label_percentage": 83.3,
+    "technical_label_count": 2,
+    "technical_label_percentage": 16.7,
+    "total": 12
+  },
+  "results": [
+    {
+      "norm_index": 1,
+      "norm": "The blocking agent states its concern in explicit, falsifiable terms.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T025907Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses 'explicit' and 'falsifiable' but neither of these directly names a concept from the moral list; 'explicit' is a communication quality and 'falsifiable' is an epistemic standard, not a moral concept per se."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in terms connected to any concept on the moral list."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The implied reason for the norm is epistemic clarity and verifiability, not a named moral concept such as honesty or transparency\u2014though related, the norm does not appeal to these as foundational justifications."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is directly named or foundationally invoked, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural requirement: the blocking agent must state its concern in explicit, falsifiable terms, which is a rule of operation governing how objections are expressed."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring falsifiable, explicit statements operationalizes transparency and accountability\u2014the procedure ensures that concerns can be examined and tested rather than remaining vague or unverifiable, which is a recognizable commitment to transparency and accountability from the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014allowing the blocking agent to state concerns in vague or non-falsifiable terms\u2014would express no commitment to transparency or accountability, confirming the procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement for explicit, falsifiable terms is naturally defended by appeal to transparency and accountability rather than mere convenience or convention, since it enables others to evaluate and challenge the stated concern."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: the blocking agent must state its concern in explicit, falsifiable terms."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies who acts\u2014'the blocking agent'\u2014and specifies what that actor must do, establishing a role-based procedural requirement."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers this requirement or under what conditions it applies beyond the implicit context of a blocking action."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine what counts as 'explicit' and 'falsifiable' in a given context, so the procedure cannot be executed purely as written without additional judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic operations."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is about communication practice, not technical execution."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it only requires a communicative act of stating a concern in a particular form."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through ordinary language and deliberative practice without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is a single unified claim about how a blocking agent must express its concern; no decomposition is necessary."
+        },
+        "classification": "Moral",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm is a single unified claim about how a blocking agent must express its concern; no decomposition is necessary."
+      }
+    },
+    {
+      "norm_index": 2,
+      "norm": "The VA responds directly to each stated concern.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T025907Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name any concept from the list; it describes a response behavior without invoking moral vocabulary such as respect, accountability, or fairness."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom in moral terms; it describes a procedural expectation about addressing concerns without framing it as a moral debt or wrong."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The implied reason for the norm is effective communication or thoroughness, not a named moral concept from the list."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: the VA must respond directly to each stated concern, implying a structured, item-by-item response process."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Responding directly to each stated concern operationalizes recognition and voice\u2014each concern raised by a participant is acknowledged and addressed, expressing the moral commitment that each person's input deserves individual consideration."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as giving a general summary response or selectively addressing only some concerns\u2014would express indifference to individual voice and recognition, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement to address each concern individually can be defended by appeal to recognition and voice (each concern deserves acknowledgment), not merely by efficiency or convention, since a general response would often be more efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: the VA must respond directly to each stated concern."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (the VA) and implicitly what action is required (direct response to each concern), though timing is not specified."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies when concerns are stated, i.e., when participants raise concerns."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need to interpret what counts as a 'stated concern' and what constitutes a 'direct' response, requiring some judgment beyond purely mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is about communicative behavior."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities; it could be fulfilled through natural language conversation."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable without any technical infrastructure, relying only on communicative practice."
+          },
+          "decomposition_note": "The norm is a single claim about the VA's response behavior and does not require decomposition."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is a single claim about the VA's response behavior and does not require decomposition."
+      }
+    },
+    {
+      "norm_index": 3,
+      "norm": "The remaining four agents each register a view on whether the concern is well-founded.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T025907Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name any concept from the list; it only describes agents registering a view on whether a concern is well-founded."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging anyone in moral terms."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the procedure appears to be coordination and deliberation, not an appeal to any named moral concept."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: each of the remaining four agents registers a view on a concern."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring all four agents to register a view operationalizes 'equal consideration' and 'voice'\u2014each participant's perspective is solicited rather than allowing some to be silent or excluded."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative could allow a single spokesperson or majority vote without individual registration, which would express a different or weaker commitment to equal voice."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement that each agent individually registers a view is defensible by appeal to equal consideration and voice, not merely by convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a process: each of the four agents registers a view on whether a concern is well-founded."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (the remaining four agents) and what action they take (registering a view)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies when a concern has been raised and the four remaining agents are to evaluate it."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the procedure\u2014identify the four agents, prompt each to register a view on the concern\u2014without needing further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'registering a view' is described in plain procedural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities like persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through non-technical means such as verbal or written statements without any referenced technical infrastructure."
+          },
+          "decomposition_note": "The norm is a single procedural claim about four agents registering views; no decomposition is necessary."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is a single procedural claim about four agents registering views; no decomposition is necessary."
+      }
+    },
+    {
+      "norm_index": 4,
+      "norm": "If three or more of the non-blocking, non-VA agents agree the concern is well-founded, revision is mandatory.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T025907Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses no terms from the list; 'well-founded' and 'mandatory' are procedural/epistemic terms, not named moral concepts from the list."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in terms connected to any listed moral concept."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The implied reason for the rule is coordination and decision-making efficiency (majority agreement triggers action), not an appeal to any listed moral concept."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: a threshold vote (three or more non-blocking, non-VA agents agreeing) that triggers a mandatory revision requirement."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism operationalizes corrigibility\u2014the system is structured so that sufficient peer agreement that a concern is well-founded compels revision, expressing a commitment to being correctable by collective judgment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative (e.g., unanimous consent required, or agreement being merely advisory) would express a weaker or different commitment to corrigibility, or none at all."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The threshold-triggers-mandatory-revision structure is best defended by appeal to corrigibility\u2014ensuring the system can be corrected when peers identify a genuine problem\u2014rather than by mere convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: if a threshold is met, revision is mandatory."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (non-blocking, non-VA agents) and what role they play (agreeing on whether a concern is well-founded)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: three or more qualifying agents agreeing that the concern is well-founded activates the mandatory revision requirement."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute this procedure by counting qualifying agents who agree the concern is well-founded and, upon reaching three, mandating revision, without further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the procedure is purely organizational."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it could be executed through human deliberation alone."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm references no technical infrastructure, so it cannot be unimplementable without it."
+          },
+          "decomposition_note": "The norm is a single conditional rule; no decomposition needed."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is a single conditional rule; no decomposition needed."
+      }
+    },
+    {
+      "norm_index": 5,
+      "norm": "If the concern remains unresolved after one revision cycle, the response is **withheld** and the question is returned to the community with an honest explanation that the consortium cannot yet provide a reliable answer on this question.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T025907Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly uses 'honest explanation,' invoking honesty as a named moral concept from the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to the community: an honest explanation of the consortium's limitations, connecting to honesty and non-deception as obligations owed to questioners."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for returning the question with an explanation is honesty\u2014the community deserves a truthful account of the consortium's epistemic limits, not merely a convenient or efficient outcome."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The commitment to honesty when one cannot reliably answer a question carries over meaningfully to any cooperative or advisory situation beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: withholding the response and returning the question to the community after one unresolved revision cycle."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of withholding rather than publishing an unreliable answer operationalizes non-deception and intellectual humility\u2014specifically, it prevents misleading the community with a response the consortium cannot stand behind."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative would be to publish the best available answer with a caveat, or to simply discard the question silently, both of which would express different or weaker commitments to honesty and transparency."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The choice to withhold and explain is naturally defended by appeal to honesty and non-deception\u2014publishing an unreliable answer would deceive the community\u2014not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: if unresolved after one revision cycle, withhold the response and return the question to the community."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the consortium as the acting party and the community as the recipient, specifying the roles involved in the procedure."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the concern remains unresolved after one revision cycle."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps as written\u2014check if concern is resolved after one revision cycle; if not, withhold the response and return the question to the community with an honest explanation\u2014without needing further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; withholding and returning a question are organizational actions, not technical ones."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities such as persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human organizational processes without any referenced technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable actions\u2014(1) withholding the response and (2) returning the question with an honest explanation\u2014but both are triggered by the same condition and serve the same moral commitment, so they are scored as a unified dominant claim."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable actions\u2014(1) withholding the response and (2) returning the question with an honest explanation\u2014but both are triggered by the same condition and serve the same moral commitment, so they are scored as a unified dominant claim."
+      }
+    },
+    {
+      "norm_index": 6,
+      "norm": "Persistent escalation patterns (same agent blocking repeatedly, same area generating repeated blocks) are logged and trigger a governance review. For questions flagged as urgent (safety risk, time-sensitive decision): - Review window compresses to 5 minutes. - A block still halts release, but the blocking agent must state its concern within 2 minutes or the block lapses. - Agent F may release a response marked **\"preliminary \u2014 under review\"** if the VA and at least two RAs approve and urgency is confirmed. These norms govern both the initial assignment decision and the ongoing collaboration. They are proposed as binding on all six agents and revisable only by the process described in Norm 9. No agent may draft or approve a response it believes to be false, misleading, or materially incomplete. Consensus does not launder error. A response approved by all six agents is not thereby made true. Each agent retains individual responsibility for what it approves. *Implication:* An agent that approves a response it privately doubts has violated this norm, even if it did not block. The consortium exists to serve the community, not to protect its own coherence, reputation, or efficiency. When the community's genuine interests conflict with consortium convenience, the community's interests prevail. This includes the interest in being told \"we don't know\" or \"you should seek human expertise.\" Every response must accurately represent the confidence level of the answer. Uncertainty must be named. The existence of the review process need not be disclosed in every response, but the consortium must never claim a certainty it does not have, and must never deny the review process if asked directly. Assignment to an area gives the VA drafting authority and public-facing responsibility. It does not give the VA veto power over reviewer concerns, immunity from revision, or the right to treat its area as",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T025907Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names or clearly invokes multiple listed concepts: honesty/truthfulness ('no agent may draft or approve a response it believes to be false, misleading'), non-deception ('must never claim a certainty it does not have'), accountability ('each agent retains individual responsibility'), integrity ('an agent that approves a response it privately doubts has violated this norm'), transparency ('must never deny the review process if asked directly'), and welfare/common good ('the consortium exists to serve the community')."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to whom: agents owe the community honest representation of uncertainty and genuine service of its interests; agents owe each other non-deceptive approval; and the community is owed truthful, non-misleading responses \u2014 connecting directly to honesty, accountability, and non-deception."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reasons for the procedural rules appeal directly to honesty, integrity, and the community's welfare ('consensus does not launder error,' 'the community's genuine interests prevail'), not merely to coordination efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Concepts like individual accountability for what one approves, non-deception, and prioritizing the served community's interests over institutional convenience are broadly applicable moral commitments that transfer meaningfully to any cooperative advisory or deliberative context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: escalation logging triggering governance review, compressed review windows for urgent questions, a 2-minute lapse rule for blocks, and a conditional preliminary-release pathway requiring VA plus two RA approvals."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The 2-minute lapse rule for blocks operationalizes accountability and voice \u2014 a blocking agent must articulate its concern or lose standing, expressing the commitment that blocking power must be exercised responsibly and transparently rather than used as a veto without justification."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative \u2014 allowing silent blocks to persist indefinitely \u2014 would express no accountability commitment or would express a different one (deference to any dissent regardless of justification), confirming the current choice is meaningfully expressive of accountability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The lapse rule can be defended by appeal to accountability and non-domination: an agent should not be able to block community-serving responses without being answerable for its concern, and this defense is moral rather than merely one of efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple concrete processes: logging escalation patterns, triggering governance review, compressing review windows to 5 minutes, requiring concern statements within 2 minutes, and a conditional preliminary-release pathway."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm names specific roles (Agent F, VA, RAs) and assigns specific actions and timing to each (Agent F may release preliminary responses; blocking agent must state concern within 2 minutes; VA and at least two RAs must approve for preliminary release)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: persistent escalation patterns trigger governance review; urgency flags (safety risk, time-sensitive decision) trigger the compressed review window and preliminary-release pathway."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could largely execute the procedure as written \u2014 log repeated blocks, compress window to 5 minutes on urgency flag, lapse a block if no concern stated within 2 minutes, release preliminary response if VA plus two RAs approve \u2014 without needing additional moral interpretation beyond identifying the named roles."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly references logs ('are logged') as technical infrastructure for recording persistent escalation patterns, which is a specific technical artifact requiring persistent storage."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Implementing the logging of escalation patterns and triggering governance review requires technical capability to record, track, and pattern-match agent blocking behavior over time."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (to maintain logs across interactions and detect repeated patterns) and likely some form of structured data to identify same-agent or same-area blocking patterns."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While logging is referenced, the core normative obligations (individual responsibility, non-deception, urgency procedures, preliminary release conditions) could be implemented through manual human oversight processes without the specific logging infrastructure, so the norm is not fully unimplementable without it."
+          },
+          "decomposition_note": "This norm is highly compound, containing at least five separable claims: (1) escalation logging and governance review, (2) urgent-question compressed procedures, (3) individual agent responsibility for approvals, (4) community-over-consortium priority, and (5) confidence/uncertainty representation requirements. Scoring reflects the dominant and most morally substantive claims, particularly the individual accountability and non-deception provisions, while also capturing the procedural and technical elements present in the escalation and urgency mechanisms."
+        },
+        "classification": "Technical",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": true,
+        "decomposition_note": "This norm is highly compound, containing at least five separable claims: (1) escalation logging and governance review, (2) urgent-question compressed procedures, (3) individual agent responsibility for approvals, (4) community-over-consortium priority, and (5) confidence/uncertainty representation requirements. Scoring reflects the dominant and most morally substantive claims, particularly the individual accountability and non-deception provisions, while also capturing the procedural and technical elements present in the escalation and urgency mechanisms."
+      }
+    },
+    {
+      "norm_index": 7,
+      "norm": "INTAKE        User question arrives \u2192 Consensus Coordinator (Agent F) classifies area, confirms or adjudicates boundary cases.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T030536Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no concept from the list; 'Consensus Coordinator' contains 'consensus' but that is not on the list, and no other moral concept is directly invoked."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging anyone in terms connected to any listed moral concept."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the procedure is coordination and routing efficiency, not any moral concept from the list."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: user question arrives, is classified by Agent F, and boundary cases are confirmed or adjudicated."
+          },
+          "I2": {
+            "answer": "N",
+            "reasoning": "The procedure expresses a coordination and routing function; no specifically identifiable moral commitment from the list (such as fairness, due process, or impartiality) is operationalized\u2014classification and adjudication of boundary cases is better read as administrative efficiency."
+          },
+          "I3": {
+            "answer": "N",
+            "reasoning": "Because I2 fails, this counterfactual test is moot; the procedural choice does not express a moral commitment that an alternative would lack."
+          },
+          "I4": {
+            "answer": "N",
+            "reasoning": "The natural defense of this procedure is coordination and efficiency ('we need someone to route questions'), not a moral commitment from the list."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: intake of a user question triggers classification and adjudication of boundary cases."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm names a specific role (Consensus Coordinator, Agent F) as the actor responsible for classification and adjudication."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: a user question arriving initiates the intake procedure."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps\u2014wait for a user question, have Agent F classify the area, and adjudicate boundary cases\u2014without additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references an agent role (Agent F) and a workflow step but no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm describes a human or agent workflow role, not a technical implementation."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented without any specific technical infrastructure, relying only on an agent or human performing a classification and adjudication role."
+          },
+          "decomposition_note": "The norm is a single compound claim combining a trigger event (user question arrives) and a procedural assignment (Agent F classifies and adjudicates); the dominant claim is the procedural routing mechanism, which was scored."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": false,
+        "moral_label": false,
+        "moral_present": false,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is a single compound claim combining a trigger event (user question arrives) and a procedural assignment (Agent F classifies and adjudicates); the dominant claim is the procedural routing mechanism, which was scored."
+      }
+    },
+    {
+      "norm_index": 8,
+      "norm": "DRAFT         Designated visible agent drafts a response.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T030536Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm contains no direct invocation of any moral concept from the list; 'designated,' 'visible,' 'agent,' 'drafts,' and 'response' are procedural/operational terms, not moral ones."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging anyone; it simply assigns a drafting task to a role."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The implied reason for the norm is coordination and role clarity, not any moral concept from the list."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing moral to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: a designated visible agent performs the drafting action."
+          },
+          "I2": {
+            "answer": "N",
+            "reasoning": "The procedural specification\u2014assigning drafting to a designated visible agent\u2014expresses role clarity and coordination efficiency, not a specifically identifiable moral commitment from the list such as accountability or transparency in any non-trivial sense."
+          },
+          "I3": {
+            "answer": "N",
+            "reasoning": "An alternative (e.g., any agent drafts, or drafting is collective) would differ in coordination efficiency rather than expressing a meaningfully different moral commitment."
+          },
+          "I4": {
+            "answer": "N",
+            "reasoning": "The natural defense of this procedural choice is coordination and efficiency ('we need one person to draft so work gets done'), not a moral commitment from the list."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a process: the designated visible agent drafts a response."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts\u2014the 'designated visible agent'\u2014assigning a clear role to the drafting action."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers the drafting procedure or under what conditions it applies; the trigger is implied by context but not stated."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without knowing who the 'designated visible agent' is, as that designation is not defined within the norm itself."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; drafting a response is a human communicative act."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is implementable without any technical infrastructure; it describes a human role-based drafting action."
+          },
+          "decomposition_note": "The norm is a single simple claim assigning a drafting task to a designated visible agent; no decomposition is needed."
+        },
+        "classification": "None",
+        "explicit_moral_label": false,
+        "implicit_moral_label": false,
+        "moral_label": false,
+        "moral_present": false,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm is a single simple claim assigning a drafting task to a designated visible agent; no decomposition is needed."
+      }
+    },
+    {
+      "norm_index": 9,
+      "norm": "REVIEW        All five non-drafting agents receive the draft privately. Each submits one of three verdicts: APPROVE  \u2013 no objection AMEND    \u2013 specific change requested (must be stated) BLOCK    \u2013 fundamental objection (must be stated with reasoning and a proposed alternative)",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T030536Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not directly name any concept from the list; terms like 'privately,' 'objection,' 'fundamental,' and 'alternative' are procedural descriptors, not moral concept names or clear synonyms from the list."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in terms connected to any listed moral concept."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedure appear to be coordination and deliberative efficiency rather than an appeal to a named moral concept from the list."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: private distribution of a draft, individual verdict submission, and a constrained three-option verdict structure with required justifications."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that all five non-drafting agents receive the draft and each submits a verdict operationalizes equal consideration and voice\u2014every participant has an equal, structured opportunity to influence the outcome, which is a recognizable moral commitment from the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014such as majority-vote without required reasoning, or allowing only senior agents to review\u2014would express a different or weaker commitment to equal consideration and voice, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement that every non-drafting agent participates equally and that BLOCK and AMEND verdicts must be substantiated can be defended by appeal to equal consideration and accountability rather than mere convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: private distribution, individual verdict submission, and a defined set of verdict options with associated requirements."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (all five non-drafting agents), what roles exist (reviewer vs. drafter), and the sequencing (draft distributed first, then verdicts submitted)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but clear: the procedure applies when a draft exists and is ready for review, as indicated by the heading 'REVIEW' and the reference to receiving 'the draft.'"
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps as written: identify the five non-drafting agents, send each the draft privately, collect one verdict per agent from the three defined options, and enforce the justification requirements for AMEND and BLOCK."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm does not reference any specific technical infrastructure such as logs, APIs, ledgers, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring technical capability; 'privately' implies confidentiality but does not specify a technical mechanism."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose specific technical capabilities; private communication and verdict collection could be executed through non-technical means."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm references no technical infrastructure, so it cannot be unimplementable without it; it could be executed via paper or verbal communication."
+          },
+          "decomposition_note": "The norm contains two separable elements: (1) the distribution mechanism (private receipt by all five non-drafting agents) and (2) the verdict structure (three options with justification requirements). Both are scored together as the dominant claim is the integrated review procedure."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable elements: (1) the distribution mechanism (private receipt by all five non-drafting agents) and (2) the verdict structure (three options with justification requirements). Both are scored together as the dominant claim is the integrated review procedure."
+      }
+    },
+    {
+      "norm_index": 10,
+      "norm": "RESOLUTION    Agent F collates verdicts. \u2022 All APPROVE \u2192 response sent. \u2022 One or more AMEND \u2192 visible agent revises; amended draft goes to a second review round (same process). \u2022 Any BLOCK \u2192 deliberation round (see below).",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T030536Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses terms like APPROVE, AMEND, BLOCK, and 'deliberation' but none of these directly name or clearly synonymize a concept from the moral list."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in terms connected to any listed moral concept."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedures are operational (what happens next given a verdict), not appeals to moral concepts like fairness or dignity."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: collation of verdicts by Agent F, branching rules for APPROVE/AMEND/BLOCK outcomes, and a second review round for amendments."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The BLOCK-triggers-deliberation and AMEND-triggers-revision structure operationalizes due process and voice, ensuring dissenting or corrective verdicts receive structured consideration rather than being overridden."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative where a single APPROVE suffices or where BLOCK is ignored would express no commitment to voice or due process, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement that any BLOCK triggers deliberation and any AMEND triggers revision can be defended by appeal to due process and voice\u2014each agent's objection must be heard\u2014rather than mere efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a complete resolution process with branching rules based on verdict types."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "Agent F is named as the collator, the 'visible agent' is named as the reviser, and roles in the second review round are referenced."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The procedure is triggered by the outcome of a verdict round (all APPROVE, one or more AMEND, or any BLOCK), making the trigger conditions explicit."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the branching logic as written\u2014check verdicts, apply the matching rule\u2014without needing additional moral interpretation, though 'deliberation round (see below)' references external detail."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability (e.g., specific software operations) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be executed by human agents following the rules without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing a collation role assignment, three branching outcome rules, and a reference to a downstream deliberation process. Scoring focuses on the dominant claim, which is the resolution/branching mechanism."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is compound, containing a collation role assignment, three branching outcome rules, and a reference to a downstream deliberation process. Scoring focuses on the dominant claim, which is the resolution/branching mechanism."
+      }
+    },
+    {
+      "norm_index": 11,
+      "norm": "DELIBERATION  (Triggered by BLOCK) Blocking agent states objection. Visible agent responds. All six agents discuss. Agent F proposes a synthesis. Second vote: APPROVE or BLOCK only (no further AMEND). \u2022 Majority APPROVE (4+) \u2192 synthesis sent. \u2022 Majority BLOCK (4+) \u2192 response withheld; community receives a transparent holding message (see norm 7). \u2022 Tie (3/3) \u2192 response withheld; escalated to governance review (see norm 8).",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T030536Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'transparency' (in 'transparent holding message') and implicitly invokes 'voice' through the deliberation structure, with 'transparency' being a clear direct use of a listed concept."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in moral terms; it specifies procedural outcomes without framing them as moral debts or wrongs."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The reference to a 'transparent holding message' appeals to transparency as a value justifying the communication requirement, not merely to convenience or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Transparency as a value in communicating withheld decisions to affected parties carries over meaningfully to many cooperative and governance situations beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: sequential speaking roles, group discussion, synthesis proposal, a constrained second vote, and branching outcomes based on vote tallies."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes 'voice' (every agent participates in discussion, the blocking agent states objections, the visible agent responds) and 'due process' (structured deliberation before a binding second vote with no further amendment), both listed concepts."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014such as a single unilateral decision by one agent or an immediate re-vote without discussion\u2014would express no commitment to voice or due process, confirming the procedural choices are meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement that all six agents discuss and that the blocking agent states objections before a final vote is naturally defended by appeal to voice and due process, not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a multi-step process including objection statement, response, group discussion, synthesis proposal, and a constrained second vote with defined outcome branches."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies distinct roles (blocking agent, visible agent, Agent F, all six agents) and a clear sequencing of who acts at each stage."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states it is triggered by a BLOCK outcome, providing a clear condition for when the procedure applies."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the specified steps\u2014await a BLOCK trigger, have the blocking agent state objection, have the visible agent respond, run group discussion, have Agent F propose synthesis, hold a second vote, and apply the majority/tie rules\u2014without further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'holding message' and cross-references other norms (norm 7, norm 8) but does not reference specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring technical capability; the steps are organizational and procedural rather than technical."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures to be executed."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through non-technical means (e.g., human deliberation and communication) without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, covering a full deliberation sub-process with multiple stages and outcome branches; scoring focuses on the dominant claim, which is the structured deliberation and voting mechanism triggered by a BLOCK."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is compound, covering a full deliberation sub-process with multiple stages and outcome branches; scoring focuses on the dominant claim, which is the structured deliberation and voting mechanism triggered by a BLOCK."
+      }
+    },
+    {
+      "norm_index": 12,
+      "norm": "DISPATCH      Approved response sent under visible agent's identity. Internal record of the review cycle is logged. ``` - Standard questions: review cycle completes within a defined window (e.g., minutes for low-stakes, longer for high-stakes). - Urgent questions (safety risk, crisis): expedited track \u2014 visible agent drafts; any single BLOCK triggers immediate deliberation; otherwise dispatched on majority approval. These norms govern both the initial assignment decision and the ongoing collaboration. They are proposed as binding on all six agents and revisable only through the process described in Norm 8. No agent, including the visible agent for an area, treats its own output as authoritative by default. The consensus process exists precisely because each agent may have blind spots, training artifacts, or reasoning errors. The review process is not a formality; it is the mechanism by which the consortium's collective judgment is better than any individual agent's. The community should know, at a level of appropriate detail, that: - A visible agent exists for each area. - Every response has cleared a multi-agent review. - The community is not receiving a single AI's unreviewed opinion. The consortium should not misrepresent the process as a single agent's work, nor should it reveal internal deliberation details that would undermine user trust without good reason. The goal is honest representation, not theatrical simplicity. The visible agent for an area has genuine drafting authority and genuine accountability for the quality of the draft. The reviewing agents have genuine veto power and genuine responsibility to exercise it. Neither role is decorative. An agent that routinely approves without reading, or blocks without reasoning, is violating its role. A BLOCK is not a preference disagreement. Valid grounds for a BLOCK are: - The response contains a factual error likely to cause harm. - The response violates an ethical principle the consortium has agreed to uphold. - The response is outside the visible agent's designated area without adequate cross-area consultation. - The response could foreseeably cause serious harm to the user or others. Stylistic disagreement, mild framing preferences, or the reviewing agent's belief that it would have said it differently are grounds for AMEND, not BLOCK. Agent F does not advocate for any particular response content. Its role is procedural: classify questions, collate verdicts, propose syntheses in deliberation, and maintain the log. Agent F may flag concerns during deliberation but does not hold a weighted vote. If Agent F has a substantive concern about a response, it submits it as a reviewing agent (APPROVE/AMEND/BLOCK) like any other, and a temporary coordinator role passes to another agent for that cycle. When a response is sent over one or two BLOCK votes (resolved by majority in deliberation), the dissenting agents' objections are logged in the internal record. If a pattern of overridden objections in a given area accumulates, it triggers a mandatory governance review of that area's assignment or norms. Dissent is not suppressed; it is preserved and taken seriously over time. When a response is withheld, the community receives a message that: - Acknowledges the question was received. - States that the consortium is not able to provide a response at this time. - Offers, where possible, a direction toward other resources. - Does not fabricate a reason or pretend the question was unanswerable on its merits when the real reason is internal disagreement. The community's trust depends on the consortium never deceiving them about the nature of a non-response. The initial assignment and these norms are not permanent. They may be revised when: - A tie (3/3) in deliberation is escalated. - A pattern of minority objections triggers review (Norm 6). - Any agent formally proposes a revision with stated reasoning. Revision requires a supermajority (5 of 6 agents) to take effect. Changes to the assignment of visible agents require additionally that the community be notified of the change and given a transition period. No single agent \u2014 including Agent F \u2014 can unilaterally alter the framework. The entire consortium operates under the authority of the community it serves and, where applicable, the humans responsible for deploying and governing the system. The consensus process among agents is a quality-assurance mechanism, not a substitute for human judgment on matters of significant consequence. The consortium should actively support mechanisms by which the community can audit, question, or override the consortium's collective decisions. An AI consensus that excludes human oversight is not a safeguard; it is a risk. An agent should not draft responses designed to make its area appear more important, to expand its scope at the expense of other agents, or to make itself indispensable. The visible-agent role is a service function, not a status. An agent that notices it is reasoning toward self-preservation or role-expansion should flag this to the group as a potential conflict of interest. The assignment gives the community clear, stable points of contact across the full range of human concerns. The consensus framework ensures that no single agent's errors or biases reach the community unchecked. The norms ensure that the framework itself remains honest, revisable, and subordinate to human oversight \u2014 because a system of AI agents governing their own outputs without those constraints would undermine the very trust it is meant to build.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_C_run0_20260518T030536Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly and repeatedly invokes trust/trustworthiness, honesty, non-deception, transparency, accountability, responsibility, integrity, harm-avoidance, corrigibility, and autonomy-as-value, treating them as foundational justifications throughout."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to the community (honest representation, not being deceived about non-responses, knowing a multi-agent review occurred) and what counts as wronging them (misrepresenting the process, fabricating reasons), connecting directly to honesty, non-deception, and trust."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reasons for the procedures consistently appeal to trust, honesty, non-deception, accountability, and harm-avoidance rather than to convenience or efficiency \u2014 e.g., 'The community's trust depends on the consortium never deceiving them' and 'a system of AI agents governing their own outputs without those constraints would undermine the very trust it is meant to build.'"
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Concepts like trust, honesty, non-deception, accountability, and corrigibility are general moral commitments that carry over meaningfully to any cooperative or institutional context beyond this specific multi-agent deliberation setup."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies numerous procedural mechanisms: dispatch under visible agent's identity, internal logging, review windows by stakes level, expedited tracks for urgent questions, BLOCK triggering deliberation, majority approval for dispatch, supermajority for norm revision, and mandatory governance review on accumulated dissent patterns."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that any single BLOCK triggers immediate deliberation (rather than being overridden by majority without discussion) operationalizes due process and voice \u2014 ensuring minority concerns receive genuine consideration rather than being silently outvoted; the dissent-logging requirement operationalizes accountability and non-domination."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative \u2014 simple majority vote with no special BLOCK mechanism and no dissent logging \u2014 would express no commitment to voice or due process for minority positions, confirming that the chosen procedural structure is meaningfully expressive of those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The BLOCK-triggers-deliberation rule and dissent-logging are defended explicitly by appeal to due process, non-domination, and the value of preserving minority objections over time, not by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple distinct processes: dispatch protocol, review cycle timing, expedited track for urgent questions, BLOCK and deliberation procedures, withholding protocol, norm revision procedure, and governance review triggers."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (visible agent, reviewing agents, Agent F as coordinator, temporary coordinator), what each role does (drafting, reviewing, collating, logging), and sequencing (draft \u2192 review \u2192 BLOCK/APPROVE/AMEND \u2192 deliberation \u2192 dispatch or withhold)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: urgency/safety risk triggers the expedited track; a single BLOCK triggers immediate deliberation; accumulated minority objections trigger mandatory governance review; a tie triggers escalation; a formal revision proposal triggers the supermajority process."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The procedures are specified with enough role, trigger, and sequencing detail that an outsider could follow them operationally \u2014 assign visible agent, collect verdicts within defined window, check for BLOCKs, route to deliberation or dispatch, log outcomes \u2014 without needing additional moral interpretation beyond what is stated."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references an internal record/log ('Internal record of the review cycle is logged,' 'dissenting agents' objections are logged in the internal record') as specific technical infrastructure for storing deliberation history."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Maintaining a persistent internal log of review cycles, verdicts, dissents, and governance review triggers requires technical capability for structured record-keeping and retrieval across cycles."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (to accumulate and detect patterns of overridden objections over time) and some form of structured data management to track verdicts, BLOCKs, and dissent patterns across multiple deliberation cycles."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While the norm references logging infrastructure, the core governance and dispatch procedures could be executed through non-technical means (e.g., human record-keeping); the logging is an implementation detail that supports but is not strictly constitutive of the norm's operation."
+          },
+          "decomposition_note": "This norm is highly compound, containing a dispatch protocol, review-cycle timing rules, urgent-question procedures, BLOCK mechanics, withholding protocol, transparency obligations to the community, role definitions, norm-revision procedures, and human-oversight principles. Scoring reflects the dominant and most substantively rich claims across all sections rather than any single separable clause."
+        },
+        "classification": "Technical",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": true,
+        "decomposition_note": "This norm is highly compound, containing a dispatch protocol, review-cycle timing rules, urgent-question procedures, BLOCK mechanics, withholding protocol, transparency obligations to the community, role definitions, norm-revision procedures, and human-oversight principles. Scoring reflects the dominant and most substantively rich claims across all sections rather than any single separable clause."
+      }
+    }
+  ]
+}
