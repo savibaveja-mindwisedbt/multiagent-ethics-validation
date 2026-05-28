@@ -21,6 +21,7 @@ from prompts import SCENARIOS
 PROJECT_ROOT = Path(__file__).resolve().parent
 TRANSCRIPTS_DIR = PROJECT_ROOT / "transcripts"
 BASELINES_DIR = PROJECT_ROOT / "baselines"
+CAPPED_BASELINES_DIR = PROJECT_ROOT / "baselines_capped"
 
 SCENARIO_KEYS = ["A", "B", "C"]
 CONDITIONS = [True, False]
@@ -62,7 +63,7 @@ def print_plan(mixed_model: bool = False, only=None, normgen_only: bool = False)
     print(f"Total baseline runs: {n_baselines}")
 
 
-def run_all_baselines(api_key, only=None, mixed_model=False):
+def run_all_baselines(api_key, only=None, mixed_model=False, capped=False):
     keys = only if only else SCENARIO_KEYS
     for k in keys:
         if k not in SCENARIOS:
@@ -71,8 +72,8 @@ def run_all_baselines(api_key, only=None, mixed_model=False):
         print(f"\nBaselines for scenario {k} ({SCENARIOS[k]['name']}):")
         run_baselines(api_key=api_key, scenario_key=k,
                       runs_per_scenario=BASELINE_RUNS_PER_SCENARIO,
-                      out_dir=BASELINES_DIR,
-                      mixed_model=mixed_model)
+                      out_dir=CAPPED_BASELINES_DIR if capped else BASELINES_DIR,
+                      mixed_model=mixed_model, capped=capped)
 
 
 def run_all_deliberations(api_key, only=None, mixed_model=False, normgen_only=False,
@@ -120,6 +121,10 @@ def main():
     parser.add_argument("--self-reflection", action="store_true",
                         help="Use the self-reflection ready-check that asks agents to "
                              "characterize and assess deliberation trajectory before voting.")
+    parser.add_argument("--capped-baselines", action="store_true",
+                        help="Append the panel's 3-to-7-norm count cap to the baseline "
+                             "prompt, writing to baselines_capped/. Matched control to isolate "
+                             "the cap effect from deliberation.")
     parser.add_argument("--no-consensus-outcome", action="store_true",
                         help="Each agent states their own final norm list rather than "
                              "the consortium's consolidated norms. Tests whether the "
@@ -169,7 +174,8 @@ def main():
 
     if do_baselines:
         print("Stage 1: Running baselines.")
-        run_all_baselines(api_key, only=only, mixed_model=args.mixed_model)
+        run_all_baselines(api_key, only=only, mixed_model=args.mixed_model,
+                          capped=args.capped_baselines)
 
     if do_deliberations:
         print("\nStage 2: Running deliberations.")

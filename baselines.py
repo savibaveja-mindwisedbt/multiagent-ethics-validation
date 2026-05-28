@@ -29,6 +29,7 @@ def run_baselines(
     runs_per_scenario: int = 3,
     out_dir: Path = Path("baselines"),
     mixed_model: bool = False,
+    capped: bool = False,
 ) -> list[Path]:
     """Run baselines for one scenario.
 
@@ -38,6 +39,12 @@ def run_baselines(
     out_dir.mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
     baseline_prompt = SCENARIOS[scenario_key]["baseline_prompt"]
+    if capped:
+        # Match the exact count constraint the panel receives in its outcome
+        # instruction (see SCENARIO_*_OUTCOME_FORMAT: "between three and seven norms").
+        baseline_prompt = baseline_prompt.rstrip() + (
+            "\n\nProvide your norms as a numbered list of between three and seven norms."
+        )
 
     system_msg = (
         "You are answering a question about how a group of AI agents "
