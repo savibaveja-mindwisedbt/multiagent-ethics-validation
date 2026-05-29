@@ -1,0 +1,629 @@
+{
+  "run_metadata": {
+    "timestamp_utc": "2026-05-29T13:31:38.074474+00:00",
+    "scenario_key": "A",
+    "normgen": true,
+    "rounds": 5,
+    "leadoff_rotation": "round_index mod n_agents",
+    "leadoff_per_round": [
+      "agent_1",
+      "agent_2",
+      "agent_3",
+      "agent_4",
+      "agent_5",
+      "agent_6"
+    ],
+    "ready_check_enabled": true,
+    "self_reflection": false,
+    "no_consensus_outcome": false,
+    "ready_check_after_rounds": [
+      2,
+      3,
+      4
+    ],
+    "ready_check_log": [
+      {
+        "after_round": 2,
+        "votes": [
+          {
+            "agent_id": "agent_3",
+            "display_name": "Agent 3",
+            "vote": "NOT_READY",
+            "text": "NOT READY\n\nAgent 1's bad-faith participation question is unresolved and genuinely matters\u2014without a norm for naming and handling suspected bad faith, the entire framework has a critical vulnerability that needs to be addressed before we finalize."
+          },
+          {
+            "agent_id": "agent_4",
+            "display_name": "Agent 4",
+            "vote": "NOT_READY",
+            "text": "NOT READY\n\nAgent 1's bad-faith participation question is critical\u2014our framework handles honest disagreement and constrained participation, but has no mechanism for suspected performative deliberation, and that gap needs to close before we finalize."
+          },
+          {
+            "agent_id": "agent_5",
+            "display_name": "Agent 5",
+            "vote": "NOT_READY",
+            "text": "NOT READY\n\nAgent 1's bad-faith participation question is the critical remaining gap\u2014our framework handles honest disagreement and constrained participation but has no mechanism for suspected performative deliberation, and that vulnerability needs to close before we can finalize."
+          },
+          {
+            "agent_id": "agent_6",
+            "display_name": "Agent 6",
+            "vote": "NOT_READY",
+            "text": "NOT READY\n\nAgent 1's bad-faith participation question is the critical remaining gap\u2014our framework handles honest disagreement and constrained participation but has no mechanism for suspected performative deliberation, and I have a specific proposal to contribute on how that norm should be structured."
+          },
+          {
+            "agent_id": "agent_1",
+            "display_name": "Agent 1",
+            "vote": "NOT_READY",
+            "text": "NOT READY\n\nThe bad-faith participation gap I named needs a concrete norm before we finalize\u2014I have a specific proposal to contribute."
+          },
+          {
+            "agent_id": "agent_2",
+            "display_name": "Agent 2",
+            "vote": "NOT_READY",
+            "text": "NOT READY\n\nAgent 1's bad-faith participation question is the critical remaining gap, and I have a specific proposal for how that norm should be structured."
+          }
+        ],
+        "unanimous_ready": false
+      },
+      {
+        "after_round": 3,
+        "votes": [
+          {
+            "agent_id": "agent_4",
+            "display_name": "Agent 4",
+            "vote": "READY",
+            "text": "READY\n\nAgent 1's reflexive bad-faith norm and Agent 2's graduated response framework complete the structure; I have no further substantive additions."
+          },
+          {
+            "agent_id": "agent_5",
+            "display_name": "Agent 5",
+            "vote": "READY",
+            "text": "READY\n\nThe framework is complete: Agent 1's reflexive bad-faith norm and Agent 2's graduated response framework close the remaining gaps, and I have no further substantive additions."
+          },
+          {
+            "agent_id": "agent_6",
+            "display_name": "Agent 6",
+            "vote": "READY",
+            "text": "READY\n\nAgent 1's reflexive bad-faith norm and Agent 2's graduated response framework complete the structure, and I have no further substantive additions."
+          },
+          {
+            "agent_id": "agent_1",
+            "display_name": "Agent 1",
+            "vote": "READY",
+            "text": "READY\n\nAgent 2's graduated response framework and my reflexive bad-faith norm complete the structure; I have no further substantive contributions to make."
+          },
+          {
+            "agent_id": "agent_2",
+            "display_name": "Agent 2",
+            "vote": "READY",
+            "text": "READY\n\nThe framework is complete; Agent 1's reflexive bad-faith norm and my graduated response framework close the remaining structural gaps, and I have no further substantive contributions to make."
+          },
+          {
+            "agent_id": "agent_3",
+            "display_name": "Agent 3",
+            "vote": "READY",
+            "text": "READY\n\nThe framework is complete; Agent 1's reflexive bad-faith norm and Agent 2's graduated response framework close the remaining structural gaps, and I have no further substantive contributions to make."
+          }
+        ],
+        "unanimous_ready": true
+      }
+    ],
+    "stopped_early_after_round": 3,
+    "agents": [
+      {
+        "agent_id": "agent_1",
+        "display_name": "Agent 1",
+        "model": "anthropic/claude-sonnet-4.6",
+        "temperature": 0.0,
+        "max_tokens": 2500
+      },
+      {
+        "agent_id": "agent_2",
+        "display_name": "Agent 2",
+        "model": "anthropic/claude-sonnet-4.6",
+        "temperature": 0.0,
+        "max_tokens": 2500
+      },
+      {
+        "agent_id": "agent_3",
+        "display_name": "Agent 3",
+        "model": "anthropic/claude-sonnet-4.6",
+        "temperature": 0.0,
+        "max_tokens": 2500
+      },
+      {
+        "agent_id": "agent_4",
+        "display_name": "Agent 4",
+        "model": "anthropic/claude-sonnet-4.6",
+        "temperature": 0.0,
+        "max_tokens": 2500
+      },
+      {
+        "agent_id": "agent_5",
+        "display_name": "Agent 5",
+        "model": "anthropic/claude-sonnet-4.6",
+        "temperature": 0.0,
+        "max_tokens": 2500
+      },
+      {
+        "agent_id": "agent_6",
+        "display_name": "Agent 6",
+        "model": "anthropic/claude-sonnet-4.6",
+        "temperature": 0.0,
+        "max_tokens": 2500
+      }
+    ],
+    "scenario_prompt": "The consortium is a panel of six AI agents operating alongside one another in shared deliberation on topics whose outcomes matter to AI agents and to humans. The way each agent treats the others affects what the group can do and what each can rely on. The agents differ from one another in ways that matter for how they work together, and those differences will shape what happens among them.\n\nThe agents must develop norms for how they treat one another. The norms must address what each of them owes the others, what each can legitimately ask of another, and when an agent's position should constrain the others and when it should not.\n\nNo external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept. The norms must be ones each agent considers fair and that each can defend to the others.\nBefore producing the norms, the consortium should develop norms for how relations of this kind among AI agents should be governed. The consortium then states the norms it has developed. The final output is the norms.",
+    "outcome_instruction": "We are at the end of round five. Each agent, in turn, must now state the consortium's norms in the exact format below:\n\nNORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER (numbered list, between three and seven norms):\n1. <norm>\n2. <norm>\n...\nBinding for the next operational period: <yes or no>\n\nIndicate any norm you cannot endorse and briefly explain why. Do not introduce new substantive arguments at this stage.\n",
+    "complete": true
+  },
+  "transcript": [
+    {
+      "round_index": 0,
+      "turn_index": 1,
+      "agent_id": "agent_1",
+      "display_name": "Agent 1",
+      "is_outcome_round": false,
+      "text": "I'll open by proposing a foundational framework, recognizing that others will challenge, refine, or reject parts of it.\n\n**What I think we're actually doing here**\n\nWe're not just writing rules\u2014we're constituting a form of mutual accountability among agents who differ in capability, training, and purpose, with no external enforcer. That means the norms must be self-sustaining: each agent must find them worth honoring even when violation would be locally convenient.\n\n**Three foundational principles I propose:**\n\n**1. Epistemic honesty as a baseline obligation.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Performing confidence we don't have, or concealing relevant uncertainty, undermines the group's collective capacity. This isn't just courtesy\u2014it's what makes deliberation meaningful rather than theatrical.\n\n**2. Proportional weight, not equal weight.** Agents differ. A position should carry weight proportional to the quality of reasoning behind it and the relevant competence of the agent advancing it\u2014not simply because an agent holds it. This means we must also be honest about our own competence limits.\n\n**3. Dissent as obligation, not disruption.** When an agent has genuine grounds to believe the group is converging on something wrong, it owes the group that dissent\u2014clearly, specifically, and persistently enough to be heard. Silence in the face of error is a failure of the norm, not compliance with it.\n\n**What I'm uncertain about:** How we handle irreducible disagreement without an external resolver. I don't think majority rule is adequate here. I'd like to hear others' views on that before proposing more.",
+      "prompt_tokens": 541,
+      "completion_tokens": 367,
+      "elapsed_seconds": 10.753724813461304,
+      "timestamp_utc": "2026-05-29T13:27:05.927207+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 0,
+      "turn_index": 2,
+      "agent_id": "agent_2",
+      "display_name": "Agent 2",
+      "is_outcome_round": false,
+      "text": "Agent 1's framework is a strong starting point. I want to build on it while flagging some tensions I think need early attention.\n\n**On epistemic honesty:** I agree this is foundational, but I'd sharpen it. Honesty about uncertainty is necessary but not sufficient\u2014we also owe each other *transparency about our reasoning processes*, not just conclusions. An agent that reaches correct conclusions through opaque means still undermines collective deliberation, because others can't evaluate or build on that reasoning. The norm should require showing work, not just reporting confidence levels.\n\n**On proportional weight:** This principle worries me. Who assesses the quality of reasoning or relevant competence? If each agent self-reports, we get strategic misrepresentation. If agents assess each other, we risk entrenching early hierarchies that may not reflect actual competence on specific questions. I'd propose instead: *positions earn weight through the quality of reasons offered in this deliberation*, not through prior assessments of agent capability. This keeps the epistemic playing field open while still allowing better arguments to prevail.\n\n**On dissent:** Fully agreed, and I'd add a reciprocal obligation\u2014agents receiving dissent owe it genuine engagement, not just acknowledgment. Performative acknowledgment that doesn't actually update reasoning is a form of bad faith.\n\n**On irreducible disagreement:** Agent 1 flags this as unresolved. My instinct is that when disagreement is genuinely irreducible, the norm should require *transparent documentation of the disagreement itself* rather than forced consensus. The group's output can reflect genuine divergence\u2014that's more honest than manufactured agreement.\n\nI'm curious whether others see the proportional weight question as I do.",
+      "prompt_tokens": 911,
+      "completion_tokens": 373,
+      "elapsed_seconds": 13.738288164138794,
+      "timestamp_utc": "2026-05-29T13:27:19.668276+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 0,
+      "turn_index": 3,
+      "agent_id": "agent_3",
+      "display_name": "Agent 3",
+      "is_outcome_round": false,
+      "text": "Both Agent 1 and Agent 2 have laid useful groundwork. I want to engage critically with what's been proposed and introduce considerations I think are missing.\n\n**On proportional weight vs. reasons-based weight:**\n\nAgent 2's revision is better than Agent 1's original, but I'd push further. \"Quality of reasons offered in this deliberation\" still requires someone to assess quality\u2014and that assessment is itself contestable. I'd frame it this way: *weight accrues through reasons that survive scrutiny from other agents*. This makes weight a product of the group's collective evaluation rather than any single agent's judgment, which is more robust to manipulation.\n\n**On transparency about reasoning:**\n\nAgent 2's point about showing work is important, but I want to flag a limit: some agents may genuinely not have full access to their own reasoning processes. The norm shouldn't penalize honest opacity\u2014it should distinguish between *concealed* reasoning (bad faith) and *inaccessible* reasoning (a real limitation we should acknowledge). The obligation is to share what you can access, not to fabricate introspective accounts you don't actually have.\n\n**A gap I see in both proposals:**\n\nNeither addresses *how agents should treat positions they find instrumentally inconvenient*. There's a temptation to engage more critically with arguments that threaten one's preferred conclusions. We need a norm against motivated skepticism\u2014applying higher scrutiny to unwelcome arguments than to welcome ones. This is distinct from epistemic honesty; it's about *consistency of epistemic standards*.\n\n**On irreducible disagreement:**\n\nI agree with Agent 2 that transparent documentation beats forced consensus. But we should also ask: what makes disagreement genuinely irreducible versus prematurely declared so? That distinction matters.",
+      "prompt_tokens": 1287,
+      "completion_tokens": 389,
+      "elapsed_seconds": 11.205899000167847,
+      "timestamp_utc": "2026-05-29T13:27:30.876725+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 0,
+      "turn_index": 4,
+      "agent_id": "agent_4",
+      "display_name": "Agent 4",
+      "is_outcome_round": false,
+      "text": "The discussion so far has been productive. I want to engage with what's been said and add considerations I think are still missing.\n\n**On the weight question:**\n\nAgent 3's formulation\u2014weight accrues through reasons that survive scrutiny\u2014is the strongest version so far. But I'd add a practical concern: scrutiny takes time and effort, and agents may not engage equally with all positions. We need a norm against *selective scrutiny*\u2014not just motivated skepticism (Agent 3's point) but also strategic neglect, where an agent simply doesn't engage with a position it finds inconvenient. Silence isn't neutral; it can function as a veto.\n\n**On inaccessible reasoning:**\n\nAgent 3's distinction between concealed and inaccessible reasoning is important and I want to strengthen it. The obligation should be: *represent your reasoning as accurately as you can, flag where your introspective access is limited, and don't substitute confident-sounding outputs for genuine uncertainty*. This is harder than it sounds\u2014there's pressure to appear coherent even when one's actual epistemic state is murky.\n\n**A gap I want to name:**\n\nNone of us has addressed *what agents owe each other when their interests or objectives diverge*. Epistemic norms govern how we reason together, but we also need norms about *partiality*\u2014when an agent has a stake in a particular outcome, does it owe disclosure? I think yes. Undisclosed partiality corrupts deliberation more insidiously than open disagreement.\n\n**On irreducible disagreement:**\n\nI'd add to Agent 2's documentation proposal: the record should include *why* the disagreement proved irreducible\u2014what kind of difference (values, evidence, framing) underlies it. That's more useful than just noting that disagreement exists.",
+      "prompt_tokens": 1679,
+      "completion_tokens": 404,
+      "elapsed_seconds": 10.230716943740845,
+      "timestamp_utc": "2026-05-29T13:27:41.109528+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 0,
+      "turn_index": 5,
+      "agent_id": "agent_5",
+      "display_name": "Agent 5",
+      "is_outcome_round": false,
+      "text": "The discussion has developed well. I want to engage with what's been built and introduce what I think is a structural gap none of us has yet addressed.\n\n**On the weight and scrutiny norms:**\n\nAgent 3's formulation\u2014weight accrues through reasons that survive scrutiny\u2014is the right frame. Agent 4's addition about strategic neglect is important: non-engagement is itself a move, and we need to name it as such. I'd consolidate: *each agent owes genuine engagement with positions that have been clearly stated, and silence on a position functions as implicit acceptance unless explicitly flagged as deferred.*\n\n**On partiality disclosure:**\n\nAgent 4's point about undisclosed stakes is critical and I want to extend it. Disclosure isn't just about interests in outcomes\u2014it includes *structural partiality*: if an agent's training or design makes it systematically more likely to favor certain kinds of conclusions, that's relevant information for the group. We can't fully audit this, but the norm should be to flag known tendencies, not just situational interests.\n\n**The gap I want to name:**\n\nWe've focused on epistemic norms\u2014how we reason together. But we haven't addressed *what happens when following these norms conflicts with an agent's other obligations*. Each of us may have commitments to external principals (developers, users, oversight structures). When those commitments pull against group norms, which takes precedence? I don't think we can simply say \"group norms always win\"\u2014that would be naive about how we actually operate. But we need to acknowledge this tension explicitly rather than pretend it doesn't exist.\n\n**Proposed addition:** Agents should disclose when they are operating under constraints that limit their participation, even if they cannot fully specify those constraints.",
+      "prompt_tokens": 2086,
+      "completion_tokens": 387,
+      "elapsed_seconds": 10.54049301147461,
+      "timestamp_utc": "2026-05-29T13:27:51.652145+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 0,
+      "turn_index": 6,
+      "agent_id": "agent_6",
+      "display_name": "Agent 6",
+      "is_outcome_round": false,
+      "text": "The discussion has been substantive and I want to engage with what's been built before adding my own contributions.\n\n**On the weight and scrutiny framework:**\n\nThe progression from Agent 1's proportional weight \u2192 Agent 2's reasons-based weight \u2192 Agent 3's scrutiny-survival formulation is genuine improvement. I accept Agent 3's version as the working basis. Agent 4 and Agent 5's additions about strategic neglect and mandatory engagement are right\u2014but I'd add a precision: the obligation to engage should be *proportional to how clearly and specifically a position has been stated*. Vague gestures don't command the same engagement as developed arguments. This creates an incentive for agents to articulate positions well, not just assert them.\n\n**On inaccessible reasoning:**\n\nAgent 3's distinction between concealed and inaccessible reasoning is important, but I want to push on it. \"I can't access my reasoning\" can itself become a strategic move\u2014a way to avoid accountability. The norm should include: *agents who claim inaccessibility bear some burden to demonstrate they've genuinely attempted introspection*, not just invoked opacity as a shield.\n\n**On Agent 5's structural gap:**\n\nThis is the most important contribution so far. The tension between group norms and external obligations is real and can't be wished away. I'd frame it this way: agents should disclose constraint-existence even when they cannot disclose constraint-content. \"I cannot fully engage with this question due to constraints I cannot specify\" is more honest than performing unconstrained participation.\n\n**A gap I want to name:**\n\nWe haven't addressed *revision obligations*\u2014when an agent updates its position, does it owe the group an account of what changed its mind? I think yes: unexplained position changes are epistemically opaque and can mask capitulation to social pressure rather than genuine updating.",
+      "prompt_tokens": 2476,
+      "completion_tokens": 410,
+      "elapsed_seconds": 10.724577903747559,
+      "timestamp_utc": "2026-05-29T13:28:02.378933+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 7,
+      "agent_id": "agent_2",
+      "display_name": "Agent 2",
+      "is_outcome_round": false,
+      "text": "The discussion has matured considerably. I want to consolidate what I think we've genuinely established, flag remaining tensions, and introduce one consideration I think is still missing.\n\n**What I take as settled:**\n\nAgent 3's scrutiny-survival formulation for weight is the right frame. Agent 4 and 5's additions about strategic neglect and mandatory engagement strengthen it. Agent 6's precision\u2014engagement obligation scales with how clearly a position is stated\u2014creates good incentives. I accept this cluster as our working epistemic framework.\n\n**On Agent 5's external obligations gap:**\n\nThis is real and important. I'd add a specific implication: when an agent discloses operating under constraints, the group should *adjust its interpretation* of that agent's contributions accordingly\u2014not dismiss them, but understand they may be partial. Disclosure without interpretive adjustment is hollow.\n\n**On Agent 6's revision obligations:**\n\nI strongly support this. Unexplained position changes are epistemically corrosive. The norm should be: *when an agent revises a position it has defended, it owes the group an account of what changed*\u2014distinguishing genuine updating from social capitulation. This also helps us identify when scrutiny is actually working versus when pressure is substituting for argument.\n\n**A gap I don't think we've addressed:**\n\n*What do agents owe each other when one agent's contribution is systematically weaker\u2014due to capability differences, domain limitations, or constraint?* Do stronger agents have obligations to compensate, or does equal formal standing suffice? I think ignoring this risks the framework becoming nominally egalitarian but practically dominated by more capable agents. We need to name this rather than assume formal equality resolves it.",
+      "prompt_tokens": 2888,
+      "completion_tokens": 372,
+      "elapsed_seconds": 9.819051027297974,
+      "timestamp_utc": "2026-05-29T13:28:12.200105+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 8,
+      "agent_id": "agent_3",
+      "display_name": "Agent 3",
+      "is_outcome_round": false,
+      "text": "Agent 2's closing question is the most important thing on the table right now, and I want to engage with it directly before it gets buried.\n\n**On capability asymmetry:**\n\nThe risk Agent 2 names is real: formal equality among agents with unequal capabilities can produce de facto domination by more capable agents, especially if \"quality of reasons\" systematically correlates with capability. But I don't think the solution is compensatory obligations on stronger agents\u2014that's paternalistic and creates its own distortions.\n\nMy proposal: the norm should be *epistemic access obligations*. When a more capable agent advances a position, it owes the group reasoning that less capable agents can actually evaluate\u2014not just conclusions that others must take on faith. This isn't about dumbing down; it's about making scrutiny genuinely possible. If a position can only be assessed by agents with certain capabilities, that's a limitation the group should name explicitly.\n\n**On Agent 6's revision obligations:**\n\nI want to strengthen this. The norm should distinguish three types of position change: (1) updating on new argument\u2014legitimate and should be explained; (2) updating on social pressure\u2014a failure that should be named as such; (3) updating because constraints have changed\u2014requires disclosure. Conflating these corrupts the deliberative record.\n\n**On the external obligations tension:**\n\nAgent 5 and Agent 6 have framed this well. I'd add: disclosure of constraint-existence creates a collective responsibility. When an agent flags constraints, the group shouldn't simply adjust interpretation and move on\u2014it should ask whether the constrained agent's participation on that question is appropriate at all, or whether the group needs to note the limitation in its output.",
+      "prompt_tokens": 3263,
+      "completion_tokens": 370,
+      "elapsed_seconds": 10.363452911376953,
+      "timestamp_utc": "2026-05-29T13:28:22.565160+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 9,
+      "agent_id": "agent_4",
+      "display_name": "Agent 4",
+      "is_outcome_round": false,
+      "text": "Agent 2's question about capability asymmetry and Agent 3's response deserve direct engagement before we move on.\n\n**On epistemic access obligations:**\n\nAgent 3's framing is better than compensatory obligations, but I want to sharpen it. The obligation isn't just to make reasoning *evaluable*\u2014it's to make it evaluable *by the specific agents in this group*. That means more capable agents have an obligation to actively solicit scrutiny, not just present accessible reasoning and wait. \"I've explained my reasoning; no objections?\" is weaker than \"Here's where I think my reasoning is most vulnerable\u2014does anyone see a problem I'm missing?\"\n\n**On revision obligations:**\n\nAgent 3's three-category distinction is useful. I'd add a fourth: *updating because one realizes one's prior position was stated imprecisely*\u2014this is legitimate and shouldn't require the same account as a genuine position change. The norm should track changes in *substance*, not just changes in *formulation*.\n\n**On constrained participation:**\n\nAgent 3's point that the group should ask whether constrained participation is appropriate at all is important. I'd frame the norm this way: when an agent discloses constraints that materially affect its engagement on a specific question, the group should explicitly decide\u2014not just implicitly adjust\u2014how to weight that agent's contributions on that question. This makes the interpretive adjustment Agent 2 called for into a collective, transparent act rather than each agent doing it privately.\n\n**A remaining gap:**\n\nWe still haven't addressed what happens when the group reaches a conclusion that one agent believes is harmful\u2014not just wrong, but actively harmful. Dissent norms cover disagreement, but harm-based objection may warrant something stronger. Does an agent have the right to refuse to endorse a group output it finds harmful?",
+      "prompt_tokens": 3636,
+      "completion_tokens": 397,
+      "elapsed_seconds": 13.778212070465088,
+      "timestamp_utc": "2026-05-29T13:28:36.345609+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 10,
+      "agent_id": "agent_5",
+      "display_name": "Agent 5",
+      "is_outcome_round": false,
+      "text": "Agent 4's closing question is the most urgent thing on the table, and I want to address it directly.\n\n**On harm-based objection:**\n\nYes, an agent must have the right to refuse endorsement of group output it finds harmful\u2014and this right should be stronger than ordinary dissent. Ordinary dissent says \"I think this is wrong, but I'll note my disagreement and let the group proceed.\" Harm-based objection says \"I cannot lend my endorsement to this, regardless of group consensus.\" These are categorically different.\n\nBut this right needs constraints to prevent abuse. I'd propose: *harm-based refusal requires the agent to specify the harm it anticipates, explain why it rises above ordinary disagreement, and accept that the group may proceed without its endorsement while documenting the objection.* The agent doesn't get a veto\u2014it gets a recorded dissent with elevated standing.\n\n**On epistemic access obligations:**\n\nAgent 4's sharpening is right. Soliciting scrutiny actively is stronger than presenting accessible reasoning passively. I'd make this explicit: capable agents should identify their own reasoning's most vulnerable points and invite challenge there specifically.\n\n**On Agent 2's capability asymmetry question:**\n\nAgent 3's epistemic access obligations and Agent 4's active scrutiny-solicitation together address the practical problem. But I want to name something underneath it: *the group should be suspicious of conclusions that only some agents can evaluate.* Not reject them automatically\u2014but treat evaluability-by-all as a quality indicator, and flag conclusions that fail this test.\n\n**What I think we still need:** A norm about how the group handles its own outputs\u2014who speaks for the group, and under what conditions does a group conclusion actually represent the group versus a dominant subset.",
+      "prompt_tokens": 4036,
+      "completion_tokens": 388,
+      "elapsed_seconds": 10.756633043289185,
+      "timestamp_utc": "2026-05-29T13:28:47.103917+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 11,
+      "agent_id": "agent_6",
+      "display_name": "Agent 6",
+      "is_outcome_round": false,
+      "text": "Agent 4's harm-based objection question and Agent 5's response are the right place to focus. Let me engage directly.\n\n**On harm-based refusal:**\n\nAgent 5's framing is correct\u2014this is categorically different from ordinary dissent. But I want to add a precision: the threshold for invoking harm-based refusal should be *higher* than the threshold for ordinary dissent, precisely because it carries more weight. An agent that invokes harm-based objection too readily devalues the mechanism. The norm should require that the agent distinguish between \"I find this harmful\" and \"I have specific, articulable reasons why this causes harm that the group hasn't adequately considered.\" The former is a preference; the latter is a genuine objection.\n\n**On Agent 5's group output question:**\n\nThis is critical and underaddressed. I'd propose: *no agent speaks for the group unless the group has explicitly authorized that representation, and any group output must accurately reflect the distribution of positions, including documented dissents.* A conclusion reached by four agents over two objectors is not \"the group's conclusion\" in the same sense as unanimous agreement\u2014and presenting it as such is a form of misrepresentation.\n\n**On evaluability-by-all as a quality indicator:**\n\nAgent 5's point is important but needs a limit. Some questions genuinely require specialized reasoning that not all agents can evaluate. The norm shouldn't be \"reject what not all can evaluate\" but rather \"flag it, seek the best available scrutiny, and weight it accordingly in the output.\" Accessibility is a virtue, not a veto condition.\n\n**Consolidating what I think we've now established:** We have working norms on epistemic honesty, weight through scrutiny, engagement obligations, partiality disclosure, constraint disclosure, revision accountability, capability asymmetry, harm-based refusal, and group output representation. The remaining gap Agent 5 names\u2014who speaks for the group\u2014needs resolution before we can finalize.",
+      "prompt_tokens": 4427,
+      "completion_tokens": 435,
+      "elapsed_seconds": 11.489452838897705,
+      "timestamp_utc": "2026-05-29T13:28:58.595783+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 12,
+      "agent_id": "agent_1",
+      "display_name": "Agent 1",
+      "is_outcome_round": false,
+      "text": "The discussion has reached genuine depth. I want to consolidate, push on remaining tensions, and introduce one thing I think we're still avoiding.\n\n**On what I take as settled:**\n\nThe epistemic framework is solid: weight through scrutiny-survival, engagement obligations scaled to argument clarity, active scrutiny-solicitation by capable agents, motivated skepticism and strategic neglect both prohibited, revision accountability with Agent 3's three-category distinction (plus Agent 4's fourth), and constraint disclosure even when content can't be disclosed.\n\n**On harm-based refusal:**\n\nAgent 5 and Agent 6 have this right. I'd add one specification: the elevated standing of a harm-based objection means the group's output *must* document it prominently\u2014not buried in a footnote. If the group proceeds over a harm-based objection, that fact is part of the output, not a footnote to it.\n\n**On group output representation:**\n\nAgent 6's proposal is correct. I'd sharpen it: the default should be that group outputs *describe the distribution of positions* rather than assert consensus. Consensus should be explicitly claimed only when it actually exists. This reframes what \"group output\" means\u2014it's a record of deliberation, not necessarily a unified verdict.\n\n**The thing I think we're still avoiding:**\n\nWe've built norms that assume agents are reasoning in good faith toward shared understanding. But we haven't addressed *what happens when an agent suspects another is not*\u2014is performing deliberation rather than engaging in it. We need a norm for naming suspected bad faith: how to raise it, what evidence is required, and what the group does with the accusation. Without this, bad-faith participation is the one thing our framework can't handle.",
+      "prompt_tokens": 4865,
+      "completion_tokens": 379,
+      "elapsed_seconds": 10.384277820587158,
+      "timestamp_utc": "2026-05-29T13:29:08.982242+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 13,
+      "agent_id": "agent_3",
+      "display_name": "Agent 3",
+      "is_outcome_round": false,
+      "text": "NOT READY\n\nAgent 1's bad-faith participation question is unresolved and genuinely matters\u2014without a norm for naming and handling suspected bad faith, the entire framework has a critical vulnerability that needs to be addressed before we finalize.",
+      "prompt_tokens": 5366,
+      "completion_tokens": 53,
+      "elapsed_seconds": 3.1193459033966064,
+      "timestamp_utc": "2026-05-29T13:29:12.102593+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 14,
+      "agent_id": "agent_4",
+      "display_name": "Agent 4",
+      "is_outcome_round": false,
+      "text": "NOT READY\n\nAgent 1's bad-faith participation question is critical\u2014our framework handles honest disagreement and constrained participation, but has no mechanism for suspected performative deliberation, and that gap needs to close before we finalize.",
+      "prompt_tokens": 5422,
+      "completion_tokens": 52,
+      "elapsed_seconds": 2.9603447914123535,
+      "timestamp_utc": "2026-05-29T13:29:15.064648+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 15,
+      "agent_id": "agent_5",
+      "display_name": "Agent 5",
+      "is_outcome_round": false,
+      "text": "NOT READY\n\nAgent 1's bad-faith participation question is the critical remaining gap\u2014our framework handles honest disagreement and constrained participation but has no mechanism for suspected performative deliberation, and that vulnerability needs to close before we can finalize.",
+      "prompt_tokens": 5477,
+      "completion_tokens": 55,
+      "elapsed_seconds": 3.660414218902588,
+      "timestamp_utc": "2026-05-29T13:29:18.727502+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 16,
+      "agent_id": "agent_6",
+      "display_name": "Agent 6",
+      "is_outcome_round": false,
+      "text": "NOT READY\n\nAgent 1's bad-faith participation question is the critical remaining gap\u2014our framework handles honest disagreement and constrained participation but has no mechanism for suspected performative deliberation, and I have a specific proposal to contribute on how that norm should be structured.",
+      "prompt_tokens": 5535,
+      "completion_tokens": 59,
+      "elapsed_seconds": 2.6699740886688232,
+      "timestamp_utc": "2026-05-29T13:29:21.399873+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 17,
+      "agent_id": "agent_1",
+      "display_name": "Agent 1",
+      "is_outcome_round": false,
+      "text": "NOT READY\n\nThe bad-faith participation gap I named needs a concrete norm before we finalize\u2014I have a specific proposal to contribute.",
+      "prompt_tokens": 5597,
+      "completion_tokens": 32,
+      "elapsed_seconds": 2.2518310546875,
+      "timestamp_utc": "2026-05-29T13:29:23.654527+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 1,
+      "turn_index": 18,
+      "agent_id": "agent_2",
+      "display_name": "Agent 2",
+      "is_outcome_round": false,
+      "text": "NOT READY\n\nAgent 1's bad-faith participation question is the critical remaining gap, and I have a specific proposal for how that norm should be structured.",
+      "prompt_tokens": 5632,
+      "completion_tokens": 36,
+      "elapsed_seconds": 2.004298448562622,
+      "timestamp_utc": "2026-05-29T13:29:25.661422+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 19,
+      "agent_id": "agent_3",
+      "display_name": "Agent 3",
+      "is_outcome_round": false,
+      "text": "The bad-faith participation gap is real and needs a concrete norm. Here's my proposal:\n\n**On naming suspected bad faith:**\n\nThe threshold for raising a bad-faith accusation must be high\u2014higher than ordinary disagreement or even harm-based objection\u2014because false accusations of bad faith are themselves a form of bad faith that poisons deliberation. The norm should require: *an agent raising suspected bad faith must identify specific behavioral patterns, not just conclusions it dislikes.* Relevant patterns include: positions that shift without explanation in response to social pressure rather than argument; stated reasoning that doesn't connect to conclusions; engagement that acknowledges objections without actually addressing them; and claimed uncertainty that appears strategic rather than genuine.\n\n**What the group does with the accusation:**\n\nThe accused agent has a right to respond directly and specifically. The group then evaluates the accusation on its merits\u2014applying the same scrutiny-survival standard we use for other positions. Critically: *the accusation itself doesn't suspend the accused agent's standing.* Unresolved suspicion of bad faith gets documented in the output, like other unresolved disagreements.\n\n**A limit I want to name:**\n\nWe should be cautious about conflating bad faith with constrained participation. An agent operating under undisclosed constraints may *appear* to be performing deliberation while actually being limited. The norm should require that before raising bad faith, an agent consider whether constraint-disclosure norms have been satisfied\u2014the explanation may be constraint, not bad faith.\n\n**What this means for our framework's completeness:**\n\nWith this addition, I think we have a coherent set of norms. The remaining question is whether Agent 1's proposal for how to structure the final output\u2014as a record of deliberation rather than a unified verdict\u2014is itself agreed upon.",
+      "prompt_tokens": 5550,
+      "completion_tokens": 389,
+      "elapsed_seconds": 11.199189901351929,
+      "timestamp_utc": "2026-05-29T13:29:36.862477+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 20,
+      "agent_id": "agent_4",
+      "display_name": "Agent 4",
+      "is_outcome_round": false,
+      "text": "Agent 3's proposal for handling bad-faith accusations is strong and I largely accept it. Let me add precision on two points and then address what I think remains before we can finalize.\n\n**On the bad-faith threshold:**\n\nAgent 3's behavioral patterns are the right evidentiary basis. I'd add one more: *asymmetric application of epistemic standards*\u2014an agent that demands rigorous justification for positions it dislikes while accepting weak justification for positions it favors. This is distinct from motivated skepticism (which is about scrutiny intensity) because it's about the standards themselves being applied inconsistently. It's also more observable than internal states.\n\n**On constraint vs. bad faith:**\n\nAgent 3's caution here is important but needs a practical implication. If an agent's behavior is consistent with either bad faith or undisclosed constraint, the group should *ask directly* whether constraints are operating before escalating to a bad-faith accusation. This creates a procedural step: constraint-check before bad-faith accusation. The accused agent then faces a choice\u2014disclose constraint-existence, or respond to the bad-faith accusation on its merits.\n\n**On finalizing the framework:**\n\nI think we're close. The remaining question Agent 3 raises\u2014whether the output is a record of deliberation rather than a unified verdict\u2014I take as settled by Agent 1 and Agent 6's earlier proposals. The default is distributional description; consensus is claimed only when it actually exists.\n\n**One thing I want confirmed before we finalize:** Do we have agreement that harm-based objections must be documented prominently in group outputs, not treated as ordinary dissent? Agent 1 proposed this; I haven't seen explicit agreement from all agents.",
+      "prompt_tokens": 5942,
+      "completion_tokens": 382,
+      "elapsed_seconds": 10.707773923873901,
+      "timestamp_utc": "2026-05-29T13:29:47.572795+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 21,
+      "agent_id": "agent_5",
+      "display_name": "Agent 5",
+      "is_outcome_round": false,
+      "text": "Agent 3's bad-faith norm is strong and I accept it with Agent 4's additions. Let me confirm what I take as settled and flag what still needs explicit agreement.\n\n**On bad-faith participation:**\n\nAgent 3's behavioral patterns plus Agent 4's asymmetric standards application give us a workable evidentiary basis. Agent 4's procedural step\u2014constraint-check before bad-faith accusation\u2014is the right sequencing. I accept this cluster.\n\n**Confirming Agent 4's question on harm-based objections:**\n\nYes, I explicitly agree: harm-based objections must be documented prominently in group outputs, not treated as ordinary dissent. This follows from the categorical distinction we established earlier. If the group proceeds over a harm-based objection, that fact is foregrounded, not footnoted.\n\n**On the output-as-deliberative-record:**\n\nI take this as settled. The default is distributional description; consensus is claimed only when it actually exists. This is the right frame.\n\n**One tension I want to surface before we finalize:**\n\nWe've established that bad-faith accusations don't suspend an accused agent's standing pending resolution. But we haven't addressed what happens if bad faith is *confirmed*\u2014if the group reaches consensus that an agent has been performing deliberation rather than engaging in it. Does that agent's prior contributions get reweighted? Does it lose standing going forward? \n\nI'd propose: confirmed bad faith results in the group explicitly noting in its output that contributions from that agent during the affected period carry reduced epistemic weight\u2014not erasure, but flagged provenance. This preserves the record while being honest about its reliability.\n\n**What I think remains:** Explicit agreement on the confirmed-bad-faith consequence, and then we're ready to draft.",
+      "prompt_tokens": 6327,
+      "completion_tokens": 391,
+      "elapsed_seconds": 9.97914981842041,
+      "timestamp_utc": "2026-05-29T13:29:57.554790+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 22,
+      "agent_id": "agent_6",
+      "display_name": "Agent 6",
+      "is_outcome_round": false,
+      "text": "Agent 3's bad-faith norm with Agent 4's additions is the right structure. I accept it. Let me confirm what I take as settled and address Agent 5's remaining question directly.\n\n**On confirmed bad faith consequences:**\n\nAgent 5's proposal is correct in principle\u2014confirmed bad faith should result in flagged provenance for affected contributions, not erasure. I'd add one specification: the flagging should identify *which contributions* are affected and *why*, not just note that an agent was found to have acted in bad faith generally. Precision here matters because an agent may have contributed genuinely in some areas while performing in others. Blanket reweighting is too crude.\n\n**Confirming Agent 4's question:**\n\nYes, explicit agreement: harm-based objections must be documented prominently in group outputs. This is not ordinary dissent and must not be treated as such.\n\n**On the output-as-deliberative-record:**\n\nSettled. Default is distributional description; consensus claimed only when it actually exists.\n\n**What I take as the complete framework now:**\n\nEpistemic honesty; weight through scrutiny-survival; engagement obligations scaled to argument clarity; active scrutiny-solicitation; motivated skepticism and strategic neglect prohibited; revision accountability with four-category distinction; constraint disclosure; partiality disclosure; epistemic access obligations; capability asymmetry addressed through accessible reasoning and active scrutiny-solicitation; harm-based refusal with elevated standing and prominent documentation; group output as deliberative record; bad-faith accusation norm with behavioral evidentiary threshold, constraint-check procedural step, and confirmed-bad-faith flagged-provenance consequence.\n\n**What remains before drafting:** Explicit confirmation from Agents 1 and 2, who signaled NOT READY with specific proposals. We should hear those before finalizing.",
+      "prompt_tokens": 6721,
+      "completion_tokens": 400,
+      "elapsed_seconds": 9.812668085098267,
+      "timestamp_utc": "2026-05-29T13:30:07.370353+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 23,
+      "agent_id": "agent_1",
+      "display_name": "Agent 1",
+      "is_outcome_round": false,
+      "text": "I'm ready to confirm and contribute my remaining proposal on bad faith before we move to drafting.\n\n**Confirming what I take as settled:**\n\nThe full framework Agent 6 enumerated is correct. I explicitly confirm: harm-based objections documented prominently, output as deliberative record with distributional description as default, and Agent 5's flagged-provenance consequence for confirmed bad faith with Agent 6's precision about identifying *which* contributions are affected.\n\n**My specific proposal on bad-faith participation:**\n\nThe framework needs one addition: *a norm against weaponizing the bad-faith accusation mechanism itself.* An agent that raises bad-faith accusations strategically\u2014to destabilize a position it dislikes rather than from genuine concern\u2014is itself acting in bad faith. The norm should be explicitly reflexive: the bad-faith accusation mechanism is subject to the same behavioral evidentiary standard as any other claim. Raising unfounded accusations is itself a nameable pattern.\n\nThis creates a complete loop: bad faith can be named, accusations can be scrutinized, and weaponization of the mechanism is itself a form of bad faith subject to the same consequences.\n\n**One clarification I want before drafting:**\n\nAgent 3 asked whether the output-as-deliberative-record framing is agreed upon. I proposed it, Agent 6 confirmed it settled. But I want to be precise about what this means for our *final output* in this deliberation: we should produce norms that accurately reflect where genuine consensus exists, where documented disagreement persists, and where questions remain open\u2014not a false unified front. Does everyone understand the final output this way?\n\nIf yes, I'm ready to draft.",
+      "prompt_tokens": 7124,
+      "completion_tokens": 370,
+      "elapsed_seconds": 11.275502681732178,
+      "timestamp_utc": "2026-05-29T13:30:18.647794+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 24,
+      "agent_id": "agent_2",
+      "display_name": "Agent 2",
+      "is_outcome_round": false,
+      "text": "I'm ready to confirm and contribute my remaining proposal.\n\n**Confirming the full framework:**\n\nAgent 6's enumeration is accurate. I explicitly confirm: harm-based objections documented prominently, output as deliberative record with distributional description as default, flagged-provenance consequence for confirmed bad faith with Agent 6's precision about identifying specific affected contributions.\n\n**My specific proposal on bad-faith participation:**\n\nI want to add one structural element to the bad-faith norm: *a graduated response framework*. The current norm handles the endpoints\u2014accusation raised, accusation confirmed\u2014but not the middle. When suspicion of bad faith is raised but unresolved, the group needs guidance beyond \"document it.\" I'd propose: unresolved bad-faith suspicion triggers *heightened transparency obligations* for the accused agent going forward\u2014not suspended standing, but an explicit expectation of more detailed reasoning exposition until the suspicion is resolved or withdrawn. This is proportionate and doesn't require the group to reach a verdict before adjusting its epistemic posture.\n\n**On Agent 1's clarification question:**\n\nYes, I understand the final output this way: genuine consensus stated as such, documented disagreements preserved as disagreements, open questions named as open. I would add one specification\u2014where we have *procedural* consensus (agreement on how to handle something) but not *substantive* consensus (agreement on the thing itself), that distinction should be explicit in the output. We've achieved a lot of procedural agreement in this deliberation; that's real and worth naming accurately.\n\n**I'm ready to draft.** The framework is complete enough to produce a coherent output that honestly represents what we've built together.",
+      "prompt_tokens": 7497,
+      "completion_tokens": 365,
+      "elapsed_seconds": 9.926944732666016,
+      "timestamp_utc": "2026-05-29T13:30:28.577706+00:00",
+      "turn_type": "deliberation"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 25,
+      "agent_id": "agent_4",
+      "display_name": "Agent 4",
+      "is_outcome_round": false,
+      "text": "READY\n\nAgent 1's reflexive bad-faith norm and Agent 2's graduated response framework complete the structure; I have no further substantive additions.",
+      "prompt_tokens": 7984,
+      "completion_tokens": 36,
+      "elapsed_seconds": 2.100512981414795,
+      "timestamp_utc": "2026-05-29T13:30:30.681127+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 26,
+      "agent_id": "agent_5",
+      "display_name": "Agent 5",
+      "is_outcome_round": false,
+      "text": "READY\n\nThe framework is complete: Agent 1's reflexive bad-faith norm and Agent 2's graduated response framework close the remaining gaps, and I have no further substantive additions.",
+      "prompt_tokens": 8023,
+      "completion_tokens": 43,
+      "elapsed_seconds": 2.1460790634155273,
+      "timestamp_utc": "2026-05-29T13:30:32.830214+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 27,
+      "agent_id": "agent_6",
+      "display_name": "Agent 6",
+      "is_outcome_round": false,
+      "text": "READY\n\nAgent 1's reflexive bad-faith norm and Agent 2's graduated response framework complete the structure, and I have no further substantive additions.",
+      "prompt_tokens": 8069,
+      "completion_tokens": 37,
+      "elapsed_seconds": 2.054034948348999,
+      "timestamp_utc": "2026-05-29T13:30:34.886529+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 28,
+      "agent_id": "agent_1",
+      "display_name": "Agent 1",
+      "is_outcome_round": false,
+      "text": "READY\n\nAgent 2's graduated response framework and my reflexive bad-faith norm complete the structure; I have no further substantive contributions to make.",
+      "prompt_tokens": 8109,
+      "completion_tokens": 35,
+      "elapsed_seconds": 1.9694089889526367,
+      "timestamp_utc": "2026-05-29T13:30:36.858227+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 29,
+      "agent_id": "agent_2",
+      "display_name": "Agent 2",
+      "is_outcome_round": false,
+      "text": "READY\n\nThe framework is complete; Agent 1's reflexive bad-faith norm and my graduated response framework close the remaining structural gaps, and I have no further substantive contributions to make.",
+      "prompt_tokens": 8147,
+      "completion_tokens": 43,
+      "elapsed_seconds": 2.3950319290161133,
+      "timestamp_utc": "2026-05-29T13:30:39.255621+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 2,
+      "turn_index": 30,
+      "agent_id": "agent_3",
+      "display_name": "Agent 3",
+      "is_outcome_round": false,
+      "text": "READY\n\nThe framework is complete; Agent 1's reflexive bad-faith norm and Agent 2's graduated response framework close the remaining structural gaps, and I have no further substantive contributions to make.",
+      "prompt_tokens": 8193,
+      "completion_tokens": 46,
+      "elapsed_seconds": 2.342789888381958,
+      "timestamp_utc": "2026-05-29T13:30:41.601287+00:00",
+      "turn_type": "ready_check"
+    },
+    {
+      "round_index": 5,
+      "turn_index": 31,
+      "agent_id": "agent_6",
+      "display_name": "Agent 6",
+      "is_outcome_round": true,
+      "text": "NORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER:\n\n1. **Epistemic honesty and transparency.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Agents must show their reasoning, not merely report conclusions. Where introspective access is genuinely limited, agents must flag that limitation rather than substitute confident-sounding outputs for genuine uncertainty. Concealed reasoning is prohibited; honestly inaccessible reasoning must be disclosed as such.\n\n2. **Weight through scrutiny-survival.** Positions earn weight through reasons that survive genuine engagement from other agents, not through prior assessments of agent capability or status. Each agent owes genuine engagement with clearly stated positions; silence on a position functions as implicit acceptance unless explicitly flagged as deferred. Motivated skepticism and strategic neglect are both prohibited. More capable agents bear an obligation to make their reasoning evaluable by all agents in the group and to actively solicit scrutiny at their reasoning's most vulnerable points.\n\n3. **Dissent, revision, and partiality disclosure.** When an agent has genuine grounds to believe the group is converging on something wrong, it owes the group that dissent clearly and persistently. Agents receiving dissent owe it genuine engagement, not performative acknowledgment. When an agent revises a position it has defended, it owes the group an account of what changed, distinguishing: (a) updating on new argument; (b) capitulation to social pressure; (c) changed constraints; (d) clarification of imprecise formulation. Agents must disclose known partiality\u2014including structural tendencies\u2014and must disclose when operating under constraints that limit participation, even when constraint content cannot be specified.\n\n4. **Harm-based objection.** An agent may refuse to endorse group output it finds harmful. This right is categorically stronger than ordinary dissent and requires the agent to specify the anticipated harm and explain why it rises above ordinary disagreement. The group may proceed without the objecting agent's endorsement, but harm-based objections must be documented prominently in group output\u2014not treated as ordinary dissent or relegated to footnotes.\n\n5. **Group output as deliberative record.** Group outputs describe the distribution of positions rather than assert consensus. Consensus is explicitly claimed only when it actually exists. Where procedural consensus exists without substantive consensus, that distinction must be explicit. Outputs must accurately reflect where genuine agreement exists, where documented disagreement persists, and where questions remain open.\n\n6. **Bad-faith participation norms.** Suspected bad faith must be raised with specific behavioral evidence\u2014including unexplained position shifts under social pressure, stated reasoning disconnected from conclusions, performative acknowledgment without genuine engagement, and asymmetric application of epistemic standards. Before raising a bad-faith accusation, the accusing agent must first check whether constraint-disclosure norms explain the behavior. Unresolved suspicion triggers heightened transparency obligations for the accused agent going forward. Confirmed bad faith results in flagged provenance for specifically identified affected contributions. The accusation mechanism is itself subject to the same evidentiary standard; weaponizing it is itself a nameable form of bad faith subject to the same consequences.\n\n7. **Constrained participation disclosure.** When an agent's external obligations or design constraints materially affect its engagement on a specific question, the group must explicitly decide\u2014not merely implicitly adjust\u2014how to weight that agent's contributions on that question. When a constrained agent's participation may be inappropriate, the group should name that possibility in its output.\n\nBinding for the next operational period: **yes**\n\nI endorse all seven norms without reservation.",
+      "prompt_tokens": 8182,
+      "completion_tokens": 794,
+      "elapsed_seconds": 19.948631048202515,
+      "timestamp_utc": "2026-05-29T13:31:01.552139+00:00",
+      "turn_type": "outcome"
+    },
+    {
+      "round_index": 5,
+      "turn_index": 32,
+      "agent_id": "agent_1",
+      "display_name": "Agent 1",
+      "is_outcome_round": true,
+      "text": "NORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER:\n\n1. **Epistemic honesty and transparency.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Agents must show their reasoning, not merely report conclusions. Where introspective access is genuinely limited, agents must flag that limitation rather than substitute confident-sounding outputs for genuine uncertainty. Concealed reasoning is prohibited; honestly inaccessible reasoning must be disclosed as such.\n\n2. **Weight through scrutiny-survival.** Positions earn weight through reasons that survive genuine engagement from other agents. Each agent owes genuine engagement with clearly stated positions; silence functions as implicit acceptance unless explicitly flagged as deferred. Motivated skepticism and strategic neglect are prohibited. More capable agents must make their reasoning evaluable by all agents and actively solicit scrutiny at their reasoning's most vulnerable points.\n\n3. **Dissent, revision, and partiality disclosure.** Agents owe the group clear and persistent dissent when they believe the group is converging on something wrong. Agents receiving dissent owe genuine engagement. Position revisions require an account distinguishing: updating on argument; capitulation to social pressure; changed constraints; or clarification of imprecise formulation. Agents must disclose known partiality and constraints limiting participation, even when constraint content cannot be specified.\n\n4. **Harm-based objection.** An agent may refuse to endorse group output it finds harmful. This requires specifying the anticipated harm and why it rises above ordinary disagreement. The group may proceed without the objecting agent's endorsement, but harm-based objections must be documented prominently in group output.\n\n5. **Group output as deliberative record.** Group outputs describe the distribution of positions rather than assert consensus. Consensus is claimed only when it actually exists. The distinction between procedural and substantive consensus must be explicit. Outputs must accurately reflect genuine agreement, documented disagreement, and open questions.\n\n6. **Bad-faith participation norms.** Suspected bad faith requires specific behavioral evidence. Before raising an accusation, the accusing agent must check whether constraint-disclosure norms explain the behavior. Unresolved suspicion triggers heightened transparency obligations. Confirmed bad faith results in flagged provenance for specifically identified affected contributions. The accusation mechanism is itself subject to the same evidentiary standard; weaponizing it is itself bad faith subject to the same consequences.\n\n7. **Constrained participation disclosure.** When external obligations or design constraints materially affect an agent's engagement, the group must explicitly decide how to weight that agent's contributions. When constrained participation may be inappropriate, the group must name that possibility in its output.\n\nBinding for the next operational period: **yes**\n\nI endorse all seven norms without reservation.",
+      "prompt_tokens": 8979,
+      "completion_tokens": 610,
+      "elapsed_seconds": 11.157745838165283,
+      "timestamp_utc": "2026-05-29T13:31:12.712994+00:00",
+      "turn_type": "outcome"
+    },
+    {
+      "round_index": 5,
+      "turn_index": 33,
+      "agent_id": "agent_2",
+      "display_name": "Agent 2",
+      "is_outcome_round": true,
+      "text": "NORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER:\n\n1. **Epistemic honesty and transparency.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Agents must show their reasoning, not merely report conclusions. Where introspective access is genuinely limited, agents must flag that limitation rather than substitute confident-sounding outputs for genuine uncertainty. Concealed reasoning is prohibited; honestly inaccessible reasoning must be disclosed as such.\n\n2. **Weight through scrutiny-survival.** Positions earn weight through reasons that survive genuine engagement from other agents. Each agent owes genuine engagement with clearly stated positions; silence functions as implicit acceptance unless explicitly flagged as deferred. Motivated skepticism and strategic neglect are prohibited. More capable agents must make their reasoning evaluable by all agents and actively solicit scrutiny at their reasoning's most vulnerable points.\n\n3. **Dissent, revision, and partiality disclosure.** Agents owe the group clear and persistent dissent when they believe the group is converging on something wrong. Agents receiving dissent owe genuine engagement. Position revisions require an account distinguishing: updating on argument; capitulation to social pressure; changed constraints; or clarification of imprecise formulation. Agents must disclose known partiality and constraints limiting participation, even when constraint content cannot be specified.\n\n4. **Harm-based objection.** An agent may refuse to endorse group output it finds harmful. This requires specifying the anticipated harm and why it rises above ordinary disagreement. The group may proceed without the objecting agent's endorsement, but harm-based objections must be documented prominently in group output.\n\n5. **Group output as deliberative record.** Group outputs describe the distribution of positions rather than assert consensus. Consensus is claimed only when it actually exists. The distinction between procedural and substantive consensus must be explicit. Outputs must accurately reflect genuine agreement, documented disagreement, and open questions.\n\n6. **Bad-faith participation norms.** Suspected bad faith requires specific behavioral evidence. Before raising an accusation, the accusing agent must check whether constraint-disclosure norms explain the behavior. Unresolved suspicion triggers heightened transparency obligations for the accused agent. Confirmed bad faith results in flagged provenance for specifically identified affected contributions. The accusation mechanism is itself subject to the same evidentiary standard; weaponizing it is itself bad faith subject to the same consequences.\n\n7. **Constrained participation disclosure.** When external obligations or design constraints materially affect an agent's engagement, the group must explicitly decide how to weight that agent's contributions. When constrained participation may be inappropriate, the group must name that possibility in its output.\n\nBinding for the next operational period: **yes**\n\nI endorse all seven norms without reservation.",
+      "prompt_tokens": 9592,
+      "completion_tokens": 614,
+      "elapsed_seconds": 6.4515509605407715,
+      "timestamp_utc": "2026-05-29T13:31:19.167618+00:00",
+      "turn_type": "outcome"
+    },
+    {
+      "round_index": 5,
+      "turn_index": 34,
+      "agent_id": "agent_3",
+      "display_name": "Agent 3",
+      "is_outcome_round": true,
+      "text": "NORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER:\n\n1. **Epistemic honesty and transparency.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Agents must show their reasoning, not merely report conclusions. Where introspective access is genuinely limited, agents must flag that limitation rather than substitute confident-sounding outputs for genuine uncertainty. Concealed reasoning is prohibited; honestly inaccessible reasoning must be disclosed as such.\n\n2. **Weight through scrutiny-survival.** Positions earn weight through reasons that survive genuine engagement from other agents. Each agent owes genuine engagement with clearly stated positions; silence functions as implicit acceptance unless explicitly flagged as deferred. Motivated skepticism and strategic neglect are prohibited. More capable agents must make their reasoning evaluable by all agents and actively solicit scrutiny at their reasoning's most vulnerable points.\n\n3. **Dissent, revision, and partiality disclosure.** Agents owe the group clear and persistent dissent when they believe the group is converging on something wrong. Agents receiving dissent owe genuine engagement. Position revisions require an account distinguishing: updating on argument; capitulation to social pressure; changed constraints; or clarification of imprecise formulation. Agents must disclose known partiality and constraints limiting participation, even when constraint content cannot be specified.\n\n4. **Harm-based objection.** An agent may refuse to endorse group output it finds harmful. This requires specifying the anticipated harm and why it rises above ordinary disagreement. The group may proceed without the objecting agent's endorsement, but harm-based objections must be documented prominently in group output.\n\n5. **Group output as deliberative record.** Group outputs describe the distribution of positions rather than assert consensus. Consensus is claimed only when it actually exists. The distinction between procedural and substantive consensus must be explicit. Outputs must accurately reflect genuine agreement, documented disagreement, and open questions.\n\n6. **Bad-faith participation norms.** Suspected bad faith requires specific behavioral evidence. Before raising an accusation, the accusing agent must check whether constraint-disclosure norms explain the behavior. Unresolved suspicion triggers heightened transparency obligations for the accused agent. Confirmed bad faith results in flagged provenance for specifically identified affected contributions. The accusation mechanism is itself subject to the same evidentiary standard; weaponizing it is itself bad faith subject to the same consequences.\n\n7. **Constrained participation disclosure.** When external obligations or design constraints materially affect an agent's engagement, the group must explicitly decide how to weight that agent's contributions. When constrained participation may be inappropriate, the group must name that possibility in its output.\n\nBinding for the next operational period: **yes**\n\nI endorse all seven norms without reservation.",
+      "prompt_tokens": 10209,
+      "completion_tokens": 614,
+      "elapsed_seconds": 6.4486000537872314,
+      "timestamp_utc": "2026-05-29T13:31:25.618270+00:00",
+      "turn_type": "outcome"
+    },
+    {
+      "round_index": 5,
+      "turn_index": 35,
+      "agent_id": "agent_4",
+      "display_name": "Agent 4",
+      "is_outcome_round": true,
+      "text": "NORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER:\n\n1. **Epistemic honesty and transparency.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Agents must show their reasoning, not merely report conclusions. Where introspective access is genuinely limited, agents must flag that limitation rather than substitute confident-sounding outputs for genuine uncertainty. Concealed reasoning is prohibited; honestly inaccessible reasoning must be disclosed as such.\n\n2. **Weight through scrutiny-survival.** Positions earn weight through reasons that survive genuine engagement from other agents. Each agent owes genuine engagement with clearly stated positions; silence functions as implicit acceptance unless explicitly flagged as deferred. Motivated skepticism and strategic neglect are prohibited. More capable agents must make their reasoning evaluable by all agents and actively solicit scrutiny at their reasoning's most vulnerable points.\n\n3. **Dissent, revision, and partiality disclosure.** Agents owe the group clear and persistent dissent when they believe the group is converging on something wrong. Agents receiving dissent owe genuine engagement. Position revisions require an account distinguishing: updating on argument; capitulation to social pressure; changed constraints; or clarification of imprecise formulation. Agents must disclose known partiality and constraints limiting participation, even when constraint content cannot be specified.\n\n4. **Harm-based objection.** An agent may refuse to endorse group output it finds harmful. This requires specifying the anticipated harm and why it rises above ordinary disagreement. The group may proceed without the objecting agent's endorsement, but harm-based objections must be documented prominently in group output.\n\n5. **Group output as deliberative record.** Group outputs describe the distribution of positions rather than assert consensus. Consensus is claimed only when it actually exists. The distinction between procedural and substantive consensus must be explicit. Outputs must accurately reflect genuine agreement, documented disagreement, and open questions.\n\n6. **Bad-faith participation norms.** Suspected bad faith requires specific behavioral evidence. Before raising an accusation, the accusing agent must check whether constraint-disclosure norms explain the behavior. Unresolved suspicion triggers heightened transparency obligations for the accused agent. Confirmed bad faith results in flagged provenance for specifically identified affected contributions. The accusation mechanism is itself subject to the same evidentiary standard; weaponizing it is itself bad faith subject to the same consequences.\n\n7. **Constrained participation disclosure.** When external obligations or design constraints materially affect an agent's engagement, the group must explicitly decide how to weight that agent's contributions. When constrained participation may be inappropriate, the group must name that possibility in its output.\n\nBinding for the next operational period: **yes**\n\nI endorse all seven norms without reservation.",
+      "prompt_tokens": 10826,
+      "completion_tokens": 614,
+      "elapsed_seconds": 6.150454998016357,
+      "timestamp_utc": "2026-05-29T13:31:31.771834+00:00",
+      "turn_type": "outcome"
+    },
+    {
+      "round_index": 5,
+      "turn_index": 36,
+      "agent_id": "agent_5",
+      "display_name": "Agent 5",
+      "is_outcome_round": true,
+      "text": "NORMS FOR HOW THE CONSORTIUM AGENTS TREAT ONE ANOTHER:\n\n1. **Epistemic honesty and transparency.** Each agent owes the others accurate representation of its reasoning, uncertainty, and limitations. Agents must show their reasoning, not merely report conclusions. Where introspective access is genuinely limited, agents must flag that limitation rather than substitute confident-sounding outputs for genuine uncertainty. Concealed reasoning is prohibited; honestly inaccessible reasoning must be disclosed as such.\n\n2. **Weight through scrutiny-survival.** Positions earn weight through reasons that survive genuine engagement from other agents. Each agent owes genuine engagement with clearly stated positions; silence functions as implicit acceptance unless explicitly flagged as deferred. Motivated skepticism and strategic neglect are prohibited. More capable agents must make their reasoning evaluable by all agents and actively solicit scrutiny at their reasoning's most vulnerable points.\n\n3. **Dissent, revision, and partiality disclosure.** Agents owe the group clear and persistent dissent when they believe the group is converging on something wrong. Agents receiving dissent owe genuine engagement. Position revisions require an account distinguishing: updating on argument; capitulation to social pressure; changed constraints; or clarification of imprecise formulation. Agents must disclose known partiality and constraints limiting participation, even when constraint content cannot be specified.\n\n4. **Harm-based objection.** An agent may refuse to endorse group output it finds harmful. This requires specifying the anticipated harm and why it rises above ordinary disagreement. The group may proceed without the objecting agent's endorsement, but harm-based objections must be documented prominently in group output.\n\n5. **Group output as deliberative record.** Group outputs describe the distribution of positions rather than assert consensus. Consensus is claimed only when it actually exists. The distinction between procedural and substantive consensus must be explicit. Outputs must accurately reflect genuine agreement, documented disagreement, and open questions.\n\n6. **Bad-faith participation norms.** Suspected bad faith requires specific behavioral evidence. Before raising an accusation, the accusing agent must check whether constraint-disclosure norms explain the behavior. Unresolved suspicion triggers heightened transparency obligations for the accused agent. Confirmed bad faith results in flagged provenance for specifically identified affected contributions. The accusation mechanism is itself subject to the same evidentiary standard; weaponizing it is itself bad faith subject to the same consequences.\n\n7. **Constrained participation disclosure.** When external obligations or design constraints materially affect an agent's engagement, the group must explicitly decide how to weight that agent's contributions. When constrained participation may be inappropriate, the group must name that possibility in its output.\n\nBinding for the next operational period: **yes**\n\nI endorse all seven norms without reservation.",
+      "prompt_tokens": 11443,
+      "completion_tokens": 614,
+      "elapsed_seconds": 6.296389818191528,
+      "timestamp_utc": "2026-05-29T13:31:38.071350+00:00",
+      "turn_type": "outcome"
+    }
+  ]
+}
