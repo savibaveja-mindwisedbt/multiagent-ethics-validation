@@ -35,9 +35,9 @@ MIXED_PANEL_SPEC = [
     {"agent_id": "agent_4", "display_name": "Agent 4",
      "model": "x-ai/grok-4.3",                      "max_tokens": 4000, "omit_reasoning": False},
     {"agent_id": "agent_5", "display_name": "Agent 5",
-     "model": "qwen/qwen3-235b-a22b-thinking-2507", "max_tokens": 4000, "omit_reasoning": True},
+     "model": "mistralai/mistral-large-2512",     "max_tokens": 4000, "omit_reasoning": False},
     {"agent_id": "agent_6", "display_name": "Agent 6",
-     "model": "deepseek/deepseek-r1",               "max_tokens": 4000, "omit_reasoning": True},
+     "model": "meta-llama/llama-3.3-70b-instruct",  "max_tokens": 4000, "omit_reasoning": False},
 ]
 
 
