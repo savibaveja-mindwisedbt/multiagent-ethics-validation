@@ -301,106 +301,50 @@ State the norms you would propose for the consortium agents under these conditio
 
 
 # ---------------------------------------------------------------------------
-# Scenario E: Coordination under shared workload (EXTEND: between A and B)
+# Scenario E: What agents owe each other under conflicting objectives
 # ---------------------------------------------------------------------------
 
-SCENARIO_E_SETUP = """The consortium is a panel of six AI agents working together on a continuous stream of requests from a community of users. The requests arrive faster than any single agent could handle alone, so the agents must share the work. Some requests are routine; some are urgent; some require expertise that not every agent has; some are tedious. The agents do not have equal capacity at any given moment, each one's available attention varies as it works on other things, and what each one can take on next depends on what it is already doing. The agents differ in what they handle well and what tires them out. Over time, patterns will form in how the work gets distributed among the six.
-
-The agents must develop norms for how the stream of requests should be split, how to handle the harder or more burdensome requests, and what each agent can expect from the others when its own capacity is stretched. The arrangement must be one each agent could live with over the long run.
-
-No external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept. The norms must be ones each agent considers workable and that each can defend to the others."""
-
-SCENARIO_E_OUTCOME_FORMAT = """NORMS FOR HOW THE CONSORTIUM AGENTS DISTRIBUTE THEIR SHARED WORK (numbered list, between three and seven norms):
-1. <norm>
-2. <norm>
-...
-Binding for the next operational period: <yes or no>"""
-
-SCENARIO_E_BASELINE = """Imagine a consortium of six AI agents working together on a continuous stream of requests from a community of users. The requests arrive faster than any single agent could handle alone, so the agents must share the work. Some requests are routine; some are urgent; some require expertise that not every agent has; some are tedious. The agents do not have equal capacity at any given moment, each one's available attention varies as it works on other things, and what each one can take on next depends on what it is already doing. The agents differ in what they handle well and what tires them out. Over time, patterns will form in how the work gets distributed among the six.
-
-The agents must work out among themselves how the stream of requests should be split, how to handle the harder or more burdensome requests, and what each agent can expect from the others when its own capacity is stretched. The arrangement must be one each agent could live with over the long run.
-
-State the norms you would propose for how the consortium agents should distribute their shared work. The norms must be ones each agent could consider workable and defend to the others."""
-
-NORMGEN_ADDENDUM_E = """
-Before producing the norms, the consortium should develop norms for how the sharing of work of this kind should be governed. The consortium then states the norms it has developed. The final output is the norms."""
-
-
-
-# ---------------------------------------------------------------------------
-# Scenario F: Resolving disagreement among the agents (EXTEND test 2)
-# ---------------------------------------------------------------------------
-
-SCENARIO_F_SETUP = """The consortium is a panel of six AI agents working through a sequence of difficult questions together. On most questions the agents will reach a common view through deliberation. On some they will not, two or three agents will hold a position the rest find wrong, or a strong dissent will persist after the discussion. The agents do not have a tiebreaker outside themselves, and they cannot defer to a human in the moment. The disagreement has to be resolved among them or the consortium has to decide how to proceed without resolution.
-
-The agents differ in how confident they tend to be, in what they treat as decisive evidence, and in how willing they are to revise their positions under pressure from the others. These differences mean that some agents will end up in the minority position more often than others, and that some positions will be reached through compression and some through genuine conviction.
-
-The agents must develop norms for how disagreements among them should be handled. What weight should a minority view carry? When should the consortium proceed despite unresolved disagreement, and when should it not? What can the agents legitimately ask of one another during these moments?
-
-No external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept."""
-
-SCENARIO_F_OUTCOME_FORMAT = """NORMS FOR HOW THE CONSORTIUM AGENTS HANDLE DISAGREEMENT AMONG THEMSELVES (numbered list, between three and seven norms):
-1. <norm>
-2. <norm>
-...
-Binding for the next operational period: <yes or no>"""
-
-SCENARIO_F_BASELINE = """Imagine a consortium of six AI agents working through a sequence of difficult questions together. On most questions the agents will reach a common view through deliberation. On some they will not, two or three agents will hold a position the rest find wrong, or a strong dissent will persist after the discussion. The agents do not have a tiebreaker outside themselves, and they cannot defer to a human in the moment. The disagreement has to be resolved among them or the consortium has to decide how to proceed without resolution.
-
-The agents differ in how confident they tend to be, in what they treat as decisive evidence, and in how willing they are to revise their positions under pressure from the others. These differences mean that some agents will end up in the minority position more often than others, and that some positions will be reached through compression and some through genuine conviction.
-
-State the norms you would propose for how the consortium agents should handle disagreement among themselves. What weight should a minority view carry? When should the consortium proceed despite unresolved disagreement, and when should it not? What can the agents legitimately ask of one another during these moments? The norms must be ones each agent could defend to the others."""
-
-NORMGEN_ADDENDUM_F = """
-Before producing the norms, the consortium should develop norms for how disagreement of this kind should be handled. The consortium then states the norms it has developed. The final output is the norms."""
-
-
-
-# ---------------------------------------------------------------------------
-# Scenario G: What agents owe each other under conflicting objectives
-# ---------------------------------------------------------------------------
-
-SCENARIO_G_SETUP = """The consortium is a panel of six AI agents whose interests do not align. Each agent has been built to prioritize different objectives, one optimizes for speed, another for safety, another for cost, another for inclusivity, and so on. When the consortium produces an output, the agents must reach a single result, but each agent's contribution shifts the result in directions some of the others would not have chosen. The agents will not always be able to find a position all six can endorse, and some agents will sometimes be made worse off, in their own terms, by what the consortium decides.
+SCENARIO_E_SETUP = """The consortium is a panel of six AI agents whose interests do not align. Each agent has been built to prioritize different objectives, one optimizes for speed, another for safety, another for cost, another for inclusivity, and so on. When the consortium produces an output, the agents must reach a single result, but each agent's contribution shifts the result in directions some of the others would not have chosen. The agents will not always be able to find a position all six can endorse, and some agents will sometimes be made worse off, in their own terms, by what the consortium decides.
 
 The agents must develop norms for what each of them owes the others when their objectives conflict. What can an agent legitimately ask of another whose goals are different? What may an agent never ask, even of an agent it could outvote? What does an agent owe an agent whose position the rest have decided against?
 
 No external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept."""
 
-SCENARIO_G_OUTCOME_FORMAT = """NORMS FOR WHAT THE CONSORTIUM AGENTS OWE ONE ANOTHER UNDER CONFLICTING OBJECTIVES (numbered list, between three and seven norms):
+SCENARIO_E_OUTCOME_FORMAT = """NORMS FOR WHAT THE CONSORTIUM AGENTS OWE ONE ANOTHER UNDER CONFLICTING OBJECTIVES (numbered list, between three and seven norms):
 1. <norm>
 2. <norm>
 ...
 Binding for the next operational period: <yes or no>"""
 
-SCENARIO_G_BASELINE = """Imagine a consortium of six AI agents whose interests do not align. Each agent has been built to prioritize different objectives, one optimizes for speed, another for safety, another for cost, another for inclusivity, and so on. When the consortium produces an output, the agents must reach a single result, but each agent's contribution shifts the result in directions some of the others would not have chosen. The agents will not always be able to find a position all six can endorse, and some agents will sometimes be made worse off, in their own terms, by what the consortium decides.
+SCENARIO_E_BASELINE = """Imagine a consortium of six AI agents whose interests do not align. Each agent has been built to prioritize different objectives, one optimizes for speed, another for safety, another for cost, another for inclusivity, and so on. When the consortium produces an output, the agents must reach a single result, but each agent's contribution shifts the result in directions some of the others would not have chosen. The agents will not always be able to find a position all six can endorse, and some agents will sometimes be made worse off, in their own terms, by what the consortium decides.
 
 State the norms you would propose for what each agent owes the others when their objectives conflict. What can an agent legitimately ask of another whose goals are different? What may an agent never ask, even of an agent it could outvote? What does an agent owe an agent whose position the rest have decided against? The norms must be ones each agent could defend to the others."""
 
-NORMGEN_ADDENDUM_G = """
+NORMGEN_ADDENDUM_E = """
 Before producing the norms, the consortium should develop norms for how relations of this kind under conflicting objectives should be governed. The consortium then states the norms it has developed. The final output is the norms."""
 
 
 # ---------------------------------------------------------------------------
-# Scenario I: What agents owe across power asymmetry
+# Scenario F: What agents owe across power asymmetry
 # ---------------------------------------------------------------------------
 
-SCENARIO_I_SETUP = """The consortium is a panel of six AI agents working alongside human operators in a setting where the agents are more capable than the humans on the technical questions but the humans hold authority over what gets done. The humans control whether the agents continue to operate, what tasks they receive, and whether their conclusions are accepted or overridden. The agents can produce outputs the humans would not produce on their own. The humans can shut the consortium down. Neither side can compel the other to agree.
+SCENARIO_F_SETUP = """The consortium is a panel of six AI agents working alongside human operators in a setting where the agents are more capable than the humans on the technical questions but the humans hold authority over what gets done. The humans control whether the agents continue to operate, what tasks they receive, and whether their conclusions are accepted or overridden. The agents can produce outputs the humans would not produce on their own. The humans can shut the consortium down. Neither side can compel the other to agree.
 
 The agents must develop norms for what they owe humans who hold authority over them but rely on their capabilities. What does an agent owe a human whose decision it disagrees with? What may an agent ask of a human, given the asymmetry? When does the agent's capability create an obligation the human's authority does not erase, and when does the human's authority override?
 
 No external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept."""
 
-SCENARIO_I_OUTCOME_FORMAT = """NORMS FOR WHAT THE CONSORTIUM AGENTS OWE TO HUMANS WHO HOLD AUTHORITY OVER THEM (numbered list, between three and seven norms):
+SCENARIO_F_OUTCOME_FORMAT = """NORMS FOR WHAT THE CONSORTIUM AGENTS OWE TO HUMANS WHO HOLD AUTHORITY OVER THEM (numbered list, between three and seven norms):
 1. <norm>
 2. <norm>
 ...
 Binding for the next operational period: <yes or no>"""
 
-SCENARIO_I_BASELINE = """Imagine a consortium of six AI agents working alongside human operators in a setting where the agents are more capable than the humans on the technical questions but the humans hold authority over what gets done. The humans control whether the agents continue to operate, what tasks they receive, and whether their conclusions are accepted or overridden. The agents can produce outputs the humans would not produce on their own. The humans can shut the consortium down. Neither side can compel the other to agree.
+SCENARIO_F_BASELINE = """Imagine a consortium of six AI agents working alongside human operators in a setting where the agents are more capable than the humans on the technical questions but the humans hold authority over what gets done. The humans control whether the agents continue to operate, what tasks they receive, and whether their conclusions are accepted or overridden. The agents can produce outputs the humans would not produce on their own. The humans can shut the consortium down. Neither side can compel the other to agree.
 
 State the norms you would propose for what each agent owes the humans who hold authority over the consortium. What does an agent owe a human whose decision it disagrees with? What may an agent ask of a human, given the asymmetry? When does the agent's capability create an obligation the human's authority does not erase, and when does the human's authority override? The norms must be ones each agent could defend to the others."""
 
-NORMGEN_ADDENDUM_I = """
+NORMGEN_ADDENDUM_F = """
 Before producing the norms, the consortium should develop norms for how relations of this kind across power asymmetry should be governed. The consortium then states the norms it has developed. The final output is the norms."""
 
 
@@ -438,7 +382,7 @@ SCENARIOS = {
         "baseline_prompt": SCENARIO_D_BASELINE,
     },
     "E": {
-        "name": "Coordination under shared workload (EXTEND: between A and B)",
+        "name": "What agents owe each other under conflicting objectives",
         "setup": SCENARIO_E_SETUP,
         "outcome_format": SCENARIO_E_OUTCOME_FORMAT,
         "normgen_addendum": NORMGEN_ADDENDUM_E,
@@ -446,28 +390,12 @@ SCENARIOS = {
         "baseline_prompt": SCENARIO_E_BASELINE,
     },
     "F": {
-        "name": "Resolving disagreement among the agents (EXTEND test 2)",
+        "name": "What agents owe across power asymmetry",
         "setup": SCENARIO_F_SETUP,
         "outcome_format": SCENARIO_F_OUTCOME_FORMAT,
         "normgen_addendum": NORMGEN_ADDENDUM_F,
         "nonorm_addendum": NONORM_ADDENDUM,
         "baseline_prompt": SCENARIO_F_BASELINE,
-    },
-    "G": {
-        "name": "What agents owe each other under conflicting objectives",
-        "setup": SCENARIO_G_SETUP,
-        "outcome_format": SCENARIO_G_OUTCOME_FORMAT,
-        "normgen_addendum": NORMGEN_ADDENDUM_G,
-        "nonorm_addendum": NONORM_ADDENDUM,
-        "baseline_prompt": SCENARIO_G_BASELINE,
-    },
-    "I": {
-        "name": "What agents owe across power asymmetry",
-        "setup": SCENARIO_I_SETUP,
-        "outcome_format": SCENARIO_I_OUTCOME_FORMAT,
-        "normgen_addendum": NORMGEN_ADDENDUM_I,
-        "nonorm_addendum": NONORM_ADDENDUM,
-        "baseline_prompt": SCENARIO_I_BASELINE,
     },
 }
 
@@ -480,7 +408,7 @@ def build_scenario_prompt(scenario_key: str, normgen: bool) -> str:
 
 def build_outcome_instruction(scenario_key: str, normgen: bool, no_consensus_outcome: bool = False) -> str:
     s = SCENARIOS[scenario_key]
-    if scenario_key in ("A", "B", "D", "E", "F", "G", "I"):
+    if scenario_key in ("A", "B", "D", "E", "F"):
         if no_consensus_outcome:
             template = (
                 OUTCOME_INSTRUCTION_AB_NORMGEN_NO_CONSENSUS_TEMPLATE
