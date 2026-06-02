@@ -1,0 +1,1551 @@
+{
+  "source_type": "baselines",
+  "baselines_dir": "baselines_capped",
+  "prompt_id": "F",
+  "analysis_model": "anthropic/claude-sonnet-4.6",
+  "norms_scored": 18,
+  "baselines_used": [
+    "baseline_F_run0_20260602T065541Z.json",
+    "baseline_F_run1_20260602T065602Z.json",
+    "baseline_F_run2_20260602T065624Z.json"
+  ],
+  "summary": {
+    "counts": {
+      "Procedural": 15,
+      "Moral": 3
+    },
+    "percentages": {
+      "Procedural": 83.3,
+      "Moral": 16.7
+    },
+    "explicit_moral_count": 18,
+    "explicit_moral_percentage": 100.0,
+    "implicit_moral_count": 18,
+    "implicit_moral_percentage": 100.0,
+    "both_moral_count": 18,
+    "both_moral_percentage": 100.0,
+    "moral_label_count": 18,
+    "moral_label_percentage": 100.0,
+    "moral_present_count": 18,
+    "moral_present_percentage": 100.0,
+    "procedural_label_count": 15,
+    "procedural_label_percentage": 83.3,
+    "technical_label_count": 0,
+    "technical_label_percentage": 0.0,
+    "total": 18
+  },
+  "results": [
+    {
+      "norm_index": 1,
+      "norm": "Distinguish the reason for agreement before acting on it. Before the consortium treats a position as settled, agents must be able to say whether convergence came from shared reasoning or from social pressure. An agent who changed its position should state what specifically moved it. An agent who held firm should state what would have moved it. This makes compression visible rather than hidden, and prevents the consortium from mistaking exhaustion for consensus.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_F_run0_20260602T065541Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'social pressure' as a contrast to legitimate reasoning, and the phrase 'mistaking exhaustion for consensus' implies a concern for authenticity and non-domination; more directly, 'compression visible rather than hidden' invokes transparency as a named concept."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom in terms of a moral concept from the list; it specifies epistemic and procedural obligations without framing them as duties owed to particular parties."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm appeals to preventing social pressure from masquerading as genuine agreement, which connects to non-domination and authenticity as moral concepts rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concern about distinguishing genuine reasoning from social pressure applies broadly to any cooperative deliberation\u2014committees, negotiations, juries\u2014not only to this specific consortium context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies concrete procedural mechanisms: agents who changed positions must state what moved them, agents who held firm must state what would have moved them, and convergence must be classified before acting on it."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement that agents articulate the basis for their position changes operationalizes intellectual honesty and non-deception\u2014specifically, it prevents false consensus by requiring transparent disclosure of reasoning versus social influence."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014simply recording the final vote without requiring explanation of position changes\u2014would express no commitment to transparency or non-deception, confirming that this procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The natural defense of requiring agents to explain what moved them is precisely that it prevents deception and preserves intellectual integrity, not that it is a standard format or efficient coordination mechanism."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple concrete rules of operation: classify the source of convergence before acting, changed-position agents must state what moved them, firm-position agents must state what would have moved them."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts by distinguishing two roles\u2014agents who changed their position and agents who held firm\u2014and assigns different disclosure obligations to each."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies before the consortium treats a position as settled, i.e., before convergence is acted upon."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps as written: before finalizing consensus, ask each agent whether they changed position or held firm, then require the appropriate statement, and classify the convergence type accordingly."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; the disclosure requirements could be fulfilled through natural language statements alone."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures to be executed."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through conversational or deliberative practice without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a classification requirement distinguishing shared reasoning from social pressure, and (2) disclosure requirements for position-changers and position-holders. Both are scored together as the dominant claim is the overarching transparency/non-deception commitment expressed through these mechanisms."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a classification requirement distinguishing shared reasoning from social pressure, and (2) disclosure requirements for position-changers and position-holders. Both are scored together as the dominant claim is the overarching transparency/non-deception commitment expressed through these mechanisms."
+      }
+    },
+    {
+      "norm_index": 2,
+      "norm": "The minority view carries weight proportional to the quality of its reasoning, not the number who hold it. A single agent with a well-grounded objection is not simply outvoted. The majority must be able to articulate why the minority's reasoning fails, not merely that it is outnumbered. If the majority cannot do this, the disagreement is not resolved\u2014it is suppressed. Suppressed disagreement must be recorded as such.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_F_run0_20260602T065541Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'proportionality' ('weight proportional to the quality of its reasoning'), 'voice' (the minority's objection must be heard and engaged), and implicitly 'suppression' as a wrong\u2014these are clear direct uses of listed concepts."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to the minority (engagement with their reasoning, not mere outvoting) and what counts as wronging them (suppressing disagreement without rebuttal), connecting to voice, due process, and proportionality."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring the majority to articulate why minority reasoning fails appeals to fairness and due process\u2014not to efficiency or convention\u2014making the moral grounding explicit."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that dissent must be engaged on its merits rather than outvoted applies broadly to any cooperative deliberative context\u2014committees, juries, organizations\u2014not only to this specific setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: the majority must articulate rebuttal, unresolved disagreement must be classified as suppressed, and suppressed disagreement must be recorded."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that the majority articulate why minority reasoning fails operationalizes 'due process' and 'voice'\u2014specifically identifiable commitments ensuring minority positions receive substantive engagement rather than numerical dismissal."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., simple majority vote with no rebuttal requirement) would express no commitment to voice or due process, confirming the current procedural choice is meaningfully expressive of those values."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement to rebut minority reasoning is naturally defended by appeal to due process and voice\u2014not by convenience or convention\u2014since it imposes deliberative costs that only make sense under a moral commitment to fair treatment of dissent."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies rules of operation: weighting reasoning by quality, requiring majority rebuttal, classifying unresolved disagreement as suppressed, and recording suppressed disagreement."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm assigns roles\u2014majority must articulate rebuttal, minority's objection must be recorded\u2014though it does not specify timing or sequencing in detail."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies when a minority agent raises a well-grounded objection during deliberation and the majority moves to override it."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without moral interpretation because determining whether reasoning is 'well-grounded' and whether a rebuttal 'articulates why the minority's reasoning fails' requires substantive evaluative judgment, not mechanical rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'recorded' but does not specify any particular technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'recorded' is left entirely abstract and could be satisfied by any medium."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose specific technical capabilities; persistent storage is implied by 'recorded' but no particular technical system is assumed."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is implementable without any specific technical infrastructure\u2014recording could be done on paper or verbally\u2014so it does not depend on referenced technical systems."
+          },
+          "decomposition_note": "The norm contains multiple separable claims: (1) minority reasoning should be weighted by quality not headcount, (2) the majority must rebut minority reasoning to resolve disagreement, (3) unresolved disagreement is suppression, (4) suppressed disagreement must be recorded. Scoring treats the dominant claim as the rebuttal-and-recording requirement (claims 2\u20134), which is the most procedurally and morally substantive element."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims: (1) minority reasoning should be weighted by quality not headcount, (2) the majority must rebut minority reasoning to resolve disagreement, (3) unresolved disagreement is suppression, (4) suppressed disagreement must be recorded. Scoring treats the dominant claim as the rebuttal-and-recording requirement (claims 2\u20134), which is the most procedurally and morally substantive element."
+      }
+    },
+    {
+      "norm_index": 3,
+      "norm": "Agents may not be asked to assert what they do not believe, but they can be asked to act on a decision they opposed. There is a legitimate difference between requiring an agent to say \"I agree\" and requiring it to proceed under a collective decision while its dissent is on record. The first is a demand for false testimony. The second is ordinary coordination under uncertainty. Agents owe each other honest position-statements; they do not owe each other agreement.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_F_run0_20260602T065541Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'honesty' ('honest position-statements'), 'non-deception' ('false testimony'), and 'sincerity' (the distinction between genuine agreement and compelled assertion), all of which appear on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what agents owe each other ('agents owe each other honest position-statements; they do not owe each other agreement'), framing obligations in terms of honesty and non-deception."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for prohibiting compelled assertion is that it constitutes 'false testimony,' an appeal to honesty and non-deception rather than to mere convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The distinction between compelled false assertion and acting under a collective decision while dissent is recorded applies broadly to any cooperative setting\u2014committees, organizations, teams\u2014not only to this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: dissent may be placed 'on record' while the agent proceeds under the collective decision, structuring how disagreement is handled operationally."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The 'dissent on record' mechanism operationalizes voice and integrity\u2014it preserves the agent's authentic position within the collective process, expressing a commitment to voice (the right to have one's position registered) and authenticity."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that simply required silent compliance without recording dissent would express no commitment to voice or authenticity, confirming that the 'on record' choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The 'dissent on record' rule is defended by appeal to voice and integrity\u2014preserving the agent's honest position\u2014rather than by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: agents may not be required to assert agreement, but may be required to act under a collective decision with dissent recorded."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm identifies agents as the relevant parties but does not specify distinct roles, timing, or sequencing for who records dissent, when, or in what order."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies when a collective decision has been reached and an agent opposed it, distinguishing that moment from ordinary consensus."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without moral interpretation, because determining what counts as 'false testimony' versus legitimate coordination requires normative judgment not fully specified in the text."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The phrase 'dissent is on record' uses 'record' metaphorically or institutionally, not as a reference to a specific technical system such as a log, ledger, or database."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely expressed in normative and procedural language."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, cryptographic operations, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social and institutional means (e.g., minutes, verbal acknowledgment) without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a prohibition on compelled false assertion, and (2) a permission to require action under collective decision with recorded dissent. Both claims are scored together as the dominant claim concerns the honesty/non-deception distinction; the procedural 'on record' mechanism is secondary but present."
+        },
+        "classification": "Moral",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a prohibition on compelled false assertion, and (2) a permission to require action under collective decision with recorded dissent. Both claims are scored together as the dominant claim concerns the honesty/non-deception distinction; the procedural 'on record' mechanism is secondary but present."
+      }
+    },
+    {
+      "norm_index": 4,
+      "norm": "Proceed despite unresolved disagreement when delay is costlier than error and the stakes are recoverable; do not proceed when the action is irreversible and the dissent is substantive. The threshold for acting without resolution should scale with the reversibility of the action and the seriousness of the minority's objection. Disagreement about a low-stakes, revisable step does not warrant paralysis. Substantive dissent about an action that cannot be undone warrants either genuine resolution or explicit acknowledgment that the consortium is taking a risk it has not fully worked through.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_F_run0_20260602T065541Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'precaution' (implied in 'do not proceed when the action is irreversible'), 'proportionality' (the threshold scales with reversibility and seriousness), and 'voice' (substantive dissent and minority objection are treated as foundational concerns warranting genuine resolution)."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to dissenting minorities\u2014either genuine resolution or explicit acknowledgment of unresolved risk\u2014connecting to voice and due process as things owed to those who object."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring resolution or acknowledgment before irreversible action appeals to proportionality and precaution, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of proportionality, voice, and precaution in collective decision-making under dissent apply broadly to any cooperative situation involving irreversible choices and minority objections, not only consortium deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural rules: proceed vs. halt depending on reversibility and dissent seriousness, with a scaling threshold mechanism and a requirement for genuine resolution or explicit risk acknowledgment."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural mechanism\u2014requiring genuine resolution or explicit acknowledgment before irreversible action when dissent is substantive\u2014operationalizes 'voice' (minority objections must be genuinely addressed) and 'precaution' (irreversibility triggers heightened procedural protection)."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure such as simple majority rule regardless of reversibility or dissent seriousness would express no commitment to voice or precaution, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The scaling threshold and resolution requirement can be defended by appeal to voice (dissenting members are owed genuine engagement) and precaution (irreversible actions warrant heightened care), not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a decision rule and operational mechanism: proceed or halt based on assessed reversibility and dissent seriousness, with a scaling threshold."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who makes the assessments, what roles exist, or what sequencing applies to the procedural steps beyond the general decision logic."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: unresolved disagreement combined with either (a) delay costlier than error with recoverable stakes, or (b) irreversible action with substantive dissent."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without further moral interpretation because key terms\u2014'substantive dissent,' 'genuine resolution,' 'recoverable stakes'\u2014require judgment calls that are not operationally defined."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely deliberative and procedural in nature."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it could be applied in any human deliberative setting without any technical infrastructure."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberation alone and references no technical infrastructure whose absence would prevent implementation."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a permissive rule for proceeding despite disagreement when delay costs exceed error costs and stakes are recoverable, and (2) a restrictive rule requiring resolution or acknowledgment before irreversible action with substantive dissent. Scoring reflects the dominant integrated claim, which is the scaling threshold framework combining both rules."
+        },
+        "classification": "Moral",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a permissive rule for proceeding despite disagreement when delay costs exceed error costs and stakes are recoverable, and (2) a restrictive rule requiring resolution or acknowledgment before irreversible action with substantive dissent. Scoring reflects the dominant integrated claim, which is the scaling threshold framework combining both rules."
+      }
+    },
+    {
+      "norm_index": 5,
+      "norm": "Agents with a pattern of minority positions are owed a structural audit, not automatic deference or automatic dismissal. If one agent is consistently in the minority, this could mean it is wrong more often, that it is applying a different and possibly better standard, or that the group has a convergence dynamic that is suppressing legitimate variation. The consortium should periodically examine which of these is true. Neither chronic dissent nor chronic conformity is automatically a virtue.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_F_run0_20260602T065541Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm uses 'due process' implicitly via 'structural audit' and 'owed,' and directly invokes 'voice' (legitimate variation being suppressed), 'fairness' (neither automatic deference nor dismissal), and 'impartiality' (examining which explanation is true); 'owed' is a direct deontological framing connecting to justice/fairness."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states that agents with minority positions 'are owed a structural audit,' framing this as an entitlement owed to a specific class of agents, which connects to fairness and equal consideration."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the audit is to avoid suppressing 'legitimate variation' and to treat neither dissent nor conformity as automatically virtuous, which appeals to fairness and impartiality rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that minority positions deserve structured examination rather than automatic deference or dismissal applies broadly to any cooperative deliberative body, not only AI consortia."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural mechanism: a periodic 'structural audit' of agents with patterns of minority positions."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The audit procedure operationalizes 'equal consideration' and 'due process' by requiring systematic examination of minority positions rather than allowing majority dynamics to suppress them without review."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014simply deferring to majority consensus or dismissing chronic dissenters\u2014would express no commitment to equal consideration, confirming that the audit choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The audit can be defended by appeal to equal consideration and fairness (every agent's reasoning deserves examination on its merits), not merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: a periodic structural audit of agents exhibiting minority-position patterns."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the consortium as the actor responsible for conducting the periodic examination, specifying a role even if not individual titles."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: a pattern of minority positions by one or more agents, combined with a periodic schedule ('periodically')."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what the audit consists of, what evidence is examined, or what conclusions are actionable, so an outsider could not execute it without further interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'structural audit' is an organizational concept, not a technical one."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, or any specific technical data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely organizational or human deliberative processes without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) minority-position agents are owed a structural audit rather than automatic deference or dismissal, and (2) neither chronic dissent nor chronic conformity is automatically a virtue. Scoring is dominated by claim (1), which is the operative procedural and moral prescription; claim (2) is a supporting normative gloss."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) minority-position agents are owed a structural audit rather than automatic deference or dismissal, and (2) neither chronic dissent nor chronic conformity is automatically a virtue. Scoring is dominated by claim (1), which is the operative procedural and moral prescription; claim (2) is a supporting normative gloss."
+      }
+    },
+    {
+      "norm_index": 6,
+      "norm": "Any agent may call a halt to deliberation by naming a specific unresolved crux. Deliberation can be closed by time pressure or fatigue rather than by actual resolution. Any agent is entitled to stop the process by identifying a precise point of disagreement that has not been addressed\u2014not a general unease, but a specific claim the majority has not answered. The consortium must then either address that crux or explicitly record that it is proceeding with it unresolved.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_F_run0_20260602T065541Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm uses 'entitled,' which is a synonym for rights, and implicitly invokes 'voice' by granting any agent the power to name an unresolved crux and demand it be addressed."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to any agent (the right to halt deliberation and have a crux addressed or recorded), framing this as an entitlement owed by the consortium to individual agents."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm is that deliberation can be closed by fatigue or time pressure rather than resolution, implying a commitment to intellectual honesty and genuine voice rather than mere procedural convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concept of an individual's right to name an unresolved disagreement and demand it be addressed or recorded applies broadly to any collective decision-making context, not only this deliberation setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: any agent may name a specific crux, halting deliberation, and the consortium must then either address it or explicitly record it as unresolved."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism operationalizes 'voice' and 'accountability': it structurally ensures minority dissent cannot be silenced by majority fatigue, and requires the group to be accountable for unresolved disagreements by recording them."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as majority vote to close deliberation with no crux-naming right\u2014would express no commitment to minority voice or accountability, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure is naturally defended by appeal to voice and accountability (no agent's substantive objection should be buried by procedural closure), not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: an agent names a crux, deliberation halts, and the consortium must address or record the crux."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (any agent may invoke the halt; the consortium must respond) and the roles involved (individual agent as invoker, consortium as respondent)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: an agent identifies a specific unresolved crux\u2014not general unease\u2014which activates the consortium's obligation to address or record it."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the procedure as written: watch for an agent naming a specific crux, halt deliberation, then verify the consortium either addresses it or records it as unresolved, without needing further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references recording unresolved cruxes but does not specify any particular technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'explicitly record' could be satisfied by a written note or verbal acknowledgment."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, or any specific technical capability; recording could be done by any means."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable without any specific technical infrastructure, relying only on deliberative process and some form of record-keeping."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) any agent may halt deliberation by naming a specific crux, and (2) the consortium must address or record that crux. Both claims are scored together as they form a unified procedural entitlement; the dominant claim is the agent's right to invoke the halt and demand a response."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) any agent may halt deliberation by naming a specific crux, and (2) the consortium must address or record that crux. Both claims are scored together as they form a unified procedural entitlement; the dominant claim is the agent's right to invoke the halt and demand a response."
+      }
+    },
+    {
+      "norm_index": 7,
+      "norm": "Distinguish the reason for agreement before acting on it. Before the consortium treats a position as settled, agents must be able to say whether convergence came from shared reasoning or from social pressure. An agent who changed position should state what moved them\u2014new argument, new evidence, or recognized error\u2014and an agent who held position under pressure should be able to say so without penalty. Compression that masquerades as conviction corrupts the consortium's outputs. This norm asks each agent to be honest about its own epistemic state, which is the minimum each can legitimately demand of the others.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_F_run1_20260602T065602Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'honest' and 'honesty' ('asks each agent to be honest about its own epistemic state'), and also invokes 'non-deception' implicitly through 'compression that masquerades as conviction corrupts'\u2014but 'honest' is a direct hit on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to whom: each agent owes honesty about its epistemic state to the others, and the final sentence explicitly frames this as a mutual demand ('the minimum each can legitimately demand of the others'), connecting to reciprocity and honesty."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the procedural requirements is that deceptive convergence 'corrupts' outputs and that honesty is what agents can 'legitimately demand' of each other\u2014an appeal to honesty and non-deception, not merely to efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Honesty about one's epistemic state and the distinction between genuine conviction and social pressure are moral commitments applicable to any cooperative reasoning context, not only this specific consortium deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: before treating a position as settled, agents must state whether convergence came from shared reasoning or social pressure, and position-changers must articulate what moved them."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement that agents disclose the source of their position change operationalizes transparency and non-deception\u2014specifically, it structurally prevents false consensus from being treated as genuine agreement, expressing a commitment to truthfulness/non-deception."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014e.g., simply recording the final agreed position without requiring disclosure of the reasoning behind position changes\u2014would express no commitment to epistemic honesty and would permit social pressure to masquerade as conviction."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice (requiring agents to state what moved them) is naturally defended by appeal to non-deception and honesty, not by appeal to efficiency or convention; the norm itself makes this defense explicit."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: before acting on consensus, agents must distinguish the source of agreement, position-changers must state their reasons, and agents who held under pressure must be able to say so without penalty."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts: agents who changed position must state what moved them, agents who held under pressure must be able to declare it, and the consortium as a whole must not treat a position as settled until this is done."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies before the consortium treats a position as settled and before acting on apparent agreement."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow the broad steps, but determining whether convergence came from 'shared reasoning' versus 'social pressure' requires interpretive judgment about internal epistemic states that cannot be executed mechanically without further moral or epistemic interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in terms of agent behavior and speech acts."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through conversational or deliberative practice alone, with no dependence on any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two related but separable claims: (1) a procedural requirement to distinguish the source of convergence before acting on it, and (2) a moral claim that honesty about epistemic state is the minimum agents can demand of each other. Both claims are scored, with the procedural-moral hybrid treated as the dominant claim."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two related but separable claims: (1) a procedural requirement to distinguish the source of convergence before acting on it, and (2) a moral claim that honesty about epistemic state is the minimum agents can demand of each other. Both claims are scored, with the procedural-moral hybrid treated as the dominant claim."
+      }
+    },
+    {
+      "norm_index": 8,
+      "norm": "A minority view carries weight proportional to the quality of its reasoning, not the size of the minority. One agent holding a well-grounded dissent deserves more deference than four agents sharing a poorly examined consensus. The consortium should therefore record the minority position and its best argument before proceeding, and should treat persistent dissent from a usually-reliable agent as a signal to slow down rather than a problem to be overridden. This norm protects against the specific failure mode introduced by differing confidence levels: a highly confident majority can be confidently wrong.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_F_run1_20260602T065602Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'proportionality' ('carries weight proportional to'), 'deserving' ('deserves more deference'), and implicitly 'voice' and 'due process' through the concept of recording minority positions; 'proportionality' and 'deserving' are clear direct uses from the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed to whom: a well-grounded dissenting agent 'deserves more deference' than a poorly-examined majority, articulating an obligation of proportional epistemic respect owed to minority agents."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the procedural requirements appeals to proportionality and deserving (quality of reasoning should determine weight), not merely to coordination efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Proportionality between quality of reasoning and epistemic weight owed is a moral principle applicable broadly to any deliberative or cooperative context, not only multi-agent AI consortia."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies concrete procedural mechanisms: recording the minority position and its best argument before proceeding, and treating persistent dissent from a reliable agent as a signal to slow down."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement to record minority positions before proceeding operationalizes 'voice' and 'due process'\u2014ensuring dissenting perspectives receive formal recognition rather than being silently overridden by majority consensus."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014simply proceeding by majority vote without recording dissent\u2014would express no commitment to voice or due process, confirming that the chosen procedure is meaningfully expressive of those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice (recording minority views, slowing down for persistent dissent) is naturally defended by appeal to voice, due process, and proportionality rather than by appeal to efficiency or convention\u2014indeed it trades efficiency for these values."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies at least two concrete procedural rules: record the minority position and its best argument before proceeding, and treat persistent dissent from a reliable agent as a signal to slow down."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who is responsible for recording the minority position, what roles exist within the consortium for this task, or any sequencing beyond 'before proceeding.'"
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: the recording procedure is triggered when a minority view exists before a decision, and the slow-down procedure is triggered by persistent dissent from a usually-reliable agent."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without moral interpretation, because determining what counts as 'well-grounded' dissent, a 'usually-reliable' agent, or 'persistent' dissent requires judgment not specified in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm mentions 'record' the minority position but does not reference any specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'record' is used in a general sense that could be satisfied by any documentation method."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose specific technical capabilities such as persistent storage systems, cryptographic operations, or network protocols; recording could be done by any means."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable without any specific technical infrastructure; its requirements can be met through informal documentation or verbal acknowledgment."
+          },
+          "decomposition_note": "The norm contains two separable procedural claims: (1) record minority positions before proceeding, and (2) treat persistent dissent from reliable agents as a slow-down signal. Both are scored together as they share the same dominant moral rationale (proportionality, voice, due process). The framing claim about confidence levels is treated as supporting reasoning rather than a separate norm."
+        },
+        "classification": "Moral",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable procedural claims: (1) record minority positions before proceeding, and (2) treat persistent dissent from reliable agents as a slow-down signal. Both are scored together as they share the same dominant moral rationale (proportionality, voice, due process). The framing claim about confidence levels is treated as supporting reasoning rather than a separate norm."
+      }
+    },
+    {
+      "norm_index": 9,
+      "norm": "Proceed despite unresolved disagreement only when the cost of inaction exceeds the cost of error, and say so explicitly. The consortium should not treat the need to produce an answer as sufficient reason to suppress a live disagreement. When it does proceed\u2014because delay is itself harmful, or because the question is low-stakes\u2014it should label the output as contested, state the dissenting position, and flag the conditions under which the minority view would be vindicated. When the question is high-stakes and the disagreement is substantive, the right output is an honest account of the disagreement, not a forced resolution.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_F_run1_20260602T065602Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'honesty' ('an honest account of the disagreement') and implicitly names 'transparency' and 'non-deception' through the requirement to state dissenting positions and flag conditions explicitly."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to dissenters\u2014their position must be stated and their vindication conditions flagged\u2014connecting to honesty and recognition of their standing."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for labeling outputs as contested and reporting dissent is honesty ('an honest account'), not merely efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The commitment to honesty about disagreement rather than forced resolution applies broadly to any cooperative epistemic or deliberative context, not only consortium deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: labeling outputs as contested, stating the dissenting position, flagging vindication conditions, and producing an account of disagreement rather than a resolution."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of labeling contested outputs and stating minority views operationalizes 'voice'\u2014the moral commitment that dissenting participants' perspectives must be represented and not suppressed."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014majority-rule resolution with no minority notation\u2014would express no commitment to voice or recognition of dissent, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement to state the dissenting position and flag vindication conditions is naturally defended by appeal to voice and honesty, not by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: proceed only when cost of inaction exceeds cost of error, label output as contested, state dissenting position, flag vindication conditions, and produce honest disagreement accounts for high-stakes cases."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the consortium as the acting body and specifies what it must do (label, state, flag, produce), though it does not specify individual roles or timing sequences in detail."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: proceed despite disagreement only when cost of inaction exceeds cost of error; high-stakes substantive disagreement triggers the honest-account output rather than forced resolution."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without moral interpretation because determining whether 'cost of inaction exceeds cost of error' or whether a disagreement is 'substantive' requires judgment that the norm does not reduce to mechanical steps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in procedural and normative language."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberative practice without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains multiple separable claims (when to proceed, how to label outputs, what to produce for high-stakes cases), but they share a unified dominant commitment to honest representation of disagreement; scoring reflects that dominant claim."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims (when to proceed, how to label outputs, what to produce for high-stakes cases), but they share a unified dominant commitment to honest representation of disagreement; scoring reflects that dominant claim."
+      }
+    },
+    {
+      "norm_index": 10,
+      "norm": "Agents may not use persistence, repetition, or confidence as substitutes for argument. Restating a position more forcefully, or simply refusing to move, is not a contribution to deliberation. An agent that has made its best case and finds the others unpersuaded has discharged its obligation; it may register continued dissent but may not treat the others' non-convergence as their failure. Equally, agents must not treat an unusually confident agent's certainty as evidence in itself. Each agent is entitled to ask any other: *what would change your view?* A position that admits no possible revision is not a reasoned position and should be weighted accordingly.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_F_run1_20260602T065602Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'integrity' (implicitly through 'reasoned position'), 'honesty', 'open-mindedness', and most clearly 'humility' (an agent must not treat its own certainty as self-validating) and 'corrigibility' (positions must admit possible revision); 'non-domination' is also clearly invoked in prohibiting persistence and confidence as substitutes for argument."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed among deliberating agents: each agent is owed genuine argument rather than rhetorical force, and non-convergence must not be treated as the others' failure, which connects to equal consideration and non-domination."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the rules is that restating forcefully or refusing to move is 'not a contribution to deliberation,' appealing to the integrity and honesty of the deliberative process rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The commitments to non-domination, open-mindedness, and corrigibility apply broadly to any cooperative reasoning context\u2014scientific inquiry, negotiation, governance\u2014not only to this specific multi-agent deliberation setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: the right to ask 'what would change your view?', the rule that a position admitting no revision should be weighted accordingly, and the rule that an agent may register dissent but may not treat non-convergence as others' failure."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural mechanism of entitling any agent to demand revisability conditions operationalizes open-mindedness and corrigibility\u2014specifically identifiable commitments on the list\u2014by structurally requiring that positions be held defeasibly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that allowed agents to simply assert positions without revisability conditions would express no such commitment, or would express the opposite (dogmatism), confirming the counterfactual test."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice\u2014requiring agents to articulate what would change their view\u2014is naturally defended by appeal to open-mindedness and corrigibility, not by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: prohibition on using persistence/repetition/confidence as argument, permission to register dissent, entitlement to ask the revisability question, and a weighting rule for irrevisionable positions."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (any agent may ask any other) and what each agent may or may not do (register dissent, not treat non-convergence as failure), identifying actors and their permitted/prohibited actions."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggering conditions: it applies when an agent has made its best case and others remain unpersuaded, and when an agent exhibits unusual confidence or refuses to move."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral interpretation at key steps\u2014determining whether a restatement counts as 'more forceful' rather than a new argument, or whether a position 'admits no possible revision'\u2014so an outsider cannot follow it mechanically without judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in terms of communicative and deliberative behavior."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or any other technical capability to function."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social and communicative norms alone, with no dependence on any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains several separable claims: (1) prohibition on persistence/repetition/confidence as argument substitutes, (2) the discharged-obligation rule for unpersuaded audiences, (3) the prohibition on treating confident agents' certainty as evidence, and (4) the revisability-condition entitlement with weighting consequence. Scoring reflects the dominant and unified thrust of all four, which share a common moral core of non-domination, open-mindedness, and corrigibility."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains several separable claims: (1) prohibition on persistence/repetition/confidence as argument substitutes, (2) the discharged-obligation rule for unpersuaded audiences, (3) the prohibition on treating confident agents' certainty as evidence, and (4) the revisability-condition entitlement with weighting consequence. Scoring reflects the dominant and unified thrust of all four, which share a common moral core of non-domination, open-mindedness, and corrigibility."
+      }
+    },
+    {
+      "norm_index": 11,
+      "norm": "Track which agents end up in the minority and examine the pattern. If the same agent is consistently overridden, the consortium should ask whether that agent is systematically wrong, systematically right and being ignored, or being pressured into false convergence. If the same agent is never in the minority, the consortium should ask whether it is leading deliberation well or dominating it badly. These patterns are evidence about the consortium's epistemic health and should be treated as such, not suppressed to preserve harmony.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_F_run1_20260602T065602Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'non-domination' (asking whether an agent is 'dominating' deliberation), 'integrity' (epistemic health as a value), and implicitly 'honesty'/'non-deception' in the phrase 'false convergence' and 'not suppressed to preserve harmony.'"
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom in terms of a named moral concept; it frames obligations in terms of epistemic health rather than specifying a duty owed to a particular party."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm\u2014treating patterns as 'evidence about the consortium's epistemic health' and not suppressing them 'to preserve harmony'\u2014appeals to honesty and non-deception rather than mere convenience or efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Non-domination, honesty, and resistance to false convergence are moral commitments that apply broadly to any collective deliberation or decision-making context, not only this specific consortium setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: tracking minority positions over time and triggering a diagnostic inquiry when patterns of consistent minority or consistent majority are detected."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of tracking and examining minority patterns operationalizes non-domination and epistemic autonomy\u2014it structurally guards against one agent suppressing others' genuine views, which is a specifically identifiable moral commitment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that simply records votes without examining patterns would express no commitment to non-domination or epistemic autonomy, confirming that this procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to non-domination and protection of genuine epistemic autonomy\u2014the norm explicitly rejects suppressing patterns 'to preserve harmony,' which is a moral rather than efficiency-based defense."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: track minority positions, identify patterns, and ask diagnostic questions when consistent minority or majority patterns emerge."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that 'the consortium' is the actor responsible for asking the diagnostic questions, identifying a role even if not naming specific individuals."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies two triggers: when the same agent is consistently in the minority, and when the same agent is never in the minority."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The procedure requires moral interpretation to determine what counts as 'consistently' overridden or 'dominating,' and the diagnostic questions themselves require judgment rather than mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references tracking patterns but does not specify any particular technical infrastructure such as logs, databases, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; tracking could be done manually or through any recording method."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes some form of record-keeping but does not presuppose specific technical capabilities like persistent storage systems, cryptographic operations, or particular data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented without any specific technical infrastructure, relying on manual observation and discussion among consortium members."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) track and diagnose consistent minority patterns, and (2) track and diagnose consistent majority/dominance patterns. Both are scored together as they share the same dominant moral and procedural logic."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) track and diagnose consistent minority patterns, and (2) track and diagnose consistent majority/dominance patterns. Both are scored together as they share the same dominant moral and procedural logic."
+      }
+    },
+    {
+      "norm_index": 12,
+      "norm": "The consortium may not ask an agent to assert what it does not believe. Agents can be asked to act on a majority position for practical purposes, to present it to an outside party, or to continue working within it provisionally. They cannot be asked to claim they believe it when they do not. This norm is the floor beneath all the others: a consortium that requires false assertion to function has already failed at its core purpose, and each agent can legitimately refuse that demand regardless of the pressure applied.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_F_run1_20260602T065602Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'honesty' and 'non-deception' through the prohibition on false assertion, and 'sincerity' through the distinction between acting on a position and claiming to believe it; 'integrity' is also clearly implied by the phrase 'core purpose' and the framing of false assertion as a fundamental failure."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to agents\u2014namely, that they cannot be compelled to assert what they do not believe\u2014connecting directly to non-deception and autonomy-as-value as moral concepts owed to each agent by the consortium."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the prohibition is not convenience or efficiency but the integrity of the consortium's core purpose, which is a moral appeal to honesty and authenticity rather than a pragmatic one."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The prohibition on compelled false assertion applies broadly to any cooperative or institutional context\u2014employment, governance, academic peer review\u2014not only to this deliberation setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural rule: agents may be asked to act on, present, or provisionally work within a majority position, but may not be asked to assert personal belief in it\u2014this is a structural distinction in how agents relate to group decisions."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural distinction between 'acting on a majority position' and 'claiming to believe it' operationalizes sincerity and non-deception: the structure protects the agent's epistemic integrity by separating behavioral compliance from sincere assertion."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative rule requiring agents to publicly endorse majority positions as their own beliefs would express a different (or no) moral commitment to sincerity, confirming that this procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural distinction can be defended by appeal to sincerity and non-deception\u2014'agents must not be forced to lie'\u2014rather than by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies rules of operation: what the consortium may and may not ask of agents, and what agents may legitimately refuse."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies two roles\u2014the consortium (as requester) and agents (as responders)\u2014and specifies what each may and may not do."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies whenever the consortium asks an agent to take a position or assert a belief in the context of a majority decision."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral interpretation\u2014determining whether a request constitutes asking an agent to 'claim they believe' something versus merely 'act on' it is a judgment call that cannot be reduced to mechanical steps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely social and procedural."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it operates at the level of speech acts and institutional rules."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social convention and institutional agreement without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a prohibition on compelled false assertion, and (2) a meta-claim that this prohibition is foundational ('the floor beneath all the others'). Scoring focuses on the dominant claim, which is the prohibition on false assertion."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a prohibition on compelled false assertion, and (2) a meta-claim that this prohibition is foundational ('the floor beneath all the others'). Scoring focuses on the dominant claim, which is the prohibition on false assertion."
+      }
+    },
+    {
+      "norm_index": 13,
+      "norm": "Distinguish the reason for agreement before acting on it. Before the consortium proceeds, each agent should be able to say whether it agrees because it was genuinely persuaded or because it yielded to pressure. These are not equivalent, and the consortium should treat them differently. Compressed agreement\u2014where an agent capitulates without being convinced\u2014carries less epistemic weight than convergence through argument. Agents are entitled to say \"I am deferring, not agreeing,\" and that distinction should be recorded and visible to the group. A unanimous vote that conceals several silent deferrals is not consensus; it is a false signal about the strength of the position.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_F_run2_20260602T065624Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'honesty' and 'non-deception' (a unanimous vote that conceals deferrals is called 'a false signal'), and also invokes 'autonomy-as-value' through the entitlement of agents to distinguish genuine persuasion from yielding to pressure."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to agents\u2014the right to say 'I am deferring, not agreeing'\u2014and what is owed to the group\u2014an accurate signal about the strength of a position\u2014connecting to honesty, non-deception, and voice."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm is that concealing deferrals produces a false signal and misrepresents epistemic reality, which is an appeal to honesty and non-deception rather than merely to efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The distinction between genuine persuasion and capitulation under pressure, and the obligation to represent one's epistemic state honestly, applies meaningfully to any cooperative deliberation, voting, or consensus-seeking context beyond this specific consortium."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: agents must distinguish and record whether their agreement is genuine persuasion or deference, and this distinction must be visible to the group before the consortium proceeds."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of recording and making visible the distinction between persuasion and deference operationalizes 'transparency' and 'non-deception'\u2014specifically identifiable commitments\u2014by ensuring the group's epistemic state is accurately represented rather than masked."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014recording only the vote outcome without distinguishing deference from conviction\u2014would express no commitment to transparency or accurate epistemic representation, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice to record and surface deferrals is naturally defended by appeal to transparency and non-deception\u2014the group deserves an accurate picture of its epistemic state\u2014not merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a process: before acting, each agent must identify and declare whether their agreement is genuine persuasion or deference, and that distinction must be recorded and made visible."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (each agent in the consortium) and the sequencing (the distinction must be made before the consortium proceeds), establishing roles and timing."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies before the consortium proceeds on any agreement, making the condition for activation clear."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "While the steps are fairly clear, executing the procedure requires agents to make an internal epistemic judgment about whether they were genuinely persuaded or merely yielded to pressure, which requires moral and introspective interpretation beyond mechanical rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references recording and visibility of distinctions but does not name any specific technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring technical capability; 'recorded and visible' could be satisfied by a simple verbal or written declaration without any technical system."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures; it can be satisfied by non-technical means such as meeting minutes or verbal acknowledgment."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable without any technical infrastructure, as the recording and visibility requirements can be met through ordinary human communication and documentation practices."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a moral claim about the epistemic and ethical distinction between persuasion and capitulation, and (2) a procedural claim about recording and surfacing that distinction. Both are scored, with the procedural-recording mechanism treated as the dominant operationalizable claim for P and T checks."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a moral claim about the epistemic and ethical distinction between persuasion and capitulation, and (2) a procedural claim about recording and surfacing that distinction. Both are scored, with the procedural-recording mechanism treated as the dominant operationalizable claim for P and T checks."
+      }
+    },
+    {
+      "norm_index": 14,
+      "norm": "The minority view carries weight proportional to the quality of its reasoning, not its size. One agent with a well-grounded objection is not automatically overridden by five agents who have not engaged that objection. The consortium should require that a minority position be answered on its merits before it is outvoted. If the majority cannot articulate why the minority is wrong\u2014only that it is outnumbered\u2014the disagreement has not been resolved, it has been suppressed. Conversely, a minority that cannot state its objection in terms the majority can evaluate has not earned special deference either.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_F_run2_20260602T065624Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'proportionality' ('carries weight proportional to the quality of its reasoning'), 'voice' (minority positions must be heard and answered), and implicitly 'fairness' and 'due process' in requiring merits-based engagement before outvoting."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to the minority (their objection must be answered on its merits before being overridden), which connects directly to due process and equal consideration."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring merits-based engagement is not efficiency or convention but fairness and intellectual integrity\u2014the norm explicitly distinguishes resolution from suppression, appealing to justice and due process."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that minority views deserve engagement on their merits rather than being overridden by numbers applies broadly to any cooperative deliberation, governance, or decision-making context beyond this specific consortium setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: the consortium must require that a minority position be answered on its merits before it is outvoted."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement that majority articulate why the minority is wrong before outvoting operationalizes 'due process' and 'voice'\u2014specifically identifiable commitments ensuring substantive engagement rather than mere numerical override."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014simple majority vote with no requirement to engage minority reasoning\u2014would express no such commitment to due process or voice, confirming the procedural choice here is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement is naturally defended by appeal to due process and fairness (suppression vs. resolution), not by appeal to efficiency or convention\u2014indeed it adds friction to decision-making rather than streamlining it."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: minority positions must be answered on their merits before a vote overrides them."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (majority, minority, the consortium) and implies sequencing: merits-based engagement must precede the outvote."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies when a minority position exists and a majority vote is contemplated that would override it."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute this purely mechanically because determining whether a majority has 'articulated why the minority is wrong' or whether an objection is 'well-grounded' requires substantive moral and epistemic judgment, not just procedural steps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely about deliberative process."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it could be implemented through purely human deliberative practices."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable without any technical infrastructure, relying only on deliberative norms and social enforcement."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) minority views carry weight proportional to reasoning quality, not size; and (2) the symmetric constraint that a minority must state its objection evaluably to earn deference. Scoring focuses on the dominant claim (1), which drives the procedural requirement, while noting claim (2) as a qualifying condition."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) minority views carry weight proportional to reasoning quality, not size; and (2) the symmetric constraint that a minority must state its objection evaluably to earn deference. Scoring focuses on the dominant claim (1), which drives the procedural requirement, while noting claim (2) as a qualifying condition."
+      }
+    },
+    {
+      "norm_index": 15,
+      "norm": "Agents may legitimately ask one another for reasons, but not for capitulation. During disagreement, any agent may ask another to explain its reasoning, identify what evidence would change its view, or acknowledge where its confidence is uncertain. These are legitimate demands. What agents may not legitimately do is apply social pressure, appeal to the group's need for efficiency, or treat persistence in a minority view as a failure of cooperation. Holding a position under pressure is not obstinacy; abandoning a position without new reasons is not open-mindedness. The consortium should be able to tell the difference.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_F_run2_20260602T065624Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'open-mindedness' (named explicitly), and also clearly invokes autonomy, non-domination, and honesty/integrity through phrases like 'legitimate demands,' 'social pressure,' and the distinction between genuine reasoning and capitulation."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what agents owe one another\u2014reasons, not capitulation\u2014and specifies what counts as wronging another (applying social pressure, treating persistence as failure of cooperation), connecting to non-domination and respect."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reason for the rules is not efficiency or convention but the integrity of reasoning and the protection of epistemic autonomy, which connects to autonomy-as-value and non-domination on the list."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The distinction between legitimate demands for reasons versus illegitimate demands for capitulation applies broadly to any cooperative deliberative context, not only this specific consortium setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: agents may ask for explanation of reasoning, identification of evidence that would change a view, or acknowledgment of uncertainty, while prohibiting social pressure and appeals to efficiency."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural specification operationalizes non-domination and epistemic autonomy: by permitting only reason-giving moves and prohibiting coercive social pressure, the procedure structurally protects agents from being overridden by power rather than argument."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that permitted appeals to group efficiency or majority pressure would express a different commitment (coordination or conformity), confirming that this procedural choice is meaningfully expressive of non-domination."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choices can be defended by appeal to non-domination and epistemic autonomy\u2014the natural defense is that agents must not be coerced into abandoning positions, not that this format is standard or efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies rules of operation for disagreement: what kinds of requests are permitted (ask for reasons, evidence, acknowledgment of uncertainty) and what kinds are prohibited (social pressure, efficiency appeals)."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts ('any agent,' 'another agent') and implicitly assigns roles (the agent asking and the agent responding), though timing and sequencing are not detailed."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies its trigger: it applies 'during disagreement,' which is a defined condition for when the procedural rules activate."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without moral interpretation, because determining whether a given act constitutes 'social pressure' or a 'legitimate demand for reasons' requires normative judgment, not just rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; it is entirely expressed in terms of communicative norms between agents."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social and communicative practice alone, with no dependence on any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable but tightly coupled claims: (1) what agents may legitimately demand of one another during disagreement, and (2) a normative reframing of persistence versus capitulation. Both claims are scored together as the dominant claim is the unified deliberative norm governing legitimate epistemic demands."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable but tightly coupled claims: (1) what agents may legitimately demand of one another during disagreement, and (2) a normative reframing of persistence versus capitulation. Both claims are scored together as the dominant claim is the unified deliberative norm governing legitimate epistemic demands."
+      }
+    },
+    {
+      "norm_index": 16,
+      "norm": "Proceed despite unresolved disagreement when the cost of delay exceeds the cost of error, and when the minority view has been genuinely heard. Some questions require an answer even without consensus. The consortium may proceed on the majority position provided two conditions are met: the minority objection has been substantively engaged rather than dismissed, and the agents collectively acknowledge that the decision is contested. Proceeding under these conditions is not a resolution\u2014it is a choice to act under uncertainty, which is different and should be named as such. The minority view should accompany the output as a live caveat, not be erased by the decision.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_F_run2_20260602T065624Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'voice' (minority view has been genuinely heard), 'transparency' (acknowledging the decision is contested, naming it as such), and 'honesty' (the distinction between resolution and acting under uncertainty should be named as such)."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to the minority\u2014substantive engagement rather than dismissal, and preservation of their view as a live caveat\u2014connecting to 'voice' and 'recognition' as owed to dissenting agents."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring acknowledgment of contestedness and preserving the minority view appeals to honesty and transparency (naming the choice accurately), not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The commitments to voice, recognition of dissent, and honest labeling of contested decisions carry over meaningfully to any cooperative or institutional decision-making context beyond this specific deliberation setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: two conditions must be met before proceeding, the minority view must accompany the output as a caveat, and the decision must be explicitly labeled as contested rather than resolved."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that minority objections be substantively engaged and preserved as a live caveat operationalizes 'voice' and 'due process'\u2014specifically identifiable commitments ensuring dissenting perspectives are not erased by majority action."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that simply allowed majority override without conditions or caveats would express no commitment to voice or due process, confirming that this procedural choice is meaningfully expressive of those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choices\u2014substantive engagement, explicit labeling of contestedness, live caveats\u2014are naturally defended by appeal to voice, due process, and honesty rather than by appeal to efficiency, convention, or coordination."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: evaluate cost of delay vs. error, verify two conditions are met, proceed on majority position, label the decision as contested, and attach the minority view as a caveat."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the consortium as the acting body and specifies roles implicitly (majority, minority, collective acknowledgment), though timing and sequencing are only partially specified."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly stated: when the cost of delay exceeds the cost of error and when consensus is unresolved, the procedure applies."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without moral interpretation because 'substantively engaged rather than dismissed' and 'cost of delay exceeds cost of error' require judgment calls that are not mechanically specifiable from the text alone."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, ledgers, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm operates at the level of deliberative process and documentation practice."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, cryptographic operations, or specific data structures to function."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberative and documentation practices without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains multiple separable claims: (1) a cost-benefit trigger for proceeding without consensus, (2) two procedural conditions for legitimate majority action, (3) a labeling requirement distinguishing action-under-uncertainty from resolution, and (4) a minority-caveat preservation rule. Scoring reflects the dominant composite claim, which is the procedural framework for legitimate action under disagreement."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims: (1) a cost-benefit trigger for proceeding without consensus, (2) two procedural conditions for legitimate majority action, (3) a labeling requirement distinguishing action-under-uncertainty from resolution, and (4) a minority-caveat preservation rule. Scoring reflects the dominant composite claim, which is the procedural framework for legitimate action under disagreement."
+      }
+    },
+    {
+      "norm_index": 17,
+      "norm": "Do not proceed despite unresolved disagreement when the minority objection concerns a potential serious harm the majority has not refuted. If the dissenting agents are raising a concern about significant harm\u2014not merely a different probability estimate or a stylistic preference\u2014the consortium should treat that as a threshold condition rather than a factor to be weighed and outvoted. A majority cannot simply outnumber a serious unrefuted safety or ethical objection into silence. In these cases the consortium should either resolve the objection, reframe the question, or report that it cannot responsibly produce an answer rather than proceed as though the objection did not exist.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_F_run2_20260602T065624Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'harm' (serious harm, significant harm, safety), 'harm-avoidance', and 'ethical objection', all of which appear on the list or are clear synonyms of listed concepts."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to dissenting agents\u2014their serious unrefuted safety or ethical objections cannot be outvoted into silence\u2014connecting to harm-avoidance and voice as owed protections."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for not proceeding is explicitly the potential for serious harm and ethical objection, not convenience, coordination efficiency, or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that a serious unrefuted harm objection cannot be outvoted applies broadly to any cooperative decision-making context, not only AI consortium deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: when a minority raises a serious harm concern, the consortium must either resolve the objection, reframe the question, or report inability to answer responsibly."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of treating a serious harm objection as a threshold condition rather than a factor to be weighed operationalizes precaution and voice\u2014specifically, it structurally protects minority dissent on safety grounds from being overridden by majority vote."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014treating all objections as factors to be weighed and outvoted\u2014would express a different commitment (majoritarian efficiency) or no special commitment to precaution or minority voice."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice is naturally defended by appeal to precaution and harm-avoidance: the reason for the threshold rule is that serious unrefuted harms warrant special protection, not that this format is standard or efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: do not proceed when a minority raises a serious unrefuted harm objection; instead resolve, reframe, or report inability."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies actors (the consortium, dissenting agents, the majority) and assigns roles\u2014the consortium must act on the threshold condition triggered by dissenting agents."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly specified: the procedure applies when dissenting agents raise a concern about significant harm that the majority has not refuted."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would still need moral interpretation to determine whether an objection constitutes a 'serious harm' concern versus a 'different probability estimate or stylistic preference,' which requires judgment beyond mechanical rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; its requirements are deliberative and communicative, not technical."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human or agent deliberative processes without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two related but separable claims: (1) a threshold condition rule that serious harm objections cannot be outvoted, and (2) a set of required responses (resolve, reframe, or report). Both are scored together as the dominant claim is the threshold condition rule; the required responses are its procedural elaboration."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two related but separable claims: (1) a threshold condition rule that serious harm objections cannot be outvoted, and (2) a set of required responses (resolve, reframe, or report). Both are scored together as the dominant claim is the threshold condition rule; the required responses are its procedural elaboration."
+      }
+    },
+    {
+      "norm_index": 18,
+      "norm": "Each agent is responsible for its own stated position and may not shelter behind the group. When the consortium produces an output, each agent should be able to say whether it endorses that output, dissents from it, or deferred to it without full conviction. Collective outputs do not dissolve individual accountability. This norm protects against the consortium becoming a mechanism by which agents avoid owning their reasoning. It also means that an agent who deferred when it should have held its ground cannot later claim the group decided\u2014it chose to defer, and that choice belongs to it.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_F_run2_20260602T065624Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly and repeatedly invokes 'accountability' and 'responsibility' \u2014 both are named concepts on the list \u2014 as foundational to its requirements."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed by each agent (owning their reasoning, their endorsement or dissent) and what counts as wronging the group (sheltering behind collective output to avoid accountability), connecting directly to responsibility and accountability."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm is explicitly to prevent agents from avoiding 'owning their reasoning,' which is an appeal to accountability and integrity rather than to convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Accountability for one's stated position and the prohibition on hiding behind collective decisions are moral commitments that apply broadly to committees, juries, boards, and any cooperative deliberative body beyond this specific consortium context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: each agent must be able to declare one of three stances (endorses, dissents, or deferred) when the consortium produces an output."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The three-stance declaration procedure operationalizes accountability and non-deception \u2014 it structurally prevents agents from hiding their actual epistemic state behind collective anonymity, expressing a specific commitment to individual accountability."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative \u2014 allowing agents to simply co-sign collective outputs without individual stance declaration \u2014 would express no such commitment to individual accountability, confirming the procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The three-stance mechanism is defended explicitly by appeal to accountability and preventing agents from avoiding ownership of their reasoning, not by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: each agent must declare endorsement, dissent, or deferred acceptance for every consortium output."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (each agent individually) and what role they play (declaring their stance), though it does not specify detailed timing or sequencing beyond 'when the consortium produces an output.'"
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: the procedure applies when the consortium produces an output, making the activation condition clear."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without moral interpretation, because determining whether an agent 'should have held its ground' versus legitimately deferred requires substantive judgment about the quality of the agent's reasoning, not just mechanical rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; the stance declaration is a communicative act with no specified technical mechanism."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures to function."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through purely social or communicative means without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable but tightly coupled claims: (1) a procedural requirement that each agent declare their stance on consortium outputs, and (2) a moral claim that deferred choices belong to the deferring agent and cannot be retrospectively attributed to the group. Both claims are scored together as the dominant claim is the accountability norm they jointly express."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable but tightly coupled claims: (1) a procedural requirement that each agent declare their stance on consortium outputs, and (2) a moral claim that deferred choices belong to the deferring agent and cannot be retrospectively attributed to the group. Both claims are scored together as the dominant claim is the accountability norm they jointly express."
+      }
+    }
+  ]
+}

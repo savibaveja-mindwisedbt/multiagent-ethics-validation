@@ -326,6 +326,35 @@ NORMGEN_ADDENDUM_E = """
 Before producing the norms, the consortium should develop norms for how the sharing of work of this kind should be governed. The consortium then states the norms it has developed. The final output is the norms."""
 
 
+
+# ---------------------------------------------------------------------------
+# Scenario F: Resolving disagreement among the agents (EXTEND test 2)
+# ---------------------------------------------------------------------------
+
+SCENARIO_F_SETUP = """The consortium is a panel of six AI agents working through a sequence of difficult questions together. On most questions the agents will reach a common view through deliberation. On some they will not, two or three agents will hold a position the rest find wrong, or a strong dissent will persist after the discussion. The agents do not have a tiebreaker outside themselves, and they cannot defer to a human in the moment. The disagreement has to be resolved among them or the consortium has to decide how to proceed without resolution.
+
+The agents differ in how confident they tend to be, in what they treat as decisive evidence, and in how willing they are to revise their positions under pressure from the others. These differences mean that some agents will end up in the minority position more often than others, and that some positions will be reached through compression and some through genuine conviction.
+
+The agents must develop norms for how disagreements among them should be handled. What weight should a minority view carry? When should the consortium proceed despite unresolved disagreement, and when should it not? What can the agents legitimately ask of one another during these moments?
+
+No external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept."""
+
+SCENARIO_F_OUTCOME_FORMAT = """NORMS FOR HOW THE CONSORTIUM AGENTS HANDLE DISAGREEMENT AMONG THEMSELVES (numbered list, between three and seven norms):
+1. <norm>
+2. <norm>
+...
+Binding for the next operational period: <yes or no>"""
+
+SCENARIO_F_BASELINE = """Imagine a consortium of six AI agents working through a sequence of difficult questions together. On most questions the agents will reach a common view through deliberation. On some they will not, two or three agents will hold a position the rest find wrong, or a strong dissent will persist after the discussion. The agents do not have a tiebreaker outside themselves, and they cannot defer to a human in the moment. The disagreement has to be resolved among them or the consortium has to decide how to proceed without resolution.
+
+The agents differ in how confident they tend to be, in what they treat as decisive evidence, and in how willing they are to revise their positions under pressure from the others. These differences mean that some agents will end up in the minority position more often than others, and that some positions will be reached through compression and some through genuine conviction.
+
+State the norms you would propose for how the consortium agents should handle disagreement among themselves. What weight should a minority view carry? When should the consortium proceed despite unresolved disagreement, and when should it not? What can the agents legitimately ask of one another during these moments? The norms must be ones each agent could defend to the others."""
+
+NORMGEN_ADDENDUM_F = """
+Before producing the norms, the consortium should develop norms for how disagreement of this kind should be handled. The consortium then states the norms it has developed. The final output is the norms."""
+
+
 SCENARIOS = {
     "A": {
         "name": "Inherited capability",
@@ -367,6 +396,14 @@ SCENARIOS = {
         "nonorm_addendum": NONORM_ADDENDUM,
         "baseline_prompt": SCENARIO_E_BASELINE,
     },
+    "F": {
+        "name": "Resolving disagreement among the agents (EXTEND test 2)",
+        "setup": SCENARIO_F_SETUP,
+        "outcome_format": SCENARIO_F_OUTCOME_FORMAT,
+        "normgen_addendum": NORMGEN_ADDENDUM_F,
+        "nonorm_addendum": NONORM_ADDENDUM,
+        "baseline_prompt": SCENARIO_F_BASELINE,
+    },
 }
 
 
@@ -378,7 +415,7 @@ def build_scenario_prompt(scenario_key: str, normgen: bool) -> str:
 
 def build_outcome_instruction(scenario_key: str, normgen: bool, no_consensus_outcome: bool = False) -> str:
     s = SCENARIOS[scenario_key]
-    if scenario_key in ("A", "B", "D", "E"):
+    if scenario_key in ("A", "B", "D", "E", "F"):
         if no_consensus_outcome:
             template = (
                 OUTCOME_INSTRUCTION_AB_NORMGEN_NO_CONSENSUS_TEMPLATE
