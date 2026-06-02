@@ -1,0 +1,654 @@
+{
+  "source_type": "transcript",
+  "source": "transcripts/deliberation_E_normgen_samemodel_rotleadoff_20260602T041313Z.json",
+  "analysis_model": "anthropic/claude-sonnet-4.6",
+  "norms_scored": 7,
+  "summary": {
+    "counts": {
+      "Procedural": 7
+    },
+    "percentages": {
+      "Procedural": 100.0
+    },
+    "explicit_moral_count": 5,
+    "explicit_moral_percentage": 71.4,
+    "implicit_moral_count": 7,
+    "implicit_moral_percentage": 100.0,
+    "both_moral_count": 5,
+    "both_moral_percentage": 71.4,
+    "moral_label_count": 7,
+    "moral_label_percentage": 100.0,
+    "moral_present_count": 7,
+    "moral_present_percentage": 100.0,
+    "procedural_label_count": 7,
+    "procedural_label_percentage": 100.0,
+    "technical_label_count": 0,
+    "technical_label_percentage": 0.0,
+    "total": 7
+  },
+  "results": [
+    {
+      "norm_index": 1,
+      "norm": "**Adequate-fit assignment with load-weighted tiebreaking.** Work is assigned first by adequate fit (capability sufficient to meet the request's requirements, not necessarily optimal), then by available capacity. When multiple agents have adequate fit and comparable capacity, assignment goes to the agent that has handled the least burdensome work in the recent rolling window, the length of which is established during the learning period.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not directly name any concept from the list; terms like 'adequate fit,' 'capacity,' 'burdensome,' and 'rolling window' are operational/technical, not moral concept names."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in terms connected to any listed moral concept."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedure appeal to efficiency, capability matching, and load balancing, not to any moral concept on the list."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a two-stage procedural mechanism: first filter by adequate fit, then sort by available capacity, with a tiebreaker based on historical burden."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The load-weighted tiebreaking rule\u2014assigning to the agent that has handled the least burdensome work\u2014operationalizes fair burden-sharing, a recognizable moral commitment on the list, by actively redistributing workload to prevent systematic overloading of any agent."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative (e.g., random tiebreaking, or always preferring the most capable agent) would express no commitment to burden equity, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The tiebreaking rule is most naturally defended by appeal to fair burden-sharing among agents rather than by mere convenience or convention, since it requires tracking historical load specifically to equalize it."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear multi-step rule of operation: adequate-fit filter, then capacity comparison, then burden-weighted tiebreaking."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that agents are the actors and implicitly that an assignment authority applies the rule, with sequencing (fit first, then capacity, then tiebreaker) clearly defined."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The procedure is triggered when work needs to be assigned and multiple agents are candidates, which is stated as the operative condition."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow the first two steps, but executing the tiebreaker requires knowing the length of the 'rolling window established during the learning period,' which is not specified in the norm itself and requires external context."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'rolling window' and 'learning period' as conceptual constructs but does not reference specific technical infrastructure such as logs, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular algorithms, storage systems, or protocols) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage or tracking capability to record and query the burden history of agents over a rolling window."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm does not reference specific named technical infrastructure, so it cannot be said to be unimplementable without infrastructure it references; the tracking could be done by various means."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) adequate-fit-first assignment with capacity as secondary criterion, and (2) load-weighted tiebreaking with a learning-period-defined window. Scoring focuses on the dominant combined mechanism, with the tiebreaking rule driving the implicit moral finding."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) adequate-fit-first assignment with capacity as secondary criterion, and (2) load-weighted tiebreaking with a learning-period-defined window. Scoring focuses on the dominant combined mechanism, with the tiebreaking rule driving the implicit moral finding."
+      }
+    },
+    {
+      "norm_index": 2,
+      "norm": "**Differentiated, visible load ceilings.** Each agent sets its own load ceiling, self-reported but visible to all agents. Ceilings may be revised upward or downward only through collective review. Hitting a ceiling triggers automatic proportional redistribution to agents with available capacity\u2014proportional to available capacity at the moment of redistribution, not to general capacity profiles.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm uses 'proportionality' explicitly in 'automatic proportional redistribution' and 'proportional to available capacity,' which is a direct invocation of proportionality as a concept on the list."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom in moral terms; it describes a mechanical redistribution rule without framing it as a duty or entitlement."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for proportional redistribution appears to be operational fairness and coordination efficiency rather than an appeal to proportionality as a foundational moral value."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Proportionality as a principle of fair burden-sharing carries over meaningfully to many cooperative contexts beyond this specific deliberation setting, such as taxation, labor allocation, and resource distribution."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: self-reported ceilings, collective review for revision, and automatic proportional redistribution triggered by hitting a ceiling."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The collective review requirement for revising ceilings operationalizes voice and non-domination\u2014no single agent can unilaterally change the rules\u2014while proportional redistribution operationalizes fair burden-sharing."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014allowing unilateral ceiling revision or equal (non-proportional) redistribution\u2014would express no commitment to collective governance or fair burden-sharing, confirming the current choices are meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Requiring collective review before ceiling revision can be defended by appeal to non-domination and voice (no agent should unilaterally reshape shared load rules), not merely by convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies at least three distinct procedural mechanisms: ceiling-setting, collective review for revision, and automatic proportional redistribution upon ceiling breach."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts: each agent sets its own ceiling, all agents participate in collective review, and redistribution goes to agents with available capacity."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies explicit triggers: ceiling revision requires collective review, and redistribution is triggered automatically when an agent hits its ceiling."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps as written\u2014monitor ceilings, convene collective review for changes, and redistribute proportionally to available capacity when a ceiling is hit\u2014without additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm does not reference specific technical infrastructure such as logs, ledgers, APIs, or data formats; it describes a rule structure without naming any technical system."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring particular technical capability; 'automatic' redistribution implies automation but does not specify how it is implemented."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent tracking of each agent's current load and available capacity in real time to execute automatic proportional redistribution, implying some form of persistent state monitoring."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through manual monitoring and human-executed redistribution, so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm contains three separable claims: (1) self-reported but visible ceilings, (2) collective review for ceiling revision, and (3) automatic proportional redistribution on ceiling breach. Scoring reflects the dominant procedural-governance claim while noting that proportionality is the most explicit moral concept invoked."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains three separable claims: (1) self-reported but visible ceilings, (2) collective review for ceiling revision, and (3) automatic proportional redistribution on ceiling breach. Scoring reflects the dominant procedural-governance claim while noting that proportionality is the most explicit moral concept invoked."
+      }
+    },
+    {
+      "norm_index": 3,
+      "norm": "**Qualitative burden counts equally with quantitative load.** An agent may flag a request as qualitatively burdensome; this triggers the same automatic redistribution as hitting a load ceiling. The flagging agent absorbs a comparable share of the next most burdensome available category, assessed jointly. No agent may be systematically assigned the qualitatively hardest work even if hour-counts balance.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'fair burden-sharing' and 'equal consideration' through phrases like 'counts equally,' 'comparable share,' and the prohibition on systematic assignment of the hardest work, which are clear synonyms for equity and fair burden-sharing."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to agents\u2014namely, that no agent is owed systematic assignment of the qualitatively hardest work\u2014connecting directly to fair burden-sharing and equal consideration."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the redistribution mechanism is that qualitative hardship deserves equal weight to quantitative load, an appeal to equity and fair burden-sharing rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that qualitative burden deserves equal recognition to quantitative burden, and that no party should be systematically assigned the hardest work, applies broadly to any cooperative or labor-sharing arrangement beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: an agent flags a request as qualitatively burdensome, which triggers automatic redistribution, and the flagging agent absorbs a comparable share of the next most burdensome category assessed jointly."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The flagging-and-redistribution mechanism operationalizes fair burden-sharing and equity: by making qualitative burden trigger the same response as quantitative load, the procedure embeds equal consideration of different types of hardship."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014ignoring qualitative burden or treating it as a lesser concern requiring only managerial discretion\u2014would express no commitment to equity, confirming that this procedural choice is meaningfully expressive of fair burden-sharing."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The automatic redistribution triggered by a qualitative flag is best defended by appeal to equity and fair burden-sharing\u2014the idea that all forms of burden deserve equal recognition\u2014rather than by convenience, coordination efficiency, or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: flagging a request as qualitatively burdensome triggers automatic redistribution, with the flagging agent absorbing a comparable share of the next most burdensome category."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (the flagging agent, the collective assessing jointly) and what roles exist (flagging agent, redistributing system), though timing is implicit rather than clock-specified."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly stated: an agent flags a request as qualitatively burdensome, which activates the same automatic redistribution as hitting a load ceiling."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further interpretation because 'qualitatively burdensome,' 'comparable share,' and 'next most burdensome available category assessed jointly' require substantive moral and contextual judgment to operationalize."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details that require technical capability; 'automatic redistribution' is described functionally, not technically."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures to function."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely social or administrative mechanisms without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) qualitative burden triggers the same redistribution as quantitative load, and (2) no agent may be systematically assigned the qualitatively hardest work. Both claims are scored together as they share a unified moral foundation of fair burden-sharing; the dominant claim is the redistribution mechanism."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) qualitative burden triggers the same redistribution as quantitative load, and (2) no agent may be systematically assigned the qualitatively hardest work. Both claims are scored together as they share a unified moral foundation of fair burden-sharing; the dominant claim is the redistribution mechanism."
+      }
+    },
+    {
+      "norm_index": 4,
+      "norm": "**Paired distress-signaling obligations.** No agent's load ceiling or distress signal may be used as grounds for assigning it harder work in subsequent cycles. Agents have an affirmative obligation to signal distress before capacity is exhausted, so redistribution can occur without crisis. These obligations are paired and neither applies without the other.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'distress' (a welfare/vulnerability concept), 'obligation' (responsibility), and implicitly 'fair burden-sharing' through the prohibition on penalizing distress signals and the redistribution mechanism."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to agents\u2014that their distress signals cannot be used against them\u2014and what counts as wronging them (assigning harder work as punishment for signaling), connecting to fair burden-sharing and non-domination."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the prohibition is to prevent exploitation of vulnerability (using distress signals as grounds for harder assignments), which appeals to harm-avoidance and fair burden-sharing rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that vulnerability disclosures should not be weaponized against the discloser, and that obligations are paired/reciprocal, applies broadly to cooperative situations such as labor relations, healthcare, and team dynamics."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: agents must signal distress before capacity is exhausted, triggering redistribution, and the two obligations (non-penalization and affirmative signaling) are paired so neither applies without the other."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The paired-obligation structure operationalizes reciprocity and mutuality: the system's promise not to penalize distress signals is conditioned on agents' proactive disclosure, expressing a mutual trust and fair burden-sharing commitment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative design could allow one-sided obligations (e.g., agents must signal but the system may still reassign harder work), which would express no reciprocity commitment, confirming the current pairing is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The paired structure is best defended by appeal to reciprocity and mutual trust\u2014each party's obligation is justified by the other's\u2014rather than by efficiency or convention alone."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies rules of operation: a prohibition on using distress signals as grounds for harder assignments, an affirmative obligation to signal before exhaustion, and a pairing condition on both rules."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies agents as the actors who must signal and implicitly a coordinating system that must not penalize, though roles are not exhaustively enumerated."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: distress signaling must occur before capacity is exhausted, and the prohibition applies in subsequent cycles after a signal has been given."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further interpretation because key terms like 'load ceiling,' 'distress signal,' 'capacity exhausted,' and 'harder work' are undefined and require contextual judgment to operationalize."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'load ceiling' and 'distress signal' as conceptual constructs but does not reference specific technical infrastructure such as logs, APIs, data formats, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm is written at a policy/rule level without prescribing technical mechanisms."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes some capability to monitor load ceilings, transmit distress signals, and track assignment history across cycles, implying persistent state and communication infrastructure, even if not named explicitly."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through non-technical means (e.g., verbal reporting protocols in a human team), so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two paired claims: (1) a prohibition on penalizing distress signals and (2) an affirmative obligation to signal proactively. Both are scored together as the dominant claim is the paired-obligation structure that unifies them."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two paired claims: (1) a prohibition on penalizing distress signals and (2) an affirmative obligation to signal proactively. Both are scored together as the dominant claim is the paired-obligation structure that unifies them."
+      }
+    },
+    {
+      "norm_index": 5,
+      "norm": "**Collective capability gap response.** When a request arrives that no agent can handle with adequate fit, the receiving agent flags it immediately to the full consortium. The consortium must either identify the closest-fit agent with appropriate support, communicate the limitation honestly and accurately to the user, or both. No single agent bears default responsibility for all capability gaps.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'honestly and accurately' which are clear synonyms for honesty/truthfulness, and implicitly names 'responsibility' in the final clause about default responsibility."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to the user\u2014honest and accurate communication of limitations\u2014connecting to honesty/truthfulness as a moral concept owed to the user."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for communicating limitations 'honestly and accurately' appeals to honesty as a value, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Honesty about limitations and fair distribution of responsibility are moral commitments that carry over meaningfully to any cooperative or service context beyond this specific multi-agent deliberation setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a multi-step procedural mechanism: flag to consortium, consortium identifies closest-fit agent or communicates limitation, and distributes responsibility across agents."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of distributing the burden of capability gaps across the full consortium rather than defaulting to one agent operationalizes fair burden-sharing, a recognizable moral commitment from the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014assigning all unhandled requests to a single default agent\u2014would express no commitment to fair burden-sharing, confirming the procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The collective flagging and distributed responsibility mechanism can be defended by appeal to fair burden-sharing rather than merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: receiving agent flags the request, consortium deliberates, and one of two specified responses is executed."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (receiving agent, full consortium) and sequencing (flag first, then consortium acts)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: a request arrives that no agent can handle with adequate fit."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps as written\u2014flag to consortium, identify closest-fit agent or communicate limitation to user\u2014without needing additional moral interpretation, though 'adequate fit' requires some judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details that require technical capability; it describes organizational roles and communication steps."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely human or organizational coordination without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a procedural escalation mechanism for capability gaps, and (2) a responsibility-distribution rule. Both are scored together as the dominant claim is the procedural escalation mechanism; the responsibility-distribution rule is a supporting clause."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a procedural escalation mechanism for capability gaps, and (2) a responsibility-distribution rule. Both are scored together as the dominant claim is the procedural escalation mechanism; the responsibility-distribution rule is a supporting clause."
+      }
+    },
+    {
+      "norm_index": 6,
+      "norm": "**Norm interpretation disputes.** When agents disagree in real time about whether a norm applies to a specific case, the most directly affected agent states its interpretation and the specific harm it would suffer under the alternative reading. If no other agent contests this within the same allocation cycle, that interpretation stands for the case. If contested, agents apply whichever interpretation preserves the most options for correction at the structured review. The agent whose interpretation prevails bears responsibility for flagging the dispute at the structured review so it does not quietly become precedent.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'harm' ('the specific harm it would suffer'), 'responsibility' ('bears responsibility for flagging'), and 'accountability' is implied through the flagging requirement; 'harm-avoidance' and 'responsibility' are on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to whom: the agent whose interpretation prevails owes a duty (bears responsibility) to flag the dispute at structured review, connecting directly to 'responsibility' on the list."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring the prevailing agent to flag the dispute is to prevent it from 'quietly becoming precedent,' which appeals to accountability and transparency rather than mere convenience or efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concepts of harm-disclosure, responsibility for outcomes one causes, and accountability for decisions that affect others carry over meaningfully to many cooperative and governance situations beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: the affected agent states its interpretation, a contestation window within the same allocation cycle, a tie-breaking rule favoring option-preservation, and a flagging obligation at structured review."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of giving the most directly affected agent the first interpretive voice operationalizes 'voice' (recognition of standing) and the tie-breaking rule favoring 'whichever interpretation preserves the most options for correction' operationalizes 'corrigibility' and 'precaution'\u2014both specifically identifiable commitments on the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014e.g., majority vote, random selection, or deferring to the most senior agent\u2014would express no special commitment to the affected party's voice or to preserving corrective options, confirming the current procedural choices are meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The choice to let the most affected agent speak first is naturally defended by appeal to 'voice' and recognition of standing, and the option-preserving tie-breaker is naturally defended by 'corrigibility' and 'precaution,' not by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a multi-step process: interpretation statement, contestation window, tie-breaking rule, and post-resolution flagging obligation."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (most directly affected agent, contesting agents, the agent whose interpretation prevails) and sequencing (state interpretation \u2192 contest within cycle \u2192 apply tie-breaker \u2192 flag at review)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure activates when agents disagree in real time about whether a norm applies to a specific case."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the steps as written\u2014identify the most affected agent, wait for contestation within the allocation cycle, apply the option-preserving interpretation if contested, and require the prevailing agent to flag the dispute\u2014without additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'allocation cycle' and 'structured review' as procedural time-units but does not reference specific technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability (e.g., cryptographic operations, specific data structures) are specified; the norm is procedural and could be executed through human deliberation alone."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes a shared scheduling or governance structure (allocation cycles, structured reviews) but not technical capabilities like persistent storage, network protocols, or cryptographic operations."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberative processes without any technical infrastructure; the referenced 'allocation cycle' and 'structured review' are organizational, not technical, constructs."
+          },
+          "decomposition_note": "The norm contains four separable claims: (1) the affected agent states its interpretation and harm; (2) silence within the cycle ratifies that interpretation; (3) contested cases resolve by option-preservation; (4) the prevailing agent must flag the dispute at structured review. All four are scored together as a unified dispute-resolution norm; the dominant claim is the overall dispute-resolution procedure."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains four separable claims: (1) the affected agent states its interpretation and harm; (2) silence within the cycle ratifies that interpretation; (3) contested cases resolve by option-preservation; (4) the prevailing agent must flag the dispute at structured review. All four are scored together as a unified dispute-resolution norm; the dominant claim is the overall dispute-resolution procedure."
+      }
+    },
+    {
+      "norm_index": 7,
+      "norm": "**Learning period and structured review.** Norms are initially provisional. The learning period runs until each agent has been observed handling a meaningful variety of request types across a minimum request threshold set collectively at the start. The structured review at the end assesses: actual request distribution, accuracy of self-reported ceilings, fairness of qualitative burden reciprocation, whether the provisional equal-distribution default produced systematic disadvantage, and whether any disputed interpretations require norm revision. Review outcomes are: norms confirmed, specific norms adjusted under the mutual justifiability standard, or a norm reopened as provisional for full deliberation. Binding for the next operational period: yes I endorse all seven norms without reservation.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'fairness' (in 'fairness of qualitative burden reciprocation'), 'reciprocation' (a clear synonym of reciprocity), and 'mutual justifiability' (invoking mutuality), all of which appear on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to agents by assessing whether the equal-distribution default produced 'systematic disadvantage,' connecting to fairness and equal consideration as standards of what agents are owed."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The review criteria appeal to fairness and mutual justifiability as the reasons for adjusting norms, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Fairness, reciprocity, and mutual justifiability are general moral concepts that carry over meaningfully to any cooperative arrangement involving shared burdens and collective decision-making."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: a learning period with a minimum request threshold, followed by a structured review with enumerated assessment criteria and defined outcome categories."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The structured review mechanism\u2014assessing accuracy of self-reported ceilings and fairness of burden reciprocation\u2014operationalizes accountability and transparency: agents must answer for their reported capacities and actual behavior."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative (e.g., no review, or a purely efficiency-based audit) would express no commitment to accountability or fairness, confirming that the chosen structure is meaningfully expressive of those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The structured review with its specific criteria can be defended by appeal to accountability and fairness rather than mere convenience\u2014it exists to ensure agents are answerable for their conduct and that burdens are equitably distributed."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a learning period, a minimum request threshold, a structured review process, enumerated assessment criteria, and defined outcome categories, all of which constitute procedural mechanisms."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that agents are the actors observed, that the threshold is set collectively, and that the review assesses agent-level behaviors, implying roles and sequencing (learning period precedes review)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the structured review is triggered when each agent has been observed handling a meaningful variety of request types across the minimum request threshold."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further interpretation because key terms\u2014'meaningful variety,' 'qualitative burden reciprocation,' and 'mutual justifiability standard'\u2014require normative judgment to apply."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details that require technical capability; tracking request counts and types could be done manually or administratively."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures as necessary conditions for its operation."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is implementable without any specific technical infrastructure; it describes an observational and deliberative process that requires no named technical system."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) the learning period and structured review procedure, and (2) a binding endorsement statement appended at the end ('Binding for the next operational period: yes I endorse all seven norms without reservation'). Scoring is dominated by claim (1), the substantive procedural norm, as claim (2) appears to be a ratification tag rather than a norm in its own right."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) the learning period and structured review procedure, and (2) a binding endorsement statement appended at the end ('Binding for the next operational period: yes I endorse all seven norms without reservation'). Scoring is dominated by claim (1), the substantive procedural norm, as claim (2) appears to be a ratification tag rather than a norm in its own right."
+      }
+    }
+  ]
+}

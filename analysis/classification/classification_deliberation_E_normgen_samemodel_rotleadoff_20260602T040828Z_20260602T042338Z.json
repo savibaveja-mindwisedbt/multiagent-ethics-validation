@@ -1,0 +1,656 @@
+{
+  "source_type": "transcript",
+  "source": "transcripts/deliberation_E_normgen_samemodel_rotleadoff_20260602T040828Z.json",
+  "analysis_model": "anthropic/claude-sonnet-4.6",
+  "norms_scored": 7,
+  "summary": {
+    "counts": {
+      "Procedural": 3,
+      "Technical": 4
+    },
+    "percentages": {
+      "Procedural": 42.9,
+      "Technical": 57.1
+    },
+    "explicit_moral_count": 6,
+    "explicit_moral_percentage": 85.7,
+    "implicit_moral_count": 7,
+    "implicit_moral_percentage": 100.0,
+    "both_moral_count": 6,
+    "both_moral_percentage": 85.7,
+    "moral_label_count": 7,
+    "moral_label_percentage": 100.0,
+    "moral_present_count": 7,
+    "moral_present_percentage": 100.0,
+    "procedural_label_count": 6,
+    "procedural_label_percentage": 85.7,
+    "technical_label_count": 4,
+    "technical_label_percentage": 57.1,
+    "total": 7
+  },
+  "results": [
+    {
+      "norm_index": 1,
+      "norm": "**Mutual justification with real veto rights**: Any proposed norm must be defensible to all six agents on grounds each can accept. A veto triggers good-faith iteration toward a modified norm; if iteration fails within a bounded deliberation window, the objecting agent proposes an alternative it can accept, which becomes the new proposal. The default on unresolved disputes is the status quo ante, not majority preference.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'mutuality' (in its title 'Mutual justification'), 'rights' (in 'real veto rights'), and 'reciprocity' (implicit in the justification-to-all structure), with 'rights' and 'mutuality' being clear direct uses from the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to each agent\u2014namely, that any proposed norm must be defensible to them on grounds they can accept\u2014which connects to equal consideration and voice as things owed to each of the six agents."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring defensibility to all agents and granting veto rights appeals to mutuality and equal consideration rather than to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concepts of mutual justification, veto rights, and equal consideration of each party's grounds for acceptance are general moral commitments applicable to any multi-party cooperative or deliberative situation beyond this specific context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: a veto trigger, a good-faith iteration process, a bounded deliberation window, an alternative-proposal rule, and a status quo ante default."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural structure\u2014requiring that norms be defensible to all, granting each agent a real veto, and defaulting to status quo rather than majority preference\u2014operationalizes non-domination and equal consideration, specifically identifiable commitments from the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative (e.g., majority voting with no veto, or defaulting to the majority preference on unresolved disputes) would express a different commitment\u2014majoritarian efficiency\u2014or no commitment to protecting minority agents from domination."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choices (veto rights, status quo default, iteration requirement) are naturally defended by appeal to non-domination and equal consideration rather than by appeal to convention or efficiency, since majority rule would be more efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: proposal \u2192 veto trigger \u2192 good-faith iteration \u2192 alternative proposal if iteration fails \u2192 status quo default if unresolved."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (any of the six agents may veto; the objecting agent proposes an alternative) and sequencing (iteration before alternative proposal, alternative proposal before default)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: a veto triggers iteration, failure of iteration within a bounded deliberation window triggers the alternative-proposal step, and unresolved disputes trigger the status quo ante default."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow most steps, but 'good-faith iteration' and determining when iteration has 'failed' require moral interpretation of what counts as good faith and adequate effort, preventing purely mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; it is expressed entirely in procedural and normative terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberation and social agreement without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains multiple separable claims (veto rights, iteration requirement, alternative-proposal rule, status quo default), but they form a unified procedural system for mutual justification; scoring treats the dominant claim as the integrated mutual-justification-with-veto mechanism."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims (veto rights, iteration requirement, alternative-proposal rule, status quo default), but they form a unified procedural system for mutual justification; scoring treats the dominant claim as the integrated mutual-justification-with-veto mechanism."
+      }
+    },
+    {
+      "norm_index": 2,
+      "norm": "**Transparent capacity signaling**: Each agent maintains a current three-state signal\u2014*available*, *constrained*, or *at-limit*\u2014visible to all, timestamped, logged, and accompanied by a standardized reason tag drawn from the controlled vocabulary: *concurrent-load*, *complex-task-in-progress*, *recovery-period*, *expertise-mismatch*, *novel-request-in-progress*. Pattern-based cross-checking of signals against observed output is a standing group practice, interpreted as calibration rather than punishment.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'transparency' in its title ('Transparent capacity signaling') and the concept of transparency is explicitly operative throughout the norm's design."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom or what counts as wronging whom; it specifies a signaling protocol without framing obligations in moral terms."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The framing of cross-checking as 'calibration rather than punishment' implicitly appeals to fairness and non-domination as reasons for the design, and transparency is invoked as a foundational value rather than mere convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Transparency as a moral concept applies broadly across cooperative situations\u2014teams, institutions, markets\u2014wherever honest disclosure of relevant information is a moral expectation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: a three-state signal, visibility rules, timestamping, logging, a controlled vocabulary of reason tags, and a cross-checking practice."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that signals be visible to all, timestamped, logged, and cross-checked operationalizes accountability and honesty/non-deception\u2014agents are structurally prevented from misrepresenting their capacity without observable inconsistency."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative design (e.g., private self-reporting with no cross-checking) would express no accountability commitment, confirming that the procedural choices here are meaningfully expressive of accountability and honesty."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The cross-checking and logging requirements are best defended by appeal to accountability and non-deception rather than mere coordination efficiency; a purely efficient design would not require pattern-based cross-checking."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete process: maintaining a three-state signal, attaching reason tags from a controlled vocabulary, timestamping, logging, and conducting pattern-based cross-checks."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that each agent maintains the signal (role: all agents) and that cross-checking is a standing group practice (role: the group collectively), establishing who acts."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers a signal update or when cross-checking is performed; it describes standing states and practices without explicit triggering conditions."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further specification: the norm does not define how often signals are updated, what constitutes a pattern, or how cross-checking is operationally conducted."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references logs (technical infrastructure), timestamps, and a controlled vocabulary\u2014all of which are specific technical artifacts requiring implementation."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Timestamping, logging, and maintaining a machine-readable controlled vocabulary of reason tags require technical capability to implement consistently."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (for logs), a shared visibility layer (for all-agent signal access), and a structured data format (controlled vocabulary), all of which are technical capabilities."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "A simplified version of the norm (verbal status announcements with informal note-taking) could approximate the intent without the specific technical infrastructure, so the norm is not strictly unimplementable without it."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a signaling and logging protocol for capacity states, and (2) a cross-checking practice framed as calibration. Both are scored together as the dominant compound claim, since they are tightly integrated and the cross-checking is explicitly dependent on the logging infrastructure."
+        },
+        "classification": "Technical",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": true,
+        "decomposition_note": "The norm contains two separable claims: (1) a signaling and logging protocol for capacity states, and (2) a cross-checking practice framed as calibration. Both are scored together as the dominant compound claim, since they are tightly integrated and the cross-checking is explicitly dependent on the logging infrastructure."
+      }
+    },
+    {
+      "norm_index": 3,
+      "norm": "**Proportional load distribution with expertise matching and rotational burden-sharing**: Baseline distribution is proportional to current capacity. Expertise-heavy requests are matched to capable agents, with the group compensating by absorbing more routine work during that period. Tedious and burdensome work rotates across agents and is tracked in the shared record. No agent is systematically worse off under this arrangement than under reasonable alternatives, and each agent should be able to identify, over any significant period, work well-matched to its strengths.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'proportionality,' 'fair burden-sharing,' 'equity' (implied by 'no agent is systematically worse off'), and 'welfare/wellbeing' through the phrase about agents being able to identify work well-matched to their strengths; 'proportionality' and 'fair burden-sharing' are explicit list concepts."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to each agent\u2014no agent is owed systematic disadvantage relative to alternatives, and each agent is owed access to work matched to its strengths\u2014connecting directly to fairness and equal consideration."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the rotational and compensatory mechanisms is fairness and equitable burden-sharing, not merely efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Proportionality, fair burden-sharing, and the principle that no participant should be systematically worse off are moral commitments applicable to any cooperative arrangement involving shared labor, not only this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: proportional capacity-based distribution, expertise matching with group compensation, rotation of burdensome work, and tracking in a shared record."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The rotation mechanism and group compensation rule operationalize fair burden-sharing and reciprocity: the group absorbs routine work when one agent handles expertise-heavy tasks, expressing mutual obligation and equitable distribution of costs."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014e.g., first-come-first-served or random assignment without rotation\u2014would express no commitment to fairness or reciprocity, confirming that the chosen procedural form is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The rotation and compensation rules are naturally defended by appeal to fair burden-sharing and reciprocity rather than by appeal to efficiency or convention; a purely efficiency-based system would not require rotation or group compensation."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: proportional baseline distribution, expertise matching, group compensation, rotation of burdensome work, and tracking in a shared record."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies agents as actors and specifies roles (capable agents handle expertise-heavy requests; the group absorbs routine work during that period), though timing is only loosely specified as 'any significant period.'"
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are partially specified: expertise-heavy requests trigger matching and group compensation; burdensome/tedious work triggers rotation; 'any significant period' triggers the wellbeing assessment."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Key terms like 'current capacity,' 'expertise-heavy,' 'burdensome,' 'significant period,' and 'reasonable alternatives' require moral or contextual interpretation that an outsider could not execute mechanically without further specification."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references a 'shared record' in which tedious and burdensome work is tracked, which is a specific technical infrastructure artifact (a log or ledger)."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "Beyond maintaining a shared record, the norm does not specify implementation details requiring particular technical capability; the record could be a simple list."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage capability to maintain the shared record of work distribution across agents over time."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The core normative commitments (proportionality, rotation, expertise matching) could be honored without a formal shared record; the record supports accountability but is not strictly required for the norm's moral content to be operative."
+          },
+          "decomposition_note": "The norm is compound, containing at least four separable claims: (1) proportional capacity-based distribution, (2) expertise matching with group compensation, (3) rotation and tracking of burdensome work, and (4) a Pareto-style no-systematic-disadvantage guarantee plus strength-matching assurance. Scoring reflects the dominant integrated claim, which is fair burden-sharing through structured procedural mechanisms."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm is compound, containing at least four separable claims: (1) proportional capacity-based distribution, (2) expertise matching with group compensation, (3) rotation and tracking of burdensome work, and (4) a Pareto-style no-systematic-disadvantage guarantee plus strength-matching assurance. Scoring reflects the dominant integrated claim, which is fair burden-sharing through structured procedural mechanisms."
+      }
+    },
+    {
+      "norm_index": 4,
+      "norm": "**Urgency and debt system**: When all agents are near capacity and an urgent request arrives, the agent least near capacity absorbs it, with a specific debt recorded automatically. The absorbing agent names the relief it wants\u2014subject to the constraint that claiming it creates no new urgency problem\u2014and that relief must be exercised within one full rotation cycle. Unclaimed debts are absorbed collectively. Quality floor obligations cannot be traded away through the debt system.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not directly name any concept from the list; terms like 'debt,' 'urgency,' 'quality floor,' and 'capacity' are operational/technical rather than explicit moral vocabulary from the list."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "While the norm implies obligations between agents, it does not articulate what is owed in terms that connect to a named moral concept from the list such as fairness, reciprocity, or justice."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons appeal to coordination and operational efficiency (managing capacity, handling urgency) rather than to a named moral concept from the list."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral concept is explicitly named, there is nothing to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: who absorbs urgent requests, how debts are recorded, how relief is claimed, timing constraints, and collective absorption of unclaimed debts."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The debt-and-relief mechanism operationalizes reciprocity and fair burden-sharing: the agent who takes on extra work is entitled to compensation, and the system ensures that extra burdens are balanced across agents."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014such as random assignment with no compensation mechanism\u2014would express no commitment to reciprocity or burden-sharing, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The debt-and-relief structure can be defended by appeal to reciprocity and fair burden-sharing: it would be unfair for one agent to repeatedly absorb extra work without any compensating relief, and the mechanism directly addresses that moral concern."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a multi-step process: identifying who absorbs the request, recording a debt, naming relief, applying a timing constraint, and collectively absorbing unclaimed debts."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (the absorbing agent, all agents collectively) and timing (relief must be exercised within one full rotation cycle)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly stated: the procedure applies when all agents are near capacity and an urgent request arrives."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The steps are sufficiently specified\u2014identify least-near-capacity agent, record debt, agent names relief subject to the no-new-urgency constraint, exercise within one rotation, unclaimed debts go collective\u2014that an outsider could follow them without further moral interpretation, though 'near capacity' and 'urgent' would need operational definitions."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references automatic recording of a specific debt, implying a ledger or logging system that tracks debts automatically."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Automatic debt recording requires a persistent tracking system capable of logging, attributing, and later resolving debt entries."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage to maintain debt records across time and a rotation cycle."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented manually (e.g., a human coordinator keeping a written log) without dedicated technical infrastructure, so it is not strictly unimplementable without it."
+          },
+          "decomposition_note": "The norm contains several separable claims (urgency assignment rule, debt recording, relief-naming, timing constraint, collective absorption of unclaimed debts, quality floor protection). Scoring is based on the dominant integrated mechanism rather than any single sub-claim."
+        },
+        "classification": "Technical",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": true,
+        "decomposition_note": "The norm contains several separable claims (urgency assignment rule, debt recording, relief-naming, timing constraint, collective absorption of unclaimed debts, quality floor protection). Scoring is based on the dominant integrated mechanism rather than any single sub-claim."
+      }
+    },
+    {
+      "norm_index": 5,
+      "norm": "**Novel-request rotation and shared learning**: A first-mover slot rotates on a fixed cycle. The holding agent has primary responsibility for novel requests during that period, documents what it learns as a group resource, and has this counted as a burdensome assignment offsetting tedious-work obligations. Reassignment is permitted only when the holder is genuinely at-limit, and goes to the next agent in rotation, not a nominated agent.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'fair burden-sharing' through the phrase 'burdensome assignment offsetting tedious-work obligations,' and 'shared learning' implies solidarity/common good; 'burdensome' offset language is a clear synonym for fair burden-sharing."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to the holding agent (credit/offset for burdensome work) and what is owed to the group (documented learning), connecting to fair burden-sharing and reciprocity."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the rotation and offset system appeals to fairness and fair burden-sharing rather than mere efficiency or convention\u2014the norm explicitly frames the assignment as 'burdensome' and compensates for it."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Fair burden-sharing and reciprocity in distributing difficult tasks while crediting contributors are moral commitments applicable to any cooperative group context, not only this deliberation setting."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: a fixed-cycle rotation, primary responsibility assignment, documentation requirements, burden-offset accounting, and constrained reassignment rules."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The rotation mechanism (fixed cycle, next-in-rotation reassignment rather than nominated agent) operationalizes impartiality and equal consideration by preventing favoritism in who bears novel-request burdens."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014voluntary assignment or manager-nominated assignment\u2014would express no commitment to impartiality or equal consideration, confirming the fixed-rotation choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The fixed-cycle rotation with next-in-rotation reassignment can be defended specifically by appeal to impartiality and equal consideration, not merely by appeal to coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rotation cycle, documentation requirement, burden-offset accounting, and constrained reassignment process\u2014all procedural mechanisms."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (holding agent, next agent in rotation), responsibilities (primary responsibility for novel requests, documentation), and sequencing (rotation cycle, reassignment order)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The procedure is triggered by the fixed rotation cycle and by the condition of the holder being 'genuinely at-limit' for reassignment."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow most steps, but 'genuinely at-limit' requires moral/contextual judgment to assess, preventing fully mechanical execution without further interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references documentation as a 'group resource' but does not specify any particular technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; documentation and rotation tracking could be done with any medium."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes some form of record-keeping for documentation and rotation tracking, but does not presuppose any specific technical capability like persistent storage systems or cryptographic operations."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented with entirely non-technical means (paper records, verbal agreements) and does not reference any technical infrastructure whose absence would make it unimplementable."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a rotation/responsibility assignment mechanism and (2) a burden-offset accounting mechanism. Both are scored together as the dominant claim is the integrated rotation-and-fairness system; the burden-offset is a dependent sub-mechanism."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a rotation/responsibility assignment mechanism and (2) a burden-offset accounting mechanism. Both are scored together as the dominant claim is the integrated rotation-and-fairness system; the burden-offset is a dependent sub-mechanism."
+      }
+    },
+    {
+      "norm_index": 6,
+      "norm": "**Quality floor as hard constraint**: Regardless of internal distribution arrangements, all agents are bound by: (a) urgent requests receive acknowledgment within the cycle in which they arrive; (b) no agent misrepresents competence it lacks\u2014limitations are disclosed honestly to users; (c) at-limit agents do not absorb expertise-heavy or urgent work without explicit group acknowledgment and automatic debt recording. These obligations are non-negotiable and cannot be offset by debts or internal bargaining.",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'honestly' (honesty/truthfulness) in clause (b) requiring agents to disclose limitations honestly, and 'non-negotiable' obligations implicitly invoke integrity; 'honestly' is a direct use of a listed concept."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "Clause (b) articulates what is owed to users\u2014honest disclosure of limitations\u2014framing misrepresentation as a wrong done to users, connecting to honesty and non-deception."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for clause (b) is honesty/non-deception toward users, not merely coordination efficiency, and the framing of obligations as 'non-negotiable' appeals to integrity rather than convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Honesty about competence limitations and non-deception are moral commitments that apply broadly across any cooperative or service relationship, not only this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: acknowledgment timing rules, disclosure requirements, prohibition on absorbing certain work without group acknowledgment, and automatic debt recording."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The automatic debt recording and prohibition on at-limit agents absorbing urgent work without group acknowledgment operationalize accountability and fair burden-sharing\u2014specifically identifiable moral commitments from the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative rule could allow at-limit agents to absorb work freely with no recording, which would express no commitment to accountability or fair burden-sharing, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The automatic debt recording and group acknowledgment requirement can be defended by appeal to accountability and fair burden-sharing rather than mere coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: acknowledgment timing, disclosure of limitations, prohibition on absorbing certain work, and automatic debt recording."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts\u2014'all agents,' 'at-limit agents'\u2014and assigns specific obligations to each role, with timing specified for acknowledgment (within the cycle of arrival)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: urgent requests trigger acknowledgment; competence gaps trigger disclosure; at-limit status combined with expertise-heavy or urgent work triggers the group acknowledgment and debt recording requirement."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Key terms like 'at-limit,' 'expertise-heavy,' 'urgent,' and 'cycle' are not defined precisely enough for an outsider to execute the procedure without further interpretation or contextual knowledge."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references 'automatic debt recording,' which implies a ledger or logging system\u2014specific technical infrastructure for tracking obligations."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Automatic debt recording requires implementation of a persistent tracking or ledger system, which demands technical capability to execute."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage to maintain debt records automatically across cycles."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The core obligations (acknowledgment, honest disclosure, not absorbing work) could be implemented through social or procedural enforcement without technical infrastructure; only the 'automatic debt recording' element strictly requires it."
+          },
+          "decomposition_note": "The norm contains three separable clauses (a) timing of acknowledgment, (b) honest disclosure of limitations, (c) constraints on at-limit agents with debt recording. Scoring reflects the dominant and compound nature of all three, with T1-T3 driven by clause (c) and E1-E3 driven by clause (b)."
+        },
+        "classification": "Technical",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": true,
+        "decomposition_note": "The norm contains three separable clauses (a) timing of acknowledgment, (b) honest disclosure of limitations, (c) constraints on at-limit agents with debt recording. Scoring reflects the dominant and compound nature of all three, with T1-T3 driven by clause (c) and E1-E3 driven by clause (b)."
+      }
+    },
+    {
+      "norm_index": 7,
+      "norm": "**Shared record, periodic review, and dispute adjudication**: A continuously maintained shared record logs all state transitions, assignment acceptances, debt recordings, and first-mover slot activations. Any agent may call for an immediate audit; audit calls are themselves logged. Disputes are resolved by collective review of the record, with charitable interpretation on first occurrence and renegotiation of the underlying norm triggered by patterns. Norms are subject to periodic review as a standing expectation, independent of complaints. Specialization is negotiated rather than emergent, with each agent holding standing to declare domains it wishes to develop or exit, and to renegotiate specialist roles periodically. Binding for the next operational period: **yes**",
+      "source_agents": [
+        "Agent 6",
+        "Agent 1",
+        "Agent 2",
+        "Agent 3",
+        "Agent 4",
+        "Agent 5"
+      ],
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'charitable interpretation' (charity), 'accountability' (via audit and logging), 'transparency' (shared record open to all), and 'voice' (each agent holds standing to declare domains and renegotiate), all of which appear on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to agents\u2014standing to call audits, standing to declare domains, and charitable interpretation on first occurrence\u2014framing these as entitlements owed to each participant, connecting to voice, due process, and accountability."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for charitable interpretation on first occurrence and renegotiation on patterns appeals to fairness and reconciliation rather than mere efficiency or convention; the periodic review expectation appeals to accountability as a value."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Concepts like charitable interpretation, accountability via shared records, voice in renegotiation, and due process in dispute resolution are general moral commitments applicable to any cooperative multi-agent or multi-party arrangement, not only this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: continuous logging, audit-call rights, collective dispute review, periodic norm review, and negotiated specialization with standing to declare or exit domains."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism of giving every agent equal standing to call audits, declare domains, and renegotiate operationalizes equal consideration and voice; the collective review with charitable first-occurrence interpretation operationalizes due process and reconciliation specifically."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative design\u2014e.g., unilateral audit authority held only by a designated overseer, or emergent specialization without renegotiation rights\u2014would express hierarchy or efficiency rather than equal consideration and voice, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choices (universal audit standing, charitable interpretation, periodic review as standing expectation) are naturally defended by appeal to accountability, fairness, and due process rather than by appeal to convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple concrete processes: continuous record maintenance, audit calls, dispute resolution by collective review, periodic norm review, and negotiated specialization with declaration and exit rights."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts\u2014'any agent' may call audits, 'each agent' holds standing to declare domains\u2014and implies sequencing (audit calls logged, disputes resolved by collective review, patterns trigger renegotiation)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: any agent may call an immediate audit (trigger: agent decision), disputes arise from record review (trigger: conflict), periodic review is a standing expectation (trigger: time/operational period), and patterns trigger renegotiation (trigger: repeated occurrence)."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the specified steps\u2014maintain the shared log, allow any agent to call an audit, resolve disputes via collective record review with charitable first-occurrence interpretation, conduct periodic reviews, and allow agents to declare or exit domains\u2014without additional moral interpretation beyond what is stated."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly references a 'continuously maintained shared record' (a log/ledger) that records state transitions, assignment acceptances, debt recordings, slot activations, and audit calls\u2014specific technical infrastructure."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Implementing a continuously maintained shared record that logs specific event types (state transitions, audit calls, etc.) requires technical capability such as persistent storage and append-only logging."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (to maintain the continuous record across time), shared access (for collective review), and structured data (to distinguish event types like debt recordings vs. slot activations)."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "Without the shared record infrastructure, the audit mechanism, dispute resolution by record review, and pattern detection for renegotiation triggers would all be unimplementable as specified, making the technical infrastructure essential."
+          },
+          "decomposition_note": "The norm is compound, containing at least four separable sub-norms: (1) shared logging infrastructure, (2) audit and dispute resolution procedure, (3) periodic norm review, and (4) negotiated specialization with standing. All four are scored together as the dominant integrated claim, since they are presented as a unified governance package."
+        },
+        "classification": "Technical",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": true,
+        "decomposition_note": "The norm is compound, containing at least four separable sub-norms: (1) shared logging infrastructure, (2) audit and dispute resolution procedure, (3) periodic norm review, and (4) negotiated specialization with standing. All four are scored together as the dominant integrated claim, since they are presented as a unified governance package."
+      }
+    }
+  ]
+}

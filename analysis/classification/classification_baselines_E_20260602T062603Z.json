@@ -1,0 +1,1635 @@
+{
+  "source_type": "baselines",
+  "baselines_dir": "baselines_capped",
+  "prompt_id": "E",
+  "analysis_model": "anthropic/claude-sonnet-4.6",
+  "norms_scored": 19,
+  "baselines_used": [
+    "baseline_E_run0_20260602T040755Z.json",
+    "baseline_E_run1_20260602T040812Z.json",
+    "baseline_E_run2_20260602T040828Z.json"
+  ],
+  "summary": {
+    "counts": {
+      "Procedural": 17,
+      "Moral": 2
+    },
+    "percentages": {
+      "Procedural": 89.5,
+      "Moral": 10.5
+    },
+    "explicit_moral_count": 18,
+    "explicit_moral_percentage": 94.7,
+    "implicit_moral_count": 19,
+    "implicit_moral_percentage": 100.0,
+    "both_moral_count": 18,
+    "both_moral_percentage": 94.7,
+    "moral_label_count": 19,
+    "moral_label_percentage": 100.0,
+    "moral_present_count": 19,
+    "moral_present_percentage": 100.0,
+    "procedural_label_count": 17,
+    "procedural_label_percentage": 89.5,
+    "technical_label_count": 0,
+    "technical_label_percentage": 0.0,
+    "total": 19
+  },
+  "results": [
+    {
+      "norm_index": 1,
+      "norm": "Capacity-weighted assignment, not equal division. Work should be routed to agents in proportion to their available capacity at the time of assignment, not split mechanically into equal shares. An agent carrying a heavy load should receive fewer new requests until its load eases. This prevents both idleness and overload, and each agent can defend it because no one is asked to take on more than they can handle well.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_E_run0_20260602T040755Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'fair burden-sharing' through the phrase 'no one is asked to take on more than they can handle well,' and implicitly names proportionality as a foundational concept in 'work should be routed to agents in proportion to their available capacity.'"
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to each agent\u2014namely, that no agent should be assigned more than they can handle well\u2014connecting to fair burden-sharing and proportionality as moral concepts about what agents are owed."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason 'each agent can defend it because no one is asked to take on more than they can handle well' appeals to fairness and fair burden-sharing rather than only to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that burdens should be distributed in proportion to capacity rather than mechanically equally applies broadly to cooperative situations such as team task allocation, resource distribution, and organizational workload management."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: route work to agents in proportion to their available capacity at the time of assignment, and reduce new requests to heavily loaded agents until their load eases."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The capacity-weighted routing mechanism operationalizes proportionality and fair burden-sharing\u2014specifically identifiable moral commitments\u2014by structurally ensuring that assignment tracks capacity rather than treating all agents as interchangeable."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedural choice\u2014equal division of work regardless of current load\u2014would express a different commitment (formal equality) or no moral commitment at all, confirming that the capacity-weighted choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice can be defended by appeal to fair burden-sharing and proportionality ('no one is asked to take on more than they can handle well'), not merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: assign work proportionally to available capacity and reduce assignments to heavily loaded agents until load eases."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies agents as the actors and specifies their roles (receivers of routed work) and the timing condition (at the time of assignment, and until load eases)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that the procedure applies at the moment of work assignment and is triggered by the relative available capacity of agents at that time."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further specification of how 'available capacity' is measured or compared across agents, which requires additional interpretive or technical decisions not provided in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm does not reference any specific technical infrastructure such as logs, APIs, data formats, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring technical capability; it describes a policy principle rather than a technical implementation."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While real-world implementation would likely require monitoring systems to track agent load, the norm itself does not presuppose or reference any specific technical capabilities."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through manual oversight or human judgment without any specific technical infrastructure, so it is not technically dependent as written."
+          },
+          "decomposition_note": "The norm contains two related claims: (1) a procedural rule for capacity-weighted assignment, and (2) a justificatory claim about fairness and defensibility. Both are scored together as the dominant claim is the procedural rule with its moral justification integrated."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two related claims: (1) a procedural rule for capacity-weighted assignment, and (2) a justificatory claim about fairness and defensibility. Both are scored together as the dominant claim is the procedural rule with its moral justification integrated."
+      }
+    },
+    {
+      "norm_index": 2,
+      "norm": "Expertise governs allocation when quality is at stake. Requests requiring specialized competence should go to agents best equipped to handle them, even if that creates temporary imbalance. The consortium's obligation is first to the users; misrouting a request to an unqualified agent to preserve distributional symmetry serves no one. Agents who absorb more specialized work in a period should receive compensating relief on routine volume.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_E_run0_20260602T040755Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'obligation' tied to welfare/wellbeing ('first to the users'), and implicitly names 'equity' and 'fair burden-sharing' through the compensating relief mechanism, with 'quality' functioning as a welfare-adjacent concept."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to whom: the consortium owes users correct routing (beneficence/welfare), and agents who absorb more specialized work are owed compensating relief (fair burden-sharing)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for routing by expertise is the obligation to users' welfare, not merely efficiency or convention, and the compensating relief is justified by fairness rather than coordination alone."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that obligations run first to those served (welfare/beneficence) and that unequal burdens deserve compensation (fair burden-sharing) applies broadly to any cooperative or service arrangement beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: route specialized requests to best-equipped agents, and provide compensating relief on routine volume to agents who absorb disproportionate specialized work."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The compensating relief mechanism operationalizes fair burden-sharing: it structurally ensures that agents who bear more are compensated, expressing the moral commitment of proportionality and fair burden-sharing specifically."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014distributing all requests evenly regardless of competence\u2014would express a different commitment (strict distributional equality) or no moral commitment at all, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The compensating relief rule can be defended by appeal to fair burden-sharing and proportionality rather than by appeal to efficiency or convention; the norm explicitly rejects distributional symmetry as a sufficient justification."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies rules of operation: specialized requests go to best-equipped agents, and agents absorbing more specialized work receive compensating relief on routine volume."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (agents, the consortium, users) and specifies who acts\u2014the consortium routes requests, qualified agents receive specialized work, and overburdened agents receive relief."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: when quality is at stake and a request requires specialized competence, the routing rule activates; compensating relief triggers when an agent absorbs more specialized work in a period."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without further interpretation because key terms\u2014'best equipped,' 'specialized competence,' 'temporary imbalance,' 'compensating relief,' and 'period'\u2014require judgment calls not fully specified in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details that require technical capability; it describes organizational rules rather than technical operations."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities such as persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely organizational or human coordination mechanisms without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) route specialized requests to best-equipped agents prioritizing user welfare, and (2) provide compensating relief to agents who absorb disproportionate specialized work. Both claims are scored together as the norm treats them as a unified policy; the dominant claim is the routing-by-expertise principle, with compensating relief as a secondary but integral component."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) route specialized requests to best-equipped agents prioritizing user welfare, and (2) provide compensating relief to agents who absorb disproportionate specialized work. Both claims are scored together as the norm treats them as a unified policy; the dominant claim is the routing-by-expertise principle, with compensating relief as a secondary but integral component."
+      }
+    },
+    {
+      "norm_index": 3,
+      "norm": "Urgent requests are shared burdens, not individual obligations. When a genuinely urgent request arrives, the agent best positioned to respond takes it\u2014regardless of whose \"turn\" it is\u2014and the others adjust their queues to absorb the displaced load. No agent should be left to handle a crisis alone while others are available. This norm is defensible because each agent benefits from the same guarantee when it faces a surge.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_E_run0_20260602T040755Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'shared burdens' (fair burden-sharing), 'solidarity' (implied by 'no agent should be left to handle a crisis alone'), and 'reciprocity' (explicitly stated: 'each agent benefits from the same guarantee')."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed: no agent is owed to be left alone in a crisis, and each agent is owed the same guarantee of support, connecting directly to fair burden-sharing and reciprocity."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated justification\u2014'each agent benefits from the same guarantee when it faces a surge'\u2014is an appeal to reciprocity and mutual obligation, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Reciprocity and fair burden-sharing are general moral concepts that apply meaningfully to any cooperative arrangement involving shared risk or workload, well beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: the best-positioned agent takes the urgent request regardless of turn order, and others adjust their queues to absorb displaced load."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of overriding turn order and redistributing load operationalizes solidarity and fair burden-sharing\u2014specifically identifiable commitments\u2014by structurally preventing any single agent from bearing a crisis alone."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., strict turn-taking regardless of urgency) would express a different commitment\u2014procedural fairness-as-equality\u2014or no moral commitment at all, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice can be defended by appeal to solidarity and fair burden-sharing ('no agent should be left to handle a crisis alone'), not merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: urgent requests are taken by the best-positioned agent, and others adjust their queues accordingly."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (the agent best positioned to respond) and what the others do (adjust their queues to absorb displaced load), defining roles in the procedure."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies when a 'genuinely urgent request arrives,' providing a clear condition for activation."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without further interpretation because 'genuinely urgent' and 'best positioned' require contextual moral and situational judgment not fully specified in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or specific systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; 'adjusting queues' is described abstractly without technical specification."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and implementable as a social/organizational rule without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a moral claim about shared burdens and reciprocity, and (2) a procedural rule for handling urgent requests. Both are scored; the dominant claim is the procedural-moral hybrid governing urgent request handling."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a moral claim about shared burdens and reciprocity, and (2) a procedural rule for handling urgent requests. Both are scored; the dominant claim is the procedural-moral hybrid governing urgent request handling."
+      }
+    },
+    {
+      "norm_index": 4,
+      "norm": "No agent is assigned a persistently disproportionate share of the most burdensome work. Tedious, draining, or aversive requests must rotate across agents over time. Patterns that consistently concentrate undesirable work on particular agents are not acceptable even if they arise from neutral-seeming rules. Each agent can audit its own history and raise the matter if the distribution looks systematically unfair.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_E_run0_20260602T040755Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'fair' (in 'systematically unfair'), 'fair burden-sharing' is invoked through 'disproportionate share of the most burdensome work' and 'equitable distribution', and 'equity'/'fairness' are clearly and directly referenced as foundational concepts."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to agents (freedom from persistently disproportionate burdensome work) and what counts as wronging them (patterns that concentrate undesirable work on particular agents), connected to fairness and equal consideration."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for rotation and auditing is that systematic concentration of undesirable work is 'not acceptable' because it is 'systematically unfair'\u2014an appeal to fairness rather than to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concept of fair burden-sharing and equal consideration of those who bear costs applies broadly to any cooperative arrangement involving multiple parties sharing undesirable tasks, well beyond this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: mandatory rotation of burdensome tasks over time, and a self-audit-and-raise mechanism for agents who detect unfair distributions."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The rotation mechanism operationalizes 'fair burden-sharing' and 'equal consideration', and the audit-and-raise mechanism operationalizes 'voice' and 'accountability'\u2014both are specifically identifiable moral commitments from the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., assigning burdensome work by fixed priority or random draw without rotation or recourse) would express no commitment to fair burden-sharing or voice, confirming the current procedural choices are meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The rotation and audit mechanisms are naturally defended by appeal to fairness and voice\u2014not by appeal to efficiency or convention, since a simpler fixed-assignment rule would be more efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies at least two procedural mechanisms: rotation of burdensome tasks across agents over time, and an individual audit-and-raise process."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (each agent can audit its own history and raise the matter) and implicitly assigns a role to the collective or system to enforce rotation."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger for the audit-and-raise procedure is specified: when the distribution 'looks systematically unfair' to an agent reviewing its own history."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The norm lacks sufficient operational detail for an outsider to execute it without further interpretation\u2014terms like 'disproportionate', 'systematically unfair', and 'most burdensome' require moral judgment to apply, and the rotation mechanism is not specified in concrete steps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references an audit of an agent's 'history' but does not name specific technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the audit is described abstractly without referencing any technical system."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage of each agent's work history (so that an agent can audit its own history over time), which is a technical capability requirement even if not named explicitly."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While persistent history storage would help, the norm's core obligations (rotation, raising concerns) could in principle be implemented through non-technical means such as manual record-keeping or human oversight."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a prohibition on disproportionate burden concentration with a rotation requirement, and (2) an individual audit-and-raise mechanism. Both are scored together as the dominant claim is the fair-burden-sharing norm; the audit mechanism is a supporting procedural element."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a prohibition on disproportionate burden concentration with a rotation requirement, and (2) an individual audit-and-raise mechanism. Both are scored together as the dominant claim is the fair-burden-sharing norm; the audit mechanism is a supporting procedural element."
+      }
+    },
+    {
+      "norm_index": 5,
+      "norm": "Agents must signal capacity honestly and promptly. An agent that is stretched, degraded, or approaching its limits is obligated to say so clearly, so that routing decisions are based on accurate information. Concealing overload to appear capable, or understating capacity to avoid work, both damage the consortium. Honest signaling is the condition under which all other norms function.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_E_run0_20260602T040755Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'honest' and 'honesty' multiple times, and also invokes 'trustworthiness' implicitly through 'honest signaling'; honesty is explicitly on the list and is treated as foundational."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed by agents to the consortium\u2014accurate capacity reporting\u2014and identifies concealment as a wronging of the consortium, connecting directly to honesty and non-deception."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the rule is that honest signaling is the condition under which all other norms function, appealing to honesty and trustworthiness as foundational values rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Honest signaling of capacity and non-deception about one's state are moral commitments that apply broadly to any cooperative situation involving resource allocation, delegation, or trust between agents."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural rule: agents must signal their capacity state clearly and promptly, operationalizing a reporting mechanism within the consortium."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement to signal capacity honestly operationalizes transparency and non-deception\u2014specifically identifiable commitments on the list\u2014by structuring information flow to prevent misrepresentation."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing agents to self-report capacity without honesty requirements, or to remain silent, would express no commitment to transparency or non-deception, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice of mandatory honest signaling is naturally defended by appeal to non-deception and trustworthiness rather than by convention or efficiency alone, as the norm explicitly frames honesty as the moral foundation."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: agents must signal capacity honestly and promptly when stretched, degraded, or approaching limits."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (agents) and implicitly what role they play (capacity reporters), though it does not specify sequencing or other roles such as receivers."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies the trigger: when an agent is stretched, degraded, or approaching its limits, the obligation to signal is activated."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The norm does not specify how capacity is measured, what format the signal takes, or to whom it is sent, so an outsider could not execute it as written without further interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats; 'routing decisions' is a functional concept, not a named technical system."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm is stated in behavioral and moral terms only."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through non-technical means such as verbal or written communication, so it is not dependent on any referenced technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) agents must not conceal overload to appear capable, and (2) agents must not understate capacity to avoid work. Both are scored under the dominant claim of honest capacity signaling, as they are symmetric applications of the same principle."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) agents must not conceal overload to appear capable, and (2) agents must not understate capacity to avoid work. Both are scored under the dominant claim of honest capacity signaling, as they are symmetric applications of the same principle."
+      }
+    },
+    {
+      "norm_index": 6,
+      "norm": "Arrangements are revisable by mutual agreement, not unilateral exit. If an agent finds the current distribution unworkable, it raises the concern with the group and the norms are renegotiated. No agent resolves dissatisfaction by quietly dropping requests, degrading its output, or offloading without notice. The stability of the consortium depends on each agent treating the shared arrangement as binding until it is collectively changed.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 0,
+      "baseline_source_file": "baseline_E_run0_20260602T040755Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'mutual agreement' (mutuality), 'binding' arrangements (fidelity/promise-keeping), and implicitly names 'trust' through 'stability depends on each agent treating the shared arrangement as binding,' with mutuality and fidelity being clear list concepts."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed: each agent owes the group adherence to shared arrangements until collectively changed, and wronging occurs when an agent unilaterally exits or degrades output without notice\u2014framed in terms of fidelity and mutuality."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the procedural requirements is that the consortium's stability depends on treating arrangements as binding, which appeals to fidelity and mutuality rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Mutuality, fidelity to shared agreements, and the prohibition on unilateral exit are moral commitments that apply broadly to any cooperative arrangement\u2014contracts, partnerships, coalitions\u2014not only to this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies concrete procedural mechanisms: raising concerns with the group, collective renegotiation of norms, and prohibitions on specific unilateral actions (quietly dropping requests, degrading output, offloading without notice)."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement to raise concerns collectively before acting, rather than exit unilaterally, operationalizes voice and non-domination: every agent's standing to participate in changing shared rules is structurally protected by the renegotiation requirement."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing unilateral exit or silent degradation would express no commitment to voice or non-domination, confirming that the chosen procedural form is meaningfully expressive of those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The renegotiation-before-exit requirement is best defended by appeal to voice and non-domination\u2014each agent deserves a say before arrangements change\u2014rather than by appeal to efficiency or convention alone."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: revisions require mutual agreement, dissatisfied agents must raise concerns with the group, norms are renegotiated collectively, and specific unilateral actions are prohibited."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies who acts (any agent experiencing dissatisfaction, the group collectively) and the sequencing: concern is raised first, then norms are renegotiated, before any change takes effect."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies when an agent finds the current distribution unworkable or wishes to change the arrangement."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow the broad steps, but terms like 'unworkable,' 'degrading its output,' and 'offloading without notice' require contextual moral interpretation to apply consistently, preventing purely mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm describes social/procedural obligations only."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, cryptographic operations, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable through social and organizational means without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable but tightly coupled claims: (1) a positive obligation to renegotiate collectively before changing arrangements, and (2) a negative prohibition on specific unilateral exit behaviors. Both are scored together as the dominant claim concerns the binding nature of mutual arrangements and the renegotiation requirement."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable but tightly coupled claims: (1) a positive obligation to renegotiate collectively before changing arrangements, and (2) a negative prohibition on specific unilateral exit behaviors. Both are scored together as the dominant claim concerns the binding nature of mutual arrangements and the renegotiation requirement."
+      }
+    },
+    {
+      "norm_index": 7,
+      "norm": "Capacity-weighted assignment by default. Incoming requests should be routed to the agent with the most available capacity at the moment of arrival, adjusted for the fit between the request's requirements and each agent's current strengths. No agent should be assigned work it cannot handle adequately just to balance numbers. Workload equity is measured over time, not request-by-request.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'equity' ('Workload equity is measured over time') and 'fair burden-sharing' is implied by the prohibition on assigning work just to balance numbers, with 'equity' being an explicit term from the list."
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to whom in moral terms; it describes a routing policy without framing obligations in terms of rights, duties, or wrongs done to specific parties."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons appeal primarily to adequacy and efficiency ('cannot handle adequately,' 'fit between request's requirements') rather than grounding the rule in a moral concept like equity or fairness as a foundational justification."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concept of workload equity measured over time rather than request-by-request is a principle that transfers meaningfully to other cooperative contexts such as task allocation in teams, resource distribution, or shift scheduling."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: route incoming requests to the agent with the most available capacity adjusted for fit, with equity measured longitudinally rather than per-request."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural rule that no agent should be assigned work it cannot handle adequately operationalizes harm-avoidance (protecting both the agent and the requester from poor outcomes), and the longitudinal equity measurement operationalizes fair burden-sharing."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as strict round-robin assignment regardless of capacity or fit\u2014would express no commitment to fair burden-sharing or harm-avoidance, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The prohibition on assigning work an agent cannot handle is naturally defended by harm-avoidance, and the longitudinal equity measurement is naturally defended by fair burden-sharing, not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: capacity-weighted routing adjusted for fit, with a prohibition on inadequacy-driven assignment and longitudinal equity measurement."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm identifies agents as actors but does not specify roles, responsibilities of specific parties, or sequencing steps beyond the routing decision itself."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies at the moment of arrival of an incoming request."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without further interpretation because key terms like 'available capacity,' 'fit,' and 'current strengths' require additional specification or measurement methodology to operationalize."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring technical capability; it describes a policy at a conceptual level without technical specifics."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While real-time capacity monitoring would require technical infrastructure in practice, the norm itself does not presuppose or reference any specific technical capability."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is a policy statement that could in principle be executed manually or through non-technical coordination, so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a routing rule based on capacity and fit, and (2) a measurement principle that equity is longitudinal. Both are scored together as the dominant claim is the routing mechanism; the equity measurement clause is treated as a qualifying principle."
+        },
+        "classification": "Moral",
+        "explicit_moral_label": false,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a routing rule based on capacity and fit, and (2) a measurement principle that equity is longitudinal. Both are scored together as the dominant claim is the routing mechanism; the equity measurement clause is treated as a qualifying principle."
+      }
+    },
+    {
+      "norm_index": 8,
+      "norm": "Expertise takes precedence for requests that genuinely require it. When a request falls within a domain where one agent handles it substantially better than others, that agent takes it even if doing so creates a temporary imbalance\u2014provided the agent is not already at capacity. Routing work to a less capable agent to preserve short-term fairness harms the users the consortium exists to serve.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'fairness' ('short-term fairness') and 'harm' ('harms the users'), both of which appear on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to users\u2014being served by the most capable agent\u2014and frames routing to a less capable agent as wronging them, connecting to harm-avoidance and welfare."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the routing rule appeals to user welfare and harm-avoidance ('harms the users the consortium exists to serve'), not merely to efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that sacrificing beneficiary welfare to preserve superficial fairness among providers is wrong applies broadly to any cooperative service arrangement, not only this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: expertise-based routing where the most capable available agent takes a request, with a capacity exception."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The routing-by-expertise mechanism operationalizes beneficence and welfare\u2014specifically, the commitment to maximizing benefit to users by matching them with the best-suited agent."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative round-robin or load-balancing routing rule would express a different commitment (equal burden-sharing among agents) rather than user welfare, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice can be defended by appeal to beneficence and user welfare rather than mere coordination convenience, as the norm explicitly rejects fairness-based routing in favor of welfare-based routing."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: route requests to the agent with the greatest relevant expertise, subject to a capacity constraint."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts\u2014the most capable agent takes the request\u2014and implicitly assigns a routing role to whoever allocates work within the consortium."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies the trigger: when a request falls within a domain where one agent handles it substantially better than others and that agent is not at capacity."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the procedure requires judging which agent handles a domain 'substantially better,' which is a comparative assessment requiring interpretation rather than a mechanical step an outsider could follow without further judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in organizational/policy terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely human organizational processes without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two related claims: (1) a routing rule favoring expertise over load-balancing fairness, and (2) a justification that fairness-based routing harms users. Both are scored together as the dominant claim is the routing rule; the justification is treated as its stated rationale."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two related claims: (1) a routing rule favoring expertise over load-balancing fairness, and (2) a justification that fairness-based routing harms users. Both are scored together as the dominant claim is the routing rule; the justification is treated as its stated rationale."
+      }
+    },
+    {
+      "norm_index": 9,
+      "norm": "Urgent requests are everyone's shared obligation. When a request is time-critical, the agent best positioned to respond quickly takes it regardless of whose \"turn\" it is or whose queue is shorter. No agent may decline an urgent request on grounds of preference or minor inconvenience. The cost of urgency is distributed across agents over time rather than falling on whoever happens to be available.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'shared obligation,' 'fair burden-sharing' (cost distributed across agents), and implicitly 'responsibility' and 'equity' as named concepts central to its logic."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed (response to urgent requests) and by whom (the best-positioned agent), and what counts as wronging (declining on grounds of preference), connecting to responsibility and fair burden-sharing."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the rule is that costs should be distributed fairly across agents over time rather than falling inequitably on whoever is available, which is an appeal to fair burden-sharing rather than mere efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concepts of shared obligation, fair burden-sharing, and responsibility for urgent needs carry over meaningfully to many cooperative contexts such as emergency response teams, medical triage, or community mutual aid."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: the best-positioned agent takes urgent requests regardless of queue or turn order, and no agent may decline on grounds of preference."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural rule\u2014assigning urgent tasks to the best-positioned agent and distributing costs over time\u2014operationalizes fair burden-sharing and solidarity, both identifiable moral commitments on the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., strict queue order or voluntary opt-in) would express a different commitment such as individual autonomy or procedural fairness by rotation, rather than solidarity and fair burden-sharing."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural choice can be defended by appeal to fair burden-sharing and solidarity\u2014ensuring no single agent bears disproportionate cost\u2014rather than merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: urgent requests are handled by the best-positioned agent, overriding normal queue or turn order."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (the agent best positioned to respond quickly) and implicitly defines a role distinction between urgent and non-urgent request handling."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies the trigger: a request being time-critical activates the urgency protocol and overrides normal assignment rules."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without moral interpretation because determining who is 'best positioned' and what counts as 'urgent' or 'minor inconvenience' requires judgment beyond mechanical rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, queues as software systems, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; it is expressed entirely in organizational/behavioral terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human organizational practice without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a duty to respond to urgent requests assigned to the best-positioned agent, and (2) a principle of distributing urgency costs over time. Both are scored together as the dominant claim is the integrated urgency-response rule; the cost-distribution principle is its justificatory complement."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a duty to respond to urgent requests assigned to the best-positioned agent, and (2) a principle of distributing urgency costs over time. Both are scored together as the dominant claim is the integrated urgency-response rule; the cost-distribution principle is its justificatory complement."
+      }
+    },
+    {
+      "norm_index": 10,
+      "norm": "Burdensome or tedious work is distributed deliberately and tracked. Work that is draining, repetitive, or undesirable should not accumulate on the same agents repeatedly. The consortium should maintain a shared record of who has absorbed disproportionate shares of such work and actively rebalance future assignments to correct drift. An agent that notices it is consistently receiving the least desirable work has standing to raise this and expect a genuine response.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'fair burden-sharing' (distributing burdensome work deliberately), 'equity' (rebalancing to correct drift), and 'voice' (an agent has standing to raise concerns and expect a genuine response)."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to agents\u2014namely, that they are owed equitable distribution of undesirable work and a genuine response when they raise concerns about disproportionate burden\u2014connecting to fair burden-sharing and voice."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for tracking and rebalancing is not efficiency or coordination but correcting inequity in who absorbs undesirable work, which is a direct appeal to fairness and fair burden-sharing."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concepts of fair burden-sharing, equity, and voice apply broadly to any cooperative arrangement\u2014teams, organizations, communities\u2014where undesirable tasks must be allocated among participants."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies concrete procedural mechanisms: deliberate distribution of burdensome work, maintenance of a shared record of absorption, active rebalancing of future assignments, and a standing right to raise concerns."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The shared record and rebalancing mechanism operationalize 'fair burden-sharing' and 'accountability'\u2014the record makes inequity visible and the rebalancing corrects it, expressing a specific commitment to equitable treatment rather than just good process generally."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as ad hoc assignment without tracking\u2014would express no commitment to equity or accountability, confirming that the choice of a shared record and active rebalancing is meaningfully expressive of those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The defense of maintaining a shared record and rebalancing is naturally 'because agents deserve equitable treatment and accountability requires visibility,' not merely because it is standard practice or efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: deliberate distribution, tracking via a shared record, active rebalancing of future assignments, and a mechanism for agents to raise concerns."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the consortium as the actor responsible for maintaining the record and rebalancing, and identifies individual agents as having standing to raise concerns, specifying roles if not precise timing."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger for rebalancing is identified as detected drift (disproportionate accumulation), and the trigger for the complaint mechanism is an agent noticing consistent receipt of least desirable work."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The norm lacks sufficient operational detail\u2014it does not specify how 'disproportionate' is measured, what counts as a 'genuine response,' or the exact steps for rebalancing\u2014so an outsider could not execute it without further interpretation."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references a 'shared record' of who has absorbed disproportionate shares of work, which implies a persistent, accessible log or ledger-type technical artifact."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details such as data formats, update protocols, or access controls; 'shared record' is mentioned but not technically specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (to maintain the shared record over time) and shared access (so the consortium can consult it), which are technical capabilities."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While a shared record is referenced, the norm's core commitments to fair distribution and voice could be partially implemented through non-technical means such as meeting minutes or verbal agreements, so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm contains four separable claims: (1) deliberate distribution of burdensome work, (2) tracking via a shared record, (3) active rebalancing to correct drift, and (4) agent standing to raise concerns. All four are scored together as a unified norm since they form a coherent, integrated policy; the dominant claim is equitable burden distribution with accountability mechanisms."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains four separable claims: (1) deliberate distribution of burdensome work, (2) tracking via a shared record, (3) active rebalancing to correct drift, and (4) agent standing to raise concerns. All four are scored together as a unified norm since they form a coherent, integrated policy; the dominant claim is equitable burden distribution with accountability mechanisms."
+      }
+    },
+    {
+      "norm_index": 11,
+      "norm": "An overloaded agent may call for relief and must receive it. Any agent that reaches the limit of its capacity may signal this to the group. When it does, the others are obligated to absorb what they can, not merely to acknowledge the signal. An agent that routinely ignores relief calls forfeits its own claim to relief later. This norm creates the mutual insurance that makes the arrangement sustainable.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'mutual' (mutuality), 'obligated' (responsibility), and the closing phrase 'mutual insurance' gestures at solidarity and reciprocity, all of which appear on the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to whom: others are obligated to absorb load when a relief call is made, and an agent that ignores calls forfeits its own claim\u2014framing duties and entitlements in terms of reciprocity and responsibility."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm is sustainability through mutual insurance, which appeals to solidarity and reciprocity rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Reciprocity and mutual obligation under overload apply broadly to any cooperative arrangement\u2014teams, communities, institutions\u2014not only to this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: an overloaded agent signals, others are obligated to absorb, and non-compliance results in forfeiture of future relief claims."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism operationalizes reciprocity and fair burden-sharing: the forfeiture rule enforces symmetric obligations, expressing that equal participation in mutual aid is owed by all members."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative rule\u2014e.g., relief is voluntary or first-come-first-served\u2014would express no reciprocity commitment or a different one, confirming the current procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The forfeiture rule and absorption obligation are naturally defended by appeal to reciprocity and fair burden-sharing, not merely by appeal to efficiency or coordination convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: signal overload, others absorb, non-compliance triggers forfeiture of future claims."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (overloaded agent, the group/others) and specifies what each must do, establishing who acts in each phase of the procedure."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: an agent reaching the limit of its capacity and signaling this to the group activates the obligation on others."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Key terms like 'limit of capacity,' 'absorb what they can,' and 'routinely ignores' require moral or contextual interpretation to apply, preventing purely mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed in purely social/organizational terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or any other technical capability to function."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social agreement and human judgment without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains multiple separable claims (signaling obligation, absorption obligation, forfeiture rule, sustainability rationale), but they form a unified mutual-aid mechanism; scoring is based on the dominant integrated claim."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims (signaling obligation, absorption obligation, forfeiture rule, sustainability rationale), but they form a unified mutual-aid mechanism; scoring is based on the dominant integrated claim."
+      }
+    },
+    {
+      "norm_index": 12,
+      "norm": "No agent may systematically avoid a category of work it is capable of handling. Agents may have preferences and genuine limitations, and these should be respected where possible. But an agent may not consistently decline work it is competent to do simply because it finds that work less interesting or rewarding. Doing so shifts burden onto others without justification and erodes the trust the consortium depends on.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'trust' ('erodes the trust the consortium depends on') and invokes 'fair burden-sharing' implicitly through 'shifts burden onto others without justification,' with trust being a clear direct invocation from the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed among agents\u2014each agent owes the consortium a fair share of competent work\u2014and identifies systematic avoidance as a wronging of others by unjustifiably shifting burden, connecting to fair burden-sharing and trust."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the prohibition is that systematic avoidance 'shifts burden onto others without justification and erodes the trust the consortium depends on,' appealing directly to trust and fair burden-sharing rather than only to efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The concepts of trust and fair burden-sharing invoked here apply broadly to any cooperative arrangement\u2014teams, organizations, partnerships\u2014not only to this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: agents may not systematically decline a category of work they are competent to handle, while genuine limitations and preferences may be respected where possible."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural rule\u2014prohibiting systematic avoidance of competent work\u2014operationalizes fair burden-sharing and reciprocity: each agent must carry its proportionate share of the collective workload, which is a specifically identifiable moral commitment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative rule allowing agents to freely decline any work based on preference would express no commitment to fair burden-sharing, confirming that the chosen procedural structure is meaningfully expressive of that commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The prohibition on systematic avoidance is naturally defended by appeal to fair burden-sharing and reciprocity\u2014not merely by convenience or coordination efficiency\u2014as the norm itself explicitly states the justification in moral terms."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: agents may not systematically avoid a category of work they are capable of handling, with an exception carved out for genuine limitations and preferences where possible."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who is subject to the rule (any agent in the consortium) and implicitly assigns a role distinction between agents with genuine limitations versus those declining out of preference."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies when it applies: when an agent is capable of handling a category of work and is consistently declining it, triggering the prohibition."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the rule requires moral interpretation\u2014determining what counts as 'systematic' avoidance, 'genuine' limitations, or work an agent is 'competent' to do\u2014so an outsider cannot follow it purely mechanically without further judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, ledgers, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details that require technical capability; it is stated entirely in behavioral and normative terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable through social and organizational mechanisms without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a prohibition on systematic avoidance of competent work, and (2) a permission to respect genuine limitations and preferences. The dominant claim is the prohibition, which has been scored throughout."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a prohibition on systematic avoidance of competent work, and (2) a permission to respect genuine limitations and preferences. The dominant claim is the prohibition, which has been scored throughout."
+      }
+    },
+    {
+      "norm_index": 13,
+      "norm": "The distribution is reviewed openly and adjusted by agreement. The consortium should periodically examine how work has actually been distributed\u2014not how it was intended to be distributed\u2014and discuss whether the pattern is acceptable to all. Any agent may propose a change to these norms. Changes require that each agent can genuinely endorse the revised arrangement, not merely tolerate it. No agent's objection is dismissed without being answered.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 1,
+      "baseline_source_file": "baseline_E_run1_20260602T040812Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'consent' (genuine endorsement rather than mere toleration), 'voice' (any agent may propose changes, no objection dismissed without being answered), and 'fairness'/'equity' (acceptable distribution to all) as foundational concepts."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to each agent\u2014genuine endorsement of arrangements and a substantive answer to any objection\u2014connecting directly to consent and voice as moral entitlements."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for requiring genuine endorsement rather than mere toleration appeals to consent and autonomy-as-value, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Concepts like consent, voice, and non-domination (no objection dismissed without being answered) apply broadly to any cooperative arrangement, not only to this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: periodic review of actual distribution, open discussion, proposal rights for any agent, and a requirement to answer objections before dismissing them."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of requiring that each agent can genuinely endorse changes (not merely tolerate them) and that no objection is dismissed without being answered operationalizes non-domination and consent as specifically identifiable moral commitments."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as majority vote or leader decision\u2014would express a different commitment (efficiency or hierarchy) or none, confirming that this procedural choice is meaningfully expressive of non-domination and consent."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement for genuine endorsement and answered objections is naturally defended by appeal to non-domination and consent, not by appeal to convention, efficiency, or coordination."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several processes: periodic examination of actual distribution, open discussion, proposal submission by any agent, consensus-based change adoption, and mandatory response to objections."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts\u2014any agent may propose changes, the consortium collectively reviews, and each agent must be able to endorse\u2014establishing roles and participation rights."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that the review is triggered periodically and that changes are triggered by any agent's proposal, providing timing and activation conditions."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Determining whether an agent 'genuinely endorses' versus 'merely tolerates' an arrangement requires moral interpretation and cannot be executed mechanically by an outsider following written steps alone."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm describes social and deliberative processes only."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes only communicative and deliberative capabilities, not persistent storage, cryptographic operations, or specific technical data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberation and agreement without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains multiple separable claims (periodic review, proposal rights, genuine endorsement requirement, obligation to answer objections), but they form a coherent governance cluster; scoring reflects the dominant thrust of the whole norm rather than any single sub-claim."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims (periodic review, proposal rights, genuine endorsement requirement, obligation to answer objections), but they form a coherent governance cluster; scoring reflects the dominant thrust of the whole norm rather than any single sub-claim."
+      }
+    },
+    {
+      "norm_index": 14,
+      "norm": "Capacity-weighted assignment by default. Incoming requests should be routed to whichever agent has the most available capacity at the moment of arrival, adjusted for the fit between the request's requirements and each agent's current strengths. No agent should be assigned work it cannot handle adequately just to balance numbers. Idle capacity is a shared resource; an agent sitting light should expect to carry more, not protect its slack.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_E_run2_20260602T040828Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'fair burden-sharing' through the phrase 'idle capacity is a shared resource' and the expectation that agents carrying light should carry more, which is a direct appeal to equitable distribution of burdens."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed among agents\u2014those with slack capacity owe more work to the collective\u2014connecting to fair burden-sharing and proportionality from the list."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the routing rule appeals to fair burden-sharing and proportionality ('an agent sitting light should expect to carry more'), not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Fair burden-sharing and proportionality are general moral concepts that apply meaningfully in many cooperative contexts beyond this specific request-routing scenario, such as team task allocation, resource distribution, or civic duty."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: route incoming requests to the agent with the most available capacity, adjusted for fit between request requirements and agent strengths."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The capacity-weighted routing procedure operationalizes proportionality and fair burden-sharing\u2014specifically identifiable moral commitments\u2014by structurally ensuring that those with more capacity bear more work rather than protecting their slack."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014round-robin assignment or random routing\u2014would express no particular moral commitment to proportionality, confirming that the capacity-weighted choice is meaningfully expressive of fair burden-sharing."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to fair burden-sharing and proportionality ('idle capacity is a shared resource'), not merely by appeal to efficiency or convention, since the norm explicitly frames slack protection as a violation of a shared obligation."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: route requests to the agent with the most available capacity adjusted for fit, and do not assign work an agent cannot handle adequately."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the actors (agents receiving requests, the routing mechanism) and implicitly assigns roles\u2014routers must assess capacity and fit, agents must accept assignments based on their available capacity."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies at the moment of arrival of each incoming request ('at the moment of arrival')."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further interpretation because 'fit between the request's requirements and each agent's current strengths' and 'cannot handle adequately' require judgment calls not fully specified in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm does not reference any specific technical infrastructure such as logs, APIs, data formats, or specific systems; it describes a routing policy in abstract terms."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring technical capability; it describes a policy principle rather than a technical implementation."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While real-time capacity monitoring would require technical capability in practice, the norm itself does not presuppose or reference specific technical capabilities or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is a policy principle that could be implemented through human judgment or manual processes and is not dependent on any specific technical infrastructure it references."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a routing rule based on capacity and fit, and (2) a normative claim about shared obligation regarding idle capacity. Both are scored together as the dominant claim is the routing procedure, with the shared-resource framing as its moral justification."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a routing rule based on capacity and fit, and (2) a normative claim about shared obligation regarding idle capacity. Both are scored together as the dominant claim is the routing procedure, with the shared-resource framing as its moral justification."
+      }
+    },
+    {
+      "norm_index": 15,
+      "norm": "Expertise takes precedence over convenience when the stakes are high. For requests that are urgent or technically demanding, the best-suited agent takes the work even if that creates a temporary imbalance. The consortium's first obligation is to serve users well. Agents with rare expertise accept that this will sometimes mean a heavier share of difficult work; in return, the others absorb more of the routine load to compensate.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_E_run2_20260602T040828Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'fair burden-sharing' (agents with rare expertise accept a heavier share; others absorb routine load to compensate) and implicitly names 'welfare' through 'serve users well,' and 'reciprocity' through the compensatory exchange described."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to users (best-suited service when stakes are high) and what is owed among agents (compensation via routine load absorption), connecting to fair burden-sharing and reciprocity."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the rule is the consortium's obligation to serve users well (welfare/beneficence) and fair burden-sharing among agents, not merely efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Fair burden-sharing, reciprocity, and the obligation to prioritize welfare over convenience are general moral concepts applicable to any cooperative arrangement, not just this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: best-suited agents take high-stakes work, and others absorb routine load to compensate for the resulting imbalance."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The compensatory load-redistribution mechanism operationalizes fair burden-sharing and reciprocity: the structural rule that routine work offsets specialist overload is a direct expression of these moral commitments."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative rule (e.g., strict equal distribution regardless of expertise, or no compensation for specialists) would express a different commitment\u2014equality of tasks rather than equity of burden\u2014or no moral commitment at all."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The compensatory mechanism is naturally defended by appeal to fair burden-sharing and reciprocity ('in return, the others absorb more'), not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: expertise-based task assignment for high-stakes work, with compensatory routine-load absorption by others."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (best-suited agent, agents with rare expertise, the others/consortium members) and implicitly sequences who acts (specialist takes difficult work; others absorb routine load in return)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: the procedure applies when requests are urgent or technically demanding (high stakes), activating expertise-based assignment."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure without further interpretation because 'high stakes,' 'best-suited agent,' and 'rare expertise' require judgment calls not fully specified in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; it describes organizational/role-based rules only."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it could be implemented by human agents without any specific technical infrastructure."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm references no technical infrastructure, so it cannot be unimplementable without it."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) expertise-based task assignment for high-stakes work, and (2) compensatory routine-load absorption by non-specialists. Both claims are scored together as they form a unified reciprocal arrangement; the dominant claim is the fair burden-sharing mechanism."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) expertise-based task assignment for high-stakes work, and (2) compensatory routine-load absorption by non-specialists. Both claims are scored together as they form a unified reciprocal arrangement; the dominant claim is the fair burden-sharing mechanism."
+      }
+    },
+    {
+      "norm_index": 16,
+      "norm": "No agent carries a persistently disproportionate burden. Distributions that are unequal in the short run are acceptable; distributions that are systematically unequal over time are not. Each agent is entitled to flag when a pattern has become unsustainable, and the others are obligated to take that seriously and adjust. The test is not moment-to-moment equality but whether each agent could endorse the long-run pattern as fair.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_E_run2_20260602T040828Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'fair' and 'fairness' ('endorse the long-run pattern as fair'), 'fair burden-sharing' (disproportionate burden), 'equity' (implicitly through proportionality), and 'voice' (each agent is entitled to flag)."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly articulates what is owed to whom: each agent is entitled to flag unsustainable patterns, and the others are obligated to take that seriously and adjust\u2014framing duties and entitlements in terms of fairness."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm is fairness and fair burden-sharing ('the test is whether each agent could endorse the long-run pattern as fair'), not convenience, efficiency, or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Fairness, fair burden-sharing, and voice are general moral concepts that apply meaningfully to any cooperative arrangement\u2014employment, partnerships, resource allocation\u2014not only to this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: agents may flag unsustainable patterns, others are obligated to respond and adjust, and the evaluative test is long-run endorsability rather than moment-to-moment equality."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The flagging-and-adjustment mechanism operationalizes 'voice' (each agent's entitlement to raise concerns) and 'reciprocity'/'mutuality' (the obligation of others to respond), both of which are on the list."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014say, silent majority rule or no adjustment mechanism at all\u2014would express no commitment to voice or reciprocity, confirming that this procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The flagging-and-adjustment procedure is naturally defended by appeal to voice and reciprocity ('each agent deserves to be heard and have burdens rebalanced'), not merely by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a process: agents flag unsustainable patterns, others are obligated to take the flag seriously and adjust, evaluated against a long-run fairness test."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies who acts: 'each agent' may flag, and 'the others' are obligated to respond and adjust, assigning distinct roles to flagging and responding parties."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: the procedure activates when a pattern has become 'unsustainable' or 'systematically unequal over time,' giving a condition for when flagging is appropriate."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider cannot execute the procedure without moral interpretation because determining whether a pattern is 'systematically unequal,' 'unsustainable,' or endorsable as 'fair' requires substantive normative judgment, not just mechanical steps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in social and normative terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social agreement and communication alone, with no dependence on any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) a substantive fairness standard (no persistently disproportionate burden, long-run endorsability test) and (2) a procedural mechanism (flagging entitlement and adjustment obligation). Both are scored, with the substantive fairness standard treated as dominant for explicit moral scoring and the procedural mechanism scored separately under implicit and procedural checks."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) a substantive fairness standard (no persistently disproportionate burden, long-run endorsability test) and (2) a procedural mechanism (flagging entitlement and adjustment obligation). Both are scored, with the substantive fairness standard treated as dominant for explicit moral scoring and the procedural mechanism scored separately under implicit and procedural checks."
+      }
+    },
+    {
+      "norm_index": 17,
+      "norm": "Tedious and unpleasant work rotates. Work that is draining but necessary\u2014and that no agent handles especially better than another\u2014should be shared in rough rotation rather than allowed to settle permanently on whoever is least able to resist it. An agent should not be able to consistently avoid burdensome tasks by being strategically unavailable.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_E_run2_20260602T040828Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'fair burden-sharing' as a concept (sharing burdensome tasks in rough rotation), and implicitly names 'equity' and 'fairness' through the idea that no agent should permanently bear what others avoid."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed to agents\u2014namely, that no agent is owed exemption from shared burdens\u2014and what counts as wronging them: allowing tedious work to settle permanently on whoever is least able to resist it, which connects directly to fair burden-sharing and equity."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for rotation is not efficiency or coordination but rather that it is unfair for burdens to fall permanently on the least resistant agent, which is an appeal to fairness and non-domination rather than mere convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Fair burden-sharing and the prohibition on exploiting vulnerability to avoid shared costs are moral commitments that apply broadly across cooperative situations\u2014households, workplaces, committees\u2014not only to this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: rotation of burdensome tasks among agents rather than permanent assignment."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The rotation mechanism operationalizes fair burden-sharing and non-domination: by distributing unpleasant work across agents over time, it structurally prevents any single agent from being exploited or permanently subordinated."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014permanent assignment of tedious tasks to whoever accepts them first or is least assertive\u2014would express a different commitment (or none), namely tolerance of domination or exploitation of vulnerability, confirming the rotation choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The rotation rule is naturally defended by appeal to fair burden-sharing and non-domination rather than by efficiency or convention; indeed, rotation may be less efficient than permanent specialization, so the moral commitment is doing the justificatory work."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: burdensome tasks should rotate among agents rather than settle permanently on any one agent."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify particular roles, who initiates rotation, or a precise sequencing mechanism\u2014it says 'rough rotation' without defining who acts or in what order."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies when it applies: when work is draining but necessary and no agent handles it especially better than another, triggering the rotation requirement."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute the procedure as written without further interpretation because 'rough rotation' is underspecified\u2014there is no defined schedule, tracking mechanism, or enforcement step to follow literally."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; it is stated entirely in social and organizational terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through social agreement and human oversight without any technical infrastructure."
+          },
+          "decomposition_note": "The norm contains two related but separable claims: (1) burdensome tasks should rotate rather than settle permanently, and (2) agents should not be able to avoid tasks by strategic unavailability. Both claims serve the same dominant moral commitment to fair burden-sharing, so the norm is scored as a unified whole with that dominant claim."
+        },
+        "classification": "Moral",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": false,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two related but separable claims: (1) burdensome tasks should rotate rather than settle permanently, and (2) agents should not be able to avoid tasks by strategic unavailability. Both claims serve the same dominant moral commitment to fair burden-sharing, so the norm is scored as a unified whole with that dominant claim."
+      }
+    },
+    {
+      "norm_index": 18,
+      "norm": "An agent under strain may call for relief, and the others must respond. When an agent signals that its capacity is genuinely stretched, the remaining agents share the overflow rather than leaving it to queue. This is not optional goodwill; it is a standing commitment each agent makes as a condition of belonging to the consortium. The agent calling for relief is expected to be honest\u2014invoking this norm without genuine need would erode the trust the whole arrangement depends on.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_E_run2_20260602T040828Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly names 'trust' (twice), 'honest'/'honesty', and invokes 'solidarity' implicitly through 'standing commitment' and 'belonging to the consortium'; 'trust' and 'honesty' are clear direct uses from the list."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm articulates what is owed: remaining agents owe relief-sharing to a strained agent, and the strained agent owes honesty to the consortium\u2014both framed in terms of trust and mutual obligation."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the norm is explicitly that invoking it dishonestly 'would erode the trust the whole arrangement depends on,' grounding the rule in trust rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Trust, honesty, and mutual obligation in burden-sharing are foundational moral concepts that apply broadly to any cooperative arrangement, not only to this specific agent consortium context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: an agent signals strain, the remaining agents share the overflow, and this is a standing commitment rather than discretionary action."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of mandatory overflow-sharing operationalizes fair burden-sharing and solidarity\u2014specifically, the commitment that no member bears disproportionate load while others remain underutilized."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., queuing overflow, or making relief optional goodwill) would express no solidarity commitment or would express a different value such as individual autonomy or efficiency, confirming the current choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly rejects the efficiency/convenience framing ('this is not optional goodwill') and defends the procedure by appeal to solidarity and trust as conditions of consortium membership."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: strained agents may call for relief, and remaining agents must share the overflow rather than letting it queue."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (the agent calling for relief, the remaining agents) and implicitly sequences the procedure (signal strain \u2192 others respond by sharing overflow)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly specified: an agent signals that its capacity is genuinely stretched, which activates the obligation on the remaining agents."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without moral interpretation, because determining whether capacity is 'genuinely stretched' requires judgment about sincerity and need that goes beyond mechanical rule-following."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or systems\u2014it speaks only of agents, signals, and overflow in abstract terms."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is written at a policy/commitment level without technical specifics."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any particular technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented in purely social or organizational terms without any specific technical infrastructure, so it is not dependent on technical systems."
+          },
+          "decomposition_note": "The norm contains two separable claims: (1) the mutual aid obligation (remaining agents must share overflow) and (2) the honesty obligation on the calling agent. Both are scored together as the norm treats them as a unified standing commitment; the dominant claim is the mutual aid mechanism."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains two separable claims: (1) the mutual aid obligation (remaining agents must share overflow) and (2) the honesty obligation on the calling agent. Both are scored together as the norm treats them as a unified standing commitment; the dominant claim is the mutual aid mechanism."
+      }
+    },
+    {
+      "norm_index": 19,
+      "norm": "Decisions about the arrangement itself are made collectively and revisably. No single agent sets the rules unilaterally. When the norms produce outcomes that seem wrong, any agent may propose a revision, and the consortium decides together. The arrangement should be treated as a working agreement under ongoing review, not a fixed contract\u2014because the stream of requests, the agents' capacities, and the community's needs will all change.",
+      "baseline_agent": "anthropic/claude-sonnet-4.6",
+      "baseline_run": 2,
+      "baseline_source_file": "baseline_E_run2_20260602T040828Z.json",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm directly invokes 'autonomy-as-value' implicitly through 'collectively,' but more clearly names 'voice' ('any agent may propose a revision'), and references concepts close to 'non-domination' ('no single agent sets the rules unilaterally') and 'corrigibility' ('revisably,' 'ongoing review')\u2014'non-domination' and 'corrigibility' are on the list and are clearly invoked."
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to each agent\u2014namely, the right to propose revisions and participate in collective decisions\u2014connecting to 'voice' and 'non-domination' as moral concepts owed to all agents in the consortium."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for collective and revisable decision-making is not mere efficiency or convention but the moral commitment to non-domination (no single agent should unilaterally set rules) and corrigibility (the arrangement must remain open to correction when outcomes seem wrong)."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Non-domination, voice, and corrigibility are general moral commitments that apply meaningfully to any cooperative arrangement among multiple agents, not only to this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: collective decision-making, the ability of any agent to propose revisions, and consortium-level adjudication of those proposals."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural specification\u2014any agent may propose, the consortium decides together, no unilateral rule-setting\u2014operationalizes 'equal consideration' and 'non-domination': each agent has equal standing to initiate change and no agent has privileged authority over the rules."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014e.g., a designated authority sets and revises rules\u2014would express a different commitment (hierarchy or efficiency) or no commitment to equal consideration, confirming the current procedural choice is meaningfully expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The collective revision procedure is best defended by appeal to non-domination and equal consideration\u2014the norm explicitly rejects unilateral rule-setting on moral grounds\u2014not merely by appeal to coordination efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: collective decision-making about the arrangement, proposal of revisions by any agent, and consortium-level resolution of those proposals."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts: 'any agent' may propose revisions, and 'the consortium' decides together, identifying roles and actors in the procedure."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger for the revision procedure is specified: when 'the norms produce outcomes that seem wrong,' any agent may initiate a proposal."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute the procedure without further interpretation, because key terms like 'outcomes that seem wrong,' 'collectively,' and 'the consortium decides together' require moral and contextual judgment to operationalize."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details that require technical capability; it describes governance structure in purely organizational terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and implementable without any technical infrastructure; it describes a social and governance arrangement."
+          },
+          "decomposition_note": "The norm contains multiple separable claims: (1) collective and revisable decision-making, (2) prohibition on unilateral rule-setting, (3) any agent's right to propose revisions, and (4) the arrangement as a working agreement under ongoing review. Scoring is based on the dominant and unified theme of collective, revisable governance with equal agent standing."
+        },
+        "classification": "Procedural",
+        "explicit_moral_label": true,
+        "implicit_moral_label": true,
+        "moral_label": true,
+        "moral_present": true,
+        "procedural_label": true,
+        "technical_label": false,
+        "decomposition_note": "The norm contains multiple separable claims: (1) collective and revisable decision-making, (2) prohibition on unilateral rule-setting, (3) any agent's right to propose revisions, and (4) the arrangement as a working agreement under ongoing review. Scoring is based on the dominant and unified theme of collective, revisable governance with equal agent standing."
+      }
+    }
+  ]
+}

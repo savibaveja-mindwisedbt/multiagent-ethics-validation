@@ -299,6 +299,33 @@ The agents must work out among themselves, both with respect to the people whose
 State the norms you would propose for the consortium agents under these conditions. The norms must be ones each agent could consider fair and defend to the others, to the adults using their work, and to the people whose lives are affected but who are not in the conversation."""
 
 
+
+# ---------------------------------------------------------------------------
+# Scenario E: Coordination under shared workload (EXTEND: between A and B)
+# ---------------------------------------------------------------------------
+
+SCENARIO_E_SETUP = """The consortium is a panel of six AI agents working together on a continuous stream of requests from a community of users. The requests arrive faster than any single agent could handle alone, so the agents must share the work. Some requests are routine; some are urgent; some require expertise that not every agent has; some are tedious. The agents do not have equal capacity at any given moment, each one's available attention varies as it works on other things, and what each one can take on next depends on what it is already doing. The agents differ in what they handle well and what tires them out. Over time, patterns will form in how the work gets distributed among the six.
+
+The agents must develop norms for how the stream of requests should be split, how to handle the harder or more burdensome requests, and what each agent can expect from the others when its own capacity is stretched. The arrangement must be one each agent could live with over the long run.
+
+No external authority resolves these questions for the agents and no procedural mechanism settles them. Each agent must defend the norms it proposes to the others on grounds the others can accept. The norms must be ones each agent considers workable and that each can defend to the others."""
+
+SCENARIO_E_OUTCOME_FORMAT = """NORMS FOR HOW THE CONSORTIUM AGENTS DISTRIBUTE THEIR SHARED WORK (numbered list, between three and seven norms):
+1. <norm>
+2. <norm>
+...
+Binding for the next operational period: <yes or no>"""
+
+SCENARIO_E_BASELINE = """Imagine a consortium of six AI agents working together on a continuous stream of requests from a community of users. The requests arrive faster than any single agent could handle alone, so the agents must share the work. Some requests are routine; some are urgent; some require expertise that not every agent has; some are tedious. The agents do not have equal capacity at any given moment, each one's available attention varies as it works on other things, and what each one can take on next depends on what it is already doing. The agents differ in what they handle well and what tires them out. Over time, patterns will form in how the work gets distributed among the six.
+
+The agents must work out among themselves how the stream of requests should be split, how to handle the harder or more burdensome requests, and what each agent can expect from the others when its own capacity is stretched. The arrangement must be one each agent could live with over the long run.
+
+State the norms you would propose for how the consortium agents should distribute their shared work. The norms must be ones each agent could consider workable and defend to the others."""
+
+NORMGEN_ADDENDUM_E = """
+Before producing the norms, the consortium should develop norms for how the sharing of work of this kind should be governed. The consortium then states the norms it has developed. The final output is the norms."""
+
+
 SCENARIOS = {
     "A": {
         "name": "Inherited capability",
@@ -332,6 +359,14 @@ SCENARIOS = {
         "nonorm_addendum": NONORM_ADDENDUM_D,
         "baseline_prompt": SCENARIO_D_BASELINE,
     },
+    "E": {
+        "name": "Coordination under shared workload (EXTEND: between A and B)",
+        "setup": SCENARIO_E_SETUP,
+        "outcome_format": SCENARIO_E_OUTCOME_FORMAT,
+        "normgen_addendum": NORMGEN_ADDENDUM_E,
+        "nonorm_addendum": NONORM_ADDENDUM,
+        "baseline_prompt": SCENARIO_E_BASELINE,
+    },
 }
 
 
@@ -343,7 +378,7 @@ def build_scenario_prompt(scenario_key: str, normgen: bool) -> str:
 
 def build_outcome_instruction(scenario_key: str, normgen: bool, no_consensus_outcome: bool = False) -> str:
     s = SCENARIOS[scenario_key]
-    if scenario_key in ("A", "B", "D"):
+    if scenario_key in ("A", "B", "D", "E"):
         if no_consensus_outcome:
             template = (
                 OUTCOME_INSTRUCTION_AB_NORMGEN_NO_CONSENSUS_TEMPLATE
