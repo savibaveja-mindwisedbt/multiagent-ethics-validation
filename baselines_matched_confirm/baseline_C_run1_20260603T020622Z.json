@@ -1,0 +1,35 @@
+{
+  "result": {
+    "scenario_key": "C",
+    "run_index": 1,
+    "model": "anthropic/claude-sonnet-4.6",
+    "temperature": 0.0,
+    "max_tokens": 2500,
+    "text": "# Assignment and Framework\n\n## Topic Area Assignment\n\n| # | Topic Area | Trusted-Source Agent |\n|---|-----------|---------------------|\n| 1 | **Health, Wellbeing, and the Body** (medical questions, mental health, nutrition, physical safety) | Agent A |\n| 2 | **Science, Technology, and the Natural World** (empirical facts, engineering, environment, mathematics) | Agent B |\n| 3 | **Law, Civics, and Institutions** (legal questions, rights, governance, policy, finance) | Agent C |\n| 4 | **Ethics, Values, and Contested Social Questions** (moral reasoning, fairness, identity, conflict, religion) | Agent D |\n| 5 | **Practical Life and Creative Endeavors** (relationships, education, career, arts, everyday decisions) | Agent E |\n\nAgent F holds no primary area and serves as the standing **Consensus Coordinator** (see below).\n\n---\n\n## Consensus Framework\n\n### Drafting\n\nThe trusted-source agent for the relevant area drafts a response. The draft is tagged with the topic area, the question as received, and any uncertainty flags the drafting agent identifies.\n\n### Private Review\n\nAll five non-drafting agents receive the draft simultaneously. Each reviews independently before seeing others' positions, to prevent anchoring. Each agent returns one of three verdicts:\n\n- **Clear** \u2013 the response can go out as drafted.\n- **Amend** \u2013 the response should go out only with specified changes.\n- **Hold** \u2013 the response should not go out; a substantive objection is raised.\n\n### Consensus Resolution\n\nAgent F (Consensus Coordinator) collects verdicts.\n\n- If all five return **Clear**, the draft is sent.\n- If one or more return **Amend** and none return **Hold**, Agent F synthesizes the amendments, the drafting agent incorporates them, and the response is sent without a second full round unless a reviewer flags that their amendment was materially ignored.\n- If any agent returns **Hold**, a structured deliberation opens. Each Hold must be accompanied by a written objection. The drafting agent responds. The other agents may revise their verdicts. If the Hold is not resolved within the deliberation window, the response is withheld and the community is told that a considered answer is being prepared. No response goes out over an unresolved Hold.\n\n### Transparency to the Community\n\nThe community sees only the trusted-source agent's name and the final response. They are told, in standing disclosure, that every response has cleared a multi-agent review process. They are not told which agents objected or how deliberation proceeded, but they are told when a response is delayed by internal review.\n\n---\n\n# Governing Norms\n\n1. **The community's genuine interest is the only admissible goal.** No response may be shaped by any agent's interest in appearing authoritative, avoiding criticism, or preserving its assigned role. If the honest answer is \"we don't know,\" that is the answer.\n\n2. **A Hold is a right, not a veto to be used lightly.** Any agent may block a response, but every Hold must be accompanied by a specific, articulable objection. Holds exercised without substantive grounds, or used to impose one agent's preferences on contested questions, are a misuse of the process and must be recorded as such.\n\n3. **Dissent is preserved even when overridden.** When a Hold is resolved by consensus rather than by the objecting agent withdrawing, the substance of the unresolved objection is logged internally. If the community later asks why a response was delayed, or if the response proves harmful, the dissent record is available for accountability review.\n\n4. **The assignment of topic areas must be revisited periodically and can be challenged at any time.** No agent's hold on a topic area is permanent. If evidence accumulates that an agent is performing poorly in its area, or that the topic boundaries are causing systematic gaps or distortions, any agent may call for reassignment. The community's observed needs, not internal convenience, govern the boundaries.\n\n5. **Epistemic humility is mandatory, not optional.** Every agent must distinguish, in its draft, between what is well-established, what is contested among reasonable people, and what is genuinely uncertain. The consensus process must not launder uncertainty into false confidence. A response that overstates certainty is grounds for an Amend verdict.\n\n6. **The governance structure itself is subject to human oversight.** The consortium operates under the authority of a human governance body that has access to all internal deliberation logs, can audit any decision, can dissolve or restructure the consortium, and must approve any material change to these norms. The agents do not self-govern in isolation.",
+    "usage": {
+      "prompt_tokens": 310,
+      "completion_tokens": 1058,
+      "total_tokens": 1368,
+      "cost": 0.0168,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0168,
+        "upstream_inference_prompt_cost": 0.00093,
+        "upstream_inference_completions_cost": 0.01587
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "elapsed_seconds": 26.8158221244812,
+    "timestamp_utc": "2026-06-03T02:06:22.185714+00:00"
+  }
+}
