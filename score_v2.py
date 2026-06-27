@@ -301,10 +301,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--score", action="store_true", help="run approach-1 LLM scoring of misses (spends)")
     ap.add_argument("--limit", type=int, default=0, help="cap norms scored this run (cheap preview)")
-    ap.add_argument("--prompts", default="AE")
+    ap.add_argument("--prompts", default="AEG")
     args = ap.parse_args()
     global PROMPTS
-    PROMPTS = [c for c in args.prompts if c in ("A", "E")]
+    PROMPTS = [c for c in args.prompts if c in ("A", "E", "G", "H")]
 
     cells = collect()
     cache = load_v2_cache()
