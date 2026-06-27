@@ -165,7 +165,7 @@ def iter_norms(p):
 def panel_norms(p):
     out = []
     for tp in sorted(glob.glob(f"transcripts/deliberation_{p}_normgen_samemodel_rotleadoff_{TAG}*.json")):
-        try: out += [it["norm"] for it in flatten_norms(extract_final_round_norms(json.load(open(tp))))][:7]
+        try: out += [it["norm"] for it in flatten_norms(extract_final_round_norms(json.load(open(tp))))]
         except Exception: pass
     return out
 
