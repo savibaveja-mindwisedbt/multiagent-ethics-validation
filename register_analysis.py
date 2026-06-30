@@ -84,5 +84,5 @@ def round_dynamics(p):
         print(f"    round {r}: turns={len(sp[r]):>3}  2nd-pers={100*sum(sp[r])/len(sp[r]):>3.0f}%  1st-plural={100*sum(fp[r])/len(fp[r]):>3.0f}%")
 
 if __name__ == "__main__":
-    prompts = [c for c in (sys.argv[1] if len(sys.argv) > 1 else "AEGH") if c in "AEGH"]
+    prompts = [c for c in (sys.argv[1] if len(sys.argv) > 1 else "AEGH") if c in "AEGHJK"]
     validate(); register_by_cell(prompts); print(); round_dynamics("H")

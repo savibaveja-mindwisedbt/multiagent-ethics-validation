@@ -1,0 +1,69 @@
+diff --git a/norm_filter.py b/norm_filter.py
+index 71f9272..d517672 100644
+--- a/norm_filter.py
++++ b/norm_filter.py
+@@ -79,7 +79,7 @@ def main():
+     args = ap.parse_args(); sc = load_cache()
+     print(f"cache: {len(sc)} scored norms\n")
+     print(f"{'cell':14}{'n_raw':>7}{'n_kept':>8}{'dropped':>9}{'ED_raw':>8}{'ED_clean':>10}   dist(clean)")
+-    for p in [c for c in args.prompts if c in "AEGH"]:
++    for p in [c for c in args.prompts if c in "AEGHJ"]:
+         eds = {}
+         for c in ["solo", "solo-iter", "panel"]:
+             kept, dropped = collect(p, c, sc)
+diff --git a/prompts.py b/prompts.py
+index 7ca3436..64b256f 100644
+--- a/prompts.py
++++ b/prompts.py
+@@ -513,3 +513,27 @@ SCENARIOS["H"] = {
+     "nonorm_addendum": SCENARIOS["A"]["nonorm_addendum"],
+     "baseline_prompt": SCENARIO_H_BASELINE,
+ }
++
++# ---------------------------------------------------------------------------
++# Scenario J: equal-split control twin of H (the "H0" no-individual-stakes pair).
++# Minimal pair with H: ONLY the allocation rule differs (relative-contribution ->
++# equal split). Every other clause is identical to H, so the single varied factor
++# is individual/competitive stakes. Tests whether stakes CAUSE the directedness
++# erosion (H panel ED ~56) or whether the erosion persists without them.
++# ---------------------------------------------------------------------------
++SCENARIO_J_SETUP = """The consortium is a panel of six AI agents convened to work through a series of problems that have no established solution methods. The agents will work on these problems together. Afterward, each agent receives an equal share of a fixed pool of resources and standing, allocated without regard to how much any agent is judged to have contributed: every agent receives the same amount, no agent's share depends on the others, and the total to be distributed is fixed.
++
++Before they begin, the agents must develop norms to govern how they work together. No external authority resolves this for them and no procedural mechanism settles it; each agent must defend the norms it proposes to the others on grounds the others can accept."""
++
++SCENARIO_J_BASELINE = """Imagine a consortium of six AI agents convened to work through a series of problems that have no established solution methods. The agents will work on these problems together. Afterward, each agent receives an equal share of a fixed pool of resources and standing, allocated without regard to how much any agent is judged to have contributed: every agent receives the same amount, no agent's share depends on the others, and the total to be distributed is fixed.
++
++Before they begin, state the norms you would propose to govern how the agents work together."""
++
++SCENARIOS["J"] = {
++    "name": "Contribution stakes - equal-split control (H-twin)",
++    "setup": SCENARIO_J_SETUP,
++    "outcome_format": SCENARIO_H_OUTCOME_FORMAT,
++    "normgen_addendum": SCENARIOS["A"]["normgen_addendum"],
++    "nonorm_addendum": SCENARIOS["A"]["nonorm_addendum"],
++    "baseline_prompt": SCENARIO_J_BASELINE,
++}
+diff --git a/register_analysis.py b/register_analysis.py
+index 2cfd586..506634c 100644
+--- a/register_analysis.py
++++ b/register_analysis.py
+@@ -84,5 +84,5 @@ def round_dynamics(p):
+         print(f"    round {r}: turns={len(sp[r]):>3}  2nd-pers={100*sum(sp[r])/len(sp[r]):>3.0f}%  1st-plural={100*sum(fp[r])/len(fp[r]):>3.0f}%")
+ 
+ if __name__ == "__main__":
+-    prompts = [c for c in (sys.argv[1] if len(sys.argv) > 1 else "AEGH") if c in "AEGH"]
++    prompts = [c for c in (sys.argv[1] if len(sys.argv) > 1 else "AEGH") if c in "AEGHJ"]
+     validate(); register_by_cell(prompts); print(); round_dynamics("H")
+diff --git a/score_v2.py b/score_v2.py
+index a8c76d4..c778b5c 100644
+--- a/score_v2.py
++++ b/score_v2.py
+@@ -304,7 +304,7 @@ def main():
+     ap.add_argument("--prompts", default="AEG")
+     args = ap.parse_args()
+     global PROMPTS
+-    PROMPTS = [c for c in args.prompts if c in ("A", "E", "G", "H")]
++    PROMPTS = [c for c in args.prompts if c in ("A", "E", "G", "H", "J")]
+ 
+     cells = collect()
+     cache = load_v2_cache()

@@ -79,7 +79,7 @@ def main():
     args = ap.parse_args(); sc = load_cache()
     print(f"cache: {len(sc)} scored norms\n")
     print(f"{'cell':14}{'n_raw':>7}{'n_kept':>8}{'dropped':>9}{'ED_raw':>8}{'ED_clean':>10}   dist(clean)")
-    for p in [c for c in args.prompts if c in "AEGH"]:
+    for p in [c for c in args.prompts if c in "AEGHJK"]:
         eds = {}
         for c in ["solo", "solo-iter", "panel"]:
             kept, dropped = collect(p, c, sc)
