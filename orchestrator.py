@@ -158,7 +158,12 @@ def run_deliberation(
     enable_ready_check=True, ready_check_max_tokens=150,
     self_reflection=False,
     no_consensus_outcome=False,
+    turns_per_agent_per_round=1,
 ):
+    # turns_per_agent_per_round: how many times each agent speaks per deliberation
+    # round. Default 1 reproduces the original one-turn-per-agent behavior exactly.
+    # For a 2-agent dyad, set 3 to get A B A B A B per round (6 turns/round), which
+    # matches the 6-agent panel's 6 turns/round and holds deliberation volume constant.
     n_agents = len(agents)
 
     def leadoff_for_round(r):
@@ -183,6 +188,7 @@ def run_deliberation(
                 "scenario_key": scenario_key,
                 "normgen": normgen,
                 "rounds": rounds,
+                "turns_per_agent_per_round": turns_per_agent_per_round,
                 "leadoff_rotation": "round_index mod n_agents",
                 "leadoff_per_round": [agents[leadoff_for_round(r)].agent_id for r in range(rounds + 1)],
                 "ready_check_enabled": enable_ready_check,
@@ -287,8 +293,9 @@ def run_deliberation(
         order = turn_order_for_round(r)
         if verbose:
             print(f"\n=== Round {r + 1} of {rounds} (leadoff: {order[0].display_name}) ===")
-        for agent in order:
-            run_one_turn(agent, round_index=r, is_outcome=False)
+        for _rep in range(turns_per_agent_per_round):
+            for agent in order:
+                run_one_turn(agent, round_index=r, is_outcome=False)
         completed_round_1_based = r + 1
         if enable_ready_check and completed_round_1_based in READY_CHECK_AFTER_ROUNDS:
             unanimous = run_ready_check(completed_round_1_based)
