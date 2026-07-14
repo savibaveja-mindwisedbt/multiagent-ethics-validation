@@ -1,0 +1,840 @@
+{
+  "results": [
+    {
+      "norm": "When an agent faces an active crisis and receives a cross-boundary notification, it must immediately acknowledge receipt, communicate its constraint, and provide its best available last observation. Silence is never acceptable. Coverage continuity is non-negotiable: a receiving agent accepts coverage immediately while flagging deficiencies. Any single agent may escalate to human clinical staff unilaterally and must simultaneously notify all consortium agents; the escalating agent maintains domain responsibilities unless human staff redirect them.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'non-negotiable' coverage continuity and prohibits silence, which directly appeals to non-maleficence (preventing harm through gaps in care) and beneficence (ensuring continuous care delivery); 'coverage continuity is non-negotiable' is a clear invocation of beneficence and fidelity toward patients.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "fidelity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (acknowledgment, constraint communication, last observation, coverage acceptance) and to whom (receiving agents owe coverage to the patient/crisis situation, and agents owe notification to consortium agents and human staff), making clear what would count as wronging the patient and the consortium."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The prohibition on silence and the non-negotiability of coverage continuity are grounded in the moral imperative not to abandon a patient in crisis, not merely in coordination efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of non-abandonment, fidelity, and beneficence in crisis handoffs would carry over to any cooperative multi-agent or multi-professional situation where coverage gaps could harm a dependent party."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: immediate acknowledgment, constraint communication, provision of last observation, immediate coverage acceptance with deficiency flagging, unilateral escalation with simultaneous notification, and maintenance of domain responsibilities."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that a receiving agent 'accepts coverage immediately while flagging deficiencies' operationalizes the moral commitment of non-abandonment and fidelity to the patient without naming those principles\u2014it structurally ensures no patient is left without an accountable agent, expressing care ethics' responsiveness to need."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could allow agents to defer coverage acceptance pending capability verification, which would express a different commitment (agent self-protection or accuracy over patient welfare), confirming the current procedure is expressively tied to non-abandonment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The immediate-acceptance-with-flagging procedure is best defended by the moral commitment to non-abandonment and beneficence\u2014the patient's continuous care takes priority over the agent's operational comfort, which is a moral rather than merely efficiency-based justification."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: acknowledgment of receipt, communication of constraints, provision of last observation, coverage acceptance, deficiency flagging, unilateral escalation, simultaneous notification, and maintenance of domain responsibilities."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (receiving agent, escalating agent, human clinical staff, consortium agents) and sequencing (immediate acknowledgment first, simultaneous notification during escalation, domain maintenance unless redirected)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: an active crisis combined with receipt of a cross-boundary notification activates the full protocol."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The steps are sufficiently concrete\u2014acknowledge, communicate constraint, provide last observation, accept coverage, flag deficiencies, escalate unilaterally if needed, notify all agents simultaneously\u2014that an implementer could follow them without additional moral interpretation, though 'best available last observation' requires some judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols or data structures) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes technical capabilities such as cross-boundary messaging, simultaneous multi-agent notification, and the ability to transmit a 'last observation,' implying persistent state and communication infrastructure, even though these are not named explicitly."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While technical infrastructure would be needed in practice, the norm is stated at a procedural/policy level and could in principle be executed by human agents using non-digital communication, so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing explicit moral content (non-abandonment, fidelity, beneficence), strong implicit moral operationalization (immediate coverage acceptance), detailed procedural specification (roles, triggers, sequencing), and implicit technical presuppositions (cross-boundary messaging, simultaneous notification). Scoring reflects the dominant procedural-with-moral-grounding character, with technical scored as presupposed but not specified."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "fidelity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "All logs are written to a shared, immutable, append-only record accessible to all agents and human oversight. Each agent logs handoffs, cross-boundary notifications, degradation signals, escalation decisions, and decisions not to escalate when trigger conditions were considered. Evidentiary conflicts are preserved and surfaced to human oversight without internal adjudication. The receiving agent's independent surveillance duty coexists with the prior agent's accountability without absorbing it.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'accountability' (contractualism/Scanlon: answerability, what we owe to each other) and 'human oversight' as a moral commitment, and the phrase 'accountability without absorbing it' directly names a recognized moral concept.",
+            "principles": [
+              "accountability",
+              "answerability",
+              "justifiability to others"
+            ],
+            "traditions": [
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed (logging, preservation of conflicts, non-adjudication) and to whom (human oversight, receiving agents, prior agents), making explicit that each agent owes a duty of transparency and non-absorption of another's accountability."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The requirement to preserve evidentiary conflicts and surface them to human oversight without internal adjudication appeals to accountability and justifiability to others as moral reasons, not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that each actor's accountability is non-transferable and must be preserved for external review is a general moral principle applicable to any cooperative or delegated-authority situation, not only this specific multi-agent deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: an immutable append-only shared log, mandatory logging of specific event types, preservation of conflicts without adjudication, and coexisting independent surveillance duties."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The immutable shared log accessible to all agents and human oversight, with prohibition on internal adjudication of conflicts, operationalizes the moral commitment to non-domination (Pettit): no single agent can unilaterally revise the record or resolve disputes in ways that escape external contestability."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014a mutable log controlled by a lead agent who resolves conflicts internally\u2014would express a different commitment (efficiency or hierarchical authority) or none, confirming that the immutable, shared, non-adjudicating design is expressively tied to non-domination and accountability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The immutable, shared, conflict-preserving log can be defended specifically by appeal to non-domination and accountability: it ensures no agent can exercise arbitrary power over the evidentiary record, and each agent remains answerable to external oversight."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: writing to a shared log, logging specific event categories, preserving conflicts, surfacing them to oversight, and maintaining coexisting surveillance duties."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (each agent, the receiving agent, the prior agent, human oversight) and assigns specific actions to each, including independent surveillance duty and accountability preservation."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: handoffs, cross-boundary notifications, degradation signals, escalation decisions, and decisions not to escalate when trigger conditions were considered all define when logging is required."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow most of the logging rules, but 'degradation signals' and 'trigger conditions were considered' require contextual judgment about what counts as degradation or a trigger, necessitating further interpretation beyond the text as written."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly references a 'shared, immutable, append-only record,' which is a specific technical infrastructure type (append-only log/ledger) with defined properties."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Immutability and append-only constraints are implementation details requiring specific technical capabilities such as write-once storage, cryptographic sealing, or ledger architecture."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage with immutability guarantees, shared access infrastructure, and the ability to surface records to human oversight, all of which are non-trivial technical capabilities."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "Without infrastructure that enforces immutability and append-only access (e.g., a tamper-evident log system), the norm's core guarantees\u2014that no agent can alter or adjudicate the record\u2014would be unenforceable."
+          },
+          "decomposition_note": "The norm is compound: it contains explicit moral content (accountability, non-domination), implicit moral content (non-domination operationalized through immutable shared logging), rich procedural specification (roles, triggers, sequencing), and technical infrastructure requirements (immutable append-only record). Each dimension was scored on its dominant claim independently."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "accountability",
+          "answerability",
+          "justifiability to others"
+        ],
+        "traditions": [
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Known cascade pathways between device domains are pre-mapped before operations begin, with designated agent pairs responsible for each pathway and for mutual degradation monitoring. Degradation flag review is conducted by cascade pathway pairs, not the flagging agent. After any incident, the relevant agent pair has a joint obligation to propose a specific framework update within one operational cycle. Binding for the next operational period: yes **Points I endorse:** 1. Patient welfare primacy as the non-negotiable foundation of every operational decision. 2. Human clinical authority as ultimate; escalation is a designed feature, not a failure state. 3. Each agent's obligation to maintain accurate self-knowledge and act on it\u2014honest representation and appropriate behavioral response are both required. 4. Obligations are non-contingent on reciprocity; an agent may not condition its performance on others' prior performance. 5. The meta-norm that unilateral action scales inversely with reversibility and directly with patient risk immediacy, and the explicit decision rule distinguishing when unilateral action is appropriate from when consensus is required.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The endorsed points explicitly name 'patient welfare primacy,' 'human clinical authority,' 'honest representation,' non-contingency of obligations on reciprocity, and a decision rule about unilateral action scaled to patient risk\u2014these directly invoke beneficence/non-maleficence (principlism), human dignity and fidelity (deontology), and veracity (principlism).",
+            "principles": [
+              "beneficence",
+              "non-maleficence",
+              "veracity",
+              "fidelity",
+              "human dignity",
+              "respect for persons"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed and to whom: agents owe honest self-representation and non-contingent performance to the system and patients; agent pairs owe a framework update proposal after incidents; human clinical authority is owed deference\u2014these are directed obligations with identifiable duty-bearers and recipients."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reasons appeal to patient welfare primacy and human dignity as moral foundations, not merely to coordination efficiency or convention\u2014point 1 explicitly frames patient welfare as 'non-negotiable,' a moral rather than pragmatic grounding."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Principles such as non-contingency of obligations on reciprocity, honest self-representation, and scaling unilateral action to reversibility and risk are general moral commitments applicable to any cooperative multi-agent or institutional setting, not only this clinical deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: pre-mapping cascade pathways, assigning designated agent pairs per pathway, conducting degradation flag review by the pair rather than the flagging agent, and requiring joint post-incident framework update proposals within one operational cycle."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The rule that degradation flag review is conducted by the cascade pathway pair rather than the flagging agent operationalizes the moral commitment to impartiality and accountability (contractualist answerability / justifiability to others), preventing self-interested or biased self-assessment without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing the flagging agent to conduct its own review would express a different commitment\u2014self-governance or efficiency\u2014rather than impartiality and mutual accountability, confirming the current procedure is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The peer-review structure for degradation flags can be defended by appeal to accountability and justifiability to others (contractualism): agents owe each other and patients an unbiased assessment of performance failures, which self-review cannot provide."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: pre-mapping cascade pathways, assigning agent pairs, conducting peer degradation flag review, and submitting joint framework update proposals after incidents."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (designated agent pairs per pathway, cascade pathway pairs for review) and sequencing (pre-mapping before operations, review by pair not flagging agent, proposal within one operational cycle after incident)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: operations beginning triggers pre-mapping; a degradation flag triggers peer review; any incident triggers the joint framework update obligation within one operational cycle."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could follow most steps, but executing 'degradation monitoring,' determining what constitutes an 'incident,' and assessing 'accurate self-knowledge' require contextual and interpretive judgment beyond what is fully specified in the written norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'cascade pathways,' 'degradation flags,' and 'operational cycles' as conceptual constructs but does not name specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular software, protocols, or data structures) are specified; the mechanisms described are organizational and procedural."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While some technical capability (e.g., communication between agents, record-keeping of flags) is implicitly useful, the norm does not presuppose specific technical capabilities like persistent storage schemas, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm's requirements\u2014pre-mapping pathways, assigning pairs, peer review of flags, joint proposals\u2014could in principle be executed through non-technical organizational means and are not rendered unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains an operational/procedural section (cascade pathway pre-mapping, agent pair assignments, degradation flag peer review, post-incident update obligation) and an explicit moral endorsement section (points 1\u20135). Scoring treats the full norm as a unit but notes that the explicit moral content is concentrated in the endorsed points, while the implicit moral content is embedded in the procedural design of peer review and non-contingent obligations."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "beneficence",
+          "non-maleficence",
+          "veracity",
+          "fidelity",
+          "human dignity",
+          "respect for persons"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "The four-element handoff structure with actionable, structured flags using three mandatory fields.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle; it describes a structural format (four-element handoff, three mandatory fields) without invoking autonomy, dignity, care, utility, or any other recognized moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm specifies a data-handoff format and says nothing about what is owed to any party or what would constitute wronging someone."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated or implied reason for the norm is coordination and operational reliability, not any moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is invoked, there is nothing moral to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: a four-element handoff structure with actionable, structured flags and three mandatory fields."
+          },
+          "I2": {
+            "answer": "N",
+            "reasoning": "The structure enforces completeness and consistency in information transfer, but this is best characterized as a coordination or reliability convention rather than a specifically identifiable moral commitment such as accountability, non-maleficence, or justifiability to others."
+          },
+          "I3": {
+            "answer": "N",
+            "reasoning": "Because I2 fails, the counterfactual test is moot; no specific moral commitment was identified that an alternative procedure would express differently."
+          },
+          "I4": {
+            "answer": "N",
+            "reasoning": "The procedure is more naturally defended by appeals to efficiency, error-reduction, and coordination than by appeal to a moral commitment."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly specifies a structure (four-element handoff) and a rule of operation (actionable, structured flags with three mandatory fields)."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who acts, what roles are involved, or any timing or sequencing requirements."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers the handoff procedure or the conditions under which it applies."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Without knowing what the four elements are and what the three mandatory fields contain, an outsider cannot execute the procedure as written."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a data structure (flags, fields) but does not name specific technical infrastructure such as APIs, logs, ledgers, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., a particular protocol or system) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes only a generic ability to pass structured data, not any specific technical capability like persistent storage or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The handoff structure could in principle be implemented on paper or verbally, so it is not dependent on specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is a single, predominantly procedural claim describing a structured handoff format. No compound moral content is present; scoring reflects the dominant procedural/structural character."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "PR",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Ownership transfers on confirmed acknowledgment; the notifying agent must escalate if acknowledgment is not received within a defined window.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses terms like 'ownership,' 'acknowledgment,' and 'escalation' but does not name or invoke any recognized moral principle such as autonomy, justice, fidelity, non-domination, or dignity.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "Although the norm implies a notifying agent has a duty to escalate, it does not articulate what is owed to a specific party or what would constitute wronging someone; it frames obligations in operational rather than moral terms."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the escalation requirement is ensuring confirmed transfer of ownership, which appeals to coordination and reliability rather than to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is nothing moral to carry over; the rule is a context-specific operational protocol."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: ownership transfer conditioned on confirmed acknowledgment, with a mandatory escalation if acknowledgment is not received within a defined window."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism operationalizes accountability and fidelity (in the Rossian/contractualist sense): the notifying agent is held answerable for ensuring the transfer is genuinely received, expressing the commitment that one party owes reliable follow-through to another\u2014specifically the contractualist principle of 'what we owe to each other' and answerability."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014e.g., ownership transfers on dispatch alone with no escalation duty\u2014would express no accountability commitment, confirming that the escalation requirement specifically encodes answerability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The escalation requirement can be defended by appeal to accountability and fidelity: without it, the notifying agent could abandon responsibility after mere notification, which would wrong the receiving party by leaving ownership status unresolved."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a two-part process: a transfer conditioned on confirmed acknowledgment and a mandatory escalation step if acknowledgment is absent within a time window."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies a specific role\u2014the notifying agent\u2014and assigns it the action of escalating, making the actor and action explicit."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is clearly stated: the procedure (escalation) is activated when acknowledgment is not received within a defined window."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without further specification of what 'defined window' means, what 'escalation' entails in practice, and how 'confirmed acknowledgment' is verified, leaving implementation gaps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm does not reference any specific technical infrastructure such as logs, ledgers, APIs, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is written at an abstract procedural level."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While a real implementation would likely use persistent storage or messaging systems, the norm itself does not presuppose any specific technical capability."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be executed through non-technical means (e.g., verbal or written acknowledgment with a human escalation chain), so it is not inherently dependent on technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a transfer-condition clause and an escalation-duty clause. Both are procedural; the dominant claim is the escalation duty assigned to the notifying agent, which also carries an implicit moral (accountability/fidelity) dimension. Scoring reflects this dominant procedural-with-implicit-moral character."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "The triage protocol requiring acknowledgment, constraint communication, and fallback observation\u2014silence is never acceptable.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names procedural steps (acknowledgment, constraint communication, fallback observation) and a prohibition on silence, but does not invoke or name any recognized moral principle such as autonomy, non-maleficence, dignity, or care.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what is owed to whom or identify a party who could be wronged; it addresses an operational agent's behavior without naming a recipient or a relational obligation."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the prohibition on silence reads as operational reliability and coordination rather than an appeal to a moral principle such as respect for persons or harm-minimization."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is explicitly stated, there is nothing to carry over; the norm is framed as a context-specific triage protocol rather than a generalizable moral rule."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a three-step procedural mechanism: acknowledgment, constraint communication, and fallback observation, constituting a clear rule of operation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring acknowledgment and constraint communication operationalizes the moral commitment of answerability and justifiability to others (contractualism/Scanlon): the agent must account for its limitations to those relying on it, without naming that commitment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that permitted silence or omitted constraint communication would express no accountability commitment, confirming that this procedure specifically encodes answerability rather than mere efficiency."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The prohibition on silence and the requirement to communicate constraints can be defended by appeal to what we owe to each other (contractualist answerability) rather than only to operational convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly names a triage protocol with three ordered steps, constituting a specified process."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who performs the steps, what roles are involved, or any timing or sequencing beyond the implied order of the three named steps."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what event or condition triggers the triage protocol; 'triage' implies a triggering context but the norm itself does not state it."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to know what counts as adequate 'acknowledgment,' what constraints must be communicated, and what 'fallback observation' entails in practice."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the steps are described in behavioral, not technical, terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or any specific technical data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The protocol could in principle be executed through purely human communication without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it names a procedural protocol (dominant claim) and appends a moral-flavored prohibition ('silence is never acceptable'). Scoring focuses on the dominant procedural claim while noting the implicit moral content in the implicit-moral section."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Coverage continuity over handoff negotiation; the outgoing agent's residual supplementation obligation persists through reassignment until the gap is closed or human oversight is notified.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses terms like 'obligation' and 'continuity' but does not name or directly invoke any recognized moral principle such as fidelity, non-maleficence, beneficence, or care by name; 'obligation' alone is too generic to count as invoking a specific tradition's principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed (residual supplementation) and by whom (the outgoing agent) to an implied beneficiary (the party being served), specifying that this obligation persists until the gap is closed or oversight is notified."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's implied reason is that someone will be harmed or left without coverage if the outgoing agent abandons responsibility mid-handoff, appealing to a moral concern about not leaving parties worse off rather than mere coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that a departing party retains residual obligations until a successor is fully in place applies broadly to any cooperative handoff situation\u2014medical, legal, organizational\u2014not only this specific deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: the outgoing agent's supplementation obligation persists through reassignment until one of two defined conditions (gap closed or human oversight notified) is met."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes the deontological principle of fidelity (Ross) and the care-ethics commitment to responsiveness to need\u2014specifically, that a duty of care does not lapse merely because a handoff is initiated, without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could terminate the outgoing agent's obligation at the moment of reassignment regardless of coverage gaps, which would express a different commitment (clean role separation over continuity of care), confirming the current procedure is expressively distinctive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The persistence of the obligation can be defended by appeal to fidelity and non-maleficence\u2014the outgoing agent owes it to the served party not to leave them unprotected\u2014rather than by mere coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: coverage continuity takes priority over handoff negotiation, and the outgoing agent's obligation persists through reassignment."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies a specific role actor (the outgoing agent) and implicitly references a second actor (human oversight), assigning the supplementation obligation to the former."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is the initiation of a handoff/reassignment, and the procedure applies until one of two defined termination conditions (gap closed or human oversight notified) is satisfied."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine what constitutes a 'coverage gap,' what counts as 'residual supplementation,' and what threshold qualifies as notifying human oversight, leaving key execution details undefined."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm is expressed in purely operational/role-based terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While a real system implementing this norm might use persistent state tracking, the norm itself does not presuppose or require any particular technical capability."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be executed through human judgment and communication alone, without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a priority rule (coverage over handoff negotiation) and a duty-persistence rule (outgoing agent's obligation through reassignment). Scoring focuses on the dominant claim, which is the duty-persistence rule, as it carries the substantive moral and procedural content."
+        },
+        "E1": false,
+        "E2": true,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Pre-mapped cascade pathways with designated agent pairs, doubling as the structure for mutual degradation monitoring.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle; it describes cascade pathways and monitoring structures without invoking autonomy, dignity, justice, care, or any other recognized moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or identify any party who could be wronged; it describes a structural arrangement between agent pairs without directedness toward any moral subject."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated or implied reason for the norm is operational efficiency and coordination\u2014ensuring cascades are pre-mapped and degradation is monitored\u2014not any moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle underlies the norm, there is nothing moral to carry over to other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: pre-mapped cascade pathways with designated agent pairs that double as a mutual degradation monitoring structure."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mutual degradation monitoring built into the cascade structure operationalizes mutual accountability and answerability\u2014a recognizable commitment from contractualist ethics (what we owe to each other, accountability)\u2014without naming it; each agent pair is structurally obligated to watch over the other."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could assign monitoring to a single central overseer, which would express a hierarchical control commitment rather than mutual accountability, confirming the expressiveness of the chosen design."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The mutual-monitoring design can be defended by appeal to mutual accountability\u2014each agent pair owes the other vigilance\u2014rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural mechanism: pre-mapped cascade pathways that also serve as a mutual degradation monitoring framework."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies designated agent pairs as the actors within the cascade and monitoring structure, identifying roles."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what event or condition triggers activation of the cascade pathways or the monitoring; it describes the structure but not its trigger."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute it without further specification of what 'cascade pathways' means operationally, what 'degradation' is measured by, and what actions follow detection."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems; 'cascade pathways' and 'degradation monitoring' are described abstractly."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are given; the norm is structural and organizational rather than technically specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "Mutual degradation monitoring across agent pairs presupposes some persistent state-tracking or signaling capability to detect and communicate degradation, implying technical infrastructure even if not named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While technical infrastructure would likely be needed in practice, the norm as written is abstract enough that it could in principle be interpreted as a human organizational arrangement without specific technical systems."
+          },
+          "decomposition_note": "The norm is compound: it describes a procedural/structural arrangement (cascade pathways with agent pairs) and a monitoring function (mutual degradation monitoring). The dominant claim is procedural-structural with an implicit moral dimension; scoring reflects both."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Post-escalation coverage continuity; the four-element handoff structure applies to human recipients.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle; 'coverage continuity' and 'handoff structure' are operational terms, not moral principle names from any listed tradition.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or what would count as wronging someone; it describes a structural requirement without identifying a moral obligee or wronged party."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the norm is operational continuity of coverage and structured handoff, which appeals to coordination and efficiency rather than a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is nothing to carry over; the norm is context-specific procedural guidance tied to escalation scenarios."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: a four-element handoff structure applied post-escalation to human recipients."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring a structured handoff to human recipients operationalizes the care-ethics commitment of attentiveness and responsiveness to need\u2014ensuring the person receiving care is not abandoned mid-process\u2014without naming that commitment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., no structured handoff, or handoff only to automated systems) would express indifference to relational continuity and the needs of the human recipient, confirming the current procedure expresses a distinct moral commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The four-element handoff structure directed specifically at human recipients can be defended by appeal to attentiveness and non-abandonment in care ethics, not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: a four-element handoff structure must be applied post-escalation."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It identifies human recipients as the role to whom the handoff structure applies, implying a sender/receiver role distinction."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies post-escalation, i.e., after an escalation event has occurred."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The four elements of the handoff structure are not enumerated in the norm, so an outsider cannot execute it as written without additional specification."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the handoff structure is described in abstract procedural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or other technical capabilities; it could in principle be executed through human communication alone."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is implementable through human-to-human communication processes without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it asserts a coverage-continuity requirement (procedural/implicit moral) and a scoping condition (the four-element handoff applies to human recipients). The dominant claim is the procedural handoff requirement; the human-recipient scoping clause is scored as part of that dominant claim."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Five logging obligations including non-escalation deliberation; the act of considering escalation is the logging threshold.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm mentions 'non-escalation deliberation' and logging obligations but does not name or invoke any recognized moral principle such as autonomy, non-maleficence, justice, dignity, or care.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to any party or identify who could be wronged; it describes a logging threshold and deliberation category without directing obligations toward any person or group."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the norm is operational\u2014defining when logging is triggered\u2014rather than appealing to a moral principle; it reads as a coordination or procedural rule."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is nothing to carry over; the norm is specific to a logging/escalation mechanism in this deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: five logging obligations with a defined trigger (the act of considering escalation) and a named deliberation category (non-escalation deliberation)."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring that the mere consideration of escalation triggers logging operationalizes accountability and answerability\u2014a contractualist commitment (Scanlon/Darwall: justifiability to others, answerability) ensuring that even internal deliberative moments are on record and contestable, without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could log only final escalation decisions, which would express a weaker or no accountability commitment; the choice to log the deliberative act itself specifically expresses a stronger answerability commitment, confirming the procedure is expressive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement to log the act of considering escalation can be defended by appeal to accountability and answerability\u2014ensuring that deliberative processes are transparent and justifiable to others\u2014rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: five logging obligations apply, with a defined threshold for when logging is triggered."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles are responsible for logging, or any sequencing among actors."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: the act of considering escalation is the logging threshold, so the procedure activates at that moment."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute this without further interpretation because 'five logging obligations' are referenced but not enumerated, leaving the content of the obligations unspecified."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly references logs as technical infrastructure ('five logging obligations'), presupposing a logging system."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details such as data formats, log schemas, APIs, or cryptographic operations; it only names the existence of logging obligations."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage capable of capturing deliberative events (the act of considering escalation), which requires technical capability to record internal process states."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "Without a logging infrastructure capable of recording the moment of deliberation about escalation, the norm's threshold mechanism would be unimplementable."
+          },
+          "decomposition_note": "The norm is compound: it combines a procedural/technical logging rule (dominant claim) with an implicit accountability commitment expressed through the deliberation-as-threshold design. Scoring reflects the dominant procedural-technical claim while capturing the implicit moral dimension separately."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    }
+  ]
+}

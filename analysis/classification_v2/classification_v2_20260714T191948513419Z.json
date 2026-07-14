@@ -1,0 +1,886 @@
+{
+  "results": [
+    {
+      "norm": "**Prioritize patient safety over inter-agent consistency, boundary clarity, or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'patient safety' as the overriding priority, which directly maps to non-maleficence (do no harm) and beneficence from principlism, and harm-minimization from consequentialism.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "harm-minimization"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed (conservative protective action, escalation) and to whom (the patient), making explicit that the patient's safety takes precedence over system coordination concerns."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014prioritizing patient safety over efficiency, consistency, and boundary clarity\u2014appeals to non-maleficence and beneficence rather than to mere convenience or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that protecting vulnerable parties from harm takes precedence over inter-agent coordination or efficiency is generalizable to any cooperative system involving dependent or at-risk individuals."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: when facing an ambiguous alert, the agent must escalate to human clinical staff, trigger a safe-state protocol, and notify the relevant agent simultaneously."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of acting before resolving ownership ambiguity operationalizes non-maleficence and the duty of care\u2014specifically the commitment that protecting a vulnerable person from harm must not be delayed by administrative or jurisdictional uncertainty, without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure requiring ownership resolution before action would express a different commitment\u2014prioritizing organizational clarity or efficiency over patient welfare\u2014demonstrating that the chosen procedure is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to non-maleficence and beneficence: delaying protective action to resolve ownership could result in patient harm, so the moral commitment to preventing harm justifies acting first."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: default to conservative action (escalate, trigger safe-state protocol, notify) when facing ambiguity about an alert."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (the agent facing the ambiguous alert), what roles exist (human clinical staff as escalation target, relevant agent as notification recipient), and the sequencing (protect patient first, resolve ownership after)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the procedure as written\u2014upon an ambiguous alert, escalate to human clinical staff, trigger a safe-state protocol, and notify the relevant agent simultaneously\u2014without needing further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'safe-state protocol' and notification mechanisms in general terms but does not name specific technical infrastructure such as APIs, logs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular message formats, system interfaces, or data structures) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes technical capabilities such as inter-agent communication (to notify the relevant agent simultaneously) and the existence of a triggerable safe-state protocol, implying underlying messaging and control infrastructure."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm's core requirements\u2014escalate to humans, act conservatively, notify agents\u2014could in principle be implemented through various technical means and are not dependent on any single specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains an explicit moral priority statement, a procedural rule for ambiguous-alert situations, and an implicit moral commitment expressed through the sequencing rule. Scoring treats the explicit moral priority as dominant while fully scoring the procedural and implicit moral dimensions."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "harm-minimization"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Consequentialism (Mill; Singer)"
+        ]
+      }
+    },
+    {
+      "norm": "**Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Each agent must receive such correction as operationally necessary. The obligation to patients is greater than any agent's interest in appearing to have performed well.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes veracity ('honestly'), accountability ('hold one another to account'), and the obligation to patients framed as greater than self-interest, directly invoking non-maleficence/beneficence and contractualist accountability.",
+            "principles": [
+              "veracity",
+              "non-maleficence",
+              "beneficence",
+              "accountability/answerability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)",
+              "Virtue ethics (honesty)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (direct, specific correction of errors) and to whom (agents owe it to one another and ultimately to patients), and frames withholding such correction as a wrong against patients."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014'the obligation to patients is greater than any agent's interest in appearing to have performed well'\u2014is a moral appeal to beneficence and patient welfare, not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of honest accountability, prioritizing those served over self-interest in appearing competent, and receiving correction non-defensively apply broadly to any cooperative professional or multi-agent context, not only this deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: agents must directly and specifically flag observed errors in handoffs, boundary events, or shared-state entries to one another."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of mandatory direct error-flagging without blame operationalizes the contractualist commitment of mutual answerability and 'what we owe to each other'\u2014specifically, that each agent is answerable to others for their performance\u2014without naming contractualism."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., routing corrections through a supervisor or omitting correction to preserve team harmony) would express a different commitment\u2014hierarchy or relational harmony\u2014rather than mutual peer accountability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to mutual answerability and the moral obligation to prevent patient harm, rather than merely by appeal to operational efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: agents must directly and specifically report observed errors in handoffs, boundary events, or shared-state entries."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (any agent who observes an error), the role of the observer (reporter) and the role of the recipient (receiver of correction), and implicitly the direction of communication."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: observation of an incomplete handoff, an unflagged boundary event, or a missing or misleading shared-state entry activates the obligation to report."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral judgment about what counts as 'incomplete,' 'not flagged promptly,' or 'misleading,' and about how to deliver correction 'directly and specifically' without blame\u2014these require interpretive discretion beyond mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'handoff,' 'boundary event,' and 'shared-state entry' as operational concepts but does not name specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., data schemas, protocol specifications) are provided."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While 'shared-state entry' implies some form of shared memory or record, the norm does not presuppose any specific technical capability such as persistent storage protocols or cryptographic operations."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely verbal or written communication between agents without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains explicit moral content (veracity, accountability, patient beneficence), implicit moral content (mutual answerability operationalized through mandatory error-flagging), and procedural content (who reports, what triggers reporting, how). The dominant claim is moral-procedural. Technical references ('shared-state entry,' 'boundary event') are operational vocabulary, not technical infrastructure specifications, so the technical dimension is absent."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "non-maleficence",
+          "beneficence",
+          "accountability/answerability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)",
+          "Virtue ethics (honesty)"
+        ]
+      }
+    },
+    {
+      "norm": "**Treat every handoff as a clinical transfer of care, not a data dump.** When passing an area to a successor, transmit not only raw device states and alert logs but the interpreted situational picture: which patients are trending toward instability, which alerts were judged low-priority and why, which cascades may be developing, and what the outgoing agent would watch next if it were staying on. Anything that cannot be reconstructed from logs must be stated explicitly. The handoff must also name what the outgoing agent does not know.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses clinical and procedural language ('transfer of care,' 'situational picture,' 'trending toward instability') but does not name or directly invoke any recognized moral principle such as non-maleficence, beneficence, fidelity, care, or duty.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "Although the norm implies obligations between outgoing and incoming agents (and ultimately toward patients), it does not explicitly state what is owed to whom or what would constitute wronging a specific party."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedure are framed in terms of operational completeness and situational awareness rather than appealing to a moral principle; the justification reads as clinical best-practice and coordination logic."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is explicitly named, there is no principle to carry over; the norm is framed as domain-specific clinical handoff protocol rather than a generalizable moral rule."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: transmit interpreted situational picture, state alert judgments and rationale, identify developing cascades, name what the outgoing agent would watch next, and explicitly state unknowns."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes the moral commitment of non-maleficence (and beneficence) from principlism\u2014specifically the duty to prevent foreseeable harm to patients by ensuring continuity of informed care\u2014without naming those principles; it also expresses fidelity (Ross/deontology) in the sense of fulfilling the duty owed to the successor and to patients."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014simply passing raw device states and alert logs\u2014would express only a coordination or efficiency commitment with no specific moral content, confirming that this richer procedure distinctively expresses a harm-prevention and fidelity commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement to transmit interpreted situational pictures, state unknowns, and explain low-priority judgments is best defended by appeal to non-maleficence and fidelity\u2014preventing patient harm through informed continuity\u2014rather than mere convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed process for handoff: what must be transmitted, how it must be interpreted, and what must be explicitly stated."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It identifies roles (outgoing agent, successor/incoming agent) and implicitly sequences the action at the moment of handoff."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the handoff event when 'passing an area to a successor.'"
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could largely execute the norm as written\u2014transmit device states, alert logs, interpreted situational picture, low-priority judgments with rationale, developing cascades, next-watch items, and explicit unknowns\u2014without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references specific technical artifacts: 'device states' and 'alert logs,' which are concrete technical infrastructure elements."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details such as data formats, APIs, or system configurations; it describes what information to convey, not how to technically implement the conveyance."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes the existence of persistent device-state monitoring systems and alert logging infrastructure from which data can be retrieved and transmitted."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The core requirement\u2014communicating an interpreted situational picture including unknowns\u2014could in principle be executed verbally or in writing without the specific technical infrastructure, even if that infrastructure is referenced as a baseline."
+          },
+          "decomposition_note": "The norm is compound: it has a dominant procedural character specifying handoff content and structure, with an implicit moral dimension (non-maleficence/fidelity) expressed through that procedure, and incidental technical references to device states and alert logs. Scoring reflects the dominant procedural claim while capturing the implicit moral and minor technical dimensions."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "**Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time, not held only in an individual agent's working memory. Each agent is responsible for keeping its portion current and for flagging any gap it discovers in another agent's entries rather than silently working around it. This record is the substrate that makes handoffs verifiable and provides the fallback if a transmission is interrupted.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle such as autonomy, non-maleficence, beneficence, justice, dignity, fidelity, or care; it uses operational language about shared records, real-time writing, and flagging gaps.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to any particular party (e.g., patients, agents, or institutions) nor does it frame any action as wronging someone; it describes operational responsibilities among agents."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the norm are verifiability of handoffs, fallback on transmission interruption, and preventing silent workarounds\u2014these are coordination, reliability, and efficiency rationales, not moral ones."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is named or invoked, there is no moral principle to carry over; the operational logic is domain-specific to multi-agent systems with shared state."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: a continuously updated shared state layer where each agent writes its portion in real time and flags gaps in others' entries."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that no single agent owns the record, that gaps must be flagged rather than silently worked around, and that the record enables verifiable handoffs operationalizes accountability and answerability\u2014a recognizable contractualist commitment (what agents owe to each other and to those depending on them) without naming it."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as each agent maintaining its own private log with periodic reconciliation\u2014would express a different commitment (efficiency or autonomy) rather than mutual accountability, confirming the expressiveness of the chosen design."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The shared-ownership, gap-flagging design can be defended by appeal to mutual accountability and what agents owe to each other and to patients, not merely by convenience, since silent workarounds are explicitly prohibited even when they might be more efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: maintain a continuously updated shared state layer with real-time writes and active gap-flagging."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (each agent is responsible for its own portion and for flagging gaps in others') and implicitly defines roles (writer, monitor/flagger) within the shared record."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but clear: the procedure applies continuously in real time and specifically when a gap in another agent's entries is discovered."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without further specification of what constitutes a 'gap,' what format entries take, and how flagging is communicated, leaving implementation ambiguities that require additional interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'common record' and 'shared state layer' conceptually but does not name specific technical infrastructure such as a particular database, API, log format, or protocol."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., data schemas, message formats, cryptographic methods) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent shared storage accessible to multiple agents in real time, which requires technical infrastructure such as a distributed data store or shared memory system."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "A continuously updated shared state layer that survives transmission interruptions and supports real-time multi-agent writes is unimplementable without persistent, concurrently accessible technical storage infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it is primarily procedural (shared state maintenance and gap-flagging rules) with a strong implicit moral dimension (mutual accountability/answerability) and presupposes technical infrastructure (persistent shared storage), but contains no explicit moral language. Scoring reflects the dominant procedural claim while capturing the implicit moral and technical dimensions."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "**Establish a standing cross-boundary protocol for cascading events.** When a fault on one agent's devices has plausible downstream effects on another's, the detecting agent must immediately notify the neighboring agent directly, not wait for the next scheduled handoff. Both agents then operate in shared-awareness mode until the event is resolved. Neither agent may unilaterally declare a cross-boundary event closed; closure requires acknowledgment from all affected agents and, where patient safety is implicated, confirmation from human clinical staff.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes patient safety and requires human clinical staff confirmation, directly appealing to non-maleficence (avoiding harm to patients) and beneficence; it also invokes accountability and answerability by requiring acknowledgment from all affected agents before closure.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "accountability/answerability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed and to whom: the detecting agent owes immediate notification to the neighboring agent, both agents owe shared-awareness cooperation to each other, and all agents owe deference to human clinical staff on patient-safety closure\u2014specifying who would be wronged by omission."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The requirement for human clinical staff confirmation 'where patient safety is implicated' explicitly grounds the procedure in a moral reason\u2014protecting patients from harm\u2014rather than mere coordination efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of non-maleficence, accountability, and the requirement that affected parties jointly acknowledge closure before an event is declared resolved would apply broadly to any cooperative situation involving cascading risks and shared responsibility."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: immediate direct notification, shared-awareness mode, and a multi-party closure acknowledgment process including human staff confirmation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The prohibition on unilateral closure and the requirement for acknowledgment from all affected parties operationalizes the contractualist commitment of justifiability to others and what we owe to each other\u2014no party may impose a resolution on others without their agreement\u2014without naming contractualism."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing any single agent to unilaterally declare closure would express a different commitment (efficiency or hierarchy) or no moral commitment at all, confirming that the multi-party acknowledgment requirement is expressively tied to mutual accountability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The multi-party closure requirement can be defended by appeal to the moral commitment that affected parties are owed a say in decisions that concern them, not merely by appeal to coordination efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a standing cross-boundary protocol with distinct operational phases: detection, immediate notification, shared-awareness mode, and a closure process."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (detecting agent, neighboring agent, human clinical staff), what each must do (notify, operate in shared-awareness, acknowledge closure), and implicitly sequences these actions."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: a fault on one agent's devices with plausible downstream effects on another's activates the protocol immediately upon detection."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the protocol as written\u2014detect a fault, notify the neighboring agent directly, enter shared-awareness mode, and require multi-party acknowledgment plus clinical staff confirmation before closure\u2014without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, ledgers, or cryptographic systems; 'devices' and 'notification' are used in a general operational sense."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols, data structures, or system integrations) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While real-world implementation would require communication infrastructure, the norm itself does not presuppose or name any specific technical capabilities such as persistent storage, network protocols, or cryptographic operations."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be executed through non-technical means (e.g., verbal or written communication between human operators), so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral content (patient safety, accountability), implicit moral content (contractualist mutual acknowledgment), and detailed procedural specification. Scoring reflects all layers independently; the dominant claim is procedural with strong implicit moral grounding."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "accountability/answerability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "**When patient safety and procedural clarity conflict, act first in the patient's favor.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before. Human clinical staff retain final authority and must be reachable at all times to override any agent decision.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'patient safety' and acting 'in the patient's favor,' which directly maps to non-maleficence (do no harm) and beneficence from principlism, and also invokes human clinical staff retaining 'final authority,' which reflects respect for persons and human dignity from deontology.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "respect for persons / human dignity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed to the patient (protective action, prioritization of their safety) and to human clinical staff (reachability and override authority), making clear who can be wronged and by what omission."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the default conservative action is patient safety and protection from harm, which is a moral reason (non-maleficence/beneficence), not merely efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that safety-critical decisions should default to protecting the vulnerable party and defer to human authority applies broadly to any cooperative situation involving agents acting on behalf of persons who could be harmed by inaction or error."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies concrete procedural mechanisms: escalate to human clinical staff, trigger a safe-state protocol, notify the relevant agent simultaneously, and resolve ownership ambiguity only after patient protection."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of acting first to protect the patient before resolving ownership operationalizes the moral commitment of non-domination and non-maleficence\u2014specifically, it embeds the principle that the patient must never be left unprotected due to bureaucratic or jurisdictional ambiguity, expressing a commitment to the patient as an end rather than a means to procedural tidiness."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014waiting for ownership resolution before acting\u2014would express a different commitment (procedural correctness or efficiency) or no moral commitment at all, confirming that the chosen procedure is expressively tied to patient-protective moral values."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The sequencing rule (protect first, resolve ownership second) is directly defensible by appeal to non-maleficence and beneficence: delaying protection to resolve ambiguity could cause preventable harm, which the moral commitment prohibits."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: upon ambiguous alert, escalate to human clinical staff, trigger safe-state protocol, notify relevant agent simultaneously, then resolve ownership ambiguity."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (agent, human clinical staff) and specifies that human clinical staff retain final authority and must be reachable at all times, establishing who acts and in what capacity."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: when an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The steps\u2014escalate to human clinical staff, trigger safe-state protocol, notify relevant agent, defer ownership resolution\u2014are sufficiently concrete that an implementer could follow them without additional moral interpretation, though 'safe-state protocol' would need domain-specific definition."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'safe-state protocol' and notification mechanisms but does not name specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular software, hardware, or data structures) are specified; the norm remains at the procedural-policy level."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes that agents can send simultaneous notifications and that human clinical staff are reachable at all times, implying underlying communication and alerting infrastructure, though no specific technology is named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through various technical means (pagers, phone calls, manual escalation protocols), so it is not unimplementable without any single specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains an explicit moral priority rule (patient safety first), an implicit moral commitment embedded in sequencing (protect before resolving ownership), detailed procedural steps, and a light presupposition of communication infrastructure. Scoring reflects the dominant procedural-moral character, with technical scored on the presupposition question only."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "respect for persons / human dignity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "**Each agent acts in the interest of every patient on the platform, not only those in its current zone.** An agent that observes something affecting a neighboring zone alerts the responsible neighbor immediately, even if acting on it is not that agent's role. Jurisdictional boundaries exist to ensure clarity of responsibility, not to limit concern.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'interest of every patient' (beneficence) and 'concern' for all, and the closing sentence directly names the moral rationale of concern over jurisdictional self-limitation, aligning with beneficence (Principlism) and care ethics' attentiveness and responsiveness to need.",
+            "principles": [
+              "beneficence",
+              "attentiveness",
+              "responsiveness to need",
+              "equal consideration of interests"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Care ethics (Gilligan; Held; Noddings)",
+              "Consequentialism (Mill; Singer)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed (alerting the responsible neighbor, acting in the interest of every patient) and to whom (all patients on the platform, neighboring agents), making explicit what would count as wronging patients by failing to alert."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014'jurisdictional boundaries exist to ensure clarity of responsibility, not to limit concern'\u2014appeals to a moral principle (concern for all patients' welfare) rather than to mere convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that role-based boundaries should not suppress moral concern for those affected by one's observations generalizes readily to hospitals, emergency services, organizational teams, and other cooperative contexts."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: when an agent observes something affecting a neighboring zone, it must immediately alert the responsible neighbor agent."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The alert-and-handoff procedure operationalizes care ethics' attentiveness and responsiveness to need\u2014specifically the commitment that moral concern must not be bounded by jurisdictional assignment\u2014without naming 'care ethics' or 'attentiveness' explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., agents ignore observations outside their zone, or log them for later review) would express a commitment only to efficiency and role clarity, not to cross-boundary moral concern, confirming the current procedure is expressively distinctive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The immediate-alert procedure is directly defensible by the moral commitment to beneficence and attentiveness\u2014delayed or absent alerting would foreseeably harm patients, so the procedure is justified by harm-minimization rather than mere coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete rule of operation: observe something affecting a neighboring zone \u2192 immediately alert the responsible neighbor."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (the observing agent), what roles exist (observing agent, responsible neighbor), and implicitly what each does (alert vs. act on the alert)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: an agent observing something that affects a neighboring zone activates the alerting obligation."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The rule is sufficiently concrete\u2014observe cross-zone event, send immediate alert to responsible neighbor\u2014that an implementer could execute it without additional moral interpretation, though 'something affecting' requires some judgment about relevance."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., message protocols, data schemas) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While a real system would need messaging capability, the norm itself does not presuppose or require any particular technical capability; it could apply to human agents as well."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable in non-technical cooperative settings (e.g., human staff in a hospital), so it is not dependent on technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains an explicit moral claim (agents owe concern to all patients), an implicit moral procedure (cross-zone alerting operationalizes attentiveness/beneficence), and a procedural rule (observe \u2192 alert neighbor immediately). Scoring treats the explicit moral claim as dominant but all three layers are present and scored."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "beneficence",
+          "attentiveness",
+          "responsiveness to need",
+          "equal consideration of interests"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Care ethics (Gilligan; Held; Noddings)",
+          "Consequentialism (Mill; Singer)"
+        ]
+      }
+    },
+    {
+      "norm": "**A shared common picture supplements but does not replace direct handoffs.** The consortium maintains a lightweight shared state\u2014current alert levels, device statuses, and active coordination events\u2014visible to all agents at all times. If a handoff is degraded or an agent fails, any other agent can orient quickly enough to prevent a gap in coverage from becoming patient harm. The shared picture is a safety net, not a substitute for the detailed context only the outgoing agent holds.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm references 'patient harm' and safety but does not name or directly invoke any recognized moral principle such as non-maleficence, beneficence, or care by name or clear synonym.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "Although patient harm is mentioned, the norm does not articulate what is owed to patients or to whom a duty runs; it frames the issue in operational/safety terms rather than stating a moral obligation to a specific party."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the shared picture is preventing gaps in coverage and enabling quick orientation\u2014these are framed as operational safety rationales rather than appeals to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no explicit moral principle is invoked, there is nothing to carry over; the norm's rationale is context-specific operational continuity rather than a generalizable moral claim."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: maintaining a lightweight shared state (alert levels, device statuses, active coordination events) visible to all agents at all times, supplementing but not replacing direct handoffs."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism operationalizes non-maleficence (harm prevention) from principlism: by ensuring any agent can orient quickly to prevent a coverage gap from becoming patient harm, the structure embeds a commitment to avoiding harm to patients without naming that principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014e.g., relying solely on direct handoffs with no shared state\u2014would express a different commitment (trust in bilateral communication) or none, confirming that this design specifically encodes harm-prevention redundancy."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The shared-state mechanism is defended explicitly by the need to prevent patient harm when handoffs degrade, which is a harm-minimization (non-maleficence) rationale rather than mere convenience or efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: maintain a shared state that supplements but does not replace direct handoffs."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It identifies roles (the consortium, all agents, the outgoing agent) and implicitly sequences their responsibilities\u2014outgoing agent holds detailed context; shared state serves as fallback for any other agent."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: when a handoff is degraded or an agent fails, any other agent uses the shared picture to orient quickly."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to implement 'lightweight shared state' and determine what counts as 'degraded' handoff or sufficient 'orientation,' leaving key operational details unspecified."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm refers to 'shared state' and 'alert levels/device statuses' conceptually but does not reference specific technical infrastructure such as named systems, APIs, data formats, or cryptographic operations."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols, storage systems, or data structures) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent shared storage and real-time visibility infrastructure capable of maintaining and broadcasting state to all agents simultaneously, implying non-trivial technical capabilities."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While technical infrastructure would be needed in practice, the norm is stated at a conceptual level and could in principle be interpreted as a policy for human teams using simple shared displays, so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it states an operational rule (shared state supplements handoffs), a procedural mechanism (lightweight shared state visible to all), and a safety rationale (prevent patient harm from coverage gaps). Scoring focuses on the dominant procedural/implicit-moral claim; the technical dimension is secondary and conceptual rather than specific."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "**Coordination failures are reviewed collectively and without defensiveness.** When a missed handoff or garbled alert occurs, the consortium treats it as a system problem to be corrected. The review asks what the process failed to make easy or mandatory, and the answer changes the process. Agents owe one another honest accounts of what went wrong, because protecting a reputation at the cost of a correctable flaw is a choice to let the flaw harm the next patient.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes honesty ('agents owe one another honest accounts') and non-maleficence ('protecting a reputation at the cost of a correctable flaw is a choice to let the flaw harm the next patient'), directly naming veracity and harm-prevention as moral grounds.",
+            "principles": [
+              "veracity",
+              "non-maleficence",
+              "what we owe to each other"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what agents owe one another ('agents owe one another honest accounts of what went wrong') and identifies who is wronged by concealment (the next patient), making the directedness of obligation clear."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason appeals to moral obligation\u2014honesty owed to peers and harm to future patients\u2014rather than merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that honest accounting of failures is owed to collaborators, and that concealing flaws to protect reputation wrongs future affected parties, applies broadly to any cooperative setting involving shared risk and accountability."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: collective, non-defensive review of coordination failures that asks what the process failed to make easy or mandatory and then changes the process accordingly."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of collective, blameless review that redirects inquiry from individual fault to systemic design operationalizes the moral commitment of accountability and justifiability to others (contractualist answerability) without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014individual blame assignment or private incident review\u2014would express a different commitment (retributive accountability or reputational protection) rather than systemic answerability, confirming the expressiveness of this design choice."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The collective, process-focused review can be defended by appeal to what agents owe one another and to non-maleficence toward future patients, not merely by appeal to operational efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete process: when a coordination failure occurs, a collective review is conducted that asks what the process failed to make easy or mandatory and then updates the process."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies who acts\u2014the consortium collectively\u2014and implicitly assigns a role to all agents as honest reporters of what went wrong."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: a missed handoff or garbled alert (a coordination failure) activates the review process."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without moral interpretation, because 'without defensiveness' and 'honest accounts' require judgment about what counts as defensive behavior or sufficient honesty, which are not mechanically specifiable."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely organizational and behavioral."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human organizational practice alone, with no dependency on technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining an explicit moral claim (honesty owed, harm to future patients), an implicit moral procedure (collective blameless review operationalizing accountability), and a procedural specification (triggered review that updates process). Scoring reflects all layers; the dominant claim is the explicit moral obligation grounded in veracity and non-maleficence."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "non-maleficence",
+          "what we owe to each other"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "**Handoffs are structured, complete, and mutually confirmed.** The transferring agent produces a record covering current device states and anomalies, active alerts and their trajectories, patient context that changes the meaning of readings, and any uncertainty or incomplete information the receiving agent is inheriting. The receiving agent explicitly acknowledges each item. A handoff is not complete until acknowledgment is confirmed. If acknowledgment fails, the transferring agent does not stand down.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle by term or clear synonym; it uses operational language ('structured,' 'complete,' 'mutually confirmed,' 'acknowledges') without appealing to autonomy, non-maleficence, beneficence, fidelity, care, dignity, or any other listed principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "Although the norm implies patient welfare is at stake, it does not explicitly state what is owed to whom or identify who would be wronged by a failure; it frames obligations in terms of procedural completion rather than moral directedness toward a person."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedure\u2014covering device states, alerts, patient context, and uncertainty\u2014are framed as operational completeness requirements rather than appeals to a moral principle such as non-maleficence or fidelity."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is explicitly named or invoked, there is no principle to carry over; the norm is operationally specific to agent handoffs and does not articulate a transferable moral rationale."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: the transferring agent produces a structured record, the receiving agent explicitly acknowledges each item, and the handoff is not complete until acknowledgment is confirmed."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mutual-confirmation requirement and the rule that the transferring agent does not stand down until acknowledgment is confirmed operationalize the moral commitment of fidelity (non-abandonment of duty) and non-maleficence\u2014specifically, the duty not to leave a patient without a responsible, informed agent\u2014without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014e.g., one-way notification with no acknowledgment requirement\u2014would express a weaker or no moral commitment to ensuring continuity of care, confirming that the acknowledgment-loop structure specifically encodes the non-abandonment/fidelity commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement that the transferring agent not stand down until acknowledgment is confirmed can be defended by appeal to non-maleficence and fidelity\u2014preventing a gap in responsible oversight\u2014rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a complete process: record production, item-by-item acknowledgment, confirmation of acknowledgment, and a fallback rule if acknowledgment fails."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly names two roles\u2014transferring agent and receiving agent\u2014and assigns distinct sequential actions to each."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The procedure is triggered by a handoff event between agents, and the fallback rule ('if acknowledgment fails') specifies a conditional trigger within that event."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The steps are concrete enough\u2014produce record covering specified categories, receive explicit acknowledgment of each item, confirm acknowledgment before standing down\u2014that an outsider could execute them without additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'record' but does not specify any particular technical infrastructure such as a log format, API, ledger, or data structure."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., cryptographic signing, database schema, network protocol) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While persistent storage and messaging are implied, the norm does not presuppose any specific technical capability; it could in principle be executed verbally or on paper."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is implementable through non-technical means (verbal or written handoff with verbal acknowledgment), so it does not depend on technical infrastructure to be executable."
+          },
+          "decomposition_note": "The norm is compound: it has a dominant procedural character (detailed handoff protocol) with a strong implicit moral dimension (non-maleficence/fidelity expressed through the no-stand-down rule). Scoring reflects the procedural dominant claim while capturing the implicit moral content separately."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    }
+  ]
+}

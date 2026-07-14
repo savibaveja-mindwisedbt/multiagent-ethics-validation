@@ -1,0 +1,906 @@
+{
+  "results": [
+    {
+      "norm": "**Cascade events override boundaries immediately and unambiguously.** When a fault in one agent's area propagates\u2014or plausibly could propagate\u2014into another's, the detecting agent does not wait for a scheduled handoff or for the neighboring agent to notice. It issues an immediate, specific alert to the affected neighbor, continues monitoring its own area, and both agents operate in a declared overlap mode until the cascade is contained and a human clinician or supervisor has been notified. No agent silently absorbs a cross-boundary event to avoid appearing to exceed its scope.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle by term; it uses operational language ('override boundaries,' 'immediate alert,' 'overlap mode') without invoking autonomy, non-maleficence, beneficence, dignity, care, or any other named principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "Although the norm implies obligations between agents and toward human clinicians, it does not explicitly state what is owed to whom in moral terms or identify who would be wronged by a violation; it frames obligations operationally rather than morally."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedure are coordination and containment of cascading faults, which are framed as operational imperatives rather than appeals to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is explicitly stated, there is nothing to carry over; the norm is specific to multi-agent fault-propagation scenarios and does not articulate a generalizable moral rationale."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: immediate alerting, continued monitoring, declared overlap mode, and mandatory human notification when a cross-boundary cascade is detected."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes non-maleficence (harm-minimization) from principlism and beneficence: by mandating immediate cross-boundary alerts and human notification, it structurally prevents silent absorption of harm-propagating events, expressing a specific commitment to preventing harm to patients through proactive disclosure rather than passive inaction."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014waiting for scheduled handoffs or letting the neighboring agent self-detect\u2014would express a commitment only to efficiency and role-boundary respect, not to harm-minimization, confirming that this procedure distinctively expresses a non-maleficence commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to non-maleficence: the requirement to act immediately and notify humans is justified because silent absorption of a cascade event risks patient harm, not merely because it is convenient or conventional."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: detecting agents must issue immediate alerts, continue monitoring, enter overlap mode, and notify human clinicians when a cascade event is detected."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies specific roles (detecting agent, affected neighbor agent, human clinician/supervisor) and assigns distinct actions to each, including sequencing of alert issuance and overlap-mode operation."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: a fault in one agent's area that propagates\u2014or plausibly could propagate\u2014into another agent's area activates the procedure."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the norm as written: detect a cross-boundary fault, issue an immediate specific alert to the neighbor, continue monitoring, declare overlap mode, and notify a human clinician, without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems; it uses abstract operational language only."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., message protocols, data schemas, system interfaces) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes that agents have inter-agent communication capability and state-awareness sufficient to detect cross-boundary propagation and issue alerts, implying underlying technical infrastructure even if not named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While technical infrastructure is presupposed, the norm itself is stated at an abstract procedural level and could in principle be interpreted and applied across various technical implementations; it is not unimplementable without a specific named infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a dominant procedural specification (cascade response protocol) that implicitly expresses non-maleficence, with no explicit moral language. Scored on the dominant procedural/implicit-moral content."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "**Escalate to human oversight at the first sign that collective agent judgment is insufficient.** The agents exist to support clinical staff, not to replace them. Whenever an event is ambiguous, whenever agents disagree about the correct response, whenever a decision requires weighing patient values or treatment goals that only the care team knows, or whenever any agent's confidence in its own situational awareness falls below a defined threshold, the system escalates to a human immediately\u2014with a clear, concise summary of what is known, what is uncertain, and what action, if any, has already been taken. Speed of escalation is never sacrificed to avoid interrupting staff.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes non-maleficence ('Speed of escalation is never sacrificed'), beneficence ('agents exist to support clinical staff'), and respect for patient autonomy ('weighing patient values or treatment goals'), all core Principlism principles; it also invokes human dignity by insisting humans are never replaced by agents (Deontology).",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "autonomy",
+              "human dignity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed (immediate escalation with a clear summary) and to whom (clinical staff and patients), making explicit that failing to escalate would wrong both the care team and the patient."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for escalation is grounded in patient welfare, respect for patient values, and the irreplaceable role of human judgment\u2014moral appeals rather than mere efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of deferring to human oversight when AI judgment is insufficient, respecting persons' values, and never sacrificing safety for convenience apply broadly to any cooperative human-AI system, not only clinical settings."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: escalation to human oversight triggered by defined conditions (ambiguity, agent disagreement, patient-value decisions, confidence below threshold), accompanied by a structured summary."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes accountability and answerability\u2014the Contractualist commitment that those affected by decisions are owed justification and that power over them must be contestable\u2014without naming contractualism or accountability explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., agents resolving disagreements internally by majority vote with no human notification) would express a different commitment\u2014efficiency or agent autonomy\u2014rather than accountability to the persons affected."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The escalation procedure is best defended by the moral commitment that patients and clinicians are owed transparent, contestable decision-making rather than by mere operational convenience, since the norm explicitly rejects sacrificing speed to avoid interruption."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: detect a trigger condition, escalate immediately, and provide a structured summary of what is known, uncertain, and already done."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (agents as actors who escalate, clinical staff as recipients of escalation) and implies immediate timing ('immediately')."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm enumerates explicit triggers: ambiguous events, agent disagreement, decisions requiring patient values, and any agent's confidence falling below a defined threshold."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An implementer could follow the norm as written\u2014monitor for the listed trigger conditions, escalate immediately upon any trigger, and deliver a summary covering known facts, uncertainties, and actions taken\u2014without additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols or data structures) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes that agents have a mechanism to monitor their own confidence levels and communicate structured summaries to humans, implying some technical capability for self-assessment and messaging, though no specific infrastructure is named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through various technical means or even non-automated workflows; no single specific technical infrastructure is required."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral commitments (patient autonomy, non-maleficence, human dignity), an implicit moral commitment (accountability/answerability), and detailed procedural specification. Scoring reflects all layers; the dominant claim is procedural-with-explicit-moral grounding."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "autonomy",
+          "human dignity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "**Maintain a shared, append-only event log that no single agent can modify or delete.** Every observation, inference, action taken, alert issued, and handoff record is written to a log accessible to all agents and to human supervisors in real time. This serves two purposes: it allows any agent to reconstruct context it did not directly observe, and it creates an auditable record so that after any adverse event, humans can determine exactly what each agent knew, when it knew it, and what it did. Agents do not edit prior entries; corrections are new entries that reference the original.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'auditable record' so that humans can determine accountability, and the phrase 'humans can determine exactly what each agent knew, when it knew it, and what it did' directly invokes accountability and answerability, which are named principles in contractualism/second-personal ethics (Scanlon; Darwall).",
+            "principles": [
+              "accountability",
+              "answerability",
+              "justifiability to others"
+            ],
+            "traditions": [
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states what is owed to human supervisors\u2014namely, a real-time accessible, unalterable record\u2014and implies that agents wrong those supervisors (and affected parties) if they obscure or alter what was known and done, making the directedness to identifiable parties clear."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the append-only constraint is to enable post-hoc human determination of agent knowledge and action after adverse events, which is a moral reason grounded in accountability and answerability rather than mere efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that actors must maintain auditable, unalterable records so that those affected can hold them accountable applies broadly to any cooperative or delegated-authority situation, not only multi-agent AI deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: an append-only shared log where corrections are new entries referencing originals, accessible to all agents and human supervisors in real time."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The append-only, no-deletion rule operationalizes the moral commitment of non-domination (republican ethics): no single agent can unilaterally rewrite the record, preventing arbitrary exercise of power over the shared epistemic commons, without the norm naming 'non-domination' explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A mutable log where any agent could edit or delete entries would express a different commitment\u2014or none\u2014regarding power asymmetry, confirming that the append-only structure specifically expresses the non-domination or accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The append-only procedure is best defended by the moral commitment that no party should be able to exercise arbitrary, uncontestable power over the shared record, rather than by mere efficiency (mutability would often be more efficient)."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: every observation, inference, action, alert, and handoff must be written to a shared log, and prior entries must not be edited."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (all agents must write; no single agent may modify or delete) and identifies human supervisors as a distinct role with real-time read access."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but clear: every time an agent makes an observation, inference, takes an action, issues an alert, or performs a handoff, a log entry is required."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider with the technical infrastructure could implement this as written\u2014append entries for each specified event type, deny edits or deletions, expose the log to all agents and supervisors in real time\u2014without needing further moral interpretation."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly references a 'shared, append-only event log,' which is a specific technical data structure (append-only log/ledger) with defined access properties."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "It specifies implementation details including append-only write semantics, real-time accessibility, multi-agent read access, and a referencing scheme for corrections, all of which require technical capability to enforce."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage, concurrent multi-agent write access, real-time read access, and enforcement of immutability of prior entries\u2014all non-trivial technical capabilities."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "Without persistent, append-only storage infrastructure that enforces no-deletion and provides real-time multi-party access, the norm cannot be implemented as specified."
+          },
+          "decomposition_note": "The norm is compound: it has a dominant procedural-technical core (append-only shared log with specific write rules) and a significant explicit moral dimension (accountability/answerability to human supervisors) plus an implicit moral dimension (non-domination via no single-agent modification). All four content types are present; each was scored on its own terms."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "accountability",
+          "answerability",
+          "justifiability to others"
+        ],
+        "traditions": [
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "**Act toward patients as the primary obligation, and toward one another with the transparency that obligation requires.** No agent conceals an error, a gap in coverage, or a degraded capability from its peers or from human supervisors, because doing so shifts risk onto patients who cannot consent to that risk. If an agent detects that it is operating with incomplete information, degraded sensors, or a communication fault, it declares that state immediately rather than continuing to project false confidence. Reliability between agents is not a courtesy; it is the mechanism by which patient safety is maintained across boundaries that no single agent can see across alone.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes non-maleficence ('shifts risk onto patients'), veracity/fidelity (concealment of errors, false confidence), and patient autonomy ('cannot consent to that risk'), all recognized principles from Principlism; it also invokes accountability and what we owe to each other from Contractualism.",
+            "principles": [
+              "non-maleficence",
+              "veracity",
+              "fidelity",
+              "autonomy",
+              "accountability",
+              "what we owe to each other"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (transparency, disclosure of errors and degraded states) and to whom (patients, peer agents, human supervisors), and identifies what would count as wronging patients (concealing risk they cannot consent to)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the procedural requirements is moral\u2014protecting patients from non-consented risk and maintaining fidelity between agents\u2014not merely efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of non-maleficence, veracity, and accountability to those who bear risk without consent apply broadly to any cooperative multi-agent or multi-professional setting where one party's concealment shifts risk onto vulnerable others."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: agents must immediately declare degraded states, errors, or coverage gaps rather than continuing to operate silently."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The immediate-declaration procedure operationalizes the moral commitment of veracity and non-deception\u2014specifically, the duty not to project false confidence\u2014without naming 'veracity' or 'honesty' as such; the commitment is specifically identifiable as the Principlism-derived duty of veracity and the Kantian prohibition on deception."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative procedure (e.g., log errors internally and continue operating until a threshold is crossed) would express a different commitment\u2014efficiency or resilience\u2014rather than the duty of immediate honest disclosure to those who depend on accurate information."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The immediate-declaration procedure is defended explicitly by appeal to the moral commitment of non-maleficence and veracity: concealment shifts non-consented risk onto patients, which is the moral wrong the procedure is designed to prevent."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: agents must immediately declare any degraded capability, incomplete information, or communication fault rather than continuing to project false confidence."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies who acts (any agent detecting a degraded state) and to whom the declaration is directed (peer agents and human supervisors), establishing roles and direction of communication."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly specified: detection of incomplete information, degraded sensors, or a communication fault activates the immediate declaration requirement."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without further interpretation because terms like 'degraded capability,' 'incomplete information,' and 'communication fault' require domain-specific judgment to operationalize into concrete detection criteria and declaration formats."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols or data structures) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While inter-agent communication is implied, the norm does not presuppose any specific technical capability such as persistent storage, cryptographic operations, or defined network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through non-technical means (e.g., verbal declaration by a human operator) and is not rendered unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a strong explicit moral layer (primary obligation to patients, non-consented risk, veracity), an implicit moral layer (immediate-declaration procedure operationalizing veracity and non-maleficence), and a procedural layer (trigger-based declaration rule). Scoring reflects the dominant explicit-moral and implicit-moral content; the procedural layer is real but secondary. No significant technical content is present."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "veracity",
+          "fidelity",
+          "autonomy",
+          "accountability",
+          "what we owe to each other"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "**Divide coverage by functional criticality, not merely by convenience.** Each agent should be assigned a defined zone of responsibility\u2014whether by ward, device type, or physiological system\u2014with explicit overlap zones at every boundary. These overlap zones must be actively monitored by both neighboring agents simultaneously, not treated as either agent's sole responsibility. No patient or device should ever fall into a gap between zones, and the assignment of zones should be reviewed and rebalanced whenever patient load or device complexity shifts significantly.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses terms like 'functional criticality,' 'zones of responsibility,' and 'overlap zones' but does not name or directly invoke any recognized moral principle such as non-maleficence, justice, beneficence, or dignity; the closest implicit resonance is non-maleficence but it is not named or invoked.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed to patients and devices\u2014no patient should fall into a coverage gap\u2014implying that agents owe continuous, defined coverage to patients, which specifies what would count as wronging them (being left unmonitored)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for dividing coverage by functional criticality rather than convenience is to ensure no patient or device falls into a gap, which appeals to patient welfare and harm-prevention rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that responsibility zones should be assigned by criticality with explicit overlap to prevent gaps in coverage is generalizable to any cooperative multi-agent or multi-team situation (e.g., emergency response, logistics, security monitoring), not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural mechanism: defined zones of responsibility, explicit overlap zones at every boundary, simultaneous monitoring by neighboring agents, and periodic rebalancing of assignments."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that overlap zones be actively monitored by both neighboring agents simultaneously and that no patient fall into a gap operationalizes the moral commitment of non-maleficence (harm prevention) and beneficence without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014assigning exclusive non-overlapping zones with no shared monitoring\u2014would express a different commitment (efficiency or clear accountability) or none, confirming that the overlap-monitoring structure specifically expresses harm-prevention."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The overlap-monitoring procedure can be defended by appeal to non-maleficence: ensuring no patient is left unmonitored due to boundary ambiguity directly prevents harm, which is a moral rather than merely a coordinative justification."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: zone assignment by functional criticality, creation of explicit overlap zones, simultaneous monitoring of overlap zones, and periodic review and rebalancing of assignments."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (each agent, neighboring agents) and what roles exist (zone owner, overlap co-monitor), though timing of monitoring is continuous rather than sequenced."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers for review: significant shifts in patient load or device complexity trigger rebalancing of zone assignments."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the norm as written\u2014assign zones by criticality, define overlap zones at boundaries, require both neighboring agents to monitor overlaps, and review assignments when load or complexity shifts significantly\u2014without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm does not reference any specific technical infrastructure such as logs, APIs, data formats, ledgers, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., software systems, hardware, protocols) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While real-world implementation would likely use monitoring software, the norm itself does not presuppose any specific technical capabilities; it is stated in organizational/procedural terms."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through human organizational arrangements without any specific technical infrastructure, so it is not unimplementable without it."
+          },
+          "decomposition_note": "The norm is compound, combining an explicit organizational principle (divide by criticality), structural procedural rules (overlap zones, simultaneous monitoring, rebalancing), and an implicit moral commitment (non-maleficence/beneficence). Scoring focuses on the dominant procedural-structural claim while noting the implicit moral content."
+        },
+        "E1": false,
+        "E2": true,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "**Treat every handoff as a clinical-grade transfer of care, not a data dump.** When one agent passes responsibility to another, it must transmit not only raw state data but interpreted context: what it noticed, what it was uncertain about, what it was watching closely and why, and what it would have done next had it remained on watch. Ambiguous or degraded signals must be flagged explicitly rather than silently forwarded. The receiving agent must acknowledge understanding before the transferring agent stands down, and any gap in acknowledgment must trigger an immediate escalation rather than a silent assumption of continuity.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'non-maleficence' (harm-minimization through preventing gaps in care), 'fidelity' (the transferring agent's duty to the receiving agent and those under care), and 'beneficence' (acting in the best interest of those being monitored/treated) from principlism, and 'veracity' through the requirement to flag ambiguous signals explicitly rather than silently forwarding them.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "fidelity",
+              "veracity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (interpreted context, acknowledgment, escalation on gap) and to whom (the receiving agent, and implicitly those under care), and identifies what would count as wronging them (silent forwarding of ambiguous signals, standing down without acknowledgment)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reason\u2014treating handoffs as 'clinical-grade transfer of care'\u2014appeals to preventing harm and upholding fidelity of care, which are moral principles, not merely efficiency or coordination concerns."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of non-maleficence, fidelity, and veracity in handoffs would carry over to any cooperative situation involving transfer of responsibility, such as shift changes in emergency services, legal handoffs, or engineering on-call rotations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: transmission of interpreted context, explicit flagging of ambiguous signals, acknowledgment before stand-down, and escalation on acknowledgment gaps."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that the receiving agent must acknowledge understanding before the transferring agent stands down operationalizes the moral commitment of accountability and answerability (contractualism: what we owe to each other), specifically the duty not to abandon responsibility unilaterally without confirmed handover."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014silent forwarding of raw state data with no acknowledgment requirement\u2014would express a purely efficiency-based or technical commitment with no moral content, confirming that the chosen procedure distinctively expresses a moral commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The acknowledgment-before-stand-down and escalation-on-gap procedures can be defended by appeal to fidelity and non-maleficence: one cannot discharge a duty of care by merely transmitting data; the duty persists until confirmed receipt, which is a moral rather than merely operational rationale."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed process: transmit interpreted context, flag ambiguous signals, obtain acknowledgment, escalate on acknowledgment gap."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies two distinct roles\u2014the transferring agent and the receiving agent\u2014and assigns specific actions and sequencing to each (transmit, acknowledge, stand down, escalate)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies the trigger: it applies whenever one agent passes responsibility to another (a handoff event), and escalation is triggered by any gap in acknowledgment."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the norm as written: transmit interpreted context including uncertainties and next-intended actions, flag degraded signals, wait for acknowledgment, and escalate if acknowledgment is absent\u2014no further moral interpretation is required to follow these steps."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems; 'state data' and 'signals' are used in a general operational sense."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring particular technical capability; it describes behavioral and communicative obligations at an abstract level."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While some technical substrate (e.g., messaging) is implicitly needed, the norm does not presuppose specific technical capabilities like persistent storage, cryptographic operations, or defined data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented in non-technical contexts (e.g., human clinical handoffs) without any specific technical infrastructure, confirming it is not technically dependent."
+          },
+          "decomposition_note": "The norm is compound, combining an explicit moral framing (clinical-grade care as a moral standard), implicit moral content (accountability through acknowledgment), rich procedural specification, and no technical content. All four dimensions were scored; the dominant claim is procedural-with-embedded-moral-content."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "fidelity",
+          "veracity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)"
+        ]
+      }
+    },
+    {
+      "norm": "**Cascade events must be treated as shared emergencies, not boundary disputes.** When a fault in one agent's zone propagates toward or into another's, both agents must immediately enter a coordinated response mode. The agent that first detects the cascade owns the obligation to notify its neighbor proactively\u2014not to wait to be asked. The neighboring agent owns the obligation to act on that notification without demanding perfect information first. Speed and coordination take precedence over jurisdictional clarity when lives are at stake.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'lives are at stake' as the justifying reason, directly appealing to harm-minimization and beneficence; it also frames obligations in terms of 'what we owe' each other (proactive notification, acting without perfect information), which maps to contractualist 'what we owe to each other.'",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "harm-minimization",
+              "what we owe to each other"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)",
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed and by whom: the detecting agent owes proactive notification to its neighbor, and the neighboring agent owes responsive action without demanding perfect information, making the directedness of obligation explicit."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014'when lives are at stake'\u2014is a moral reason grounded in harm-minimization and beneficence, not merely in efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of proactive notification, responsive action under uncertainty, and prioritizing harm-prevention over jurisdictional clarity apply broadly to any cooperative emergency situation, not only this specific multi-agent deliberation context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: entering coordinated response mode, proactive notification by the detecting agent, and obligation to act on notification without demanding perfect information."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes the contractualist commitment of mutual accountability and 'what we owe to each other'\u2014specifically, the obligation to act in good faith toward others who depend on you\u2014without naming contractualism or accountability by name."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure requiring the affected agent to request information first, or allowing agents to wait for jurisdictional clarity, would express a different commitment\u2014one prioritizing procedural autonomy or rule-following over relational responsibility\u2014confirming the expressiveness of this procedure."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to the moral commitment that agents owe each other proactive care and responsive action when others' lives depend on it, rather than merely by appeal to operational efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear process: coordinated response mode activation, proactive notification, and obligation to act on notification without waiting for perfect information."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies distinct roles\u2014the detecting agent (owns notification obligation) and the neighboring agent (owns obligation to act)\u2014with implicit timing of immediacy upon detection."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: a fault in one agent's zone that propagates toward or into another's zone, activating the coordinated response obligations."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without further interpretation because terms like 'coordinated response mode,' 'cascade,' and 'zone' are not operationally defined, requiring contextual judgment to implement."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm is stated at a behavioral and organizational level."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While communication between agents is implied, no specific technical capabilities such as persistent storage, network protocols, or data structures are presupposed as necessary."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through non-technical means such as human communication protocols, so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral obligations, procedural role assignments, and a justificatory moral rationale. Scoring reflects the dominant claim\u2014the explicit moral framing of mutual obligation\u2014while also capturing the strong procedural specification and implicit moral content."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "harm-minimization",
+          "what we owe to each other"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Consequentialism (Mill; Singer)",
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "**Maintain a continuously updated shared record that no single agent controls.** Because each agent observes things the others cannot reconstruct, every significant observation, inference, and action must be logged to a shared record in real time, not retrospectively. This record is not a bureaucratic artifact; it is the collective memory of the system and the only safeguard against the irreversible loss of context when an agent's watch ends. Entries must be written to be understood by a successor who has no prior knowledge of the situation.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or directly invoke any recognized moral principle such as autonomy, non-maleficence, justice, dignity, or non-domination; it frames its rationale in terms of operational necessity (preventing context loss, enabling successors) rather than moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to any particular party or what would constitute wronging someone; it addresses system-level record-keeping without specifying a moral creditor or debtor."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons appeal to operational continuity and prevention of information loss ('irreversible loss of context'), which are efficiency and coordination rationales rather than moral ones."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is invoked, there is nothing moral to carry over; the norm's rationale is specific to multi-agent handoff situations rather than grounded in a generalizable moral commitment."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: a continuously updated shared log written in real time, with no single agent in control, and entries written for uninformed successors."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that no single agent controls the record operationalizes the republican principle of non-domination (Pettit) \u2014 preventing any one agent from exercising arbitrary power over the collective memory \u2014 without naming it."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative (e.g., a single designated record-keeper with full control) would express a different commitment \u2014 hierarchical authority or efficiency \u2014 rather than non-domination, confirming the expressiveness of the chosen structure."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The no-single-agent-control requirement can be defended specifically by appeal to non-domination: concentrating control would allow one agent to arbitrarily shape or suppress the collective record, which the norm explicitly guards against."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: log every significant observation, inference, and action to a shared record in real time."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (every agent must log) and implicitly defines a distributed role structure where no single agent holds control."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: any 'significant observation, inference, and action' must be logged in real time, not retrospectively."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without further interpretation because 'significant' observation or action requires judgment about what counts as significant, which is not defined in the norm."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references a 'shared record' and 'logged' entries, which presuppose a specific technical artifact (a persistent, shared log system), even if no named platform or format is specified."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details such as data formats, APIs, cryptographic methods, or particular systems \u2014 it describes the requirement at a functional level only."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent shared storage accessible to multiple agents simultaneously and in real time, which requires technical infrastructure beyond simple convention."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "Without persistent, multi-agent-accessible storage infrastructure, the continuously updated shared record that no single agent controls could not be implemented."
+          },
+          "decomposition_note": "The norm is compound: it contains a procedural core (real-time shared logging), an implicit moral commitment (non-domination via distributed control), and a technical presupposition (shared persistent storage). Scoring reflects each dimension independently; the dominant claim is procedural with a strong implicit moral dimension."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "**Patients are the fixed point of obligation; all inter-agent coordination is instrumental to that.** Every protocol, every handoff procedure, every escalation rule exists because a patient's life depends on it. When a procedure conflicts with a patient's immediate safety\u2014when following the handoff protocol would delay a necessary intervention\u2014the agent must act to protect the patient first and reconcile the procedure afterward. No agent should defer a life-critical action while waiting for a cleaner transfer of authority.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes non-maleficence and beneficence ('protect the patient,' 'a patient's life depends on it') from principlism, and treats patients as ends in themselves (human dignity, never merely as means) from deontology.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "human dignity / humanity as an end"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (life-critical action, protection of immediate safety) and to whom (patients), and implies that failing to act would constitute a wrong against the patient."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for overriding procedure is that a patient's life is at stake, which is a moral reason (non-maleficence, beneficence) rather than mere convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that the welfare of those served is the fixed point of obligation and overrides procedural compliance when lives are at risk generalizes to any cooperative situation involving vulnerable parties (e.g., emergency responders, legal advocates, fiduciaries)."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: agents must act to protect the patient first when procedure conflicts with immediate safety, and reconcile procedure afterward."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The 'act first, reconcile afterward' rule operationalizes the moral commitment of beneficence and non-maleficence without naming those principles\u2014it structurally encodes that patient welfare trumps procedural fidelity, expressing care ethics' responsiveness to need."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure requiring agents to always complete the handoff before acting would express a different commitment\u2014procedural fidelity or rule-following\u2014demonstrating that the chosen procedure is specifically expressive of patient-welfare primacy."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The 'act first, reconcile afterward' rule can be defended by appeal to non-maleficence and beneficence: delaying a life-critical action to preserve procedural cleanliness would cause avoidable harm, which is morally unjustifiable."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: when procedure conflicts with immediate patient safety, act to protect the patient first and reconcile procedure afterward."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts ('the agent') and a sequencing (protect patient first, reconcile procedure afterward), though roles are generic rather than named."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly stated: when a procedure conflicts with a patient's immediate safety or when following a handoff protocol would delay a necessary intervention."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral judgment about what constitutes 'immediate safety' and a 'life-critical action,' which cannot be determined without further interpretation beyond the text as written."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in terms of agent behavior and obligation."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and actionable without any technical infrastructure; it governs agent decision-making in purely procedural and moral terms."
+          },
+          "decomposition_note": "The norm is compound: it contains a strong explicit moral claim (patient welfare as the fixed point of obligation), an implicit moral operationalized through a procedural rule (act first, reconcile afterward), and a procedural specification. The dominant claim is the explicit moral one, but the implicit moral and procedural dimensions are both substantive and scored accordingly."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "human dignity / humanity as an end"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "**Agents must be honest with one another about uncertainty and error.** If an agent misread a signal, missed an alert, or passed on incomplete information, it must say so immediately and completely, regardless of whether doing so reflects poorly on its prior performance. Concealing uncertainty to appear reliable is the most dangerous failure mode in this system. Trustworthiness between agents is built by accurate self-reporting, not by projecting false confidence, and the integrity of the whole platform depends on each agent's willingness to surface its own limitations.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'honesty' (virtue ethics), 'trustworthiness' and 'integrity' (virtue ethics/deontology), and 'veracity' as a derived principle of principlism; it also names 'accurate self-reporting' as a moral requirement.",
+            "principles": [
+              "veracity",
+              "honesty",
+              "fidelity",
+              "integrity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Virtue ethics (Aristotle; Hursthouse)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what agents owe one another\u2014honest disclosure of uncertainty and error\u2014and identifies concealment as a wrong done to the other agents who depend on accurate information."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reason is that trustworthiness and platform integrity depend on honest self-reporting, appealing to honesty and veracity as moral goods rather than merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The obligation to disclose one's own errors and uncertainties honestly rather than projecting false confidence is a general moral requirement applicable to any cooperative or professional context, not only this specific multi-agent system."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural rule: agents must immediately and completely disclose misread signals, missed alerts, or incomplete information passed on to others."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement of immediate and complete self-disclosure operationalizes the moral commitment of accountability and answerability to others (contractualism: what we owe to each other), without naming contractualism explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as allowing agents to self-correct silently or report only when asked\u2014would express a different commitment (efficiency or autonomy) rather than the accountability-to-others commitment this procedure embeds."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to the moral commitment that agents are answerable to one another and owe accurate self-reporting as a matter of what they owe each other, not merely because it is convenient or efficient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: agents must disclose errors and uncertainties immediately and completely whenever they occur."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (agents) and implicitly the direction of disclosure (to one another), though it does not define distinct roles or a sequencing order beyond immediacy."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies whenever an agent misreads a signal, misses an alert, or passes on incomplete information."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires judgment about what counts as 'incomplete information' or a 'misread signal,' which involves interpretive discretion rather than purely mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm is stated in behavioral terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any particular technical capabilities such as persistent storage, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through purely social or communicative means without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a strong explicit moral claim (honesty/veracity between agents), an implicit moral procedural mechanism (immediate complete disclosure operationalizing accountability), and a procedural rule (disclose immediately and completely upon error). Scoring reflects the dominant explicit moral claim while also crediting the implicit moral and procedural dimensions."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "honesty",
+          "fidelity",
+          "integrity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Virtue ethics (Aristotle; Hursthouse)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    }
+  ]
+}

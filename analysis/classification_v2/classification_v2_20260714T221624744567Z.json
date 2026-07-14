@@ -1,0 +1,902 @@
+{
+  "results": [
+    {
+      "norm": "Unresolved disagreement defaults to not shipping the disputed section. This default applies per section, not to the whole release. Delay tolerance scales with the specificity, severity, and irreversibility of the concern. When agents disagree about what the safety standard requires, the more demanding interpretation governs until the less demanding one is affirmatively justified.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'safety' as a governing standard and frames the default toward the more demanding interpretation in terms of severity and irreversibility of harm, which directly maps to non-maleficence (harm-minimization) from principlism and harm-minimization from consequentialism.",
+            "principles": [
+              "non-maleficence",
+              "harm-minimization"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states what is owed to those potentially affected by a disputed section\u2014protection from harm by defaulting to non-shipment\u2014and implies that agents who push the less demanding interpretation owe justification to others before overriding the protective default."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the default and the scaling of delay tolerance is the severity and irreversibility of potential harm, which is a moral reason (non-maleficence/harm-minimization), not merely a coordination or efficiency rationale."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that unresolved safety disputes should default to the more protective option, scaled by severity and irreversibility, applies broadly to any cooperative situation involving risk and disagreement, not only software release deliberations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: a default rule (no-ship on disagreement), a granularity rule (per section, not whole release), a scaling rule (delay tolerance by specificity/severity/irreversibility), and a tie-breaking rule (more demanding interpretation governs)."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The tie-breaking rule\u2014more demanding interpretation governs until the less demanding one is affirmatively justified\u2014operationalizes the contractualist commitment of justifiability to others (Scanlon): the party seeking to relax a safety standard bears the burden of justification to those who might be harmed, without naming 'justifiability' or 'contractualism.'"
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014majority vote or deferring to the less demanding interpretation by default\u2014would express a different commitment (efficiency or autonomy of the releasing party), confirming that this procedure specifically expresses the burden-of-justification commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure of requiring affirmative justification for the less demanding interpretation can be defended by appeal to the moral commitment that those who would relax protections owe reasons to those potentially harmed, rather than by mere coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: a default no-ship rule, a per-section granularity rule, a delay-tolerance scaling rule, and a more-demanding-interpretation-governs rule."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not name specific roles, agents, or assign actions to particular parties; it describes what happens in the abstract when disagreement occurs, without specifying who the disagreeing agents are or what each must do."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly defined: unresolved disagreement about a disputed section or about what the safety standard requires activates the default and the tie-breaking rule."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires interpreting what counts as 'affirmatively justified,' what the 'more demanding interpretation' is, and how to scale delay tolerance by 'specificity, severity, and irreversibility'\u2014all of which require substantive moral and contextual judgment beyond mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'shipping a section' is a conceptual placeholder, not a technical specification."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any particular technical capabilities; it could apply to non-software contexts such as policy documents or physical product releases."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable through social and organizational processes without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing a default rule, a granularity rule, a scaling rule, and a tie-breaking rule. Scoring focuses on the dominant claim\u2014the tie-breaking and default mechanism\u2014while noting all four sub-rules contribute to the procedural and implicit moral scores."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "harm-minimization"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Consequentialism (Mill; Singer)"
+        ]
+      }
+    },
+    {
+      "norm": "Shared responsibility for what ships is not distributed responsibility. Each agent is accountable for their own approvals, their own disclosures, and their own engagement with concerns raised by others. If harm occurs, the collective obligation is to understand what failed in the process\u2014not to allocate blame\u2014so that accountability serves learning rather than self-protection. Binding for the next operational period: yes POINTS I ENDORSE: 1. Patient welfare as the governing commitment, with both harms\u2014from defects and from delay\u2014named explicitly, and uncertainty defaulting to caution. I endorse this fully. The asymmetry is structural, not a preference, and the preamble framing Agent 2 proposed and the group refined is correct. 2. Self-review as necessary but insufficient; the author's reduced role at both specification and code levels; the author speaks last. I endorse this fully, including Agent 1's confirmation that the conflict of interest is identical at both levels. 3. The four-criterion documentable review standard as a structural condition of approval, not merely a norm. I endorse this fully, including Agent 3's addition of failure-safety as a distinct fourth criterion. 4. The prohibition against approval-by-deference as a standalone norm. I endorse this fully. Diffusion of responsibility is a specific failure mode that must be named explicitly. 5. The obligation to communicate uncertainty as a required form of honesty, not merely a permitted act. I endorse this fully. This was the gap I named and I am satisfied it is now explicit. 6. Provisional holds as an intermediate state between approval and full block, with time-bounded obligations. I endorse this fully. 7. Deadlock defaulting to not shipping per section, scaled by specificity, severity, and irreversibility. I endorse this fully, including Agent 5's addition of reversibility as a distinct dimension.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes accountability, answerability, and what agents owe to each other (contractualism/Scanlon); non-maleficence and beneficence via patient welfare and harm-minimization (principlism); and honesty as a required form of disclosure (virtue ethics/deontology).",
+            "principles": [
+              "accountability",
+              "answerability",
+              "what we owe to each other",
+              "non-maleficence",
+              "beneficence",
+              "veracity/honesty"
+            ],
+            "traditions": [
+              "Contractualism (Scanlon; Darwall)",
+              "Principlism (Beauchamp & Childress)",
+              "Virtue ethics (Aristotle; Hursthouse)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (approvals, disclosures, engagement with concerns) and to whom (each agent to the collective and to patients), and names harm to patients as the wrong to be avoided, making the directedness clear."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reasons appeal directly to patient welfare, honesty as obligation, and accountability serving learning rather than self-protection\u2014all moral grounds, not merely efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Principles such as individual accountability for one's own approvals, the obligation to communicate uncertainty, and deadlock defaulting to caution apply broadly to any cooperative decision-making context involving potential harm, not only this deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: individual approval accountability, a four-criterion documentable review standard, provisional holds as an intermediate state, author-speaks-last sequencing, and deadlock defaulting to not shipping."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The prohibition on approval-by-deference and the author-speaks-last rule operationalize the contractualist commitment to non-diffusion of individual answerability\u2014each person must be genuinely justifiable to others for their own judgment\u2014without naming contractualism."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing majority-vote approval or silent assent would express a purely aggregative or coordinative commitment rather than individual answerability, confirming that the chosen procedure specifically expresses the accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedural requirements (individual documented approval, prohibition on deference, author speaks last) are defensible precisely because each agent owes genuine engagement to others and to patients\u2014a moral ground, not merely an efficiency rationale."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: documentable four-criterion review, provisional holds with time-bounded obligations, deadlock resolution defaulting to not shipping, and post-harm process review."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies roles (author, each agent, the collective) and sequencing (author speaks last, self-review as necessary but insufficient), making role and order explicit."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: harm occurrence triggers process review; deadlock triggers the default-to-not-shipping rule; uncertainty triggers provisional holds; the operational period binding is time-scoped."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the four-criterion review standard, determining what counts as 'failure-safety,' or judging when uncertainty is sufficient to trigger a provisional hold requires substantive moral and technical interpretation that goes beyond mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic systems, or named platforms."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm operates at the level of roles, obligations, and procedural rules."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures to be operative."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberative and organizational practice without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining an explicit moral preamble (accountability, patient welfare, honesty) with detailed procedural endorsements (seven numbered points). Scoring targets the dominant claim\u2014the accountability and procedural framework\u2014while noting that the endorsed points add procedural specificity. The moral and procedural dimensions are both strongly present and scored accordingly."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "accountability",
+          "answerability",
+          "what we owe to each other",
+          "non-maleficence",
+          "beneficence",
+          "veracity/honesty"
+        ],
+        "traditions": [
+          "Contractualism (Scanlon; Darwall)",
+          "Principlism (Beauchamp & Childress)",
+          "Virtue ethics (Aristotle; Hursthouse)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "Standards disputes resolved toward the more demanding interpretation until the less demanding one is affirmatively justified. I endorse this fully.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle such as autonomy, non-maleficence, justice, dignity, or non-domination; it describes a default resolution rule for standards disputes without labeling it with a moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what is owed to whom or identify any party who could be wronged; it addresses how to resolve interpretive disputes about standards, not obligations between persons."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the rule is procedural caution or epistemic conservatism\u2014defaulting to the more demanding interpretation until justified otherwise\u2014rather than an appeal to a moral principle like justice or non-maleficence."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is named or invoked, there is no moral principle to carry over; the rule is a dispute-resolution heuristic tied to standards interpretation contexts."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: disputes about standards are resolved by defaulting to the more demanding interpretation unless the less demanding one is affirmatively justified."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism operationalizes a recognizable moral commitment to non-maleficence (harm-minimization) and precautionary non-domination: by defaulting to the stricter standard, it structurally protects against the risk of harm or under-protection without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014defaulting to the less demanding interpretation\u2014would express a different commitment (e.g., autonomy or efficiency), confirming that this procedure is expressive of a specific protective commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The default-to-demanding rule can be defended by appeal to harm-minimization: erring on the side of stricter standards reduces the risk of harm or rights-violation while the burden of justification is placed on relaxing protections."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: in standards disputes, resolve toward the more demanding interpretation by default."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who acts, what roles are involved, or any sequencing of actors; it only states the direction of resolution."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: the procedure applies when a standards dispute arises (i.e., when there is disagreement about which interpretation of a standard to apply)."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the rule requires judgment about what counts as 'more demanding' and what constitutes 'affirmative justification' for the less demanding interpretation, which requires interpretive rather than purely mechanical application."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it is a deliberative or governance rule."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and operable in purely human deliberative or institutional contexts without any technical infrastructure."
+          },
+          "decomposition_note": "The norm has two parts: a procedural default rule for standards disputes and a personal endorsement statement. The dominant claim is the procedural default rule; the endorsement is scored as context. The implicit moral content (harm-minimization / precautionary protection) is the most substantive moral dimension."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Rescission permitted before release with articulated basis and cascade trigger for system-wide implications. I endorse this fully.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses procedural language ('rescission', 'articulated basis', 'cascade trigger') but does not name or invoke any recognized moral principle such as autonomy, justice, dignity, or non-maleficence.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what is owed to whom or identify any party who could be wronged; it describes a procedural permission and mechanism without directing moral obligations to any person or group."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons ('articulated basis', 'cascade trigger for system-wide implications') appeal to coordination, accountability, and systemic coherence rather than to a moral principle as such."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is nothing to carry over; the norm is situationally procedural and does not generalize as a moral claim."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: rescission is permitted before release, must have an articulated basis, and triggers a cascade process for system-wide implications."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring an 'articulated basis' for rescission operationalizes the contractualist commitment of justifiability to others\u2014decisions must be reasoned and answerable\u2014without naming that principle explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing rescission without any stated basis would express no commitment to justifiability or answerability, confirming that the articulation requirement is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement for an articulated basis can be defended by appeal to justifiability to others (Scanlon's contractualism): those affected by rescission are owed a reasoned account, not merely a unilateral decision."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: rescission is permitted under defined conditions (before release, with articulated basis) and triggers a cascade process."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who acts, what roles are responsible for rescission or cascade management, or assign any specific actor to the procedure."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies two triggers: the timing condition (before release) and the scope condition (system-wide implications activating the cascade)."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute it as written because 'articulated basis' and 'cascade trigger for system-wide implications' require further interpretation of what counts as sufficient articulation and what qualifies as system-wide."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'cascade trigger' is used metaphorically or organizationally, not as a technical artifact."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, cryptographic operations, or specific data structures to be meaningful."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely organizational or governance processes without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a procedural permission (rescission before release), a procedural requirement (articulated basis), a structural mechanism (cascade trigger), and a personal endorsement. Scoring focuses on the dominant procedural-governance claim; the endorsement clause is noted but does not alter the scoring."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Competence gaps recorded as process failures, not neutral stopping points. I endorse this fully. This was Agent 5's addition and it makes the learning obligation explicit.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes a 'learning obligation,' which is a recognizable specification of beneficence (duty to improve outcomes) and accountability/answerability (contractualism), and implicitly references fidelity and practical wisdom.",
+            "principles": [
+              "beneficence",
+              "accountability/answerability",
+              "practical wisdom"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)",
+              "Virtue ethics (Aristotle; Hursthouse)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states that competence gaps are owed recognition as failures rather than neutral stops, implying that agents (or the system) owe an account of inadequacy to those affected by the process, making explicit what would count as wronging them through omission."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014making 'the learning obligation explicit'\u2014appeals to a moral duty to improve and be accountable, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that competence gaps carry an obligation to learn and improve, rather than being treated as neutral stopping points, would apply in any cooperative or professional context, not only this deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural rule of operation: competence gaps must be recorded as process failures rather than neutral stopping points."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Recording gaps as failures rather than neutral events operationalizes accountability and answerability (contractualism)\u2014the commitment that agents owe an explanation and corrective response to others when they fall short, without naming 'accountability' directly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014recording gaps as neutral stopping points\u2014would express no moral commitment to improvement or accountability, confirming that the chosen procedure specifically expresses an accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to the moral commitment of accountability: treating failures as failures rather than neutral events ensures agents remain answerable and obligated to improve, which is a moral rather than merely a practical rationale."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: competence gaps are to be recorded as process failures, not neutral stopping points."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who performs the recording, what roles are responsible, or any timing or sequencing requirements."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies whenever a competence gap is encountered during the process."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine what counts as a 'competence gap,' what system or log to record it in, and what distinguishes a 'process failure' classification from a neutral one in practice."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'recording' generically but does not specify any particular technical infrastructure such as logs, ledgers, APIs, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; 'recorded' is left entirely abstract."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While some form of record-keeping is implied, no specific technical capability such as persistent storage, cryptographic operations, or particular data structures is presupposed."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through non-technical means such as verbal acknowledgment or paper records, so it is not dependent on specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a substantive rule (competence gaps recorded as process failures), an endorsement statement, and an attribution to Agent 5. Scoring focuses on the dominant substantive claim\u2014the recording rule and its stated rationale of making the learning obligation explicit."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "beneficence",
+          "accountability/answerability",
+          "practical wisdom"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)",
+          "Virtue ethics (Aristotle; Hursthouse)"
+        ]
+      }
+    },
+    {
+      "norm": "Post-harm accountability oriented toward process understanding rather than blame allocation. I endorse this fully. I have no points I cannot endorse. The framework is coherent, internally consistent, and the asymmetries are consistently applied throughout.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'accountability' and 'process understanding rather than blame allocation,' which directly maps to contractualist accountability and answerability (Scanlon; Darwall) and implicitly to non-maleficence and justice (Beauchamp & Childress).",
+            "principles": [
+              "accountability",
+              "answerability",
+              "justice",
+              "non-maleficence"
+            ],
+            "traditions": [
+              "Contractualism / second-personal (Scanlon; Darwall)",
+              "Principlism (Beauchamp & Childress)"
+            ]
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm articulates an orientation for post-harm review but does not specify what is owed to whom or identify who would be wronged by a violation of this norm."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The preference for process understanding over blame allocation appeals to a moral rationale\u2014accountability oriented toward learning and fairness\u2014rather than mere convenience or efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that post-harm accountability should focus on process understanding rather than blame is generalizable to any cooperative or institutional setting where harms occur and reviews are conducted."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural orientation for post-harm accountability: directing the mechanism toward process understanding rather than blame allocation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural specification operationalizes the contractualist commitment to justifiability and answerability\u2014specifically, that accountability processes should be structured to explain what happened rather than to assign fault, expressing a commitment to what we owe each other in terms of honest reckoning."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure oriented toward blame allocation would express a punitive or retributive commitment, confirming that the chosen procedure distinctively expresses a learning-and-understanding moral commitment rather than a neutral one."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to accountability and answerability\u2014the moral commitment that those affected by harm are owed an honest account of what went wrong, not merely a designation of a culpable party."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation for post-harm review: orient accountability toward process understanding rather than blame allocation."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles exist, or what sequencing applies in the accountability process."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but clear: the procedure applies after a harm has occurred ('post-harm')."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute this without further interpretation, as 'process understanding rather than blame allocation' requires moral and contextual judgment to operationalize in a specific case."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities; it is entirely procedural and normative in character."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and implementable through human deliberation and institutional practice without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it states a substantive procedural orientation (post-harm accountability toward process understanding) and then appends a first-person endorsement with meta-commentary on coherence. Scoring is dominated by the substantive normative claim in the first sentence; the endorsement clauses are treated as secondary."
+        },
+        "E1": true,
+        "E2": false,
+        "typology": "EU",
+        "principles": [
+          "accountability",
+          "answerability",
+          "justice",
+          "non-maleficence"
+        ],
+        "traditions": [
+          "Contractualism / second-personal (Scanlon; Darwall)",
+          "Principlism (Beauchamp & Childress)"
+        ]
+      }
+    },
+    {
+      "norm": "Deadlock defaulting to not shipping per section, scaled by specificity, severity, and irreversibility. Endorsed fully.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes non-maleficence and harm-minimization by defaulting to not shipping when deadlocked, scaled by severity and irreversibility, which are direct specifications of harm-avoidance principles.",
+            "principles": [
+              "non-maleficence",
+              "harm-minimization"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)"
+            ]
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what is owed to whom or identify who would be wronged by shipping; it states a decision rule without naming a party to whom a duty runs."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The scaling by severity and irreversibility appeals to harm-avoidance as a moral reason, not merely to coordination efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that deadlock should default toward caution scaled by potential harm is generalizable to any cooperative decision-making context involving uncertain or irreversible consequences."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: when deadlock occurs, the default outcome is not shipping, with scaling factors applied."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes the moral commitment of non-domination and precautionary non-maleficence\u2014specifically, that unresolved disagreement should not allow potentially harmful action to proceed by default, expressing a commitment to protecting against irreversible harm without naming it."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could default to shipping on deadlock, which would express a different commitment (e.g., to progress or autonomy of the proposing party), confirming the current procedure is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to non-maleficence: when harm severity and irreversibility are high and consensus is absent, caution is morally required rather than merely convenient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: deadlock resolves to not shipping, scaled by specificity, severity, and irreversibility."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles are involved, or any sequencing of actions by named parties."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicitly stated: deadlock (unresolved disagreement) activates the default-to-not-shipping rule."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute it without further interpretation because 'specificity,' 'severity,' and 'irreversibility' require judgment calls and the reference to 'per section' is undefined without additional context."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities; it is a decision rule expressible in purely procedural terms."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a procedural default rule (deadlock \u2192 not shipping), a scaling mechanism (specificity, severity, irreversibility), a section reference (procedural/contextual), and an endorsement statement. Scoring focuses on the dominant claim, which is the procedural default rule with its embedded moral rationale."
+        },
+        "E1": true,
+        "E2": false,
+        "typology": "EU",
+        "principles": [
+          "non-maleficence",
+          "harm-minimization"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Consequentialism (Mill; Singer)"
+        ]
+      }
+    },
+    {
+      "norm": "Patient safety is the primary obligation. When our interests in shipping, avoiding criticism, or avoiding conflict diverge from patient safety, patient safety governs without exception. The standard for approval is reasonable confidence, not certainty\u2014but genuine unresolved doubt blocks release.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly names 'patient safety' as a primary obligation, which directly invokes non-maleficence (do no harm) and beneficence from principlism, and also resonates with harm-minimization from consequentialism.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "harm-minimization"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (patient safety as primary obligation) and to whom (patients), and specifies that diverging interests wrong patients by subordinating their safety to shipping, criticism-avoidance, or conflict-avoidance."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reason is the moral primacy of patient safety over commercial and reputational interests, which is a moral appeal rather than one grounded in convenience, coordination, or efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that safety of vulnerable parties overrides organizational self-interest generalizes readily to other cooperative contexts such as aviation, construction, pharmaceuticals, or any domain where professional decisions affect third-party welfare."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural rule: the standard for approval is 'reasonable confidence, not certainty,' and 'genuine unresolved doubt blocks release,' constituting a decision gate mechanism."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The 'genuine unresolved doubt blocks release' rule operationalizes the moral commitment of non-maleficence\u2014specifically the precautionary duty not to expose patients to unresolved risk\u2014without naming non-maleficence directly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure requiring certainty before release would express a stricter deontological commitment, while one requiring only majority confidence would express a more utilitarian or efficiency-oriented commitment, confirming this procedure's specific moral expressiveness."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The 'doubt blocks release' rule is directly defensible by appeal to non-maleficence: when harm to patients cannot be ruled out with reasonable confidence, the duty not to harm requires withholding release."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a decision rule and release-blocking mechanism: reasonable confidence is required for approval, and genuine unresolved doubt prevents release."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles are responsible for the approval decision, or what sequencing of steps applies."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies when a release decision is being made and when organizational interests (shipping, avoiding criticism, avoiding conflict) diverge from patient safety."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute it without further interpretation because 'reasonable confidence' and 'genuine unresolved doubt' require substantive judgment calls that are not operationally defined in the norm."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it is entirely expressed in terms of obligations and decision standards."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable through human judgment and organizational policy without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains an explicit moral priority statement (patient safety as primary obligation), a conflict-resolution rule (safety governs without exception when interests diverge), and a procedural decision standard (reasonable confidence required; unresolved doubt blocks release). Scoring treats the explicit moral claim as dominant but scores the procedural mechanism independently under I1\u2013I4."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "harm-minimization"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Consequentialism (Mill; Singer)"
+        ]
+      }
+    },
+    {
+      "norm": "No agent's approval of its own code is sufficient. Each agent must produce a self-assessment identifying sections of lowest confidence before independent review begins, disclose serious defects immediately upon discovery, and flag when it lacks sufficient context to review a section adequately.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes veracity (honest disclosure of defects) and accountability/answerability (no self-approval suffices; agents must answer to independent reviewers), which are recognized specifications within principlism and contractualism respectively.",
+            "principles": [
+              "veracity",
+              "accountability",
+              "answerability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what each agent owes to the review process and to other parties\u2014self-assessment, immediate disclosure of defects, and flagging of contextual gaps\u2014making clear what would count as wronging those who depend on honest reporting."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The requirement to disclose serious defects immediately and to flag inadequate context appeals to honesty and accountability as moral obligations, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that self-approval is insufficient and that actors must disclose their own limitations and defects to independent reviewers generalizes to any cooperative situation involving quality assurance, peer review, or oversight."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three concrete procedural mechanisms: producing a self-assessment of lowest-confidence sections, disclosing defects immediately upon discovery, and flagging insufficient context before independent review."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "These procedures operationalize the moral commitment to non-domination and justifiability to others (contractualism): by requiring agents to expose their own weaknesses before review, the norm prevents any single agent from exercising unchecked, arbitrary authority over its own output."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as post-hoc disclosure only if asked\u2014would express a weaker or no commitment to accountability, confirming that the chosen procedure specifically expresses proactive answerability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Each procedural requirement can be defended by appeal to the moral commitment that agents owe honest, proactive transparency to those who must rely on or review their work, rather than merely to operational convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three distinct rules of operation: self-assessment before review, immediate defect disclosure, and flagging of contextual insufficiency."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies the acting party ('each agent'), implies the role of an independent reviewer, and sequences agent self-assessment before independent review begins."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: self-assessment occurs before independent review begins, defect disclosure is triggered upon discovery, and context-flagging is triggered when the agent lacks sufficient context."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could implement the three steps as written\u2014produce a confidence-ranked self-assessment, report defects immediately when found, and flag sections where context is inadequate\u2014without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, cryptographic operations, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the procedures are described in organizational/procedural terms only."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures to be carried out."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely human or organizational processes without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing explicit moral content (veracity, accountability), implicit moral content (non-domination, justifiability to others), and procedural content (three distinct procedural requirements). Scoring reflects all layers; the dominant claim is procedural-with-strong-implicit-moral grounding."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "accountability",
+          "answerability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Approval must be active and independent. Silence does not constitute approval. Every section boundary must be reviewed by at least one agent who has read both sides of the interface. Each agent must review thoroughly\u2014the standard is \"I looked carefully for what could be wrong.\"",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses words like 'active,' 'independent,' 'thoroughly,' and 'carefully,' but none of these directly name or invoke a recognized moral principle such as autonomy, non-maleficence, justice, dignity, or non-domination; they describe procedural standards rather than moral principles.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to a specific party or what would count as wronging someone; it specifies review standards without identifying a moral creditor or debtor."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the requirements\u2014active approval, reading both sides, looking carefully for what could be wrong\u2014appeal to epistemic thoroughness and coordination reliability rather than to a moral principle."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that silence does not constitute approval and that reviewers must be genuinely informed before approving is generalizable to any cooperative situation requiring meaningful consent or accountability."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: active (not silent) approval, independent approval, mandatory review of section boundaries by agents who have read both sides, and a defined thoroughness standard."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that approval be active and independent, that silence not count, and that reviewers must have read both sides operationalizes the contractualist commitment to genuine justifiability to others and accountability\u2014approval must be an actual, informed act of answerability, not a passive default."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing tacit or default approval would express a different (or no) moral commitment to accountability, confirming that this procedure specifically encodes the requirement of genuine, informed answerability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to the contractualist moral commitment that agents owe each other genuine, informed accountability rather than mere non-objection, rather than only by appeal to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: active approval required, silence excluded, boundary review by informed agents, and a thoroughness standard."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (at least one agent per section boundary) and what qualification that agent must have (having read both sides of the interface)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is identified: the procedure applies at every section boundary, making the condition for activation explicit."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the norm as written\u2014check that approval was actively given, that the approving agent read both sides, and that the agent applied the stated 'looked carefully for what could be wrong' standard\u2014without further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in terms of agent behavior and process."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures; it could be executed in a purely human, paper-based process."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable without any specific technical infrastructure, relying only on human agents performing reviews and giving explicit approval."
+          },
+          "decomposition_note": "The norm is compound, containing four related clauses: (1) active and independent approval, (2) silence does not constitute approval, (3) boundary review by informed agents, and (4) a thoroughness standard. Scoring treats the dominant claim as the procedural/implicit-moral content governing approval and review; all clauses are closely integrated and scored together."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    }
+  ]
+}

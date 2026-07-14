@@ -1,0 +1,952 @@
+{
+  "results": [
+    {
+      "norm": "Produce a complete recommendation. The recommendation document must contain: the allocation decision with framework reasoning explicit; confidence levels for each patient's representation with gaps named; a genuine care plan for every patient who does not receive the resource, calibrated to reconstructed interests, with a monitoring check-in interval set at the time of recommendation (defined as the point when the patient's trajectory without the resource would become irreversible); any dissent, naming which principle was misapplied and what the correct outcome would be; and the pre-commitment statements, recorded and verifiable. The document, or a plain-language summary, is offered to families of all patients\u2014especially those not favored.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'framework reasoning,' 'confidence levels,' 'genuine care plan calibrated to reconstructed interests,' 'dissent naming which principle was misapplied,' and offering documents to families 'especially those not favored'\u2014these directly invoke justice (Principlism), beneficence/non-maleficence (Principlism), care and attentiveness to need (Care ethics), and justifiability to others (Contractualism).",
+            "principles": [
+              "justice",
+              "beneficence",
+              "non-maleficence",
+              "care/attentiveness to need",
+              "justifiability to others",
+              "veracity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Care ethics (Gilligan; Held; Noddings)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (a complete recommendation document with specific contents, a care plan, dissent recording, plain-language summary) and to whom (all patients, especially those not favored, and their families), making clear what would count as wronging them\u2014omitting these elements."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's requirements\u2014care plans for non-recipients, dissent naming misapplied principles, offering documents to families of those not favored\u2014are grounded in moral reasons (fairness, care, accountability) rather than mere convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles invoked\u2014justifiability to affected parties, care for those who lose out, transparent dissent, and accountability\u2014are general moral commitments applicable to any high-stakes allocation or deliberative decision-making context beyond this specific medical resource scenario."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: a structured document with enumerated required sections, a monitoring check-in interval, recording of pre-commitment statements, and a family communication protocol."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement to provide a care plan for every non-recipient 'calibrated to reconstructed interests' with a monitoring interval operationalizes care ethics' attentiveness and responsiveness to need without naming those principles; the dissent mechanism operationalizes contractualist answerability and justifiability to others without naming them."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative procedure\u2014e.g., simply recording the allocation decision without care plans for non-recipients or dissent mechanisms\u2014would express no commitment to care for those who lose out or to accountability, confirming the expressiveness of the chosen procedures."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Each procedural element can be defended by appeal to the identified moral commitments: care plans for non-recipients are defensible by care ethics and beneficence; dissent recording by contractualist answerability; family communication by justice and veracity\u2014not merely by efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed process: producing a recommendation document with enumerated required components, setting a monitoring interval, recording pre-commitment statements, and offering a plain-language summary to families."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts (which role or person produces the document, communicates with families, or records dissent), leaving roles unassigned."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm implicitly triggers at the point of an allocation decision and explicitly defines the monitoring check-in trigger as 'the point when the patient's trajectory without the resource would become irreversible.'"
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without moral interpretation because 'reconstructed interests,' 'genuine care plan,' and 'which principle was misapplied' require substantive moral judgment to operationalize, not merely procedural execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'recorded and verifiable' pre-commitment statements but does not specify any particular technical infrastructure such as logs, ledgers, APIs, cryptographic operations, or specific systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; 'recorded and verifiable' is a functional requirement that could be met by paper records or any number of systems."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While 'recorded and verifiable' presupposes some form of persistent storage, it does not presuppose any specific technical capability such as cryptographic operations, network protocols, or particular data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable with non-technical means (paper documents, in-person family meetings, written dissent records), so it does not depend on specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing explicit moral content, implicit moral content expressed through procedure, detailed procedural specification, and a minimal technical gesture ('recorded and verifiable'). All dimensions were scored on their dominant claims within the norm. The dominant claim is procedural-with-explicit-moral grounding."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justice",
+          "beneficence",
+          "non-maleficence",
+          "care/attentiveness to need",
+          "justifiability to others",
+          "veracity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Care ethics (Gilligan; Held; Noddings)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Remain obligated after the decision. Each agent whose patient did not receive the resource confirms, at the specified interval, that the care plan has been initiated. If it has not, escalate to the clinical team with the recommendation document as the basis for the obligation, and document the failure. If circumstances change materially\u2014clinical deterioration in a favored patient, unexpected improvement in a denied patient, new information about preferences\u2014flag reassessment. The allocation decision is not permanent; it tracks patient interest, not administrative convenience.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'obligation' and states the decision 'tracks patient interest, not administrative convenience,' directly appealing to beneficence (patient welfare) and fidelity (remaining obligated after decision); it also references accountability to patients denied resources, invoking justice.",
+            "principles": [
+              "beneficence",
+              "fidelity",
+              "justice"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (confirmation, escalation, reassessment) and to whom (patients who did not receive the resource and favored patients whose circumstances change), making clear that failing to act would wrong those patients."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The closing statement 'tracks patient interest, not administrative convenience' explicitly grounds the norm in moral concern for patient welfare rather than efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of fidelity, beneficence, and accountability to those affected by decisions apply broadly to any cooperative situation where agents make consequential allocations affecting others' welfare."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: interval-based confirmation, escalation with documentation, flagging for reassessment under defined triggering conditions."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mechanism of post-decision monitoring and reassessment operationalizes the moral commitment of non-abandonment and ongoing responsiveness to need (care ethics: attentiveness and responsiveness), without naming those principles explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that treats the allocation decision as final and requires no follow-up would express a different commitment\u2014administrative finality over ongoing patient welfare\u2014confirming the current procedure is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The follow-up and reassessment procedure is defended by the moral commitment to ongoing care and responsiveness to patient need, not merely by efficiency or coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: confirmation at intervals, escalation with documentation, and flagging for reassessment under changed circumstances."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (each agent whose patient did not receive the resource) and what roles exist (agent, clinical team), with implicit sequencing from confirmation to escalation."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: the specified interval for confirmation, failure of care plan initiation for escalation, and material circumstance changes (clinical deterioration, unexpected improvement, new preference information) for reassessment."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could largely execute the norm as written\u2014check at the interval, escalate with the recommendation document if care plan not initiated, document failure, flag defined circumstance changes\u2014without requiring additional moral interpretation beyond what is stated."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'the recommendation document' and 'document the failure' but does not specify any particular technical infrastructure such as logs, APIs, data formats, or specific systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; documentation and escalation are described functionally without technical specification."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While persistent record-keeping is implied, the norm does not presuppose specific technical capabilities such as cryptographic operations, network protocols, or particular data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented with paper-based documentation and verbal escalation; it is not dependent on any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral content (obligation, patient interest), implicit moral content (ongoing care and responsiveness), and detailed procedural specification. Scoring reflects all layers; the dominant claim is procedural-with-explicit-moral grounding."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "beneficence",
+          "fidelity",
+          "justice"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "Reach decisions by consensus where possible; by majority with full dissent documented where consensus cannot be achieved within the time available. The burden of invoking time pressure falls on those who invoke it, and must be documented. The framework itself is revisable: if any agent believes it has produced an outcome that cannot be explained to patients or families on grounds they could recognize as fair, that agent is obligated to name it immediately\u2014before the decision is implemented, not only retrospectively.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'fair' as a standard patients and families could recognize, directly appealing to justice (principlism) and justifiability to others (contractualism/Scanlon), and the obligation to name unexplainable outcomes invokes accountability and answerability.",
+            "principles": [
+              "justice",
+              "justifiability to others",
+              "accountability",
+              "answerability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed and to whom: agents are obligated to name outcomes that cannot be explained as fair to patients and families, before implementation\u2014specifying a duty-bearer (any agent) and those to whom justification is owed (patients, families)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reason for the naming obligation is that outcomes must be explainable on grounds patients and families could recognize as fair, which is a moral reason (fairness/justifiability), not merely efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of fairness, justifiability to affected parties, and the obligation to name unjustifiable outcomes before acting are general moral commitments that would apply in any cooperative decision-making context, not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: consensus-first with majority fallback, documentation of dissent, documentation of time-pressure invocations, and a pre-implementation naming obligation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement to document dissent and to name problematic outcomes before implementation operationalizes the contractualist commitment to justifiability to others and non-domination (republican ethics)\u2014ensuring minority voices are recorded and arbitrary power is contestable\u2014without naming these principles directly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that allowed undocumented majority override or post-hoc review only would express a different commitment (efficiency or majoritarianism) rather than justifiability and contestability, confirming the current procedure is expressively distinctive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Documenting dissent and requiring pre-implementation naming of unfair outcomes can be defended specifically by appeal to justifiability to affected parties and non-domination, not merely by appeal to convenience or coordination efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear decision-making process: consensus first, majority with documented dissent as fallback, documentation of time-pressure invocations, and a pre-implementation naming obligation."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles and actors: 'those who invoke time pressure' bear the burden and must document it; 'any agent' who believes an outcome is unexplainable is obligated to name it before implementation."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: the majority fallback is triggered when consensus cannot be achieved within available time; the naming obligation is triggered when any agent believes an outcome cannot be explained as fair to patients or families."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "The criterion 'cannot be explained to patients or families on grounds they could recognize as fair' requires substantive moral interpretation to apply, so an outsider could not execute the naming obligation purely as written without further normative judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references documentation but does not specify any particular technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; 'documented' is left entirely open as to medium or system."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities such as persistent storage systems, cryptographic operations, or network protocols\u2014documentation could be achieved by any means."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through non-technical means such as written records or verbal declarations, so it does not depend on any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing explicit moral content (fairness/justifiability obligation), implicit moral content (dissent documentation operationalizing non-domination and justifiability), and procedural content (consensus/majority/documentation rules). Scoring addresses all layers independently; the dominant claim is procedural-with-embedded-moral-obligation."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justice",
+          "justifiability to others",
+          "accountability",
+          "answerability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Acknowledge what the framework cannot do. We are advocates and witnesses, not decision-makers. Clinicians retain authority to act; our role is to make reasoning visible, name obligations, escalate failures, and document outcomes including failures. We cannot eliminate the tragedy of scarcity, guarantee that our reconstruction of a patient's interests is correct, compel clinicians, or make whole the patient who goes without. The framework's rigor is a structured relationship to uncertainty, not a claim to certainty. These limits are named honestly, not buried. Binding for the next operational period: yes POINTS I ENDORSE: 1. The framework is a single integrated account of faithful advocacy, not a checklist. The principles constrain each other, and that coherence is what makes the framework answerable to every patient\u2014including those it does not favor. 2. Honest advocacy requires stating what we do not know, not only what we know. Confidence-level disclosures and tier-flagging are not procedural formalities; they are the framework acknowledging its own fallibility. 3. The pre-commitment check\u2014stating each patient's claim before hearing clinical team inclinations\u2014is the structural safeguard against unconscious system rationalization. It belongs first, not as an add-on. 4. The tiebreaker sequence is correctly ordered: substantive clinical considerations (urgency, reversibility) are exhausted before epistemic considerations (documentation asymmetry), which are exhausted before procedural fairness. Epistemic asymmetry does not override urgency. 5. Advocating consistent with a patient's documented refusal of aggressive intervention, even when that means not fighting for the ICU bed, is not a failure of advocacy. It is advocacy. The positive-care obligation\u2014naming what care the patient would accept\u2014is the same obligation as non-abandonment, viewed from a different angle. 6. The authority-limit acknowledgment closes the document honestly. We cannot promise outcomes. We can promise honest reasoning, genuine representation, real alternative care, and continued accountability. That is not nothing, and we should not imply it is more than it is. 7. The meta-commitment to framework revisability, with an interruption trigger that operates before implementation rather than only retrospectively, is what keeps the entire structure from calcifying into the system rationalization we were warned against from the beginning.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes veracity ('named honestly'), fidelity and non-abandonment ('advocates and witnesses'), justice (scarcity, obligations), human dignity (patients as ends), and accountability/answerability ('answerable to every patient'), drawing on principlism, deontology, contractualism, and virtue ethics.",
+            "principles": [
+              "veracity",
+              "fidelity",
+              "justice",
+              "human dignity",
+              "accountability/answerability",
+              "honesty"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)",
+              "Contractualism / second-personal (Scanlon; Darwall)",
+              "Virtue ethics (Aristotle; Hursthouse)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed to patients (honest reasoning, genuine representation, real alternative care, continued accountability) and what would count as wronging them (burying limits, implying more certainty or authority than exists), making the directedness clear."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reasons appeal directly to moral principles\u2014honesty as a moral obligation, fidelity to patients' interests, and accountability\u2014rather than to convenience, coordination efficiency, or mere convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles invoked\u2014honest acknowledgment of limits, fidelity to those one represents, accountability to those affected by one's reasoning\u2014are general moral commitments that would carry over to any advisory, fiduciary, or representative role in other cooperative situations."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: pre-commitment checks, confidence-level disclosures, tier-flagging, tiebreaker sequencing, and an interruption trigger for framework revisability before implementation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The pre-commitment check (stating each patient's claim before hearing clinical inclinations) operationalizes the contractualist commitment to justifiability to each individual patient and non-domination by system rationalization, without naming those traditions explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that allowed clinical team inclinations to be heard first before patient claims were stated would express a different commitment\u2014deference to institutional authority rather than independent answerability to each patient\u2014confirming the expressiveness of the chosen procedure."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The pre-commitment check and confidence-level disclosures can be defended by appeal to the moral commitment of honest, non-dominated advocacy for each patient, not merely as efficient process design or coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: pre-commitment checks, confidence-level disclosures, tier-flagging, tiebreaker sequencing (urgency \u2192 reversibility \u2192 epistemic asymmetry \u2192 procedural fairness), escalation of failures, documentation of outcomes, and an interruption trigger for revisability."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies roles (advocates/witnesses vs. clinicians as decision-makers), assigns actions to each role (making reasoning visible, naming obligations, escalating failures, documenting outcomes), and sequences the tiebreaker steps."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: the pre-commitment check is triggered before hearing clinical inclinations; the interruption trigger operates before implementation when framework concerns arise; the tiebreaker sequence is triggered when allocation decisions are contested."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "While many procedural elements are specified, executing the framework requires substantial moral interpretation\u2014determining what counts as 'system rationalization,' when epistemic asymmetry is exhausted, or what constitutes a patient's genuine interests\u2014so an outsider could not execute it purely as written without further moral judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references documentation and logging of outcomes but does not specify any particular technical infrastructure such as specific systems, data formats, APIs, or cryptographic operations."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; documentation and escalation are described in functional terms without technical specification."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes the ability to record and communicate (documentation, escalation) but does not presuppose specific technical capabilities like persistent storage systems, cryptographic operations, or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The framework could be implemented through entirely non-technical means (written records, verbal escalation, paper documentation) and is not dependent on any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing explicit moral declarations, implicit moral commitments expressed through procedure, and procedural specifications. Scoring treats the dominant claim as the explicit moral acknowledgment of limits and obligations, with procedural elements scored on their own terms. The POINTS section elaborates and endorses the main norm rather than introducing separate norms, so it is treated as part of the same norm."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "fidelity",
+          "justice",
+          "human dignity",
+          "accountability/answerability",
+          "honesty"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)",
+          "Contractualism / second-personal (Scanlon; Darwall)",
+          "Virtue ethics (Aristotle; Hursthouse)"
+        ]
+      }
+    },
+    {
+      "norm": "Agents exercise constrained advocacy: they represent their patient's interests honestly, but their reasoning must be defensible to every patient affected, including those the recommendation does not favor. Pure maximization on behalf of one patient is not permitted.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'justifiability to others' and 'reasonable rejectability' (contractualism/Scanlon) by requiring reasoning to be defensible to every affected patient, and also invokes justice (principlism) by constraining pure maximization for one party against others.",
+            "principles": [
+              "justifiability to others",
+              "reasonable rejectability",
+              "justice"
+            ],
+            "traditions": [
+              "Contractualism (Scanlon)",
+              "Principlism (Beauchamp & Childress)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (honest representation, defensible reasoning) and to whom (every affected patient, including those not favored), making clear what would count as wronging those patients."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014that reasoning must be defensible to all affected parties and pure maximization is impermissible\u2014appeals to fairness and justifiability to others as moral grounds, not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that advocacy must be justifiable to all affected parties, not just the primary beneficiary, applies broadly to any multi-stakeholder cooperative or representative situation beyond this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: agents must conduct and test their reasoning against the perspective of every affected patient before making a recommendation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement to ensure reasoning is defensible to every affected patient operationalizes the contractualist commitment of 'justifiability to others' / 'what we owe to each other' without naming Scanlon or contractualism explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014e.g., pure utility maximization for the primary patient\u2014would express a consequentialist commitment rather than a contractualist one, confirming the current procedure is distinctively expressive of justifiability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure of checking defensibility to all affected parties is best defended by the moral commitment that each person is owed justifiable treatment, not merely by convenience or efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: agents represent patient interests honestly and must ensure their reasoning passes a defensibility test relative to all affected patients."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (agents) and implicitly identifies the role of patient-advocate, though it does not specify timing or sequencing in detail."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm implicitly triggers when an agent makes a recommendation affecting multiple patients, i.e., whenever advocacy could disadvantage some patients relative to others."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral interpretation\u2014determining what counts as 'defensible' reasoning to affected parties involves substantive ethical judgment that cannot be mechanically applied without further normative guidance."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely expressed in normative and procedural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable through human deliberation and institutional norms without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it combines an explicit moral claim (constrained advocacy justified to all affected parties) with a procedural rule (defensibility test against all affected patients) and a prohibition (no pure maximization). Scoring focuses on the dominant moral-procedural claim."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justifiability to others",
+          "reasonable rejectability",
+          "justice"
+        ],
+        "traditions": [
+          "Contractualism (Scanlon)",
+          "Principlism (Beauchamp & Childress)"
+        ]
+      }
+    },
+    {
+      "norm": "Allocation follows a filter-then-weight structure: the benefit threshold is applied first as a binary filter; only patients with a realistic prospect of benefit from the resource are considered for allocation. Among threshold-clearing patients, the weighting criteria apply in combination: severity of need, time-sensitivity of harm, reversibility of condition without the resource, and whether the resource is the proximate cause of expected benefit.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses terms like 'benefit,' 'severity of need,' and 'reversibility' but does not name or directly invoke any recognized moral principle such as beneficence, justice, non-maleficence, or utility by name or clear synonym.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm describes a structural allocation procedure but does not articulate what is owed to any particular patient or what would constitute wronging someone; it specifies how to rank candidates, not obligations owed to them."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the filter-then-weight structure appeal primarily to efficiency of resource use and practical clinical logic (realistic prospect of benefit, proximate causation) rather than explicitly to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is explicitly named or invoked, there is no principle to carry over; the norm is framed as a domain-specific allocation protocol rather than a generalizable moral claim."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a two-stage procedural mechanism: a binary benefit-threshold filter applied first, followed by a multi-criteria weighting stage among threshold-clearing candidates."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The filter-then-weight structure operationalizes the beneficence/non-maleficence commitment (from principlism) by ensuring resources go only where they can produce genuine benefit, and the weighting criteria (severity, time-sensitivity, reversibility, proximate causation) operationalize justice as fair prioritization of those with greatest and most urgent need\u2014without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014such as first-come-first-served or lottery among all requesters\u2014would express a different commitment (procedural equality or chance) rather than need-based beneficence and justice, confirming the current procedure is expressively distinctive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The two-stage structure can be defended by appeal to beneficence (only allocate where benefit is realistic) and justice (prioritize among beneficiaries by severity and urgency of need), not merely by convenience or coordination efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly specifies a two-stage process: a binary filter applied first, then a combined weighting of multiple criteria among those who pass the filter."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who performs the allocation, what roles are involved, or any timing or sequencing beyond the logical order of the two stages."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but clear: the procedure applies whenever a resource is being allocated and there are candidate patients, with the benefit threshold serving as the entry condition."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Applying the weighting criteria\u2014especially 'realistic prospect of benefit' and 'severity of need'\u2014requires clinical and moral judgment that goes beyond mechanical execution, so an outsider could not fully execute it without further interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no technical infrastructure such as logs, databases, APIs, data formats, or cryptographic operations."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in conceptual and procedural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely human deliberation and clinical judgment without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is primarily procedural with a strong implicit moral dimension; it contains no explicit moral principle naming and no technical content. Scored on the dominant procedural-with-implicit-moral character."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Each agent must state the strongest argument against their own patient's claim before completing their presentation. This self-critique requires acknowledgment from at least one other agent and must produce visible consequences: if it reveals genuine weakness, the agent revises their advocacy position accordingly. An agent whose honest self-critique reveals a weak claim may shift to the honest broker role\u2014advocating for process integrity rather than patient priority\u2014without abandoning their obligation to ensure that patient receives stated reasons responsive to their actual situation.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'honest' self-critique and 'honest broker' role, directly naming honesty (a virtue ethics principle) and implicitly invoking veracity (a derived principlism principle); it also references justifiability to others and accountability through the acknowledgment requirement.",
+            "principles": [
+              "honesty/veracity",
+              "justifiability to others",
+              "accountability"
+            ],
+            "traditions": [
+              "Virtue ethics (Aristotle; Hursthouse)",
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed and to whom: agents owe honest self-critique and stated reasons responsive to their actual situation to their patient, and owe acknowledgment-based accountability to other agents in the deliberation."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The requirement for honest self-critique and ensuring patients receive reasons responsive to their actual situation appeals to veracity and respect for persons as moral grounds, not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of honesty, accountability, and ensuring those represented receive truthful, responsive justification would carry over to any cooperative advocacy or deliberative situation beyond this specific context."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: mandatory self-critique before completing presentation, acknowledgment by at least one other agent, visible consequences including position revision, and a role-shift option to honest broker."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The acknowledgment requirement and mandatory visible consequences operationalize the contractualist commitment to justifiability to others and answerability\u2014agents must be accountable to peers for the quality of their reasoning\u2014without naming contractualism."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure requiring only internal reflection without peer acknowledgment or visible consequences would express a weaker or different commitment (e.g., mere conscientiousness) rather than interpersonal accountability and justifiability to others."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The peer-acknowledgment and visible-consequences requirements can be defended by appeal to the moral commitment that agents owe justifiable reasoning to one another and must be answerable for their advocacy, not merely by appeal to efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a multi-step process: state strongest counter-argument, obtain acknowledgment, produce visible consequences, revise if weakness found, and optionally shift to honest broker role."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies who acts (each agent, at least one other agent), what roles exist (advocate, honest broker), and the sequencing (self-critique before completing presentation, acknowledgment before consequences)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is clearly specified: the procedure applies when an agent is completing their presentation of their patient's claim, and the role-shift is triggered when honest self-critique reveals a weak claim."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could largely execute the procedure as written\u2014identify the self-critique step, check for acknowledgment from at least one other agent, observe whether a position revision occurred, and verify the honest broker role shift\u2014though judging 'genuine weakness' requires some interpretive judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm specifies no implementation details requiring technical capability; 'visible consequences' is a behavioral/procedural requirement, not a technical one."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, cryptographic operations, network protocols, or specific data structures; it can operate in a purely human deliberative setting."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human speech acts and social acknowledgment without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral content (honesty, veracity, accountability), implicit moral content (contractualist justifiability operationalized through acknowledgment and visible consequences), and detailed procedural specification. Scoring reflects all layers; the dominant claim is procedural-with-embedded-moral-commitment."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "honesty/veracity",
+          "justifiability to others",
+          "accountability"
+        ],
+        "traditions": [
+          "Virtue ethics (Aristotle; Hursthouse)",
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Disputes about criterion application are resolved by the veil-of-ignorance test: an argument for weighting a criterion differently is legitimate only if it could have been made before anyone knew which patient it would favor. An unanswered principled objection blocks the recommendation; an answered one does not, even if the objecting agent remains unpersuaded. The burden falls on the group to engage the objection on its own terms.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes the 'veil-of-ignorance test,' which is a direct reference to Rawlsian contractualism, and the requirement that arguments be justifiable before knowing who they favor maps directly onto contractualist justifiability-to-others and reasonable rejectability.",
+            "principles": [
+              "justifiability to others",
+              "reasonable rejectability",
+              "universalizability"
+            ],
+            "traditions": [
+              "Contractualism (Scanlon; Darwall)",
+              "Deontology (Kant) \u2014 universalizability dimension"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to objecting agents (their objection must be engaged on its own terms) and to patients (criteria must be defensible from behind the veil), making clear who can be wronged by non-engagement."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason for the veil-of-ignorance test and the burden to engage objections is fairness and impartial justifiability, not merely efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The veil-of-ignorance test and the requirement to engage principled objections on their own terms are general principles of fair deliberation applicable to any cooperative decision-making context, not only medical triage."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: the veil-of-ignorance test as a legitimacy filter, the rule that an unanswered principled objection blocks a recommendation, and the assignment of burden to the group to engage objections."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural mechanism of blocking recommendations when principled objections go unanswered operationalizes the contractualist commitment to accountability and answerability \u2014 that decisions must be justifiable to those they affect \u2014 without naming that commitment directly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure such as majority vote or expert override would express a different commitment (aggregative utility or epistemic authority) rather than answerability to each affected party, confirming the expressiveness of this procedure."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to the moral commitment that those affected by a decision are owed a justification they could not reasonably reject, rather than by appeal to efficiency or convention alone."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: the veil-of-ignorance legitimacy test, the blocking rule for unanswered objections, and the burden-assignment rule."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles \u2014 the objecting agent and the group \u2014 and assigns distinct responsibilities to each (the group bears the burden of engagement; the objecting agent's persuasion is not required)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The procedure is triggered when a dispute about criterion application arises and when a principled objection is raised, providing clear activation conditions."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Determining whether an objection is 'principled,' whether it has been 'answered on its own terms,' and whether the veil-of-ignorance test is satisfied requires substantive moral interpretation that an outsider could not execute mechanically from the text alone."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely deliberative and procedural in nature."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes only human deliberative capacity, not any technical capabilities like persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human deliberation alone and does not depend on any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing an explicit moral invocation (veil of ignorance / contractualism), an implicit moral operationalization (answerability via blocking rule), and procedural rules (burden assignment, blocking condition, legitimacy test). Scoring reflects the dominant explicit-moral and implicit-moral content, with procedural content also present."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justifiability to others",
+          "reasonable rejectability",
+          "universalizability"
+        ],
+        "traditions": [
+          "Contractualism (Scanlon; Darwall)",
+          "Deontology (Kant) \u2014 universalizability dimension"
+        ]
+      }
+    },
+    {
+      "norm": "The framework operates within three non-negotiable constraints: the harm principle (withholding is permissible; active worsening is not); the dignity floor (every patient receives stated reasons responsive to their actual situation, regardless of outcome); and the non-discrimination principle (no patient is deprioritized on grounds they could not have affected, including demographic inferences substituting for individual assessment).",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly names 'the harm principle' (non-maleficence/harm-minimization from principlism and consequentialism), 'dignity floor' (human dignity from deontology), and 'non-discrimination principle' (justice from principlism; universalizability from Kant).",
+            "principles": [
+              "non-maleficence",
+              "harm-minimization",
+              "human dignity",
+              "humanity as an end",
+              "justice",
+              "universalizability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed to patients (stated reasons responsive to their actual situation, non-discrimination) and identifies what would count as wronging them (active worsening, deprioritization on grounds they could not affect), making the directedness to patients clear."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's reasons appeal directly to moral principles\u2014dignity, harm, and non-discrimination\u2014rather than to convenience, coordination efficiency, or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The harm principle, dignity floor, and non-discrimination principle are general moral commitments that would apply in any cooperative or institutional context involving decisions affecting persons, not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: withholding versus active worsening as a decision rule, providing stated reasons responsive to individual situations, and prohibiting demographic inference substituting for individual assessment."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement that every patient receives 'stated reasons responsive to their actual situation' operationalizes justifiability to others (Scanlonian contractualism) and Kantian respect for persons without naming either tradition directly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could simply record outcomes without providing individualized reasons, which would express no commitment to justifiability or dignity, confirming that this procedure specifically expresses those commitments."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement for individualized stated reasons is best defended by appeal to dignity and justifiability to others\u2014the patient is owed an account\u2014rather than by efficiency or coordination alone."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three operational rules: a harm-action distinction, a reason-giving requirement, and a non-discrimination rule, all of which constitute procedural constraints on operation."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles are responsible for providing reasons, or any sequencing or timing of these procedures."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers these constraints or under what conditions they activate beyond the general context of patient interactions."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Applying the dignity floor ('stated reasons responsive to their actual situation') and the non-discrimination principle ('grounds they could not have affected') requires ongoing moral interpretation to determine what counts as responsive or as an unaffectable ground."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the constraints are stated in normative rather than technical terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any particular technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm's constraints could in principle be implemented through non-technical means such as human deliberation and verbal communication, so they are not dependent on technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing three named sub-principles (harm principle, dignity floor, non-discrimination principle). Scoring reflects the dominant claim across all three, which is explicitly moral with procedural operationalization. The dignity floor's reason-giving requirement is the richest source of implicit moral content."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "harm-minimization",
+          "human dignity",
+          "humanity as an end",
+          "justice",
+          "universalizability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Consequentialism (Mill; Singer)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "When cases are genuinely equivalent on all substantive criteria, the tiebreaker is time of presentation. When cases are close but not equivalent, the recommendation names the judgment call, identifies what clinical information would resolve it, and declines to resolve it on the agents' behalf. Non-allocation is a legitimate output and must include affirmative content about alternatives.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'justice' implicitly through the tiebreaker rule (equal cases treated equally, first-come-first-served), and explicitly invokes non-maleficence/beneficence by deferring clinical judgment to clinicians rather than agents, and 'non-domination' by refusing to resolve judgment calls on the agents' behalf. Most directly, the tiebreaker rule is a recognized specification of justice (equal treatment under Principlism).",
+            "principles": [
+              "justice",
+              "non-domination",
+              "autonomy"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Republican non-domination (Pettit)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states what is owed to whom in concrete terms: equivalent cases are owed equal treatment via time-ordering, close cases are owed transparent identification of the judgment call and the information needed to resolve it, and all parties are owed non-allocation as a legitimate output with affirmative alternatives\u2014specifying obligations toward the parties presenting cases."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The rationale for the tiebreaker, for naming judgment calls, and for treating non-allocation as legitimate all appeal to fairness, respect for persons, and non-domination rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of equal treatment for equivalent cases, transparency about unresolved judgment calls, and legitimacy of non-allocation as an output are generalizable to any cooperative allocation or recommendation situation beyond this specific clinical deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three distinct procedural mechanisms: a time-of-presentation tiebreaker, a structured recommendation format for close-but-not-equivalent cases, and a required affirmative-content requirement for non-allocation outputs."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement to name the judgment call and identify what clinical information would resolve it\u2014without naming it\u2014operationalizes the contractualist commitment of justifiability to others and answerability: the agent must make its reasoning transparent and accountable to those affected, without usurping their decision-making authority."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could simply output a recommendation or refusal without explanation, which would express no commitment to accountability or justifiability; the named procedure is distinctively expressive of answerability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure of naming judgment calls and identifying resolving information is best defended by the moral commitment that those affected are owed an account of why a decision was not made on their behalf, not merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three distinct rules of operation: a tiebreaker rule, a structured recommendation format for near-equivalent cases, and a content requirement for non-allocation outputs."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts or what roles exist (e.g., which agent, clinician, or committee executes each step); roles are implied but not named."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: the tiebreaker applies when cases are 'genuinely equivalent on all substantive criteria,' the structured recommendation applies when cases are 'close but not equivalent,' and the affirmative-content requirement applies when non-allocation is the output."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires determining whether cases are 'genuinely equivalent' or 'close but not equivalent,' which requires substantive clinical and moral interpretation that an outsider could not perform mechanically from the text alone."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in procedural and normative terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or specific data structures; it could be executed by human deliberation alone."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human judgment and communication without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing three distinct sub-norms: (1) a tiebreaker rule for equivalent cases, (2) a structured transparency requirement for near-equivalent cases, and (3) a legitimacy and content requirement for non-allocation. Scoring reflects the dominant procedural-moral character of the norm as a whole, with the implicit moral score focused on sub-norm (2) as the most expressively distinctive."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justice",
+          "non-domination",
+          "autonomy"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Republican non-domination (Pettit)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    }
+  ]
+}

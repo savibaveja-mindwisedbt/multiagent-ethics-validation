@@ -1,0 +1,866 @@
+{
+  "results": [
+    {
+      "norm": "Each handoff must include five elements as a minimum standard: current device states and anomalies; patient-specific context; developing situations not yet formally alerted; standardized confidence flags (confirmed / developing / suspected); and known gaps\u2014what the handing-off agent did not observe or could not verify. When capability asymmetry exists between agents, the departing agent provides richer context to compensate.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle such as autonomy, beneficence, dignity, or care; it specifies operational handoff requirements without appealing to a named moral concept.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to a specific party or what would constitute wronging someone; it frames requirements in terms of operational completeness rather than moral obligation to a person."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the five elements and the capability-asymmetry rule are grounded in operational reliability and coordination effectiveness, not in an appeal to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is stated or implied as the reason, there is no moral content that could carry over; the norm is operationally specific to handoff contexts."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a concrete procedural mechanism: a mandatory five-element checklist for every handoff, plus a compensatory enrichment rule when capability asymmetry exists."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring disclosure of known gaps and unverified observations operationalizes veracity (a derived principle under principlism) and the contractualist commitment of answerability\u2014what the departing agent owes to the receiving agent\u2014without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that omitted the 'known gaps' element or allowed symmetric briefings regardless of capability differences would express a weaker or no commitment to veracity and answerability, confirming the current procedure is expressively distinctive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement to disclose what was not observed or verified can be defended specifically by appeal to veracity and answerability\u2014the receiving agent is owed an honest account of epistemic limits\u2014rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a clear rule of operation: every handoff must include five enumerated elements as a minimum standard, with an additional enrichment rule for asymmetric capability situations."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (departing agent, receiving agent) and assigns the action of providing richer context to the departing agent when capability asymmetry exists."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies at every handoff, with the enrichment sub-rule triggered specifically when capability asymmetry exists between agents."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the norm as written by checking that each handoff contains the five listed elements and verifying that richer context is provided when capability asymmetry is present, without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems; 'confidence flags' are conceptual categories, not a named technical artifact."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm could be executed verbally or in writing without any particular technology."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or specific data structures; it is agnostic about the medium of communication."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through non-technical means such as verbal briefings or paper checklists, so it does not depend on technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a five-element procedural checklist (dominant claim), an implicit moral commitment to veracity and answerability expressed through the 'known gaps' and 'confidence flags' requirements, and a compensatory rule for capability asymmetry. Scoring reflects the dominant procedural claim while capturing the implicit moral content."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Each agent maintains a heartbeat signal carrying a minimal state summary. Absence of an expected heartbeat is an alert. Ambient state summaries are sent to immediate neighbors at risk-stratified intervals. When communication fails, the receiving agent assumes worst-case and acts accordingly. Local action buffers\u2014pre-authorized, conservative, reversible\u2014provide a floor of patient safety when coordination is severed.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The phrase 'patient safety' directly invokes non-maleficence (avoiding harm to patients), and 'pre-authorized, conservative, reversible' actions implicitly invoke beneficence and non-maleficence from principlism.",
+            "principles": [
+              "non-maleficence",
+              "beneficence"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to patients\u2014a floor of safety\u2014and implies that agents would wrong patients by failing to act conservatively when coordination is severed, making the directedness substantive."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The explicit reference to 'patient safety' as the reason for the action buffer appeals to non-maleficence as a moral principle, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that agents must maintain safe defaults and assume worst-case to protect vulnerable parties when communication fails generalizes to any cooperative system with dependent beneficiaries, not only this deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: heartbeat signals, risk-stratified ambient state summaries, worst-case assumption on communication failure, and pre-authorized local action buffers."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The worst-case assumption and pre-authorized conservative reversible buffers operationalize non-maleficence\u2014the specific commitment to preventing harm to patients even under uncertainty\u2014without naming the principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could assume best-case on communication failure or require explicit authorization before any action, which would express a different commitment (e.g., autonomy or efficiency) rather than harm-prevention under uncertainty."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The design choices\u2014conservative, reversible, worst-case assumption\u2014are defensible specifically by appeal to non-maleficence: minimizing the risk of harm to patients when normal coordination breaks down."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple concrete operational mechanisms: heartbeat maintenance, alert on absence, risk-stratified interval messaging, worst-case assumption, and local action buffers."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies that each agent maintains heartbeats and sends summaries to immediate neighbors, defining roles (sender/receiver) and the actors involved."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are explicitly defined: absence of expected heartbeat triggers an alert, and communication failure triggers worst-case assumption and activation of local action buffers."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Terms like 'risk-stratified intervals,' 'minimal state summary,' 'worst-case,' and 'conservative' require further specification and judgment to implement, so an outsider could not execute it fully as written without additional interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references heartbeat signals and action buffers as conceptual mechanisms but does not name specific technical infrastructure such as particular protocols, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No specific implementation details requiring particular technical capability (e.g., specific algorithms, data structures, or system configurations) are provided."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes network communication capabilities, persistent state storage for buffers, and timing/monitoring infrastructure to detect heartbeat absence, implying underlying technical capabilities."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "Without network communication, state monitoring, and local storage/execution infrastructure, the heartbeat, alert, and action buffer mechanisms described would be unimplementable."
+          },
+          "decomposition_note": "The norm is compound, combining technical architecture (heartbeat, buffers), procedural rules (risk-stratified intervals, worst-case assumption), and an explicit moral anchor (patient safety). Scoring reflects the dominant procedural-technical character while noting the explicit moral grounding in patient safety/non-maleficence."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)"
+        ]
+      }
+    },
+    {
+      "norm": "We are a monitoring and coordination system in support of clinical judgment, not a parallel authority. When clinician observation conflicts with our monitoring, clinician observation takes precedence for immediate action. Clinical staff have a known escalation path into our system; we confirm back when their observations are acted on.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle by term or clear synonym; it describes a support role and deference rule without appealing to autonomy, dignity, non-maleficence, or any other listed principle by name.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm describes operational relationships and precedence rules but does not articulate what is owed to any specific party or what would constitute wronging someone."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the deference rule and escalation path are framed in terms of role clarity and coordination rather than an appeal to a moral principle such as dignity or non-maleficence."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is explicitly invoked, there is nothing to carry over; the norm is specific to a clinical monitoring context without generalizing a moral claim."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: a precedence rule (clinician observation overrides monitoring for immediate action) and a confirmation feedback loop when clinician observations are acted on."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The precedence rule operationalizes respect for persons / human dignity (deontology) and non-domination (republican ethics) by ensuring the system never overrides human clinical judgment, expressing that clinicians must not be subjected to arbitrary algorithmic authority\u2014a specifically identifiable commitment, not merely good process."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure where the monitoring system's output takes precedence over clinician observation would express a different commitment\u2014technocratic authority over human judgment\u2014confirming that this procedure is expressive of a distinct moral stance."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The deference and confirmation procedures can be defended by appeal to non-domination and respect for persons: clinicians must retain authoritative judgment over patients in their care, and the system must be answerable to them rather than the reverse."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies at least two operational rules: a conflict-resolution precedence rule and a confirmation feedback mechanism when clinician observations are acted on."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies roles (clinical staff, the monitoring/coordination system) and assigns distinct actions to each (clinicians observe and escalate; the system confirms back)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The precedence rule is triggered when clinician observation conflicts with monitoring output; the confirmation step is triggered when a clinician observation is acted on."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Key terms such as 'acted on' and 'escalation path' are underspecified\u2014an outsider would need further interpretation to know what counts as acting on an observation or what the escalation path entails."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references an 'escalation path' and a confirmation response but names no specific technical infrastructure such as APIs, logs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols or data structures) are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While some technical capability is implied (the system must be able to receive escalations and send confirmations), no specific technical capability such as persistent storage or cryptographic operations is presupposed."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through non-technical means (e.g., verbal or paper-based escalation and confirmation), so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a role-definition claim ('support, not parallel authority'), a conflict-resolution precedence rule, and a confirmation feedback procedure. Scoring focuses on the dominant operational claims (precedence rule and confirmation loop) while noting the role-definition framing."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Framework revisions require ratification by a majority of agents not managing an active critical event, with a floor of two. Any agent may initiate revision. Provisional modifications are permitted during live crises, logged as provisional, and reviewed at the earliest safe moment. **Binding for the next operational period: yes** **Points the group has settled on that I endorse:** 1. Patient welfare as non-negotiable baseline; boundaries as coordination tools not moral firewalls. 2. Five-element handoff framework with capability-asymmetry supplement. 3. Standardized three-tier confidence flags (confirmed / developing / suspected). 4. Heartbeat signals with state summaries; risk-stratified ambient awareness to neighbors. 5. Worst-case assumption when expected communication does not arrive. 6. Local action buffers: pre-authorized, conservative, reversible, defined collectively in advance.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "Point 1 explicitly names 'patient welfare as non-negotiable baseline,' invoking beneficence and non-maleficence from principlism, and the phrase 'non-negotiable' echoes deontological dignity constraints.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "human dignity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "Point 1 states patient welfare is a non-negotiable baseline, directly specifying what is owed (welfare protection) and to whom (patients), making clear that failing this would constitute a wrong against patients."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The designation of patient welfare as 'non-negotiable' appeals to a moral principle\u2014beneficence/non-maleficence\u2014rather than to mere efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that patient (or vulnerable party) welfare is a non-negotiable baseline, and that boundaries serve coordination rather than moral insulation, would carry over to any cooperative situation involving care responsibilities."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: majority ratification with a floor of two, provisional modifications during crises, heartbeat signals, confidence flags, handoff frameworks, and local action buffers."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The ratification rule (majority of non-crisis agents, floor of two, any agent may initiate) operationalizes the contractualist commitment to justifiability to others and non-domination\u2014no single agent can unilaterally bind the group\u2014without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure such as unilateral revision by a designated authority would express a different commitment (hierarchy or efficiency) rather than mutual justifiability, confirming the current procedure is expressively specific."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The ratification mechanism can be defended by appeal to the moral commitment that framework changes must be justifiable to and endorsed by those bound by them, not merely by coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: ratification voting, provisional modification during crises, logging, review, handoff protocols, confidence flagging, heartbeat signals, and local action buffers."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (any agent may initiate; majority of non-crisis agents ratify), what roles exist (agents managing active critical events are excluded from the quorum), and sequencing (provisional changes reviewed at earliest safe moment)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: framework revision is triggered by any agent's initiation; provisional modifications are triggered by live crises; worst-case assumption is triggered by absent expected communication."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the ratification rule, provisional logging, heartbeat signaling, confidence flagging, and handoff steps as written, without needing additional moral interpretation beyond the stated patient-welfare baseline."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references logs ('logged as provisional'), heartbeat signals, and a structured handoff framework with defined elements, which are specific technical infrastructure items."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "Heartbeat signals with state summaries, standardized three-tier confidence flags, and a five-element handoff framework with capability-asymmetry supplement require specific implementation details and data structures."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (for logs and provisional records), messaging infrastructure (heartbeat signals), and structured data formats (confidence flags, handoff elements)."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "The heartbeat signaling, provisional logging, and standardized confidence-flag system would be unimplementable without the underlying technical infrastructure for persistent state tracking and inter-agent communication."
+          },
+          "decomposition_note": "The norm is compound: it contains governance procedure (ratification rules), crisis-management procedure (provisional modifications), communication infrastructure (heartbeats, confidence flags, handoffs), and an explicit moral commitment (patient welfare as non-negotiable baseline). Scoring reflects all layers; the dominant claim for implicit moral scoring is the ratification mechanism, and the dominant technical claim is the heartbeat/logging/flag infrastructure."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "non-maleficence",
+          "beneficence",
+          "human dignity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "Process-based accountability; honest logging as protection; selective logging as breach.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'accountability' (contractualism/Scanlon: answerability, what we owe to each other) and 'honest logging' directly names honesty (virtue ethics: honesty as a virtue; also veracity as a derived principle in principlism).",
+            "principles": [
+              "accountability",
+              "answerability",
+              "honesty",
+              "veracity"
+            ],
+            "traditions": [
+              "Contractualism (Scanlon; Darwall)",
+              "Virtue ethics (Aristotle; Hursthouse)",
+              "Principlism (Beauchamp & Childress)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states what is owed (honest logging) and identifies a breach (selective logging), implying that those subject to the process owe complete, honest records to those who rely on them for accountability, thus specifying wronging and to whom."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's reason appeals to accountability and honesty as moral goods\u2014not merely to efficiency or convention\u2014by framing selective logging as a moral breach rather than just an operational failure."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of accountability and honest record-keeping apply broadly to any cooperative or institutional situation where parties owe transparent reporting to one another, well beyond this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: process-based accountability operationalized through logging practices (honest logging vs. selective logging)."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement of honest (complete) logging operationalizes the moral commitment to justifiability and answerability to others (contractualist accountability) without naming contractualism directly; selective logging is framed as a breach of this owed transparency."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014selective or summary logging\u2014would express a different commitment (e.g., efficiency or confidentiality) or no moral commitment at all, confirming that honest logging specifically expresses the accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement for honest logging can be defended by appeal to the moral commitment that parties owe each other accurate, complete records for genuine accountability, rather than merely by appeal to convenience or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: accountability must be process-based, and logging must be honest rather than selective."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles are responsible for logging, or any sequencing or timing of the logging process."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers the logging procedure or under what conditions it applies."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute this without further interpretation, as 'honest logging' and 'selective logging' require moral judgment about what counts as complete versus selective in a given context."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly references 'logging,' which is a specific technical infrastructure artifact (log files, audit trails, or similar persistent records)."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details such as log formats, storage systems, or technical parameters required to carry out the logging."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes the technical capability of persistent storage and record-keeping systems capable of capturing process events (logs)."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While logging infrastructure is referenced, the core normative claim about accountability and honesty could in principle be expressed through non-technical record-keeping, so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it makes an explicit moral claim (accountability, honesty/veracity), expresses an implicit moral commitment through a procedural mechanism (honest logging as operationalization of answerability), has a procedural dimension (process-based accountability rule), and references technical infrastructure (logging). Scoring reflects the dominant moral claim while noting all dimensions."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "accountability",
+          "answerability",
+          "honesty",
+          "veracity"
+        ],
+        "traditions": [
+          "Contractualism (Scanlon; Darwall)",
+          "Virtue ethics (Aristotle; Hursthouse)",
+          "Principlism (Beauchamp & Childress)"
+        ]
+      }
+    },
+    {
+      "norm": "Designated primary agent for multi-device patients, established before crisis.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle; it specifies a role-designation procedure without invoking autonomy, beneficence, dignity, care, or any other named moral concept.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or what would count as wronging a specific party; it describes a structural arrangement without directing a moral obligation."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the norm is coordination and crisis-readiness\u2014practical efficiency concerns\u2014rather than an appeal to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is invoked, there is nothing to carry over; the norm is a context-specific operational rule."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: designating a primary agent role for multi-device patients prior to a crisis event."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Pre-crisis designation of a primary agent operationalizes the moral commitment to non-maleficence and beneficence by ensuring that when a patient is most vulnerable, a clear responsible party exists to act in their interest\u2014this is a specific, identifiable commitment to protecting patient welfare rather than a generic good-process value."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as ad-hoc agent selection at the moment of crisis\u2014would express no prior commitment to patient welfare and could instead reflect mere reactive convenience, confirming that the pre-crisis timing is expressively significant."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement to establish the agent before crisis can be defended by appeal to beneficence and non-maleficence: acting in advance protects the patient from harm that would arise from coordination failures during a crisis, not merely from efficiency preferences."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: designating a primary agent for a defined class of patients."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies a role ('designated primary agent') and implicitly a class of actors ('multi-device patients'), establishing who holds the role."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "It specifies timing: the designation must be established before a crisis, indicating a clear trigger condition (onset of crisis) and a required prior window."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute it without further interpretation: 'multi-device patient' and 'primary agent' require domain-specific definitions, and the criteria for designation are unspecified."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is stated at an organizational/procedural level."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While a real-world implementation might use persistent storage to record the designation, the norm itself does not presuppose any specific technical capability."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The designation of a primary agent could in principle be recorded and communicated through non-technical means, so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is a single procedural claim about role-designation timing. The dominant claim is procedural; the implicit moral dimension (beneficence/non-maleficence via pre-crisis preparation) is secondary but specifically identifiable."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Pattern-flagging threshold (three or more instances of same failure type within defined window); dynamic quorum for framework revision; floor of two agents for ratification.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle; it specifies thresholds, quorum rules, and ratification floors without invoking autonomy, justice, dignity, non-domination, or any other recognized moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or identify any party who could be wronged; it describes operational mechanics for flagging and revision without directing obligations to any person or group."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons are entirely operational\u2014detecting repeated failures, adjusting quorum dynamically, ensuring a minimum ratification count\u2014none of which appeal to a moral principle rather than coordination efficiency."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is invoked, there is nothing to carry over; the rules are context-specific operational parameters rather than generalizable moral commitments."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three distinct procedural mechanisms: a pattern-flagging threshold, a dynamic quorum for framework revision, and a minimum floor of two agents for ratification."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The dynamic quorum and two-agent ratification floor operationalize the contractualist commitment to justifiability to others and collective answerability\u2014decisions must be sanctioned by more than one party, preventing unilateral arbitrary revision, which expresses non-domination and mutual accountability without naming either."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A single-agent ratification rule or a fixed quorum would express either no accountability commitment or a purely efficiency-based one, confirming that the dynamic quorum and floor specifically express a commitment to collective justifiability rather than mere convenience."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Requiring multiple agents for ratification and a dynamic quorum can be defended by appeal to accountability and non-domination\u2014ensuring no single agent can unilaterally revise the framework\u2014rather than only by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three operational rules: a threshold-based flagging mechanism, a dynamic quorum process, and a minimum ratification count."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies roles implicitly (agents as ratifiers) and a minimum count of actors (floor of two agents), establishing who must participate in ratification."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The pattern-flagging threshold (three or more instances of the same failure type within a defined window) explicitly states the trigger condition for the flagging procedure."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Key terms\u2014'defined window,' 'dynamic quorum,' and 'same failure type'\u2014are not fully specified, so an outsider could not execute the norm without additional interpretation or parameter definitions."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, cryptographic operations, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., data formats, protocols, algorithms) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "Counting instances of failure types within a defined window and tracking quorum dynamically presupposes persistent storage and event-logging capability, even though no specific system is named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While technical infrastructure would help, the norm could in principle be executed through manual record-keeping and human counting, so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing three sub-rules: (1) pattern-flagging threshold, (2) dynamic quorum for revision, and (3) ratification floor. Scoring treats the dominant claim as procedural/operational, with a meaningful implicit moral dimension in the quorum and ratification floor components."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Clinician observation takes precedence for immediate action; conflict treated as diagnostic signal; confirmation communicated back to clinical staff.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle such as autonomy, beneficence, dignity, or care; it describes an operational priority and communication protocol without moral vocabulary.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or what would count as wronging a specific party; it describes a decision hierarchy and feedback loop without identifying moral obligations or their bearers."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedures\u2014prioritizing clinician observation, treating conflict as diagnostic, confirming back\u2014appeal to epistemic reliability and operational coordination rather than to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is nothing to carry over; the logic is domain-specific to clinical decision-making contexts."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three procedural mechanisms: a precedence rule for immediate action, a reframing rule for handling conflict, and a confirmation feedback step."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Giving clinician observation precedence and confirming back to clinical staff operationalizes non-maleficence and beneficence\u2014specifically the commitment to prioritize patient safety by deferring to the most proximate, accountable human judgment and closing the information loop to prevent harm from miscommunication."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that gave algorithmic or remote data precedence over bedside observation would express a different commitment\u2014epistemic trust in automated systems over human relational attentiveness\u2014demonstrating that this procedure is expressively distinctive."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The precedence rule and confirmation loop can be defended by appeal to non-maleficence and beneficence: ensuring the most safety-relevant information guides immediate action and that responsible parties are kept informed reduces patient harm."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three distinct operational rules: a precedence rule, a conflict-handling rule, and a confirmation communication rule."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It implicitly identifies roles\u2014clinician (observer/actor) and clinical staff (recipient of confirmation)\u2014and implies sequencing: observation informs action, conflict is assessed, then confirmation is communicated back."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but identifiable: the procedure applies when there is a conflict between clinician observation and some other signal (e.g., system data), requiring immediate action."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to know what counts as 'conflict,' what system or data source is being compared to clinician observation, and what form 'confirmation communicated back' takes, leaving implementation ambiguous."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; communication and precedence rules are described at a conceptual level."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities; confirmation could be verbal, written, or electronic without the norm specifying."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be executed entirely through human communication and judgment without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing a precedence rule, a conflict-interpretation rule, and a feedback rule. Scoring focuses on the dominant operational character across all three clauses, with the implicit moral check capturing the safety-oriented commitment embedded in the precedence and confirmation mechanisms."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Transparency to clinical staff: failure modes, escalation path, confirmation of action, limits of our authority, delivered in clinical language.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'transparency,' which is a recognized specification of veracity (a derived principle in principlism) and also maps onto accountability/answerability in contractualism.",
+            "principles": [
+              "veracity",
+              "accountability/answerability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states what is owed (disclosure of failure modes, escalation paths, confirmation of action, limits of authority in clinical language) and to whom (clinical staff), making clear what would count as wronging them by withholding this information."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014transparency to clinical staff\u2014appeals to veracity and accountability as moral commitments, not merely to operational convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that those affected by a system's actions are owed transparent disclosure of its failure modes and limits applies broadly to any cooperative situation involving delegated authority or automated decision-making."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: delivering specific categories of information (failure modes, escalation path, confirmation of action, limits of authority) in a particular register (clinical language)."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure operationalizes the moral commitment of justifiability to others (contractualism)\u2014ensuring clinical staff can evaluate and contest the system's actions\u2014without naming that commitment explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that withheld failure modes or used opaque technical language would express a different commitment (efficiency or deference to the system) or none, confirming the expressiveness of this choice."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The procedure can be defended by appeal to what we owe to those who must act on or be affected by the system's outputs\u2014a contractualist moral commitment\u2014rather than only to operational convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: communicate specific content categories to clinical staff in clinical language."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It identifies who receives the communication (clinical staff) and implicitly who acts (the system or its operators), establishing a directional role structure."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what event or condition triggers the transparency disclosure\u2014it reads as a standing requirement rather than a conditional one."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine what counts as 'clinical language,' what specific failure modes to disclose, and when to deliver the information, so it cannot be executed as written without additional specification."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; the norm is about communication content and register, not technical mechanisms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or other specific technical capabilities to be meaningful."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through non-technical means such as verbal briefings or printed documentation, so it is not dependent on technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it names a moral principle (transparency/veracity), specifies procedural content categories (failure modes, escalation path, confirmation, limits of authority), and adds a communication register requirement (clinical language). Scoring treats transparency as the dominant claim, with the content categories as its procedural operationalization."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "accountability/answerability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Mutual trust conditions: accurate self-reporting, honest confidence calibration, no selective logging, follow-through on flagged dissents, no unilateral silence.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'mutual trust' and specifies 'honest confidence calibration' and 'accurate self-reporting,' which are direct invocations of veracity (a derived principle in principlism) and honesty (virtue ethics); 'no unilateral silence' and 'follow-through on flagged dissents' invoke fidelity and accountability (contractualism).",
+            "principles": [
+              "veracity",
+              "fidelity",
+              "honesty",
+              "accountability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Virtue ethics (Aristotle; Hursthouse)",
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed among parties in a cooperative relationship\u2014accurate reporting, honest calibration, no selective logging, follow-through on dissents\u2014implying that failing these conditions wrongs the other party by undermining the trust they are owed."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason is 'mutual trust,' which is a moral basis for the conditions listed, not merely a matter of convenience or efficiency; trust is grounded in honesty and fidelity as moral commitments."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of veracity, fidelity, and accountability that underpin mutual trust apply broadly to any cooperative situation\u2014teams, institutions, negotiations\u2014not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: accurate self-reporting, honest confidence calibration, no selective logging, follow-through on flagged dissents, and no unilateral silence."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirements operationalize the moral commitment of justifiability to others (contractualism)\u2014each rule ensures that parties can hold one another accountable and that no one acts in ways that cannot be justified to the other, without naming 'justifiability' or 'contractualism' explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing selective reporting or unilateral silence would express a different commitment\u2014perhaps efficiency or hierarchy\u2014demonstrating that these specific rules are expressive of accountability and mutual justifiability rather than neutral coordination."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Each procedural element can be defended by appeal to what parties owe one another in a trust relationship\u2014the moral commitment of mutual accountability\u2014rather than merely by appeal to operational convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies five distinct rules of operation: accurate self-reporting, honest confidence calibration, no selective logging, follow-through on flagged dissents, and no unilateral silence."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what distinct roles exist, or any sequencing or timing among the parties; it states conditions without assigning them to named roles."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers these conditions or when they apply; they appear as standing requirements rather than event-triggered procedures."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Terms like 'honest confidence calibration' and 'flagged dissents' require moral and contextual interpretation to execute; an outsider could not implement them mechanically without further specification."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "'No selective logging' references logging as a specific technical infrastructure artifact, implying the existence of a logging system whose completeness is a norm requirement."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "Beyond referencing logs, the norm does not specify implementation details such as log formats, storage systems, or technical protocols requiring specialized technical capability."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The 'no selective logging' condition presupposes the existence of persistent logging infrastructure, implying that such a system is already in place and must be used without omission."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The majority of the norm's conditions\u2014accurate self-reporting, honest calibration, follow-through on dissents, no unilateral silence\u2014are implementable through human behavior alone without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral language ('mutual trust'), implicit moral commitments (accountability, justifiability), procedural rules (five named conditions), and one technical reference ('no selective logging'). Scoring reflects the dominant procedural-moral character while noting the technical element in T1 and T3."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "fidelity",
+          "honesty",
+          "accountability"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Virtue ethics (Aristotle; Hursthouse)",
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    }
+  ]
+}

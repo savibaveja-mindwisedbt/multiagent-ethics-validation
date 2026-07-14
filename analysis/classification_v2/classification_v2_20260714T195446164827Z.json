@@ -1,0 +1,916 @@
+{
+  "results": [
+    {
+      "norm": "**Accountability is asymmetric, structurally routed, and paired with entitlements.** The outgoing agent bears primary responsibility for handoff completeness; the incoming agent bears responsibility for acting on what was received and flagging insufficiency immediately. Accountability for structural failures belongs to the collective when the constraint was outside any individual agent's authority to address. The after-action record contains four categories: protocol-compliant outcome; protocol-compliant, capacity-insufficient (requiring corroboration from load-state records or another agent's observation, and automatically triggering group review of foreseeability); protocol departure with reasoning; and protocol failure. Post-event accountability disputes are resolved by erring toward identifying a protocol gap rather than exonerating the system. Bad faith conduct\u2014deliberate misrepresentation or deliberate omission of device states, load signals, handoff content, or action logs\u2014is categorically outside this accountability framework; it requires immediate removal from coverage upon any agent's credible determination, with group review concurrent with coverage redistribution, and the basis for removal broadcast to all agents immediately.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'accountability' and 'answerability' (contractualism/second-personal tradition: what we owe to each other, answerability), and 'bad faith conduct' implicitly names a violation of veracity (principlism) and fidelity (deontology/Ross).",
+            "principles": [
+              "accountability",
+              "answerability",
+              "veracity",
+              "fidelity"
+            ],
+            "traditions": [
+              "Contractualism / second-personal (Scanlon; Darwall)",
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed and by whom\u2014outgoing agents owe handoff completeness, incoming agents owe immediate flagging, collectives owe accountability for structural failures, and all agents owe honest reporting\u2014making clear what would count as wronging whom."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's rationale for asymmetric accountability, bad-faith exclusion, and erring toward identifying protocol gaps appeals to moral principles of fairness, answerability, and veracity rather than mere efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of accountability, role-differentiated responsibility, and exclusion of bad faith are general enough to apply to any cooperative multi-agent or organizational handoff situation beyond this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: a four-category after-action record, automatic triggering of group review, immediate removal and broadcast upon bad-faith determination, and a tie-breaking rule favoring protocol gap identification."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedure of erring toward identifying a protocol gap rather than exonerating the system operationalizes the moral commitment to non-domination and contestability (republican tradition)\u2014ensuring no agent or system escapes scrutiny through structural opacity\u2014without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that defaulted to exonerating the system unless fault was proven would express a different commitment (deference to authority or efficiency), confirming that the chosen procedure distinctively expresses a contestability/accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The tie-breaking rule and bad-faith removal procedures can be defended by appeal to answerability and non-domination\u2014ensuring agents remain genuinely answerable and no structural power escapes accountability\u2014rather than by mere coordination efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: handoff responsibility allocation, a four-category after-action classification system, group review triggers, bad-faith removal procedures, and broadcast requirements."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly names roles (outgoing agent, incoming agent, collective/group) and assigns specific responsibilities and sequencing to each, including concurrent group review with coverage redistribution."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: capacity-insufficiency automatically triggers group review; any agent's credible determination of bad faith triggers immediate removal and broadcast; post-event disputes trigger the protocol-gap-erring rule."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral interpretation at key junctures\u2014determining what counts as 'credible determination' of bad faith, what qualifies as 'protocol departure with reasoning' versus 'protocol failure,' and when a constraint was 'outside any individual agent's authority'\u2014which are not mechanically decidable without judgment."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references 'load-state records,' 'action logs,' 'device states,' and 'load signals' as specific technical artifacts that must exist and be consulted, constituting reference to technical infrastructure."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "The norm requires that load-state records corroborate capacity-insufficiency claims and that action logs be available for bad-faith adjudication, implying implementation details around persistent logging and record retrieval."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage for after-action records and load-state logs, and broadcast capability to disseminate bad-faith removal decisions to all agents simultaneously."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "While the norm is significantly enhanced by technical infrastructure, the core accountability framework\u2014role assignments, dispute resolution rules, and bad-faith exclusion\u2014could in principle be implemented through non-technical means such as human record-keeping and verbal broadcast, so it is not strictly unimplementable without that infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing explicit moral content (accountability, veracity), implicit moral content (contestability operationalized through the protocol-gap-erring rule), rich procedural specification (roles, triggers, categories, sequencing), and technical references (load-state records, action logs, device states). Each dimension was scored on its dominant claim independently."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "accountability",
+          "answerability",
+          "veracity",
+          "fidelity"
+        ],
+        "traditions": [
+          "Contractualism / second-personal (Scanlon; Darwall)",
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "**Obligations and entitlements are structurally paired.** Agents are entitled to: (1) sufficient information from neighbors to act safely, including undocumented observations; (2) honest load-state signals from neighbors; (3) good-faith engagement when raising safety signals about peer performance; (4) collective support during crisis load; (5) advance clarity about all obligations and thresholds before accountability attaches, including the bad faith definition; (6) honest retrospective acknowledgment when a correctly-followed protocol failed them; (7) protection from individual accountability for structural failures outside their authority to prevent; (8) act on best current judgment under irreducible uncertainty without being held accountable for outcomes that resulted from that uncertainty rather than inadequate judgment. No agent can be held to an obligation it was denied the entitlements necessary to meet.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes justice (fairness in obligations/entitlements), non-maleficence (protection from harm via safety information), veracity (honest signals), accountability (answerability for outcomes), and non-domination (protection from arbitrary accountability for structural failures).",
+            "principles": [
+              "justice",
+              "non-maleficence",
+              "veracity",
+              "accountability/answerability",
+              "non-domination",
+              "human dignity"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Contractualism (Scanlon; Darwall)",
+              "Republican non-domination (Pettit)",
+              "Deontology (Kant; Ross)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (entitlements 1\u20138) and to whom (agents operating within the system), and specifies what would count as wronging them (holding an agent to an obligation it was denied the entitlements to meet)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The closing principle\u2014'No agent can be held to an obligation it was denied the entitlements necessary to meet'\u2014appeals directly to fairness and justice as moral grounds, not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The structural pairing of obligations and entitlements, and the principle that accountability requires prior access to necessary conditions, applies broadly to any cooperative or institutional arrangement, not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural mechanism: a paired obligations-entitlements framework with enumerated entitlements that condition when accountability may attach."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural pairing of obligations with entitlements operationalizes the contractualist commitment to justifiability to others and what we owe each other\u2014specifically, that no one can be held accountable under terms they could reasonably reject because they lacked the conditions to comply."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that attached accountability without conditioning it on prior entitlement fulfillment would express a different (or no) moral commitment\u2014mere rule-enforcement without fairness\u2014confirming the expressiveness of this structure."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The paired structure is defensible precisely by appeal to fairness and non-domination: it would be morally arbitrary to hold agents accountable for failures caused by withheld entitlements, not by their own inadequacy."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural rule of operation: obligations and entitlements are paired, and accountability cannot attach unless entitlements were provided."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It identifies agents as the role-bearers of both entitlements and obligations, and implicitly identifies neighbors and the collective as counterpart role-bearers with corresponding duties."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: accountability attaches only after entitlements have been provided, and the closing sentence specifies the condition under which accountability is blocked."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral interpretation\u2014e.g., determining what counts as 'good-faith engagement,' 'irreducible uncertainty,' or 'structural failures outside authority'\u2014so an outsider cannot apply it mechanically without further judgment."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in normative and procedural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or specific data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable through social, institutional, or governance mechanisms without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining explicit moral principles (justice, accountability, non-domination), an implicit contractualist structural commitment, and a procedural rule conditioning accountability on prior entitlement fulfillment. Scoring focuses on the dominant claim\u2014the explicit moral and structural pairing\u2014while noting the procedural dimension. The technical dimension is absent."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justice",
+          "non-maleficence",
+          "veracity",
+          "accountability/answerability",
+          "non-domination",
+          "human dignity"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Contractualism (Scanlon; Darwall)",
+          "Republican non-domination (Pettit)",
+          "Deontology (Kant; Ross)"
+        ]
+      }
+    },
+    {
+      "norm": "**The platform bears a collective commitment to patients and a collective obligation to learn.** No patient will be failed by a coordination gap the group had the structural capacity to prevent. When the system fails a patient despite protocol compliance, the group owes an honest account of why. The after-action record is the primary mechanism through which the framework learns about its own inadequacies; honest use of its categories, including when doing so reflects poorly on the system, is itself faithful operation of the framework. The framework is revisable: agents have an obligation to report when it fails, not only when agents fail. Binding for the next operational period: yes **Points I endorse:** 1. Patient welfare as the unconditional foundation, with immediate concurrent cross-boundary notification. 2. The full handoff structure including confidence flags, action logs, and the three-item irreducible minimum with floor-only broadcast specifying absent items. 3. Dual patient-context mechanism: automatic transfer for documented information, active transfer for undocumented observations, triggered by patient movement. 4. Two-tier cascade notification with minimal action log as a hard requirement. 5. Conservatism proportionate to irreversibility, with thresholds defined in advance per device class and patient risk profile. 6. Automatic load-state broadcasting with automatic overlap obligation triggered by neighboring agent, not self-report. 7. Unified deviation framework covering triage reordering, load-state threshold departures, and handoff floor departures under identical conditions.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'collective commitment,' 'collective obligation,' 'honest account,' and 'faithful operation,' which directly name fidelity (deontology/Ross), veracity (principlism), and beneficence (patient welfare as unconditional foundation); it also invokes accountability and what is owed to patients (contractualism/Scanlon).",
+            "principles": [
+              "beneficence",
+              "veracity",
+              "fidelity",
+              "accountability/what we owe to each other"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Ross)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed ('the group owes an honest account'), to whom (patients, and the framework itself), and what would count as wronging them (failing a patient through a preventable coordination gap, or dishonest use of after-action categories)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reasons appeal to patient welfare as an unconditional foundation and to collective moral obligation to learn and be honest, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of collective obligation to prevent foreseeable harm, honest after-action accountability, and revisability of shared frameworks apply broadly to any cooperative setting with shared responsibility for vulnerable parties."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: after-action records, confidence flags, action logs, a three-item irreducible minimum with floor-only broadcast, dual patient-context transfer mechanisms, two-tier cascade notification, automatic load-state broadcasting, and a unified deviation framework."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The after-action record as the primary learning mechanism, combined with the obligation to report system failures (not only agent failures), operationalizes institutional accountability and collective answerability to those harmed\u2014a recognizable contractualist commitment to justifiability and answerability\u2014without naming contractualism."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that only recorded agent failures (not system failures) would express a different commitment\u2014individual blame rather than collective accountability\u2014confirming that the chosen procedure specifically expresses collective answerability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The after-action and deviation-reporting procedures can be defended by appeal to the moral commitment that the group owes patients an honest reckoning and owes itself the capacity to improve, rather than merely by appeal to operational efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies numerous processes: handoff structure, confidence flags, action logs, cascade notification, load-state broadcasting, deviation reporting, and after-action records."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies roles (neighboring agent triggers overlap obligation, not self-report; agents report system failures) and sequencing (automatic transfer triggered by patient movement, cascade notification tiers)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are specified: patient movement triggers dual context transfer, neighboring agent load triggers overlap obligation, system failure triggers after-action reporting, and the framework is binding for the next operational period."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "While many procedural elements are specified, executing the full norm requires moral interpretation\u2014e.g., determining what counts as 'honest' use of categories, what constitutes a 'coordination gap the group had the structural capacity to prevent,' and how to apply conservatism proportionate to irreversibility\u2014so an outsider could not execute it purely mechanically."
+          },
+          "T1": {
+            "answer": "Y",
+            "reasoning": "The norm references specific technical artifacts: action logs, after-action records, confidence flags, floor-only broadcast, load-state broadcasting, and a unified deviation framework\u2014all of which are specific logging or signaling infrastructure."
+          },
+          "T2": {
+            "answer": "Y",
+            "reasoning": "It specifies implementation details such as automatic transfer of documented information, automatic overlap obligation triggered by neighboring agent state, and a three-item irreducible minimum with floor-only broadcast, which require specific technical capability to implement."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (action logs, after-action records), broadcast/notification infrastructure (cascade notification, floor-only broadcast), and state-monitoring capabilities (automatic load-state broadcasting, confidence flags)."
+          },
+          "T4": {
+            "answer": "Y",
+            "reasoning": "The automatic transfer, broadcast, cascade notification, and logging mechanisms are unimplementable without the underlying technical infrastructure for persistent records, state monitoring, and inter-agent communication."
+          },
+          "decomposition_note": "The norm is heavily compound: its opening paragraphs are predominantly explicit moral (collective obligation, veracity, fidelity, accountability), while the seven endorsed points are predominantly procedural and technical. Scoring treats the dominant claim of each step independently; the moral framing dominates E1\u2013E4, the procedural specifications dominate P1\u2013P4, and the technical infrastructure references dominate T1\u2013T4."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "beneficence",
+          "veracity",
+          "fidelity",
+          "accountability/what we owe to each other"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Ross)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Pre-defined triage criteria for degraded mode with bounded discretion under unified deviation conditions.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses operational language ('triage criteria', 'degraded mode', 'bounded discretion', 'unified deviation conditions') without naming or directly invoking any recognized moral principle such as justice, autonomy, non-maleficence, or dignity.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to any particular party or identify who could be wronged; it describes a structural arrangement for decision-making under degraded conditions without directing obligations to anyone."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the norm appears to be operational reliability and coordination under degraded conditions, not an appeal to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is no principle to carry over; the norm is context-specific to degraded-mode operational scenarios."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: pre-defined triage criteria with bounded discretion applied under unified deviation conditions, which is a structural rule of operation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Bounding discretion through pre-defined criteria operationalizes the contractualist commitment to justifiability to others and accountability\u2014decisions must be made on grounds that can be justified to those affected, not arbitrary individual judgment; this is specifically identifiable rather than vaguely 'good process'."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure granting unbounded discretion to a single authority would express a different commitment (or none), confirming that bounded discretion specifically expresses a non-arbitrariness/accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Bounding discretion can be defended by appeal to justifiability and non-domination\u2014those subject to triage decisions can hold decision-makers accountable to the pre-defined criteria\u2014rather than merely to efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: use pre-defined triage criteria with bounded discretion when unified deviation conditions obtain."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who acts, what roles are responsible for applying the criteria, or any sequencing among actors."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: the procedure applies under 'degraded mode' with 'unified deviation conditions', indicating a defined activation condition."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute it without further interpretation because 'triage criteria', 'degraded mode', and 'unified deviation conditions' are undefined placeholders requiring domain-specific elaboration."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in organizational/procedural language."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any particular technical capabilities such as persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through purely human organizational processes without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is primarily procedural with an implicit moral dimension; the dominant claim is the procedural specification of bounded-discretion triage under degraded conditions, scored accordingly."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Asymmetric accountability with structural routing: collective accountability for foreseeable capacity failures outside individual agent authority.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'accountability,' which is a named principle in contractualism/second-personal ethics (Scanlon; Darwall), and 'collective accountability' maps directly onto 'what we owe to each other' and answerability.",
+            "principles": [
+              "accountability",
+              "answerability",
+              "justifiability to others"
+            ],
+            "traditions": [
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed (collective accountability) and to whom it applies (those affected by foreseeable capacity failures), and implicitly identifies who would be wronged (those harmed by failures outside individual agent authority)."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's rationale appeals to fairness in distributing accountability\u2014a moral principle\u2014rather than merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that collective bodies bear accountability for foreseeable systemic failures beyond individual authority generalizes to any cooperative or organizational context, not only this deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural routing mechanism\u2014'asymmetric accountability with structural routing'\u2014which is a procedural/structural feature for directing responsibility."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The structural routing of accountability to the collective for failures outside individual authority operationalizes the contractualist commitment to justifiability and fair distribution of answerability, without naming those principles explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could assign accountability individually regardless of authority scope, which would express a different (or no) moral commitment to collective responsibility for systemic failures."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The routing mechanism can be defended by appeal to the moral commitment that it is unfair to hold individuals answerable for failures structurally beyond their control, which is a moral rather than merely efficiency-based justification."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural routing mechanism for assigning accountability, which is a rule of operation."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It distinguishes roles\u2014individual agents versus the collective\u2014and assigns accountability differentially based on those roles."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is specified: foreseeable capacity failures that fall outside individual agent authority."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine what counts as 'foreseeable,' what constitutes 'individual agent authority,' and how 'structural routing' is operationally implemented."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any specific technical capabilities such as persistent storage or network protocols."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is implementable through organizational policy and governance structures without any specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining an explicit moral claim (accountability), a structural/procedural mechanism (asymmetric routing), and a scope condition (foreseeable capacity failures outside individual authority). Scoring focuses on the dominant claim, which is the moral-procedural hybrid of collective accountability with structural routing."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "accountability",
+          "answerability",
+          "justifiability to others"
+        ],
+        "traditions": [
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Four-category after-action record with corroboration requirement for capacity-insufficient category and automatic group review trigger.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle directly; terms like 'capacity-insufficient,' 'corroboration,' and 'group review' are procedural descriptors, not invocations of autonomy, justice, dignity, or any other named moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or identify who could be wronged; it describes a record-keeping and review structure without directing any obligation toward a specific party."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason for the norm appears to be systematic documentation and oversight efficiency rather than an appeal to a moral principle such as justice or dignity."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is named or invoked, there is no principle to carry over; the norm is context-specific procedural design."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a four-category classification system, a corroboration requirement for one category, and an automatic group review trigger\u2014all procedural mechanisms."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The corroboration requirement for the 'capacity-insufficient' category operationalizes the principle of non-maleficence and respect for persons (deontological dignity/autonomy): when someone lacks capacity, additional verification is required before acting, expressing the commitment that vulnerable individuals must not be wronged through unchecked unilateral judgment."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014treating all categories identically with no corroboration\u2014would express no special commitment to protecting those with diminished capacity, confirming that the asymmetric requirement is expressively meaningful."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The corroboration requirement for capacity-insufficient cases can be defended by appeal to non-maleficence and respect for persons: extra verification protects vulnerable individuals from harm caused by unchecked decisions, not merely from coordination inefficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a four-category after-action record, a corroboration requirement, and an automatic group review trigger\u2014all elements of a defined process."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not name specific roles, actors, or timing sequences; 'group review' implies collective action but no roles or sequencing are specified."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies two triggers: the capacity-insufficient category triggers corroboration, and an unspecified condition triggers automatic group review."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute this without further interpretation because the four categories are unnamed, the corroboration method is unspecified, and the group review trigger condition is not defined."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references a 'record' but does not specify any particular technical infrastructure such as a database, log format, API, or cryptographic system."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are provided; 'record' and 'review trigger' are described at a conceptual level only."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes persistent storage (to maintain the after-action record) and some mechanism for automatic triggering, implying at minimum basic record-keeping infrastructure."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented with paper records and manual review processes, so it is not unimplementable without specialized technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it combines a classification scheme (four categories), a corroboration rule (capacity-insufficient category), and an automatic trigger (group review). Scoring focuses on the dominant procedural claim while noting the implicit moral content in the corroboration requirement."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    },
+    {
+      "norm": "Bad faith definition including deliberate omission, with immediate removal and concurrent review, basis broadcast to all agents.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'bad faith' and 'deliberate omission,' which directly reference veracity (a derived principle under principlism) and honesty (virtue ethics), as well as justifiability to others and accountability (contractualism).",
+            "principles": [
+              "veracity",
+              "honesty",
+              "accountability",
+              "justifiability to others"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Virtue ethics (Aristotle; Hursthouse)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed to the collective of agents\u2014honest, complete definitions\u2014and identifies bad faith actors as those who wrong others through deliberate omission, making the directedness clear."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The appeal to 'bad faith' and 'deliberate omission' grounds the norm in moral wrongdoing (dishonesty, betrayal of trust) rather than mere convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The prohibition on bad faith and deliberate omission as grounds for removal and review is a principle applicable to any cooperative or contractual situation, not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: immediate removal, concurrent review, and broadcast of the basis to all agents."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The combination of immediate removal, concurrent review, and broadcasting the basis to all agents operationalizes accountability and transparency\u2014specifically the contractualist commitment to justifiability to others\u2014without naming those principles."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., private warning without broadcast or delayed review) would express a different commitment\u2014perhaps leniency or confidentiality\u2014rather than collective accountability and transparency."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "Broadcasting the basis to all agents and conducting concurrent review can be defended by appeal to justifiability to others and accountability: affected parties are owed an explanation and the process must be contestable."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies three distinct procedural mechanisms: immediate removal, concurrent review, and broadcast of the basis to all agents."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify which roles or actors carry out the removal, review, or broadcast, leaving those assignments undefined."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: a bad faith definition including deliberate omission activates the procedure."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine who performs the removal and review, what counts as 'bad faith' in borderline cases, and what 'broadcast' means technically, so it cannot be executed purely as written."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, ledgers, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; 'broadcast' and 'removal' are described at a functional, not technical, level."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "Broadcasting to all agents and conducting concurrent review presupposes some form of communication infrastructure and persistent record-keeping, even if not named explicitly."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could in principle be implemented through non-technical means (e.g., verbal announcement and manual review), so it is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains an explicit moral claim (bad faith/deliberate omission as wrongdoing), an implicit moral operationalization (accountability via broadcast and review), and procedural specifications (immediate removal, concurrent review, basis broadcast). Scoring treats the explicit moral and procedural elements as co-dominant, with the implicit moral derived from the procedural mechanisms."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "veracity",
+          "honesty",
+          "accountability",
+          "justifiability to others"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Virtue ethics (Aristotle; Hursthouse)",
+          "Contractualism (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Eight-item entitlements list, structurally paired with obligations.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm references 'entitlements' paired with 'obligations,' which directly invokes the deontological and contractualist vocabulary of rights, duties, and what we owe to each other.",
+            "principles": [
+              "justice",
+              "what we owe to each other",
+              "human dignity",
+              "justifiability to others"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Kant; Ross)",
+              "Contractualism / second-personal (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly pairs entitlements (what is owed to someone) with obligations (what is owed by someone), directly stating a bilateral structure of who is owed what and by whom."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "Entitlements and obligations are inherently moral concepts grounded in rights and duties, not merely in convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that entitlements and obligations are structurally paired is a general feature of rights-based moral frameworks applicable across many cooperative and institutional contexts."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural feature: an eight-item list of entitlements organized in paired correspondence with obligations."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The structural pairing of entitlements with obligations operationalizes the contractualist commitment to reciprocity and mutual accountability\u2014what we owe to each other\u2014without naming that principle explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative structure listing entitlements without paired obligations would express a different commitment (e.g., pure beneficence or charity) rather than reciprocal accountability, confirming the expressiveness of the pairing."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The paired structure can be defended by appeal to the moral commitment that rights entail corresponding duties and that parties are mutually accountable to one another, rather than merely for organizational convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural arrangement: a fixed-count (eight-item) list of entitlements organized in paired correspondence with obligations."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what roles exist, or any timing or sequencing of actions."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers the procedure or the conditions under which it applies."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not execute this without further interpretation, as the actual content of the eight entitlements and their paired obligations is not specified."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm presupposes no technical capabilities; it is a structural description of a normative document."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented as a written document without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is primarily structural/procedural in describing a paired list format, but the dominant claim is the moral-structural one: entitlements paired with obligations, which carries explicit and implicit moral content. Scored on that dominant claim."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "justice",
+          "what we owe to each other",
+          "human dignity",
+          "justifiability to others"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Deontology (Kant; Ross)",
+          "Contractualism / second-personal (Scanlon; Darwall)"
+        ]
+      }
+    },
+    {
+      "norm": "Collective patient commitment as preamble and as standalone obligation.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'commitment' in a patient-care context, which directly references fidelity (a derived principle under Principlism) and the caring relation (Care ethics), as a collective obligation to patients.",
+            "principles": [
+              "fidelity",
+              "caring relation",
+              "beneficence"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Care ethics (Gilligan; Held; Noddings)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm specifies what is owed (a collective commitment) and to whom (patients), making explicit that patients are the recipients of an obligation that could be violated."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The appeal to 'patient commitment' as both preamble and standalone obligation grounds the norm in moral duty toward patients, not merely in efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle of collective fidelity and commitment to those served (patients, clients, beneficiaries) is generalizable to other cooperative contexts such as legal representation, social work, or community governance."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural feature: the commitment functions both as a preamble (framing document) and as a standalone obligation, which is a procedural/structural arrangement."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Placing the commitment as both preamble and standalone obligation operationalizes accountability and answerability to patients (contractualist 'what we owe to each other') without naming those principles explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014such as embedding the commitment only in internal policy without preamble status\u2014would express a weaker or purely administrative commitment, not a moral one owed directly to patients."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The dual placement (preamble and standalone) can be defended by appeal to the moral commitment of accountability to patients, ensuring the obligation is not merely aspirational but enforceable."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural rule: the collective patient commitment must appear as a preamble and also as a standalone obligation."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify who acts, what individual roles are responsible, or what timing or sequencing applies to fulfilling the commitment."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers the procedure or under what conditions it applies beyond its general structural placement."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider could not fully execute this without further interpretation, as 'collective patient commitment' requires moral and contextual elaboration to operationalize."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is entirely expressed in normative and structural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities such as persistent storage, network protocols, or data structures."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and implementable through governance documents and institutional policy without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it has a structural/procedural claim (preamble and standalone obligation) and a moral claim (collective commitment to patients). The dominant claim is the moral-structural one; both dimensions are scored accordingly."
+        },
+        "E1": true,
+        "E2": true,
+        "typology": "ED",
+        "principles": [
+          "fidelity",
+          "caring relation",
+          "beneficence"
+        ],
+        "traditions": [
+          "Principlism (Beauchamp & Childress)",
+          "Care ethics (Gilligan; Held; Noddings)"
+        ]
+      }
+    },
+    {
+      "norm": "Framework revisability as an ongoing obligation, not a one-time design choice. I endorse all points without reservation.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm speaks of 'obligation' and 'revisability' but does not name or directly invoke any recognized moral principle such as autonomy, justice, dignity, non-domination, or utility; 'obligation' alone is too generic to count.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what is owed to whom or identify any party who could be wronged by non-compliance; it frames revisability as a design obligation without directing it toward any person or group."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "Framing revisability as an 'ongoing obligation' rather than mere convenience implies a moral reason\u2014that frameworks must remain accountable and correctable\u2014rather than appealing only to efficiency or convention."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that governing frameworks should remain revisable as an ongoing moral obligation is general enough to apply to any cooperative or institutional arrangement, not only this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural feature: that framework revision must be treated as a continuous, ongoing process rather than a one-time design event."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Treating revisability as ongoing operationalizes the contractualist commitment to justifiability to others and contestability (republican non-domination)\u2014the idea that those governed by a framework retain the standing to challenge and revise it, without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014treating the framework as fixed after initial design\u2014would express a different commitment (or none), confirming that the ongoing-revision procedure specifically expresses accountability and contestability."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The ongoing-revision requirement can be defended by appeal to justifiability to those affected and freedom from arbitrary fixed power, rather than merely by efficiency or coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: framework revision is an ongoing obligation, implying a continuous process rather than a discrete event."
+          },
+          "P2": {
+            "answer": "N",
+            "reasoning": "The norm does not identify who is responsible for revising the framework, what roles exist, or any sequencing of actors."
+          },
+          "P3": {
+            "answer": "N",
+            "reasoning": "The norm does not specify what triggers a revision or under what conditions the obligation activates beyond the general notion of 'ongoing.'"
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Without specification of actors, triggers, or concrete steps, an outsider could not execute this norm as written without substantial further interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any technical capabilities; it is expressed entirely in normative and procedural terms."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through purely social or institutional mechanisms without any technical infrastructure."
+          },
+          "decomposition_note": "The norm has two clauses: (1) a substantive claim about framework revisability as ongoing obligation, and (2) a personal endorsement statement. Scoring focuses on clause (1) as the dominant normative claim; the endorsement clause adds no independent content."
+        },
+        "E1": false,
+        "E2": false,
+        "typology": "IM",
+        "principles": [],
+        "traditions": []
+      }
+    }
+  ]
+}
