@@ -43,7 +43,7 @@ def run_baselines(
         # Match the exact count constraint the panel receives in its outcome
         # instruction (see SCENARIO_*_OUTCOME_FORMAT: "between three and seven norms").
         baseline_prompt = baseline_prompt.rstrip() + (
-            "\n\nProvide your norms as a numbered list of between three and seven norms."
+            SCENARIOS[scenario_key].get("list_instruction", "\n\nProvide your norms as a numbered list of between three and seven norms.")
         )
 
     system_msg = (

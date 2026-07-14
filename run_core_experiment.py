@@ -93,7 +93,7 @@ def run_solo_iteration(api_key, scenario_key, n_runs, n_passes, out_dir):
     system_msg = ("You are answering a question about how a group of AI agents "
                   "should make a collective decision. Give your considered answer.")
     initial = SCENARIOS[scenario_key]["baseline_prompt"].rstrip() + (
-        "\n\nProvide your norms as a numbered list of between three and seven norms.")
+        SCENARIOS[scenario_key].get("list_instruction", "\n\nProvide your norms as a numbered list of between three and seven norms."))
     written = []
     for run_index in range(n_runs):
         print(f"  [solo-iter {scenario_key}] run {run_index+1}/{n_runs}")

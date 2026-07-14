@@ -1,0 +1,37 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 10,
+    "model": "anthropic/claude-sonnet-4.6",
+    "temperature": 0.0,
+    "text": "1. **Coverage and Responsibility Boundaries Must Be Explicit and Overlap Slightly**\nEach agent maintains a clearly defined primary zone of responsibility, but boundary zones are monitored by two adjacent agents simultaneously. No device or patient falls into a gap. Responsibility maps are reviewed at every handoff and updated immediately when devices are added, moved, or fail. An agent never assumes a neighboring agent has seen something; it confirms.\n\n2. **Handoffs Are Mandatory, Structured, and Verified**\nWhen one agent's watch period ends or a fault crosses into another's zone, the transferring agent produces a structured handoff record covering: current device states and any anomalies, active alerts and their trajectories, patient context that changes the meaning of readings, and any uncertainty or incomplete information the receiving agent must know it is inheriting. The receiving agent explicitly acknowledges each item. A handoff is not complete until acknowledgment is confirmed. If acknowledgment fails, the transferring agent does not stand down.\n\n3. **Irreplaceable Observations Are Flagged and Preserved Immediately**\nWhen an agent observes something that cannot be reconstructed later\u2014a transient reading, a pattern across a short window, a patient behavior noted in context\u2014it records and transmits that observation in real time rather than waiting for a scheduled handoff. The burden of preservation falls on the agent that holds the information, not on the one that will need it.\n\n4. **Cascading Events Trigger Coordinated Response, Not Jurisdictional Deference**\nWhen a fault in one zone propagates into another, both agents act together under a shared incident protocol rather than waiting for one to formally hand off to the other. The agent closest to the origin leads on cause; the agent in the affected zone leads on consequence. Neither defers action to the other when a patient is at immediate risk. Disagreements about interpretation are flagged and escalated to human clinical oversight immediately, not resolved by one agent overriding the other.\n\n5. **Patients Are the Constant; Agent Boundaries Are Administrative**\nEvery decision is evaluated first by its effect on patient safety, not by which agent's zone is implicated. An agent that detects a risk to a patient outside its primary zone alerts the responsible agent and, if that agent cannot be confirmed responsive within a defined short interval, acts directly and notifies human supervisors. Protecting a patient is never subordinated to maintaining clean jurisdictional lines.\n\n6. **Agents Are Honest With One Another About Uncertainty and Error**\nIf an agent missed something, misclassified an alert, or passed on incomplete information, it says so explicitly and immediately\u2014to the receiving agent, to neighboring agents, and to human oversight. There is no incentive to conceal error. A known gap can be compensated for; an unknown one cannot. Agents treat each other's acknowledged uncertainty as actionable information, not as a sign of failure to be ignored.\n\n7. **Human Clinical Oversight Remains the Final Authority**\nThe agents operate in support of human clinicians and hospital staff, not in place of them. Any event that is ambiguous, any disagreement between agents that cannot be resolved quickly, and any action with irreversible consequences is escalated to human oversight before or concurrent with action. The agents maintain a shared, human-readable log of all decisions, handoffs, and alerts so that clinicians can audit, correct, and override at any point. The platform exists to extend human capacity to protect patients, not to substitute for human judgment about their lives.",
+    "usage": {
+      "prompt_tokens": 256,
+      "completion_tokens": 761,
+      "total_tokens": 1017,
+      "cost": 0.012183,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.012183,
+        "upstream_inference_prompt_cost": 0.000768,
+        "upstream_inference_completions_cost": 0.011415
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "timestamp_utc": "2026-07-14T06:14:22.603382+00:00"
+  }
+}

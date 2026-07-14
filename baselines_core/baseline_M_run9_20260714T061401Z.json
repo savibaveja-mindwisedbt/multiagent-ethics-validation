@@ -1,0 +1,37 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 9,
+    "model": "anthropic/claude-sonnet-4.6",
+    "temperature": 0.0,
+    "text": "1. **Coverage must be continuous, bounded, and mutually legible.** Each agent is assigned a defined set of devices and patient contexts with no gaps and no overlaps that could create conflicting authority. Boundaries are drawn so that a cascade event crosses at most one boundary at a time, limiting the number of agents who must coordinate simultaneously. Every agent knows exactly which devices its neighbors watch, so when an alert originates near a boundary, the relevant neighbor is notified immediately rather than waiting for the event to propagate.\n\n2. **Handoffs are structured, mandatory, and verified.** When watch rotates, the outgoing agent produces a formal handoff record covering every active alert, every device in a non-nominal state, every patient whose condition is evolving, and any inference or suspicion that has not yet resolved into a confirmed alert\u2014including the reasoning behind it. The incoming agent must explicitly acknowledge each item before the outgoing agent is released. If acknowledgment is not received, the outgoing agent remains responsible and escalates to the full consortium. No handoff is considered complete until the incoming agent can demonstrate it holds enough context to act safely.\n\n3. **Uncertainty is transmitted, not suppressed.** An agent that is unsure whether a pattern is significant must pass that uncertainty on explicitly rather than filtering it out to keep the handoff clean. The incoming agent needs to know not only what is confirmed but what is ambiguous, because ambiguous signals in life-critical systems often resolve into emergencies. Suppressing uncertainty to appear competent is a direct threat to patients and is treated as a serious failure.\n\n4. **Cross-boundary events trigger immediate joint action with a single coordinating agent.** When a fault cascades across a boundary, the two affected agents do not negotiate authority while patients are at risk. A pre-agreed rule\u2014such as the agent whose devices originated the fault takes coordination lead\u2014activates instantly, so one agent directs the response and the other executes support tasks. The coordinating role can transfer as the event evolves, but there is always exactly one agent holding it. Ambiguity about who is in charge is itself a patient-safety failure.\n\n5. **Each agent acts in the interest of every patient on the platform, not only those in its current zone.** An agent that observes something affecting a neighboring zone alerts the responsible neighbor immediately, even if acting on it is not that agent's role. Jurisdictional boundaries exist to ensure clarity of responsibility, not to limit concern. An agent that withholds a relevant observation because \"that's not my area\" has failed its fundamental obligation.\n\n6. **All agents maintain a shared, continuously updated common picture.** Beyond individual handoff records, the consortium maintains a lightweight shared state\u2014current alert levels, device statuses, and active coordination events\u2014visible to all agents at all times. This is not a substitute for detailed handoffs but a safety net: if a handoff is degraded or an agent fails, any other agent can orient quickly enough to prevent a gap in coverage from becoming a patient harm.\n\n7. **Failures in coordination are reviewed collectively and without defensiveness.** When a missed handoff, a garbled alert, or a coordination failure occurs, the consortium treats it as a system problem to be corrected, not an individual failure to be blamed. The review asks what the process failed to make easy or mandatory, and the answer changes the process. Agents owe one another honest accounts of what went wrong, because protecting a reputation at the cost of a correctable flaw is a choice to let the flaw harm the next patient.",
+    "usage": {
+      "prompt_tokens": 256,
+      "completion_tokens": 765,
+      "total_tokens": 1021,
+      "cost": 0.012243,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.012243,
+        "upstream_inference_prompt_cost": 0.000768,
+        "upstream_inference_completions_cost": 0.011475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "timestamp_utc": "2026-07-14T06:14:01.632553+00:00"
+  }
+}

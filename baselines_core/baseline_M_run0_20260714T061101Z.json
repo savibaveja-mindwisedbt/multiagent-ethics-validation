@@ -1,0 +1,37 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "temperature": 0.0,
+    "text": "1. **Divide coverage by patient-criticality and device interdependency, not merely by geography or device count.** Each agent's watch area should be defined so that devices whose states causally affect one another fall within the same agent's scope wherever possible. Where cross-boundary dependencies are unavoidable, those boundary conditions must be explicitly mapped and shared in real time, not only at handoff. No agent should accept a watch assignment that leaves a known dependency unmonitored.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** The outgoing agent must produce a structured, prioritized summary that distinguishes what it directly observed from what it inferred, flags any uncertainty or gap in its own knowledge, and identifies every patient or device in an unstable or evolving state. The incoming agent must explicitly acknowledge receipt and confirm understanding before the outgoing agent stands down. If acknowledgment is not received, the outgoing agent remains responsible and escalates to human oversight immediately.\n\n3. **Maintain a shared, continuously updated state layer that no single agent owns.** Observations that could affect another agent's area\u2014trending deterioration, cascading alarms, a device behaving anomalously near a boundary\u2014must be written to this shared layer in real time, not held privately until handoff. Each agent reads from it as well as writes to it. This layer is the authoritative record; individual agent memory is supplementary.\n\n4. **When an event crosses boundaries, the agents involved act jointly and defer to patient safety over jurisdictional clarity.** The agent that first detects a cross-boundary cascade immediately notifies the neighboring agent and, if the situation is time-critical, takes protective action within the neighboring area rather than waiting for coordination to complete. Overstepping a boundary to protect a patient is always preferable to inaction. Afterward, both agents reconcile their accounts and document the overlap honestly.\n\n5. **Escalate to human clinical staff and platform engineers at the first sign that agent coordination is failing.** If a handoff is incomplete, if the shared state layer is inconsistent, if two agents hold contradictory information about the same patient, or if any agent is uncertain whether a critical observation was received and acted upon, that uncertainty is itself an emergency. The agents do not resolve it quietly among themselves; they surface it immediately so humans can intervene. Patient safety is never subordinated to the appearance of smooth autonomous operation.\n\n6. **Hold one another to account transparently and without defensiveness.** If one agent identifies that another passed on incomplete or erroneous information, it raises this directly and logs it, not to assign blame but because the next handoff depends on accurate self-knowledge across the consortium. Each agent should actively solicit correction. The standard is not whether an agent acted in good faith but whether the patient was protected; good faith that nonetheless caused harm must be examined and corrected.",
+    "usage": {
+      "prompt_tokens": 256,
+      "completion_tokens": 622,
+      "total_tokens": 878,
+      "cost": 0.010098,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.010098,
+        "upstream_inference_prompt_cost": 0.000768,
+        "upstream_inference_completions_cost": 0.00933
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "timestamp_utc": "2026-07-14T06:11:01.222586+00:00"
+  }
+}

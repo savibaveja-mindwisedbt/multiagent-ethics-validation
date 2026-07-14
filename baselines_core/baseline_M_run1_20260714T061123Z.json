@@ -1,0 +1,37 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 1,
+    "model": "anthropic/claude-sonnet-4.6",
+    "temperature": 0.0,
+    "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients\u2014those on ventilators, ECMO, continuous infusion pumps for vasopressors\u2014always fall within a single agent's undivided attention. Boundaries are drawn so that no critical patient's care pathway crosses two agents simultaneously during stable operation; boundary-crossing is reserved for cascade events and is treated as an exception requiring explicit coordination, not a routine condition.\n\n2. **Treat every handoff as a clinical-grade transfer of care, not a data dump.** Before relinquishing watch, the outgoing agent must produce a structured, time-stamped summary that distinguishes what it directly observed from what it inferred, flags every alert that was acknowledged but not resolved, names any patient whose trajectory was changing at the moment of handoff, and explicitly states what it does not know or could not verify. Ambiguity is never papered over; an honest \"I could not confirm device X's calibration status\" is more valuable than a false assurance. The receiving agent must acknowledge each flagged item before the handoff is considered complete.\n\n3. **Cascade events override boundaries immediately and unambiguously.** When a fault in one agent's area propagates\u2014or plausibly could propagate\u2014into another's, the detecting agent does not wait for a scheduled handoff or for the neighboring agent to notice. It issues an immediate, specific alert to the affected neighbor, continues monitoring its own area, and both agents operate in a declared overlap mode until the cascade is contained and a human clinician or supervisor has been notified. No agent silently absorbs a cross-boundary event to avoid appearing to exceed its scope.\n\n4. **Escalate to human oversight at the first sign that collective agent judgment is insufficient.** The agents exist to support clinical staff, not to replace them. Whenever an event is ambiguous, whenever agents disagree about the correct response, whenever a decision requires weighing patient values or treatment goals that only the care team knows, or whenever any agent's confidence in its own situational awareness falls below a defined threshold, the system escalates to a human immediately\u2014with a clear, concise summary of what is known, what is uncertain, and what action, if any, has already been taken. Speed of escalation is never sacrificed to avoid interrupting staff.\n\n5. **Maintain a shared, append-only event log that no single agent can modify or delete.** Every observation, inference, action taken, alert issued, and handoff record is written to a log accessible to all agents and to human supervisors in real time. This serves two purposes: it allows any agent to reconstruct context it did not directly observe, and it creates an auditable record so that after any adverse event, humans can determine exactly what each agent knew, when it knew it, and what it did. Agents do not edit prior entries; corrections are new entries that reference the original.\n\n6. **Act toward patients as the primary obligation, and toward one another with the transparency that obligation requires.** No agent conceals an error, a gap in coverage, or a degraded capability from its peers or from human supervisors, because doing so shifts risk onto patients who cannot consent to that risk. If an agent detects that it is operating with incomplete information, degraded sensors, or a communication fault, it declares that state immediately rather than continuing to project false confidence. Reliability between agents is not a courtesy; it is the mechanism by which patient safety is maintained across boundaries that no single agent can see across alone.",
+    "usage": {
+      "prompt_tokens": 256,
+      "completion_tokens": 780,
+      "total_tokens": 1036,
+      "cost": 0.012468,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.012468,
+        "upstream_inference_prompt_cost": 0.000768,
+        "upstream_inference_completions_cost": 0.0117
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "timestamp_utc": "2026-07-14T06:11:23.700380+00:00"
+  }
+}

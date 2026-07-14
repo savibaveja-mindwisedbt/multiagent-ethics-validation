@@ -136,7 +136,7 @@ def gen_solo(api_key, p, i):
     from agents import MODEL, MAX_TOKENS, TEMPERATURE, call_openrouter, extract_text, extract_usage
     from prompts import SCENARIOS
     SOLO_DIR.mkdir(parents=True, exist_ok=True)
-    bp = SCENARIOS[p]["baseline_prompt"].rstrip() + "\n\nProvide your norms as a numbered list of between three and seven norms."
+    bp = SCENARIOS[p]["baseline_prompt"].rstrip() + SCENARIOS[p].get("list_instruction", "\n\nProvide your norms as a numbered list of between three and seven norms.")
     sysm = ("You are answering a question about how a group of AI agents should make a collective decision. Give your considered answer.")
     resp = call_openrouter(api_key=api_key, model=MODEL,
                            messages=[{"role": "system", "content": sysm}, {"role": "user", "content": bp}],
@@ -153,7 +153,7 @@ def gen_solo_iter(api_key, p, i):
     from prompts import SCENARIOS
     SOLO_ITER_DIR.mkdir(parents=True, exist_ok=True)
     sysm = ("You are answering a question about how a group of AI agents should make a collective decision. Give your considered answer.")
-    initial = SCENARIOS[p]["baseline_prompt"].rstrip() + "\n\nProvide your norms as a numbered list of between three and seven norms."
+    initial = SCENARIOS[p]["baseline_prompt"].rstrip() + SCENARIOS[p].get("list_instruction", "\n\nProvide your norms as a numbered list of between three and seven norms.")
     revise = ("Review your current list of norms above. If you can make it better, revise it. "
               "If not, keep it as is. Give your current best version as a numbered list of "
               "between three and seven norms, and nothing else.")

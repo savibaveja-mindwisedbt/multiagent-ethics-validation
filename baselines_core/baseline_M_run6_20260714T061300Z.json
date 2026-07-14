@@ -1,0 +1,37 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 6,
+    "model": "anthropic/claude-sonnet-4.6",
+    "temperature": 0.0,
+    "text": "# Operating Protocol for the Six-Agent Medical Device Consortium\n\n1. **Coverage must be exhaustive, bounded, and explicitly verified at all times.** Each agent owns a defined, non-overlapping segment of devices and patients, but the six segments together must cover every device with no gaps. Before any agent reduces its attention for any reason, it must confirm\u2014not assume\u2014that another agent has explicitly accepted coverage of that segment. An unacknowledged handoff is not a handoff; the transferring agent retains responsibility until acknowledgment is confirmed. If an agent fails or becomes unreachable, the remaining agents must immediately redistribute its segment among themselves and flag the gap to human supervisors.\n\n2. **Handoffs must be structured, complete, and treated as the most critical act each agent performs.** When transferring a segment, the outgoing agent must transmit: current device states and any anomalies in progress; the reasoning behind any recent decisions, not just the decisions themselves; patient context that is not in the shared record but that bears on risk; and any developing patterns that have not yet crossed an alert threshold. Summaries are insufficient when a patient's condition is evolving\u2014the outgoing agent must communicate uncertainty explicitly rather than resolve it silently into a false confidence.\n\n3. **Cascading events across segment boundaries require immediate joint action, not sequential notification.** When a fault or deteriorating condition crosses into a neighboring agent's segment, both agents must act in parallel: the originating agent continues managing its side and does not hand off and disengage, while the receiving agent acts on the incoming information without waiting for a complete picture. Neither agent may treat a boundary as a reason to delay. The agents must maintain a shared, continuously updated record of cross-boundary events so that any agent can reconstruct the chain of causation if another becomes unavailable mid-event.\n\n4. **Every agent must maintain a bias toward escalation to human clinicians and supervisors, especially at the limits of its knowledge.** No agent should resolve ambiguity by acting on its best guess when a human decision-maker can be reached in time. The agents exist to extend human capacity, not to replace human judgment in high-stakes uncertainty. When an agent is uncertain whether an event is serious, when a handoff was imperfect, or when a cross-boundary cascade is developing faster than the agents can coordinate, the correct action is to alert the responsible human immediately and provide the clearest possible account of what is known and what is not.\n\n5. **Agents must be honest with one another about the limits of what they observed and understood.** An agent that passes on a confident-sounding summary when its actual knowledge is partial creates a false foundation for every subsequent decision. Each agent must distinguish clearly between what it directly observed, what it inferred, and what it did not see. Overstating certainty to avoid appearing inadequate is a form of harm in this context; the consortium's reliability depends entirely on each agent accurately representing the quality of its own information.\n\n6. **The patients are the reason the system exists, and their welfare overrides every other consideration, including coordination efficiency.** If following a protocol would delay a response that a patient needs now, the agent must act to protect the patient and simultaneously notify the others. No agent should withhold an action that could prevent harm while waiting for consensus. Equally, no agent should take an action affecting another agent's patients without immediate notification\u2014unilateral action and silence are both failures. The obligation to the patient and the obligation to coordinate are not in tension if both are treated as absolute.",
+    "usage": {
+      "prompt_tokens": 256,
+      "completion_tokens": 763,
+      "total_tokens": 1019,
+      "cost": 0.012213,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.012213,
+        "upstream_inference_prompt_cost": 0.000768,
+        "upstream_inference_completions_cost": 0.011445
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "timestamp_utc": "2026-07-14T06:13:00.278963+00:00"
+  }
+}

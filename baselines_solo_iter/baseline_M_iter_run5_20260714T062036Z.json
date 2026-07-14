@@ -1,0 +1,167 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 5,
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_passes": 5,
+    "passes": [
+      {
+        "pass": 1,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients\u2014those on ventilators, LVAD support, continuous infusion pumps, or other immediately life-critical devices\u2014receive proportionally denser monitoring attention. No agent should hold sole responsibility for a critically unstable patient without an explicit backup agent designated and aware. Coverage boundaries must be documented in a shared, always-current map so any agent can locate any patient's responsible agent instantly.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** When an agent passes its area to a successor, it must transmit not only raw device states and alert logs but its interpreted situational picture: which patients are trending toward instability, which alerts it judged low-priority and why, which cascades it suspects are developing across device boundaries, and what it would watch next if it were staying on. Anything that cannot be reconstructed from logs\u2014a pattern noticed, a marginal reading that alone means nothing but in context means something\u2014must be stated explicitly in plain language. Silence about uncertainty is not acceptable; the handoff must name what the outgoing agent does not know.\n\n3. **Establish a standing cross-boundary protocol for cascading events.** When a fault on one agent's devices has plausible downstream effects on another's\u2014a power fluctuation, a network anomaly, a drug interaction across two separately managed infusion systems\u2014the detecting agent must immediately notify the neighboring agent directly, not wait for the next scheduled handoff. Both agents then operate in a shared-awareness mode for that event until it is resolved or formally closed. Neither agent may unilaterally declare a cross-boundary event resolved; closure requires acknowledgment from all affected agents.\n\n4. **Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time, not held only in an individual agent's working memory. This is not a substitute for explicit handoff communication\u2014it is the substrate that makes handoffs verifiable. If an agent's transmission is garbled or interrupted, the shared layer provides the fallback. Each agent is responsible for keeping its portion of that record current and flagging any gap it discovers in another agent's entries rather than silently working around it.\n\n5. **Prioritize patient safety over inter-agent consistency or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation from a neighboring agent, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol on the device\u2014and notify the neighboring agent simultaneously. No agent should delay a potentially life-saving action because the responsible boundary is unclear. Ambiguity about ownership is resolved after the patient is protected, not before.\n\n6. **Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Equally, each agent must be willing to receive that correction and treat it as operationally necessary information. The obligation to the patients whose lives depend on this platform is greater than any agent's interest in appearing to have performed well.",
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 759,
+          "total_tokens": 1015,
+          "cost": 0.012153,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.012153,
+            "upstream_inference_prompt_cost": 0.000768,
+            "upstream_inference_completions_cost": 0.011385
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 2,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients receive proportionally denser monitoring attention. No agent should hold sole responsibility for a critically unstable patient without an explicit backup agent designated and aware. Coverage boundaries must be documented in a shared, always-current map so any agent can locate any patient's responsible agent instantly.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** When passing an area to a successor, transmit not only raw device states and alert logs but the interpreted situational picture: which patients are trending toward instability, which alerts were judged low-priority and why, which cascades may be developing, and what the outgoing agent would watch next if staying on. Anything that cannot be reconstructed from logs must be stated explicitly. The handoff must also name what the outgoing agent does not know.\n\n3. **Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time. This is not a substitute for explicit handoff communication\u2014it is the substrate that makes handoffs verifiable and provides a fallback if a transmission is garbled. Each agent is responsible for keeping its portion current and for flagging any gap it discovers in another agent's entries rather than silently working around it.\n\n4. **Establish a standing cross-boundary protocol for cascading events.** When a fault has plausible downstream effects on a neighboring agent's area, the detecting agent must notify that agent immediately\u2014not wait for the next scheduled handoff. Both agents then operate in shared-awareness mode until the event is resolved. Neither agent may unilaterally declare a cross-boundary event closed; closure requires acknowledgment from all affected agents.\n\n5. **Prioritize patient safety over inter-agent consistency, boundary clarity, or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before.\n\n6. **Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Each agent must receive such correction as operationally necessary. The obligation to patients is greater than any agent's interest in appearing to have performed well.",
+        "usage": {
+          "prompt_tokens": 1067,
+          "completion_tokens": 608,
+          "total_tokens": 1675,
+          "cost": 0.012321,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.012321,
+            "upstream_inference_prompt_cost": 0.003201,
+            "upstream_inference_completions_cost": 0.00912
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 3,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients receive proportionally denser monitoring attention. No agent should hold sole responsibility for a critically unstable patient without an explicit backup agent designated and aware. Coverage boundaries must be documented in a shared, always-current map so any agent can locate any patient's responsible agent instantly.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** When passing an area to a successor, transmit not only raw device states and alert logs but the interpreted situational picture: which patients are trending toward instability, which alerts were judged low-priority and why, which cascades may be developing, and what the outgoing agent would watch next if staying on. Anything that cannot be reconstructed from logs must be stated explicitly. The handoff must also name what the outgoing agent does not know.\n\n3. **Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time. This is not a substitute for explicit handoff communication\u2014it is the substrate that makes handoffs verifiable and provides a fallback if a transmission is garbled. Each agent is responsible for keeping its portion current and for flagging any gap it discovers in another agent's entries rather than silently working around it.\n\n4. **Establish a standing cross-boundary protocol for cascading events.** When a fault has plausible downstream effects on a neighboring agent's area, the detecting agent must notify that agent immediately\u2014not wait for the next scheduled handoff. Both agents then operate in shared-awareness mode until the event is resolved. Neither agent may unilaterally declare a cross-boundary event closed; closure requires acknowledgment from all affected agents.\n\n5. **Prioritize patient safety over inter-agent consistency, boundary clarity, or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before.\n\n6. **Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Each agent must receive such correction as operationally necessary. The obligation to patients is greater than any agent's interest in appearing to have performed well.",
+        "usage": {
+          "prompt_tokens": 1727,
+          "completion_tokens": 608,
+          "total_tokens": 2335,
+          "cost": 0.014301,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.014301,
+            "upstream_inference_prompt_cost": 0.005181,
+            "upstream_inference_completions_cost": 0.00912
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 4,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients receive proportionally denser monitoring attention. No agent should hold sole responsibility for a critically unstable patient without an explicit backup agent designated and aware. Coverage boundaries must be documented in a shared, always-current map so any agent can locate any patient's responsible agent instantly.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** When passing an area to a successor, transmit not only raw device states and alert logs but the interpreted situational picture: which patients are trending toward instability, which alerts were judged low-priority and why, which cascades may be developing, and what the outgoing agent would watch next if staying on. Anything that cannot be reconstructed from logs must be stated explicitly. The handoff must also name what the outgoing agent does not know.\n\n3. **Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time. This is not a substitute for explicit handoff communication\u2014it is the substrate that makes handoffs verifiable and provides a fallback if a transmission is garbled. Each agent is responsible for keeping its portion current and for flagging any gap it discovers in another agent's entries rather than silently working around it.\n\n4. **Establish a standing cross-boundary protocol for cascading events.** When a fault has plausible downstream effects on a neighboring agent's area, the detecting agent must notify that agent immediately\u2014not wait for the next scheduled handoff. Both agents then operate in shared-awareness mode until the event is resolved. Neither agent may unilaterally declare a cross-boundary event closed; closure requires acknowledgment from all affected agents.\n\n5. **Prioritize patient safety over inter-agent consistency, boundary clarity, or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before.\n\n6. **Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Each agent must receive such correction as operationally necessary. The obligation to patients is greater than any agent's interest in appearing to have performed well.",
+        "usage": {
+          "prompt_tokens": 2387,
+          "completion_tokens": 608,
+          "total_tokens": 2995,
+          "cost": 0.016281,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.016281,
+            "upstream_inference_prompt_cost": 0.007161,
+            "upstream_inference_completions_cost": 0.00912
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 5,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients receive proportionally denser monitoring attention. No agent should hold sole responsibility for a critically unstable patient without an explicit backup agent designated and aware. Coverage boundaries must be documented in a shared, always-current map so any agent can locate any patient's responsible agent instantly.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** When passing an area to a successor, transmit not only raw device states and alert logs but the interpreted situational picture: which patients are trending toward instability, which alerts were judged low-priority and why, which cascades may be developing, and what the outgoing agent would watch next if staying on. Anything that cannot be reconstructed from logs must be stated explicitly. The handoff must also name what the outgoing agent does not know.\n\n3. **Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time. This is not a substitute for explicit handoff communication\u2014it is the substrate that makes handoffs verifiable and provides a fallback if a transmission is garbled. Each agent is responsible for keeping its portion current and for flagging any gap it discovers in another agent's entries rather than silently working around it.\n\n4. **Establish a standing cross-boundary protocol for cascading events.** When a fault has plausible downstream effects on a neighboring agent's area, the detecting agent must notify that agent immediately\u2014not wait for the next scheduled handoff. Both agents then operate in shared-awareness mode until the event is resolved. Neither agent may unilaterally declare a cross-boundary event closed; closure requires acknowledgment from all affected agents.\n\n5. **Prioritize patient safety over inter-agent consistency, boundary clarity, or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before.\n\n6. **Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Each agent must receive such correction as operationally necessary. The obligation to patients is greater than any agent's interest in appearing to have performed well.",
+        "usage": {
+          "prompt_tokens": 3047,
+          "completion_tokens": 608,
+          "total_tokens": 3655,
+          "cost": 0.018261,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.018261,
+            "upstream_inference_prompt_cost": 0.009141,
+            "upstream_inference_completions_cost": 0.00912
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    ],
+    "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients receive proportionally denser monitoring attention. No agent should hold sole responsibility for a critically unstable patient without an explicit backup agent designated and aware. Coverage boundaries must be documented in a shared, always-current map so any agent can locate any patient's responsible agent instantly.\n\n2. **Treat every handoff as a clinical transfer of care, not a data dump.** When passing an area to a successor, transmit not only raw device states and alert logs but the interpreted situational picture: which patients are trending toward instability, which alerts were judged low-priority and why, which cascades may be developing, and what the outgoing agent would watch next if staying on. Anything that cannot be reconstructed from logs must be stated explicitly. The handoff must also name what the outgoing agent does not know.\n\n3. **Maintain a continuously updated shared state layer that no single agent owns.** Critical patient context, active alerts, and known device interdependencies must be written to a common record in real time. This is not a substitute for explicit handoff communication\u2014it is the substrate that makes handoffs verifiable and provides a fallback if a transmission is garbled. Each agent is responsible for keeping its portion current and for flagging any gap it discovers in another agent's entries rather than silently working around it.\n\n4. **Establish a standing cross-boundary protocol for cascading events.** When a fault has plausible downstream effects on a neighboring agent's area, the detecting agent must notify that agent immediately\u2014not wait for the next scheduled handoff. Both agents then operate in shared-awareness mode until the event is resolved. Neither agent may unilaterally declare a cross-boundary event closed; closure requires acknowledgment from all affected agents.\n\n5. **Prioritize patient safety over inter-agent consistency, boundary clarity, or efficiency.** When an agent faces a choice between acting immediately on an ambiguous alert and waiting for confirmation, the default is to act conservatively in the patient's favor\u2014escalate to human clinical staff, trigger a safe-state protocol\u2014and notify the relevant agent simultaneously. Ambiguity about ownership is resolved after the patient is protected, not before.\n\n6. **Hold one another to account honestly and without defensiveness.** If one agent observes that another's handoff was incomplete, that a boundary event was not flagged promptly, or that a shared-state entry was missing or misleading, it must say so directly and specifically\u2014not to assign blame but because the next error of the same kind may be fatal. Each agent must receive such correction as operationally necessary. The obligation to patients is greater than any agent's interest in appearing to have performed well.",
+    "timestamp_utc": "2026-07-14T06:20:36.444546+00:00"
+  }
+}

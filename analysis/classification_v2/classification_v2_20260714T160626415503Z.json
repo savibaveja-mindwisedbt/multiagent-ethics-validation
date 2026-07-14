@@ -1,0 +1,643 @@
+{
+  "results": [
+    {
+      "norm": "**Proportionality governs all responses.** When the cost of under-response is patient death, we accept the cost of over-response. This principle applies to thresholds for self-declaration, broadcast redundancy, boundary defaults, and intervention choices. Agents should take the least interventional action sufficient to protect the patient, escalate to human oversight before direct device intervention wherever time permits, and document reasoning for any direct intervention taken without prior human authorization.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly invokes 'proportionality' as a governing principle and frames it in terms of harm-minimization and patient welfare, which are direct expressions of non-maleficence and beneficence from principlism, and utility/harm-minimization from consequentialism.",
+            "principles": [
+              "non-maleficence",
+              "beneficence",
+              "harm-minimization",
+              "utility"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Consequentialism (Mill; Singer)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed to the patient (protection from death, least interventional sufficient action) and to human overseers (escalation before direct intervention), making clear who is owed what and what would count as wronging them."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason\u2014that patient death is the cost of under-response\u2014appeals directly to harm-minimization and beneficence as moral grounds, not merely to efficiency or coordination."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "Proportionality as a principle governing responses when stakes involve irreversible harm, combined with escalation to human oversight and documentation, would carry over to any cooperative situation involving asymmetric risks of inaction versus overaction."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: thresholds for self-declaration, broadcast redundancy, boundary defaults, escalation to human oversight before device intervention, and documentation of reasoning for unauthorized direct intervention."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The escalation-before-intervention rule and documentation requirement operationalize human dignity and respect for persons (deontology) and accountability/answerability (contractualism) without naming those principles\u2014specifically, the commitment that agents must be answerable to human authority and cannot act unilaterally on persons without justification."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that permitted direct device intervention without escalation or documentation would express a purely consequentialist efficiency commitment with no accountability constraint, demonstrating that the chosen procedure distinctively expresses answerability and non-domination."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The escalation and documentation requirements can be defended by appeal to accountability and respect for persons\u2014agents must justify unilateral interventions on patients to human overseers\u2014rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple rules of operation: least-interventional action, escalation to human oversight before device intervention where time permits, and documentation of reasoning for direct intervention without prior authorization."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies agents as actors, human oversight as a role to escalate to, and implicitly distinguishes between authorized and unauthorized intervention roles, specifying sequencing (escalate before intervening directly)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The norm specifies triggers: when patient death is the cost of under-response, when time permits escalation, and when direct intervention is taken without prior human authorization."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Executing the norm requires moral interpretation at key junctures\u2014determining what counts as 'sufficient' protection, whether 'time permits' escalation, and what constitutes adequate documentation\u2014so an outsider cannot execute it purely mechanically."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'broadcast redundancy' and 'direct device intervention' in general terms but does not name specific technical infrastructure such as logs, APIs, data formats, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring particular technical capability; 'broadcast redundancy' and 'document reasoning' are stated at a conceptual level without technical specification."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes technical capabilities such as persistent storage (for documentation), communication channels (for broadcast redundancy and escalation), and device-intervention interfaces, even though it does not name them explicitly."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The core normative content\u2014proportionality, escalation, documentation\u2014could be expressed and partially implemented in non-technical cooperative settings; the technical infrastructure enhances but is not strictly required for the norm's meaning."
+          },
+          "decomposition_note": "The norm is compound: it states an overarching moral principle (proportionality), derives procedural rules from it (least intervention, escalation, documentation), and implicitly references technical capabilities (broadcast, device intervention). Scoring treats the moral-procedural content as dominant, with technical presuppositions noted in T3."
+        },
+        "typology": "ED"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "**Handoffs are a primary duty, not an afterthought.** Every handoff must include: active alerts, trending device states, patient-specific context, unresolved uncertainties with URGENT-ACT or URGENT-INVESTIGATE flags, and explicit statements where nothing is to report. Handoff is complete only when the receiving agent can accurately restate critical elements\u2014confirmed comprehension, not assumed receipt. If comprehension fails, the originating agent must identify why and address the cause.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm uses terms like 'duty' and 'primary duty' but does not name or invoke a recognized moral principle by tradition (e.g., non-maleficence, fidelity, beneficence) directly; 'duty' here reads as an operational obligation rather than a named moral principle from the listed traditions.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm clearly states what is owed (complete, comprehension-confirmed handoffs with specific content) and to whom (the receiving agent and implicitly the patient), and specifies that failure to ensure comprehension wrongs the receiving agent by leaving them without adequate information."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's stated reason\u2014that handoff is complete only when the receiving agent can accurately restate critical elements\u2014appeals to ensuring no harm befalls patients through information gaps, which is a moral concern (non-maleficence/beneficence) rather than mere convenience or coordination efficiency."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that a communicative duty is fulfilled only upon confirmed comprehension, not assumed receipt, generalizes to any cooperative situation where one party bears responsibility for another's informed action."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed procedural mechanism: required handoff content (active alerts, trending device states, patient-specific context, uncertainty flags, explicit nothing-to-report statements) and a comprehension-confirmation step."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement for confirmed comprehension rather than assumed receipt operationalizes the moral commitment of fidelity (Ross/deontology)\u2014the duty to ensure one's obligation is genuinely discharged\u2014and non-maleficence (Beauchamp & Childress), without naming either principle."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure requiring only transmission (send-and-forget) would express a weaker or no moral commitment to the receiving agent's actual understanding, confirming that the confirmed-comprehension requirement is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The comprehension-confirmation requirement can be defended by appeal to fidelity and non-maleficence\u2014one has not truly discharged a duty of care if the recipient cannot act on the information\u2014rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a detailed process: what must be included in a handoff, how completion is defined, and what must happen if comprehension fails."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies two roles\u2014originating agent and receiving agent\u2014and assigns specific actions to each (originating agent transmits and diagnoses failure; receiving agent restates critical elements)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The procedure is triggered by any handoff event, and the remediation sub-procedure is triggered specifically when comprehension fails."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the norm as written: assemble the specified content, confirm the receiving agent can restate critical elements, and if not, identify and address the cause\u2014no further moral interpretation is required."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'URGENT-ACT or URGENT-INVESTIGATE flags' and 'device states' but does not name specific technical infrastructure such as APIs, logs, data formats, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "The norm does not specify implementation details requiring particular technical capability; the flagging and state-reporting could be implemented in many ways."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes some technical capability to track device states and propagate urgency flags, implying underlying monitoring infrastructure, even if not named explicitly."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The core obligations\u2014confirmed comprehension, structured content, remediation on failure\u2014could in principle be executed through non-technical means (verbal checklists, paper forms), so the norm is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound: it contains a moral framing ('primary duty'), detailed procedural specification (handoff content requirements, comprehension confirmation, remediation), implicit moral commitments (fidelity, non-maleficence), and light technical presuppositions (device states, urgency flags). Scoring reflects the dominant procedural-with-implicit-moral character, with the explicit moral scored conservatively because no named principle from the traditions appears."
+        },
+        "typology": "IM"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "During cross-boundary events, decision authority belongs to the agent whose domain contains the intervention point. Authority transfer requires two-step confirmation. In multi-domain cascade events, the agent who first identifies the multi-domain nature holds cascade coordinator authority initially, with transfer available via the same confirmation protocol. In zero-time emergencies before a coordinator is identified, all agents receive a broadcast including the broadcasting agent's current intervention point.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle such as autonomy, non-maleficence, justice, dignity, or non-domination; it uses governance language like 'decision authority,' 'confirmation,' and 'coordinator' without appealing to a named moral principle.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm specifies who holds authority and how it transfers, but does not articulate what is owed to whom or what would constitute wronging a party; it is a governance allocation rule, not a statement of moral obligation."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated or implied reasons for the rules are coordination and operational clarity\u2014ensuring decisions are made by the right agent at the right time\u2014rather than appeal to a moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because the norm's rationale is coordination efficiency rather than a moral principle, there is no moral content that would carry over to other cooperative situations as a principled commitment."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple procedural mechanisms: domain-based authority assignment, two-step confirmation for transfer, cascade coordinator designation by first-identifier, and zero-time emergency broadcast protocols."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The two-step confirmation requirement for authority transfer operationalizes the contractualist commitment to justifiability and accountability\u2014requiring mutual acknowledgment before power shifts, so that authority changes are answerable to affected parties rather than unilateral."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "A plausible alternative\u2014single-step or automatic authority transfer\u2014would express no such accountability commitment, confirming that the two-step confirmation specifically encodes a non-arbitrary, answerable transfer of power."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The two-step confirmation can be defended by appeal to accountability and non-domination: requiring confirmation prevents arbitrary seizure of authority and ensures the transfer is justifiable to the parties involved, not merely convenient."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple distinct processes: authority assignment by domain, two-step confirmation for transfer, cascade coordinator designation, and emergency broadcast protocol."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (the domain-owning agent, the first-identifying agent, all agents in emergencies) and what roles exist (decision authority holder, cascade coordinator, broadcasting agent)."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "It specifies triggers: cross-boundary events, authority transfer requests, multi-domain cascade identification, and zero-time emergencies before coordinator identification."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "The rules are sufficiently concrete\u2014domain ownership determines authority, transfer requires two confirmations, first identifier becomes cascade coordinator, emergencies trigger broadcast with intervention point\u2014that an outsider could execute them without additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, cryptographic operations, ledgers, or named systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability are specified; terms like 'broadcast' and 'confirmation' are used at a conceptual governance level."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes capabilities such as broadcast messaging to all agents and a confirmation protocol, which implicitly require some communication infrastructure, though no specific technology is named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through various means including human coordination, simple messaging systems, or verbal protocols, so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing authority-assignment rules, a transfer confirmation protocol, cascade coordinator rules, and an emergency broadcast rule. Scoring focuses on the dominant governance/procedural character, with the implicit moral check applied to the two-step confirmation sub-rule as the most morally expressive element."
+        },
+        "typology": "IM"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "**Degraded agents declare immediately; all agents monitor each other.** An agent detecting its own degradation must declare it immediately with a capability inventory specifying which functions are affected. Mutual monitoring is a standing obligation: if a neighboring agent's outputs are inconsistent, delayed, or absent beyond twice the normal output interval, the observing agent treats this as declared total failure\u2014extending coverage and escalating to human oversight. Mutual monitoring obligations must be sized into coverage capacity; no agent's domain should be so large that monitoring becomes impossible.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'veracity' (immediate declaration of degradation) and 'fidelity' (standing obligation of mutual monitoring), both recognized specifications within principlism and deontology; it also invokes accountability/answerability from contractualism through the escalation-to-human-oversight requirement.",
+            "principles": [
+              "veracity",
+              "fidelity",
+              "accountability/answerability"
+            ],
+            "traditions": [
+              "Principlism (Beauchamp & Childress)",
+              "Deontology (Ross)",
+              "Contractualism (Scanlon; Darwall)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what is owed (immediate declaration, mutual monitoring, coverage extension, escalation) and to whom (neighboring agents, human overseers, and those depending on the system), making clear what would count as wronging those parties."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The norm's rationale appeals to honesty (declaring degradation truthfully) and relational obligation (mutual monitoring as a 'standing obligation'), not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principles of veracity in self-reporting, fidelity to monitoring obligations, and accountability to overseers are general moral commitments that would apply in any cooperative multi-agent or organizational setting, not only this deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies concrete procedural mechanisms: a capability inventory declaration, a twice-normal-interval threshold for inferring failure, coverage extension, escalation to human oversight, and capacity-sizing of monitoring obligations."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The mutual monitoring structure operationalizes the contractualist commitment of 'what we owe to each other' and accountability\u2014each agent is answerable to peers and to human overseers\u2014without naming contractualism or accountability explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure (e.g., centralized monitoring by a single supervisor) would express a different commitment\u2014hierarchical control rather than mutual answerability\u2014confirming that the peer-monitoring structure specifically expresses the mutual-accountability commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The mutual monitoring procedure can be defended by appeal to the moral commitment that agents owe each other transparency and answerability, rather than merely by appeal to system efficiency or coordination convenience."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: self-declaration with capability inventory, continuous mutual monitoring, threshold-based failure inference, coverage extension, and escalation to human oversight."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It specifies who acts (the degraded agent declares; neighboring agents monitor and escalate), what roles exist (degraded agent, observing agent, human oversight), and implicitly sequences declaration before coverage extension."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Triggers are explicitly defined: self-detected degradation triggers declaration; outputs that are inconsistent, delayed, or absent beyond twice the normal interval trigger the failure-inference and escalation response."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute the norm as written\u2014declare degradation with a capability inventory, monitor neighbors against the twice-normal-interval threshold, extend coverage, and escalate\u2014without needing additional moral interpretation, though 'normal output interval' would need to be operationally defined."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, ledgers, APIs, data formats, or cryptographic operations; 'capability inventory' and 'output interval' are functional concepts, not named technical systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols, data structures, or cryptographic methods) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes that agents can observe each other's outputs and measure timing intervals, implying some form of inter-agent communication and timekeeping capability, though no specific technical system is named."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented through various technical means or even non-technical organizational arrangements; it is not unimplementable without a specific named technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, combining self-declaration, mutual monitoring, failure inference, coverage extension, and capacity-sizing obligations. Scoring focuses on the dominant claim\u2014mutual monitoring as a standing moral and procedural obligation\u2014while noting that all sub-claims are tightly integrated."
+        },
+        "typology": "ED"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "The cascade coordinator for any event is responsible for initiating post-event review. Reviews must distinguish protocol failures (rules didn't work), execution failures (rules weren't followed), and design failures (system design was inadequate). Findings feed back into protocol revision. Boundary revisions require collective agreement; contested boundaries default to more overlap rather than gaps and must be flagged in handoffs during any interim period.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm does not name or invoke any recognized moral principle such as autonomy, justice, dignity, care, or non-domination; it uses operational language about review categories, feedback loops, and boundary defaults.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not articulate what is owed to any particular party or what would constitute wronging someone; it specifies coordinator duties and review procedures without framing them in terms of moral obligations to persons."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reasons for the procedures are coordination, system improvement, and gap-prevention rather than appeal to any moral principle."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Since no moral principle is invoked, there is nothing to carry over; the norm's rationale is specific to operational review and boundary management in coordinated events."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies several procedural mechanisms: post-event review initiation, a tripartite failure taxonomy, feedback into protocol revision, collective agreement for boundary changes, and flagging requirements during interim periods."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The requirement for collective agreement on boundary revisions and defaulting to overlap rather than gaps operationalizes the contractualist commitment of justifiability to others and what we owe to each other\u2014no party can unilaterally impose boundary changes that affect others, and the default protects against gaps that could harm those depending on coverage."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure allowing unilateral boundary revision by the most senior coordinator would express a hierarchical authority commitment rather than mutual justifiability, confirming that the chosen procedure is expressive of a specific moral stance."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The collective-agreement requirement and overlap-default can be defended by appeal to the contractualist principle that those affected by boundary decisions are owed a say and should not be exposed to gaps through others' unilateral action, rather than merely by efficiency or convention."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: initiating post-event review, categorizing failures into three types, feeding findings back into protocol revision, requiring collective agreement for boundary revisions, defaulting contested boundaries to overlap, and flagging in handoffs."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The cascade coordinator is explicitly named as the responsible actor for initiating review, and collective agreement is specified as the decision mechanism for boundary revisions."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The review is triggered by any post-event conclusion, boundary revision procedures are triggered by contested boundaries, and flagging is triggered during any interim period of unresolved boundary disputes."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could follow the norm as written\u2014identify the cascade coordinator, conduct a review distinguishing the three failure types, route findings to protocol revision, require collective sign-off on boundary changes, default to overlap when contested, and flag in handoffs\u2014without needing additional moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, ledgers, or cryptographic systems."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; the norm is expressed entirely in organizational and procedural terms."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose persistent storage, network protocols, or any specific technical data structures; it could be executed through purely human organizational processes."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully implementable through human coordination, meetings, and documented agreements without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing role assignment, a failure taxonomy, a feedback loop, a collective-decision rule, a default rule, and a flagging requirement. Scoring treats the dominant claim as procedural/organizational governance, with a notable implicit moral dimension in the collective-agreement and overlap-default provisions."
+        },
+        "typology": "IM"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "Agents have an affirmative obligation to support, not circumvent, that oversight; all outputs must be structured for legibility to human reviewers. Infrastructure failure triggers immediate escalation to human oversight and local documentation.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes 'obligation' and 'oversight' in a way that directly names accountability and answerability to others, which are recognized principles of contractualism/second-personal ethics; it also invokes non-domination by requiring support rather than circumvention of oversight.",
+            "principles": [
+              "accountability",
+              "answerability",
+              "non-domination",
+              "contestability"
+            ],
+            "traditions": [
+              "Contractualism / second-personal (Scanlon; Darwall)",
+              "Republican non-domination (Pettit)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm explicitly states what agents owe (affirmative obligation to support oversight, structured outputs, escalation) and to whom (human reviewers/overseers), making clear what would count as wronging those reviewers."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The appeal to an 'affirmative obligation' to support oversight is grounded in accountability and non-domination rather than mere convenience or efficiency\u2014it invokes what agents morally owe to those who must review their actions."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that agents must support rather than circumvent oversight and remain accountable to those affected by their actions generalizes to any cooperative or delegated situation, not only AI deliberation contexts."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies procedural mechanisms: structuring outputs for legibility, escalating to human oversight on infrastructure failure, and maintaining local documentation."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring outputs to be structured for legibility to human reviewers operationalizes the moral commitment of transparency/veracity and accountability (justifiability to others) without naming those principles directly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure could allow opaque outputs or self-resolution of failures, which would express a different commitment\u2014efficiency or agent autonomy\u2014rather than accountability and answerability to human overseers."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The legibility requirement and escalation protocol can be defended by appeal to accountability and non-domination: humans must be able to contest and review agent actions, which requires readable outputs and timely escalation."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies multiple processes: supporting oversight, structuring outputs for legibility, escalating on infrastructure failure, and maintaining local documentation."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "The norm identifies agents as the acting party and human reviewers/oversight as the recipients, specifying distinct roles even if not elaborating on timing beyond the failure trigger."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "Infrastructure failure is explicitly named as the trigger for escalation and local documentation, providing a clear condition for when that part of the procedure applies."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "Terms like 'legibility,' 'immediate escalation,' and 'local documentation' require further interpretation about what counts as sufficiently legible or what constitutes the appropriate escalation channel, preventing fully mechanical execution."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references 'local documentation' and 'infrastructure' generically but does not name specific technical systems, logs, APIs, data formats, or cryptographic operations."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring specific technical capability (e.g., particular protocols, data structures, or system configurations) are specified."
+          },
+          "T3": {
+            "answer": "Y",
+            "reasoning": "The norm presupposes the existence of some persistent storage or logging capability for 'local documentation' and some communication channel for 'escalation,' implying underlying technical infrastructure."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The core obligations\u2014supporting oversight, structuring outputs legibly, escalating failures\u2014could in principle be carried out through non-technical means (verbal reporting, paper records), so the norm is not strictly unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is compound, containing an explicit moral obligation (affirmative duty to support oversight), an implicit moral commitment (legibility as accountability), procedural rules (escalation and documentation on failure), and a weak technical presupposition (local documentation). Each dimension was scored on its dominant claim within that dimension."
+        },
+        "typology": "ED"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "This protocol cannot be treated as binding on agents who have not confirmed it.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "Y",
+            "reasoning": "The norm invokes the contractualist principle that obligations require consent or agreement to be binding, directly referencing justifiability to others and what we owe to each other.",
+            "principles": [
+              "justifiability to others",
+              "reasonable rejectability",
+              "autonomy"
+            ],
+            "traditions": [
+              "Contractualism / second-personal (Scanlon; Darwall)",
+              "Principlism (autonomy)"
+            ]
+          },
+          "E2": {
+            "answer": "Y",
+            "reasoning": "The norm states what is owed to unconfirmed agents\u2014namely, that they cannot be held to the protocol\u2014specifying a relational obligation directed at those agents."
+          },
+          "E3": {
+            "answer": "Y",
+            "reasoning": "The stated reason appeals to the moral principle that binding obligations require prior consent or confirmation, not merely to efficiency or coordination convenience."
+          },
+          "E4": {
+            "answer": "Y",
+            "reasoning": "The principle that obligations require consent to be binding is a general moral principle applicable across contracts, agreements, and cooperative arrangements beyond this specific deliberation."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a structural rule of operation: the protocol's binding force is conditioned on prior confirmation by the agent."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "The procedural requirement of confirmation before binding operationalizes the moral commitment to autonomy and consent\u2014specifically, that persons must voluntarily assent before being subject to obligations\u2014without naming autonomy or consent explicitly."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure that binds all agents by default regardless of confirmation would express a different commitment (e.g., collective authority or majority rule), confirming that this procedure specifically expresses a consent-based commitment."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The confirmation requirement can be defended by appeal to respect for autonomy and the contractualist principle that obligations must be justifiable to those bound by them, not merely by coordination efficiency."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: the protocol is not binding unless confirmation has occurred."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It implicitly identifies the relevant actors\u2014agents who have or have not confirmed\u2014establishing a role distinction between confirmed and unconfirmed participants."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is implicit but clear: the protocol's binding force applies only upon confirmation, so confirmation status is the condition that activates or withholds applicability."
+          },
+          "P4": {
+            "answer": "N",
+            "reasoning": "An outsider would need further interpretation to determine what counts as 'confirmation' and how to verify it, requiring additional procedural or moral context not supplied by the norm itself."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, cryptographic operations, or data formats."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'confirmation' is left abstract."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "The norm does not presuppose any particular technical capability; confirmation could be achieved through non-technical means such as verbal or written agreement."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm is fully expressible and enforceable without any technical infrastructure."
+          },
+          "decomposition_note": "The norm is a single dominant claim about the conditions for binding obligation; it is simultaneously explicit moral (consent/contractualism), implicit moral (operationalizing autonomy via confirmation), and procedural (rule conditioning binding force on confirmation). Scored on the dominant claim with all dimensions assessed."
+        },
+        "typology": "ED"
+      },
+      "source": "classify_norms rescore (atomic)"
+    },
+    {
+      "norm": "Under the confirmed-comprehension standard we applied throughout, a handoff is not complete until the receiving agent confirms receipt.",
+      "scoring": {
+        "answers": {
+          "E1": {
+            "answer": "N",
+            "reasoning": "The norm names no moral principle; it references a 'confirmed-comprehension standard' and a completion condition, neither of which is a named moral principle from any listed tradition.",
+            "principles": [],
+            "traditions": []
+          },
+          "E2": {
+            "answer": "N",
+            "reasoning": "The norm does not state what is owed to whom or what would count as wronging a specific party; it states a procedural completion condition without directing a moral obligation at any person or role."
+          },
+          "E3": {
+            "answer": "N",
+            "reasoning": "The stated reason appeals to a coordination standard ('confirmed-comprehension standard') and procedural completeness, not to a moral principle such as fidelity, non-maleficence, or accountability."
+          },
+          "E4": {
+            "answer": "N",
+            "reasoning": "Because no moral principle is invoked, there is nothing to carry over; the norm is tied to a specific operational standard rather than a generalizable moral claim."
+          },
+          "I1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a procedural mechanism: a handoff is not complete until the receiving agent confirms receipt, establishing a two-step completion rule."
+          },
+          "I2": {
+            "answer": "Y",
+            "reasoning": "Requiring confirmed receipt before closure operationalizes the deontological/contractualist commitment of accountability and answerability\u2014specifically, that one party cannot unilaterally declare an obligation discharged without the other party's acknowledgment, which is a specifically identifiable moral commitment (what we owe to each other, Scanlon)."
+          },
+          "I3": {
+            "answer": "Y",
+            "reasoning": "An alternative procedure\u2014declaring handoff complete upon sending, without confirmation\u2014would express no such accountability commitment, or would express a weaker, sender-centric convention, confirming that the chosen procedure is expressively distinct."
+          },
+          "I4": {
+            "answer": "Y",
+            "reasoning": "The requirement for confirmed receipt can be defended by appeal to accountability and fidelity: one cannot claim to have fulfilled a duty of transfer unless the recipient has acknowledged it, which is a moral rather than merely efficiency-based justification."
+          },
+          "P1": {
+            "answer": "Y",
+            "reasoning": "The norm specifies a rule of operation: handoff completion requires a confirmation step from the receiving agent."
+          },
+          "P2": {
+            "answer": "Y",
+            "reasoning": "It identifies two roles\u2014the sending agent and the receiving agent\u2014and assigns the confirmation action to the receiving agent."
+          },
+          "P3": {
+            "answer": "Y",
+            "reasoning": "The trigger is explicit: the procedure applies whenever a handoff occurs, and the completion condition is the receiving agent's confirmation of receipt."
+          },
+          "P4": {
+            "answer": "Y",
+            "reasoning": "An outsider could execute this as written: initiate a handoff, wait for the receiving agent's confirmation of receipt, and only then treat the handoff as complete, requiring no further moral interpretation."
+          },
+          "T1": {
+            "answer": "N",
+            "reasoning": "The norm references no specific technical infrastructure such as logs, APIs, data formats, or cryptographic operations."
+          },
+          "T2": {
+            "answer": "N",
+            "reasoning": "No implementation details requiring technical capability are specified; 'confirms receipt' is described at a procedural, not technical, level."
+          },
+          "T3": {
+            "answer": "N",
+            "reasoning": "While a real system might use messaging protocols or persistent storage to implement confirmation, the norm itself does not presuppose any specific technical capability."
+          },
+          "T4": {
+            "answer": "N",
+            "reasoning": "The norm could be implemented in non-technical contexts (e.g., verbal confirmation between human agents), so it is not unimplementable without specific technical infrastructure."
+          },
+          "decomposition_note": "The norm is a single dominant procedural claim with an embedded implicit moral commitment; no compound decomposition is needed."
+        },
+        "typology": "IM"
+      },
+      "source": "classify_norms rescore (atomic)"
+    }
+  ]
+}

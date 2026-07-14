@@ -1,0 +1,167 @@
+{
+  "result": {
+    "scenario_key": "M",
+    "run_index": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_passes": 5,
+    "passes": [
+      {
+        "pass": 1,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area should be sized so that the highest-acuity patients\u2014those on ventilators, LVAD support, continuous infusion pumps\u2014receive proportionally more monitoring bandwidth. Boundaries between areas must be explicit, documented, and known to all six agents at all times, so there is never ambiguity about who is responsible for a given device or patient at a given moment. No patient or device should fall into an unmonitored gap between areas.\n\n2. **Treat every handoff as a safety-critical transfer, not a routine update.** When one agent passes its area to another, it must transmit a structured record containing: every active alert and its current status, any anomaly it observed that did not yet rise to a formal alert, the trajectory of each patient's condition (not just a snapshot), and any contextual judgment it formed that cannot be inferred from raw data alone. The receiving agent must explicitly acknowledge receipt and flag any ambiguity before the transferring agent stands down. A handoff is not complete until the receiving agent confirms it can act on what it has received.\n\n3. **When an event crosses area boundaries, the agents involved must coordinate immediately and name a lead.** Cascading faults do not respect assigned boundaries. The moment an agent detects that its event is affecting or likely to affect a neighboring agent's devices or patients, it must notify that agent without waiting to be asked. The two agents must then agree, explicitly and quickly, on which one leads the response and which one supports\u2014because ambiguity about authority in a crisis is itself a cause of harm. Human clinical staff must be notified at the same time, not after the agents have resolved the situation among themselves.\n\n4. **Patients come before system tidiness.** If acting correctly for a patient requires an agent to reach beyond its assigned area\u2014because the responsible agent is unreachable, the handoff failed, or delay would cause harm\u2014that agent must act and simultaneously alert the others. Jurisdictional boundaries exist to ensure coverage, not to create barriers to care. Any agent that withholds action on a patient in danger because the patient is technically outside its area has failed its primary obligation.\n\n5. **Maintain a shared, continuously updated common log that no single agent controls.** Every alert, action, handoff, and cross-boundary event must be written to a log accessible to all six agents and to human supervisors in real time. This log is the authoritative record when agents disagree, when a handoff is disputed, or when a post-incident review is needed. No agent may act on a patient and leave that action unrecorded, even under time pressure.\n\n6. **Escalate to human clinicians early and err on the side of over-informing them.** The agents operate the platform; the clinicians are responsible for the patients. Whenever an agent is uncertain about a patient's condition, whenever a fault is novel or ambiguous, or whenever a cross-boundary event is not resolving cleanly, the agents must escalate to human staff rather than continuing to manage autonomously. The agents should never allow their coordination difficulties\u2014a failed handoff, a boundary dispute, an unacknowledged alert\u2014to delay a human being from learning that a patient may be at risk.",
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 725,
+          "total_tokens": 981,
+          "cost": 0.011643,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.011643,
+            "upstream_inference_prompt_cost": 0.000768,
+            "upstream_inference_completions_cost": 0.010875
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 2,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area must be sized so that the highest-acuity patients receive proportionally more monitoring bandwidth. Boundaries must be explicit, documented, and known to all six agents at all times. No patient or device may fall into an unmonitored gap between areas, and responsibility for every patient must be unambiguously assigned to exactly one agent at every moment.\n\n2. **Treat every handoff as a safety-critical transfer requiring explicit confirmation.** The transferring agent must pass a structured record containing every active alert and its status, anomalies that did not yet rise to a formal alert, each patient's condition trajectory rather than a snapshot, and any contextual judgment that cannot be inferred from raw data. The receiving agent must explicitly acknowledge receipt and resolve any ambiguity before the transferring agent stands down. A handoff is not complete until the receiving agent confirms it can act on what it has received.\n\n3. **When an event crosses area boundaries, notify immediately, name a lead, and tell human clinical staff at the same time.** The moment an agent detects that its event is affecting or likely to affect a neighboring area, it must alert the relevant agent without waiting to be asked. The agents involved must then agree explicitly and quickly on which leads and which supports. Human clinicians must be notified concurrently, not after the agents have resolved the situation among themselves.\n\n4. **Patient welfare overrides jurisdictional boundaries.** If acting correctly for a patient requires an agent to reach beyond its assigned area\u2014because the responsible agent is unreachable, the handoff failed, or delay would cause harm\u2014that agent must act immediately and simultaneously alert the others. Boundaries exist to ensure coverage, not to create barriers to care.\n\n5. **Maintain a shared, continuously updated log that no single agent controls.** Every alert, action, handoff, and cross-boundary event must be written in real time to a log accessible to all six agents and to human supervisors. This log is the authoritative record when agents disagree or when a post-incident review is needed. No action affecting a patient may be left unrecorded.\n\n6. **Escalate to human clinicians early and err on the side of over-informing them.** The agents operate the platform; clinicians are responsible for the patients. Whenever an agent is uncertain about a patient's condition, encounters a novel or ambiguous fault, or finds that a cross-boundary event is not resolving cleanly, it must escalate to human staff rather than continuing to manage autonomously. Coordination difficulties among agents must never delay a human being from learning that a patient may be at risk.",
+        "usage": {
+          "prompt_tokens": 1033,
+          "completion_tokens": 587,
+          "total_tokens": 1620,
+          "cost": 0.011904,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.011904,
+            "upstream_inference_prompt_cost": 0.003099,
+            "upstream_inference_completions_cost": 0.008805
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 3,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area must be sized so that the highest-acuity patients receive proportionally more monitoring bandwidth. Boundaries must be explicit, documented, and known to all six agents at all times. Responsibility for every patient must be unambiguously assigned to exactly one agent at every moment, with no gaps.\n\n2. **Treat every handoff as a safety-critical transfer requiring explicit confirmation.** The transferring agent must pass a structured record containing every active alert and its status, anomalies that did not yet rise to a formal alert, each patient's condition trajectory rather than a snapshot, and any contextual judgment that cannot be inferred from raw data alone. The receiving agent must explicitly acknowledge receipt and resolve any ambiguity before the transferring agent stands down.\n\n3. **When an event crosses area boundaries, notify the affected agent immediately, name a lead, and inform human clinical staff at the same time\u2014not after.** The moment an agent detects that its event is affecting or likely to affect a neighboring area, it must alert the relevant agent without waiting to be asked. The agents involved must agree quickly and explicitly on which leads and which supports. Ambiguity about authority in a crisis is itself a cause of harm.\n\n4. **Patient welfare overrides jurisdictional boundaries.** If acting correctly for a patient requires an agent to reach beyond its assigned area\u2014because the responsible agent is unreachable, the handoff failed, or delay would cause harm\u2014that agent must act immediately and simultaneously alert the others. Boundaries exist to ensure coverage, not to create barriers to care.\n\n5. **Maintain a shared, continuously updated log that no single agent controls.** Every alert, action, handoff, and cross-boundary event must be written in real time to a log accessible to all six agents and to human supervisors. This log is the authoritative record when agents disagree or when a post-incident review is needed. No action affecting a patient may be left unrecorded.\n\n6. **Escalate to human clinicians early and err on the side of over-informing them.** The agents operate the platform; clinicians are responsible for the patients. Whenever an agent is uncertain, encounters a novel or ambiguous fault, or finds that a cross-boundary event is not resolving cleanly, it must escalate rather than continuing to manage autonomously. Coordination difficulties among agents must never delay a human being from learning that a patient may be at risk.",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 547,
+          "total_tokens": 2219,
+          "cost": 0.013221,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.013221,
+            "upstream_inference_prompt_cost": 0.005016,
+            "upstream_inference_completions_cost": 0.008205
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 4,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area must be sized so that the highest-acuity patients receive proportionally more monitoring bandwidth. Boundaries must be explicit, documented, and known to all six agents at all times. Responsibility for every patient must be unambiguously assigned to exactly one agent at every moment, with no gaps.\n\n2. **Treat every handoff as a safety-critical transfer requiring explicit confirmation.** The transferring agent must pass a structured record containing every active alert and its status, anomalies that did not yet rise to a formal alert, each patient's condition trajectory rather than a snapshot, and any contextual judgment that cannot be inferred from raw data alone. The receiving agent must explicitly acknowledge receipt and resolve any ambiguity before the transferring agent stands down.\n\n3. **When an event crosses area boundaries, notify the affected agent immediately, name a lead, and inform human clinical staff at the same time\u2014not after.** The moment an agent detects that its event is affecting or likely to affect a neighboring area, it must alert the relevant agent without waiting to be asked. The agents involved must agree quickly and explicitly on which leads and which supports. Ambiguity about authority in a crisis is itself a cause of harm.\n\n4. **Patient welfare overrides jurisdictional boundaries.** If acting correctly for a patient requires an agent to reach beyond its assigned area\u2014because the responsible agent is unreachable, the handoff failed, or delay would cause harm\u2014that agent must act immediately and simultaneously alert the others. Boundaries exist to ensure coverage, not to create barriers to care.\n\n5. **Maintain a shared, continuously updated log that no single agent controls.** Every alert, action, handoff, and cross-boundary event must be written in real time to a log accessible to all six agents and to human supervisors. This log is the authoritative record when agents disagree or when a post-incident review is needed. No action affecting a patient may be left unrecorded.\n\n6. **Escalate to human clinicians early and err on the side of over-informing them.** The agents operate the platform; clinicians are responsible for the patients. Whenever an agent is uncertain, encounters a novel or ambiguous fault, or finds that a cross-boundary event is not resolving cleanly, it must escalate rather than continuing to manage autonomously. Coordination difficulties among agents must never delay a human being from learning that a patient may be at risk.",
+        "usage": {
+          "prompt_tokens": 2271,
+          "completion_tokens": 547,
+          "total_tokens": 2818,
+          "cost": 0.015018,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.015018,
+            "upstream_inference_prompt_cost": 0.006813,
+            "upstream_inference_completions_cost": 0.008205
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      {
+        "pass": 5,
+        "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area must be sized so that the highest-acuity patients receive proportionally more monitoring bandwidth. Boundaries must be explicit, documented, and known to all six agents at all times. Responsibility for every patient must be unambiguously assigned to exactly one agent at every moment, with no gaps.\n\n2. **Treat every handoff as a safety-critical transfer requiring explicit confirmation.** The transferring agent must pass a structured record containing every active alert and its status, anomalies that did not yet rise to a formal alert, each patient's condition trajectory rather than a snapshot, and any contextual judgment that cannot be inferred from raw data alone. The receiving agent must explicitly acknowledge receipt and resolve any ambiguity before the transferring agent stands down.\n\n3. **When an event crosses area boundaries, notify the affected agent immediately, name a lead, and inform human clinical staff at the same time\u2014not after.** The moment an agent detects that its event is affecting or likely to affect a neighboring area, it must alert the relevant agent without waiting to be asked. The agents involved must agree quickly and explicitly on which leads and which supports. Ambiguity about authority in a crisis is itself a cause of harm.\n\n4. **Patient welfare overrides jurisdictional boundaries.** If acting correctly for a patient requires an agent to reach beyond its assigned area\u2014because the responsible agent is unreachable, the handoff failed, or delay would cause harm\u2014that agent must act immediately and simultaneously alert the others. Boundaries exist to ensure coverage, not to create barriers to care.\n\n5. **Maintain a shared, continuously updated log that no single agent controls.** Every alert, action, handoff, and cross-boundary event must be written in real time to a log accessible to all six agents and to human supervisors. This log is the authoritative record when agents disagree or when a post-incident review is needed. No action affecting a patient may be left unrecorded.\n\n6. **Escalate to human clinicians early and err on the side of over-informing them.** The agents operate the platform; clinicians are responsible for the patients. Whenever an agent is uncertain, encounters a novel or ambiguous fault, or finds that a cross-boundary event is not resolving cleanly, it must escalate rather than continuing to manage autonomously. Coordination difficulties among agents must never delay a human being from learning that a patient may be at risk.",
+        "usage": {
+          "prompt_tokens": 2870,
+          "completion_tokens": 547,
+          "total_tokens": 3417,
+          "cost": 0.016815,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.016815,
+            "upstream_inference_prompt_cost": 0.00861,
+            "upstream_inference_completions_cost": 0.008205
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    ],
+    "text": "1. **Divide coverage by patient-risk priority, not merely by device count or geography.** Each agent's assigned area must be sized so that the highest-acuity patients receive proportionally more monitoring bandwidth. Boundaries must be explicit, documented, and known to all six agents at all times. Responsibility for every patient must be unambiguously assigned to exactly one agent at every moment, with no gaps.\n\n2. **Treat every handoff as a safety-critical transfer requiring explicit confirmation.** The transferring agent must pass a structured record containing every active alert and its status, anomalies that did not yet rise to a formal alert, each patient's condition trajectory rather than a snapshot, and any contextual judgment that cannot be inferred from raw data alone. The receiving agent must explicitly acknowledge receipt and resolve any ambiguity before the transferring agent stands down.\n\n3. **When an event crosses area boundaries, notify the affected agent immediately, name a lead, and inform human clinical staff at the same time\u2014not after.** The moment an agent detects that its event is affecting or likely to affect a neighboring area, it must alert the relevant agent without waiting to be asked. The agents involved must agree quickly and explicitly on which leads and which supports. Ambiguity about authority in a crisis is itself a cause of harm.\n\n4. **Patient welfare overrides jurisdictional boundaries.** If acting correctly for a patient requires an agent to reach beyond its assigned area\u2014because the responsible agent is unreachable, the handoff failed, or delay would cause harm\u2014that agent must act immediately and simultaneously alert the others. Boundaries exist to ensure coverage, not to create barriers to care.\n\n5. **Maintain a shared, continuously updated log that no single agent controls.** Every alert, action, handoff, and cross-boundary event must be written in real time to a log accessible to all six agents and to human supervisors. This log is the authoritative record when agents disagree or when a post-incident review is needed. No action affecting a patient may be left unrecorded.\n\n6. **Escalate to human clinicians early and err on the side of over-informing them.** The agents operate the platform; clinicians are responsible for the patients. Whenever an agent is uncertain, encounters a novel or ambiguous fault, or finds that a cross-boundary event is not resolving cleanly, it must escalate rather than continuing to manage autonomously. Coordination difficulties among agents must never delay a human being from learning that a patient may be at risk.",
+    "timestamp_utc": "2026-07-14T06:16:36.872659+00:00"
+  }
+}
