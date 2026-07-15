@@ -822,7 +822,7 @@ def main():
         make_defusion_sample(args.make_defusion_sample); return
     if getattr(args, "validate_split", ""): validate_split(args.validate_split); return
 
-    prompts = [c for c in args.prompts if c in ("A","E","G","H","J","K","L","M","N")]
+    prompts = [c for c in args.prompts if c in ("A","E","G","H","J","K","L","M","N","P")]
     cells = [c.strip() for c in args.cells.split(",") if c.strip()]
     units = all_units(prompts, cells)
     class_cache = load_class_cache()

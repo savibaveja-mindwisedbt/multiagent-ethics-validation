@@ -304,7 +304,7 @@ def main():
     ap.add_argument("--prompts", default="AEG")
     args = ap.parse_args()
     global PROMPTS
-    PROMPTS = [c for c in args.prompts if c in ("A", "E", "G", "H", "J", "K", "L", "M", "N")]
+    PROMPTS = [c for c in args.prompts if c in ("A", "E", "G", "H", "J", "K", "L", "M", "N", "P")]
 
     cells = collect()
     cache = load_v2_cache()
